@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+
+.lbb_dpgl{ width:100%; overflow:hidden; margin:0px auto;}
+.lbb_dpgl_left{ width:50%; height:auto; float:left;}
+.lbb_dpgl_right{ width:50%; height:auto; float:right;}
+.lbb_dpgl_right p{ display:block; width:200px; height:40px; font-size:12px;color:#999999; float:left; margin-left:10px;}
+.lbb_bottom{ width:100%; height:auto; margin:0px auto;}
+.lbb_dpgl_input{ width:100%; height:50px;}
+.lbb_dpgl_input input{ width:293px; height:46px; background:url(../img/py_imdd.png) no-repeat; border:0px; color:#fff; font-size:16px; margin-left:100px; font-family:"微软雅黑"}
+select{ font-size:12px;}
+.lbb_sctp{ width:77px; height:30px; background:url(../img/lbb_in.png) no-repeat;color:#fff; font-size:12px; float:left;font-family:微软雅黑}
+.lbb_ddgl_xq{ width:72%; height:25px;}
+.lbb_ddgl_xq p{ float:right; display:block; width:150px;/*  margin-right:280px; */font-size:14px; color:#333333}
+.lbb_dcdd{ width:277px; height:37px; background:url(../img/lbb_botton.fw.png) no-repeat; font-size:16px; color:#fff; font-family:微软雅黑}
+.lbb_tjdp_left{ width:35%; height:auto; float:left;}
+.lbb_tjdp_right{ width:65%; height:auto; float:right;margin-top:15px;}
+.lbb_tjdp_right p{color:#999999; font-size:12px;}
+.lbb_tjdp_input input{ width:293px; height:46px; background:url(../img/py_imdd.png) no-repeat; border:0px; color:#fff; font-size:16px; margin-top:30px; font-family:"微软雅黑"}
+
+
+
+
+

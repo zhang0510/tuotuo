@@ -1,0 +1,183 @@
+/*------------------------------------------------------------------
+
+[Login Stylesheet]
+
+	Project:		Adminia Admin
+	Version:		1.0
+	Last change:	05/11/2012
+	Assigned to:	Rod Howard (rh)
+
+
+[Table of contents]
+
+	1. Container / #login-container
+	2. Header / #login-header
+	3. Content / #login-content
+	4. Extra / #login-extra
+	5. Max Width: 480px
+
+-------------------------------------------------------------------*/
+
+
+
+/*------------------------------------------------------------------
+[1. Container / #login-container]
+*/
+
+#login-container {
+	width: 293px;
+	margin: 120px auto 0;
+
+}
+
+
+
+
+/*------------------------------------------------------------------
+[2. Header / #login-header]
+*/
+
+#login-header {
+
+	padding: 10% 0px 36px;
+	margin-bottom: 1em;
+
+
+
+	border-radius: 5px;
+
+	text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+}
+
+#login-header h3 {
+	margin-bottom: 0;
+
+	font-size: 16px;
+	color: #FFF;
+
+	text-decoration: 1px 1px 2px rgba(0,0,0,.4);
+}
+
+
+
+/*------------------------------------------------------------------
+[3. Content / #login-content]
+*/
+
+#login-content {
+	/* padding: 20px; */
+
+width:366px;margin:0 auto;
+}
+
+.body_img{background: url(../img/body-bg.jpg) no-repeat center center;background-size:cover; height:100%;position:fixed;top:0px;left:0px;width:100%;height:100%;}
+
+#login-container1{width:550px;margin-left:50%;height:100%;background:url(../img/logo1.png) repeat;}
+
+.form-groupdd{background:#fff;height:23px;padding:12px 0px;border-radius:5px;}
+.sd1{width:56px;border-right:1px solid #dcdcdc;float:left;height:23px;background:url(../img/py1_input.png) no-repeat center center;}
+.form-groupdd input{float:left;padding:0px;height:23px;line-height:23px;background:#fff;width:250px;border:0px;box-shadow:0px 0px 0px #fff;text-indent:15px;}
+
+.form-groupdd1{background:#fff;height:23px;padding:12px 0px;border-radius:5px;}
+.sd2{width:56px;border-right:1px solid #dcdcdc;float:left;height:23px;background:url(../img/py_input.png) no-repeat center center;}
+.form-groupdd1 input{float:left;padding:0px;height:23px;line-height:23px;background:#fff;width:250px;border:0px;box-shadow:0px 0px 0px #fff;text-indent:15px;}
+
+.form-groupdd3 input{background:#fff;height:23px;padding:12px 0px;border-radius:5px;box-shadow:0px 0px 0px #fff;text-indent:15px;width:205px;float:left;}
+.form-groupdd3 button,.form-groupdd3 button:hover{width:138px;border-right:1px solid #dcdcdc;float:right;height:46px;background:#21A8FF;border-radius:5px;border:0px;color:#fff;margin:0px;padding:0px;}
+.btn-default7,.btn-default7:hover{width:100%;height:46px;color:#000000;background:#F7BE29;border:0px;}
+.form-groupdd3 {
+margin-top:15px;overflow:hidden;
+}
+.form-groupdd3 a {
+    color: #fff;
+    font-size: 12px;
+    margin-left: 10px;
+}
+.form-groupdd2 {
+    margin-top: 10px;
+}
+
+.form-control {
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555;
+    display: block;
+    font-size: 14px;
+    height: 34px;
+    line-height: 1.42857;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 100%;
+}
+.form-groupdd, .form-groupdd1 {
+    margin-top: 15px;
+}
+#login-content input {
+	/*  width: 96%;
+	padding: 2% 2%; */
+}
+
+#login-content #remember-me {
+	margin-top: 3px;
+}
+
+#login-content #remember-me input {
+	display: inline-block;
+
+	width: auto;
+	padding: 0;
+}
+
+#login-content #remember-me label {
+	position: relative;
+	top: 2px;
+
+	display: inline-block;
+
+	margin-left: .5em;
+}
+
+
+
+/*------------------------------------------------------------------
+[4. Extra / #login-extra]
+*/
+
+#login-extra {
+	margin-top: 1.5em;
+
+	text-align: center;
+}
+
+#login-extra p {
+	font-size: 12px;
+
+	color: #888;
+}
+
+
+
+
+/*------------------------------------------------------------------
+[5. Max Width: 480px]
+*/
+
+@media (max-width: 480px) {
+	#login-container {
+		width: 100%;
+		margin: 40px auto 0;
+	}
+}
+
+
+
+
+#login-header h3{text-align:center;}
+
+
+
+
+
