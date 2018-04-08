@@ -1,0 +1,475 @@
+<include file='public:head'/>
+<script src="__JS__/jquerytool_1.0v.js"></script>
+	<body>
+	<include file='public:header'/>
+    <div id="main-pyf">
+		<include file='public:left'/>
+		<div id="content">
+	<!-- 		<div class="ico-pt span12">
+				<h4>店铺管理</h4>
+			</div> -->
+			<div class="row">
+					<div class="tsan113">
+						<div class="widget">
+						<div class="tabbable">
+						<ul class="nav nav-tabs" id="tabnav">
+					 	  <!-- <li>
+						    <a href="__MODULE__/Member/getCommonMem">普通会员</a>
+						  </li> -->
+					 	  <li class="active">
+						    <a href="__MODULE__/Worklwt/getComMem">大客户管理</a>
+						  </li>
+						   <li>
+						    <a href="__MODULE__/Worklwt/latencyMemberList">潜在会员</a>
+						  </li>
+						</ul>
+						<form action="__MODULE__/Worklwt/setMemberOrder" method="post" id="edit-profile" class="form-horizontal" />
+						<div class="tab-content1">
+							<div class="dw93">
+								<div class="fh2">
+									<span>用户姓名:</span>
+									<span>{$user.user_name}</span>
+								</div>
+								<div class="fh2">
+									<span>手机号:</span>
+									<input type="text" class="i_n text2" name="mobile" id="mobile" placeholder="请输入手机号" >
+								</div>
+							    <div class="fh2">
+									<span>备用手机号:</span>
+									<input type="text" class="i_n text2" name="tmobile" id="tmobile" placeholder="请输入备用手机号" >
+								</div>
+							</div>
+							<h2 class="dw88">路线信息</h2>
+						<div class="dw91">
+							<select id="city_sheng" name="city_sheng" class="dh5" onchange="cityFun(this);">
+								<option value="">请选择省</option>
+								<foreach name="city" item="vo">
+									<option value="{$vo.area_id}">{$vo.area_name}</option>
+								</foreach>
+							</select>
+							<select id="city_shi" name="city_shi" class="dh5" onchange="city_quFun(this);">
+								<option value="">请选择市</option>
+							</select>
+							<select id="city_qu" name="city_qu" class="dh5">
+								<option value="">请选择区</option>
+							</select>
+							<span>~</span>
+					      	<select id="city_jie_sheng" name="city_jie_sheng" class="dh5" onchange="cityJieFun(this);">
+								<option value="">请选择省</option>
+								<foreach name="city" item="vo">
+									<option value="{$vo.area_id}">{$vo.area_name}</option>
+								</foreach>
+							</select>
+							<select id="city_jie_shi" name="city_jie_shi" class="dh5">
+								<option value="">请选择市</option>
+							</select>
+							</div>	
+							<h2 class="dw88">车辆信息</h2>
+							<div class="dw9">
+							<dt>
+							<select class="dh5" name="car_pin" id="car_pin" onchange="carpFuns(this);">
+								<option data='' value="">请选择品牌</option>
+								<foreach name="cart" item="vo">
+									<option data='{$vo.cxjj_id}' value="{$vo.cxjj_brand}">{$vo.cxjj_brand}</option>
+								</foreach>
+							</select>
+							<select class="dh5" name="car_xing" id="car_xing">
+								<option pri='' data="" value="">请选择车型</option>
+								
+							</select>
+							<!-- <input type="text" name="carmark" placeholder="请输入车牌号" id="carmark" class="i_n text2"> -->
+							</dt>
+							</div>
+                	<h2 class="dw88">接车方式</h2>
+                      <div class="dw8">
+							<div class="dw81">
+							<label><input type="radio" name="way" checked="checked" value="S"><span>司机接车</span></label>
+							</div>
+							<div class="dw81">
+							<label><input type="radio" name="way" value="X"><span>小板接车</span></label>
+							</div>
+							<input type="text" name="order_info_star_address" id="order_info_star_address" value="" class="i_n text2" placeholder="请输入详细地址">
+					  </div>	
+             		<h2 class="dw88">是否上门送车</h2>
+                      <div class="dw8">
+							<div class="dw81">
+								<label id="vv1"><input type="radio" checked="checked" name="smsc" value="N"><span>客户自提</span></label>
+							</div>
+							<div class="dw81" >
+								<label id="vv2"><input type="radio" name="smsc" value="Y"><span>上门送车</span></label>
+							</div>
+							<div class="erer">
+								<select id="city_shengs" name="city_shengs" class="dh5" onchange="cityFuns(this);">
+								<option value="">请选择省</option>
+								<foreach name="city" item="vo">
+									<option value="{$vo.area_id}">{$vo.area_name}</option>
+								</foreach>
+								</select>
+								<select id="city_shis" name="city_shis" class="dh5" onchange="city_quFuns(this);">
+									<option value="">请选择市</option>
+								</select>		
+								<select id="city_qus" name="city_qus" class="dh5">
+									<option value="">请选择区</option>
+								</select>
+								<input type="text" name="city_addres" id="city_addres" class="i_n text2" placeholder="请输入详细地址">
+							</div>
+					  </div>
+					  
+					<input type='hidden' id="user_name" name="user_name" value="{$user.user_name}">
+					<input type='hidden' id="tel_s" name="tel_s" value="{$user.tel}">
+					<input type='hidden' id="order_info_zj" name="order_info_zj">
+					<input type='hidden' id="order_info_price" name="order_info_price">
+					<input type='hidden' id="order_info_bxd" name="order_info_bxd">
+					<input type='hidden' id="order_info_c_car" name="order_info_c_car">
+					<input type='hidden' id="order_info_t_car" name="order_info_t_car">
+					<input type='hidden' id="order_info_s_car" name="order_info_s_car">
+					<input type='hidden' id="order_smsc_car" name="order_smsc_car">
+					<input type='hidden' id="order_info_add_price" name="order_info_add_price">
+					<input type='hidden' id="order_info_star" name="order_info_star">
+					<input type='hidden' id="order_info_end" name="order_info_end">
+					<input type='hidden' id="order_info_smscd" name="order_info_smscd">
+					<input type='hidden' id="order_info_margin" name="order_info_margin">
+					
+					<h2 class="dw88">车辆运输价格</h2>
+					<div class="dw90">
+					<div class="fh3">
+					<span>车辆估值:</span>
+						<input type="text" id="car_baojia" onkeyup="if(event.keyCode !=37 && event.keyCode != 39){if (!/^[\d]+$/ig.test(this.value)){this.value='';}}" placeholder="（：万元）" class="i_n text5">
+					</div>
+					<button class="btn btn-default5 ll" style="float:left;" onclick="querenFuns();" type="button">确认</button>
+					
+					<div class="fh2">
+						<span>运输费:</span>
+						<span id='ysf_s'></span>
+					</div>
+					</div>	
+					<div class="dw91">
+					<div class="fh2">
+						<span>保险费:</span>
+						<span id="bxf_s"></span>
+					</div>
+					<div class="fh2">
+						<span>共计:</span>
+						<span id="tatel"></span>
+					</div>
+					</div>
+					<div class="dw92">
+					<textarea name="order_info_remark" placeholder="请输入备注"></textarea>
+					</div>
+					<hr>
+					<div class="sad1">
+						<button style="margin-left:8px;" class="btn btn-default7" type="button" onclick="orderFuns();">确认</button>
+					</div>
+					</div>
+					</div> <!-- /widget -->
+					</div> <!-- /span11 -->
+				</div> <!-- /row -->
+				</form>
+		</div>
+		</div>
+		<script>
+		$("#vv1").click(function(){
+		$(".erer").hide();
+		});
+		$("#vv2").click(function(){
+		$(".erer").show();
+		});
+		//发送短信
+		function sendMobile(){
+			var car_pin = $('#car_pin').val(); //车辆品牌
+			var car_xing = $('#car_xing').val();//车型
+			var mobile = $("#mobile").val();//手机号
+			var city_shi = $("#city_shi").val()//出发市
+			var city_jie_shi = $("#city_jie_shi").val()//目的地市
+			var order_info_c_car = $('#order_info_c_car').val();//货运价格
+			var order_info_zj = $("#order_info_zj").val();//总价格
+			if(!$.check_Mobile(mobile)){
+				$.anewAlert("请输入正确的手机号!");
+				return false;
+			}
+			if(car_pin ==""){
+				$.anewAlert('请选择品牌');
+				return false;
+			}
+			if(car_xing ==""){
+				$.anewAlert('请选择车型');
+				return false;
+			}
+			if(city_shi ==""){
+				$.anewAlert('请选择出发城市');
+				return false;
+			}
+			if(city_jie_shi ==""){
+				$.anewAlert('请选择目的城市');
+				return false;
+			}
+			if(order_info_c_car == ''){
+				$.anewAlert('暂无运输费，短信不能发送');
+				return false;
+			}
+			var car = car_pin+'-'+car_xing;
+			if(window.confirm('确定发送短信？')){
+				$.post("__MODULE__/Worklwt/sendMobile",{car:car,mob:mobile,start:city_shi,end:city_jie_shi,price:order_info_zj},function(data){
+					
+				},'json');
+             }else{
+                return false;
+            }
+		}
+		//下单
+		function orderFuns(){
+			var mobile = $("#mobile").val();
+			var order_info_c_car = $('#order_info_c_car').val();
+			if(mobile == ''){
+				$.anewAlert('请输入手机号');
+				return false;
+			}
+			if(!$.check_Mobile(mobile)){
+				$.anewAlert("请输入正确的手机号!");
+				return false;
+			}
+			if(order_info_c_car == ''){
+				$.anewAlert('暂无运输费，不可下单');
+				return false;
+			}
+			$("#edit-profile").submit();
+		}
+		//确认
+		function querenFuns(){
+			var car_baojia = $("#car_baojia").val(); //车辆报价
+			var car_pin = $('#car_pin').val(); //车辆品牌
+			var car_xing = $('#car_xing').val();//车型
+			var car_pri = $('#car_xing').find("option:selected").attr("pri");
+			var carmark = $('#carmark').val();//车牌
+			
+			var city_sheng = $("#city_sheng").val()//出发省
+			var city_shi = $("#city_shi").val()//出发市
+			var city_qu = $("#city_qu").val()//出发区
+			var cit_str = city_sheng+','+city_shi+','+city_qu;
+			
+			var city_jie_sheng = $("#city_jie_sheng").val()//目的地省
+			var city_jie_shi = $("#city_jie_shi").val()//目的地市
+			var cit_jie_str = city_jie_sheng+','+city_jie_shi;
+			
+			var city_shengs = $("#city_shengs").val()//上门
+			var city_shis = $("#city_shis").val()//上门
+			var city_qus = $("#city_qus").val()//上门
+			var cit_strs = city_shengs+','+city_shis+','+city_qus;
+			
+			$("#order_info_star").val(cit_str);
+			$("#order_info_end").val(cit_jie_str);
+			$("#order_info_smscd").val(cit_strs);
+			var smsc = $("input[name='smsc']:checked").val();
+			var way = $("input[name='way']:checked").val();
+			if(car_pin ==""){
+				$.anewAlert('请选择品牌');
+				return false;
+			}
+			if(car_xing ==""){
+				$.anewAlert('请选择车型');
+				return false;
+			}
+			/* if(carmark ==""){
+				$.anewAlert('请输入车牌号');
+				return false;
+			} */
+			if(city_qu ==""){
+				$.anewAlert('请选择出发城市');
+				return false;
+			}
+			if(city_jie_shi ==""){
+				$.anewAlert('请选择目的城市');
+				return false;
+			}
+			if(way == undefined){
+				$.anewAlert('请选择接车方式');
+				return false;
+			}
+			if(smsc != undefined){
+				if(smsc == 'Y'){
+					var city_qus = $('#city_qus').val();
+					var city_addres = $('#city_addres').val();
+					if(city_qus ==''){
+						$.anewAlert('请选择区域地址');
+						return false;
+					}
+					if(city_addres ==''){
+						$.anewAlert('请输入详细地址');
+						return false;
+					}
+				}
+				/* if(car_baojia ==""){
+					$.anewAlert('请选择车辆报价');
+					return false;
+				} */
+				//alert(cit_str+'--'+cit_jie_str+"--"+cit_strs);
+				$.post("__MODULE__/Worklwt/getPrice",{way:way,car_baojia:car_baojia,car_xing:car_pri,city_shi:cit_str,city_jie_shi:cit_jie_str,smsc:smsc,city_qus:cit_strs},function(data){
+					$('#order_info_zj').val(data.totel);
+					$('#order_info_price').val(car_baojia*1000000);
+					$('#order_info_bxd').val(data.baopr);
+					$('#order_info_t_car').val(data.ti_price);
+					$('#order_info_s_car').val(data.song_price);
+					$('#order_smsc_car').val(data.sm_price);
+					$("#order_info_add_price").val(car_pri);
+					$('#order_info_margin').val(data.ml_price);
+					$("#tatel").html(data.totel/100);
+					$("#bxf_s").html(data.baopr/100);
+					if(data.san_price == null || data.san_price == ''){
+						$('#order_info_c_car').val('');
+						$("#ysf_s").html('暂无运输价');
+					}else{
+						$('#order_info_c_car').val(data.san_price);
+						$("#ysf_s").html(data.san_price/100);
+					}
+				},'json');
+			}else{
+				$.anewAlert('请选择送车方式');
+				return false;
+			}
+		}
+		//查询用户是否下单
+		function serchFuns(){
+			var mob = $("#mobile").val();
+			if(mob !=""){
+				if(!$.check_Mobile(mob)){
+					$.anewAlert("请输入正确的手机号!");
+					return false;
+				}
+				$.post('__MODULE__/Worklwt/getOrder',{val:mob},function(data){
+					var sum = data.num;
+					$('#kdhs').html(sum);
+					var obj = data.data;
+					var str = '';
+					$('#jvsd').html('');
+					for(var i=0;i<sum;i++){
+						str += '<tr class="tr2">';
+						str += '<td>-</td>';
+						str += '<td>'+obj[i]['user_tel']+'</td>';
+						str += '<td>'+obj[i]['admin_name']+'</td>';
+						str += '<td class="td_d2">'+obj[i]['order_info_brand']+'－'+obj[i]['order_info_type']+'<br>'+obj[i]['order_info_carmark']+'</td>';
+						str += '<td>'+obj[i]['start_city']+'<br>'+obj[i]['end_city']+'</td>';
+						str += '<td>'+obj[i]['order_info_zj']+'</td>';
+						str += '</tr>';
+					}
+					
+					$('#jvsd').html(str);
+				},'json');
+			}else{
+				$.anewAlert('请输入手机号');
+				return false;
+			}
+		}
+		function carpFuns(obj){
+			var id = $(obj).find("option:selected").attr("data");
+			if(id != ''){
+				$.post("__MODULE__/Worklwt/getCarXing",{id:id},function(data){
+					var sum = data.length;
+					var str = '<option data="" value="">请选择车型</option>';
+					$("#car_xing").html('');
+					for(var i=0;i<sum;i++){
+						str += '<option pri="'+data[i]['cxjj_price']+'" data="'+data[i]['cxjj_id']+'" value="'+data[i]['cxjj_brand']+'">'+data[i]['cxjj_brand']+'</option>';
+					}
+					$("#car_xing").append(str);
+				},'json');
+			}else{
+				var str = '<option data="" value="">请选择品牌</option>';
+				$("#car_xing").html(str);
+			}
+			
+		}
+		function cityFun(obj){
+			var id = $(obj).val();
+			if(id != ''){
+				$.post("__MODULE__/Worklwt/getCitys",{id:id},function(data){
+					var sum = data.length;
+					var str = '<option value="">请选择市</option>';
+					$("#city_shi").html('');
+					var strqu = '<option value="">请选择区</option>';
+					$("#city_qu").html(strqu);
+					for(var i=0;i<sum;i++){
+						str += '<option value="'+data[i]['area_id']+'">'+data[i]['area_name']+'</option>';
+					}
+					$("#city_shi").append(str);
+				},'json');
+			}else{
+				var str = '<option value="">请选择省</option>';
+				$("#city_shi").html(str);
+				var str = '<option value="">请选择市</option>';
+				$("#city_qu").html(str);
+			}
+		}
+		function city_quFun(obj){
+			var id = $(obj).val();
+			if(id != ''){
+				$.post("__MODULE__/Worklwt/getCitys",{id:id},function(data){
+					var sum = data.length;
+					var str = '<option value="">请选择区</option>';
+					$("#city_qu").html('');
+					for(var i=0;i<sum;i++){
+						str += '<option value="'+data[i]['area_id']+'">'+data[i]['area_name']+'</option>';
+					}
+					$("#city_qu").append(str);
+				},'json');
+			}else{
+				var str = '<option value="">请选择市</option>';
+				$("#city_qu").html(str);
+			}
+		}
+		function cityJieFun(obj){
+			var id = $(obj).val();
+			if(id != ''){
+				$.post("__MODULE__/Worklwt/getCitys",{id:id},function(data){
+					var sum = data.length;
+					var str = '<option value="">请选择市</option>';
+					$("#city_jie_shi").html('');
+					for(var i=0;i<sum;i++){
+						str += '<option value="'+data[i]['area_id']+'">'+data[i]['area_name']+'</option>';
+					}
+					$("#city_jie_shi").append(str);
+				},'json');
+			}else{
+				var str = '<option value="">请选择省</option>';
+				$("#city_jie_shi").html(str);
+			}
+		}
+		function cityFuns(obj){
+			var id = $(obj).val();
+			if(id != ''){
+				$.post("__MODULE__/Worklwt/getCitys",{id:id},function(data){
+					var sum = data.length;
+					var str = '<option value="">请选择市</option>';
+					$("#city_shis").html('');
+					var strqu = '<option value="">请选择区</option>';
+					$("#city_qus").html(strqu);
+					for(var i=0;i<sum;i++){
+						str += '<option value="'+data[i]['area_id']+'">'+data[i]['area_name']+'</option>';
+					}
+					$("#city_shis").append(str);
+				},'json');
+			}else{
+				var str = '<option value="">请选择省</option>';
+				$("#city_shis").html(str);
+				var str = '<option value="">请选择市</option>';
+				$("#city_qus").html(str);
+			}
+		}
+		function city_quFuns(obj){
+			var id = $(obj).val();
+			if(id != ''){
+				$.post("__MODULE__/Worklwt/getCitys",{id:id},function(data){
+					var sum = data.length;
+					var str = '<option value="">请选择区</option>';
+					$("#city_qus").html('');
+					for(var i=0;i<sum;i++){
+						str += '<option value="'+data[i]['area_id']+'">'+data[i]['area_name']+'</option>';
+					}
+					$("#city_qus").append(str);
+				},'json');
+			}else{
+				var str = '<option value="">请选择市</option>';
+				$("#city_qus").html(str);
+			}
+		}
+		</script>
+	</body>
+</html>

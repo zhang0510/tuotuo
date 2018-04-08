@@ -1,0 +1,144 @@
+<include file="Public:head" />
+<script src="__JS__/jquerytool_1.0v.js"></script>
+<script src="__PUBLIC__/laydate/laydate.js"></script>
+<body>
+<include file="Public:header" />
+<script language="javascript" src="__JS__/LodopFuncs.js"></script>
+<div id="main-pyf">
+	<include file="Public:left" />
+
+	<div id="content">
+		<!-- 		<div class="ico-pt span12">
+		<h4>店铺管理</h4>
+	</div>
+	-->
+	<div class="row">
+
+		<div class="tsan113">
+
+			<div class="widget">
+
+				<div class="tabbable">
+					<ul class="nav nav-tabs" id="tabnav">
+						<li class="active">
+							<a >留言列表</a>
+							
+						</li>
+					
+                    </ul>
+                <script>
+					$("#cctv").click(function(){
+						if($(".cctv1").css("display")=="none"){
+							$(".cctv1").show();
+						}else{
+							$(".cctv1").hide();
+						}
+					});
+					$(function(){
+						var order_status="{$order_status}";
+						if(order_status=='C'||order_status=='Y'||order_status=='M'||order_status=='N'||order_status=='B'||order_status=='G'||order_status=='D'){
+							$(".cctv1").show();
+						}
+					})
+				</script>
+
+					<div class="tab-content1">
+						<div class="tab-content">
+							<div class="tab-pane active">
+								<form id="edit-profile" class="form-horizontal" />
+								<fieldset>
+									<div class="l_uit">
+										<div class="control-group">
+
+											<div style="float:left;" class="controls clec_t">
+												<!-- <div class="dropdown">
+													<select class="height46" name="" id="pay_status">
+														<option value="0">请选择支付方式</option>
+														<option value="W">网上支付</option>
+														<option value="H">货到付款</option>
+													</select>
+												</div> -->
+												<input type="text" style="float:left; margin-left:10px" class="i_n text2" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" id="startime" placeholder="起始时间" value="" readonly="readonly">					<input type="text" style="float:left;margin-left:10px;" class="i_n text2" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" id="endtime" value="" placeholder="结束时间" readonly="readonly">
+												
+												<div class="v_pb">	
+													<input type="text" id="phone" value="{$phone}" name="phone" placeholder="请输入手机号"  class="i_n text2">
+													<button class="btn btn-default5" id="btn" type="button">搜索</button>
+												</div>
+
+											</div>
+											<!-- /controls -->
+
+										</div>
+										<script>
+												$(function(){
+													$('table tr.tr2:odd').css('background','#F0F0F0');
+												});
+												
+											</script>
+										<div class="l_table">
+											<table>
+												<tr class="tr1">
+													
+													<td>手机号</td>
+													<td>内容</td>
+													<td>时间</td>
+													
+												</tr>
+												<volist name="data.list" id="vo">
+													<tr class="tr2">
+													   <td>{$vo.phone}</td>
+													   <td>{$vo.content}</td>
+													   <td>{$vo.time}</td>
+														
+													</tr>
+												</volist>
+											</table>
+
+										</div>
+										<div class="l_fenye"><if condition="$data.page neq ''">{$data.page}</if></div>
+									</div>
+								</fieldset>
+							</form>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<!-- /widget -->
+
+	</div>
+	<!-- /span11 -->
+
+</div>
+<!-- /row -->
+<style>
+	.l_table table tr td a{
+		color: #000;
+	}
+</style>
+</div>
+</div>
+<script>
+//搜索
+$('#btn').click(function(event) {
+    var phone = $('#phone').val();
+    var startime = $('#startime').val();
+    var endtime = $('#endtime').val();
+   	if (startime == '') {
+   		startime = 0;
+   	}
+   	if (endtime == '') {
+   		endtime = 0;
+   	}
+    if (phone) {
+    	window.location.href="__MODULE__/Liu/index/star/"+startime+"/end/"+endtime+"/phone/"+phone;
+    }else{
+    	window.location.href="__MODULE__/Liu/index/star/"+startime+"/end/"+endtime;
+    }        
+});
+</script>
+</body>
+</html>

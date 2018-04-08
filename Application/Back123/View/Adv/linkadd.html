@@ -1,0 +1,177 @@
+<include file='public:head'/>
+<script src="__JS__/jquery.Huploadify.js"></script>
+<script src="__JS__/jquerytool_1.0v.js"></script>
+<body>
+<include file='public:header'/>
+<div id="main-pyf">
+	<include file='public:left'/>
+	<div id="content">
+		<!-- 		<div class="ico-pt span12">
+		<h4>店铺管理</h4>
+	</div>
+	-->
+	<div class="row">
+		<form action="__MODULE__/Worklwt/add_act" method="post" id='formMaster'>
+			<div class="tsan113">
+				<div class="widget">
+					<div class="tabbable">
+						<ul class="nav nav-tabs" id="tabnav">
+							<li class="">
+								<a href="__MODULE__/Worklwt/advList">广告列表</a>
+							</li>
+							<li class="active">
+								<a href="__MODULE__/Worklwt/link">友情链接列表</a>
+							</li>
+						</ul>
+						<div class="tab-content1">
+
+							<div class="dw6">
+								<div class="dw61">
+									<dl>
+										<input type="text" name="fl_name" id="title" class="i_n text2" placeholder="请输入网站标题" value="{$data.fl_name}"></dl>
+
+									<dl>
+										<input type="text" id="url" name="fl_link" class="i_n text2" placeholder="请输入指向链接http://" value="{$data.fl_link }" >
+									</dl>
+									<div class="dw62">
+											    <h2>上传缩略图片（灰色）</h2>
+									   <div class="dw62a">
+
+									     <div class="dw62c">
+									     <if condition="$data.fl_img eq ''">
+									    	 <img id="oneclick" src="__BACK__/images/de1.png">
+									     <else />
+									    	 <img id="oneclick" src="{$data.fl_img}">
+									     </if>
+
+										 </div>
+									   </div>
+									   <div class="dw62b">
+									   </div>
+									</div>
+
+													<div class="dw62" style="margin-top:20px;">
+													   <h2>上传缩略图片（彩色）</h2>
+									   <div class="dw62a">
+
+									     <div class="dw62c">
+									     <if condition="$data.fl_img1 eq ''">
+									    	 <img id="oneclick1" src="__BACK__/images/de1.png">
+									     <else />
+									    	 <img id="oneclick1" src="{$data.fl_img1}">
+									     </if>
+
+										 </div>
+									   </div>
+									   <div class="dw62b">
+									   </div>
+									</div>
+									<dl>
+
+
+										<if condition="$data.fl_status eq 'Y'">
+										是否启用：<input type="radio" value="Y" name="fl_status" checked>是
+										<input type="radio" value="N" name="fl_status">否
+										<else />
+										是否启用：<input type="radio" value="Y" name="fl_status" >是
+										<input type="radio" value="N" name="fl_status" checked>否
+										</if>
+										</dl>
+									<dl>
+										排序：<input type="text" name="fl_sort" style="width:30px;" value="{$data.fl_sort}"></dl>
+									<input type="hidden" id='adv_img_id' name='fl_id' value='{$data.fl_id}'>
+									<input type="hidden" id='fl_img' name='fl_img' value='{$data.fl_img}'>
+									<input type="hidden" id='fl_img1' name='fl_img1' value='{$data.fl_img1}'>
+								</div>
+							</div>
+
+							<hr>
+							<div class="sad1">
+								<button class="btn btn-default7" type="button" onclick="bttonFun();">确定</button>
+								<!-- <button class="btn btn-default8" type="button">取消</button>
+							-->
+						</div>
+					</div>
+				</div>
+				<!-- /widget -->
+			</div>
+			<!-- /span11 -->
+		</div>
+		<!-- /row -->
+	</form>
+</div>
+</div>
+<div id="upload" style="display:none;"></div>
+<script>
+  		function bttonFun(){
+	  		var us = $("#title").val();
+	  		var ps = $("#url").val();
+	  		if(us==''){
+	  			$.anewAlert('名称不能为空');
+	  			return false;
+	  		}
+	  		if(ps==''){
+	  			$.anewAlert('链接不能为空');
+	  			return false;
+	  		}
+	  		$('#formMaster').submit();
+	  	}
+  		var up = $('#upload').Huploadify({
+			auto:true,
+			fileTypeExts:'*.jpg;*.gif;*.png;*.jpeg',
+			multi:false,
+			fileSizeLimit:1024,
+			showUploadedPercent:false,
+			showUploadedSize:false,
+			removeTimeout:1000,
+			abs:1,
+			canshu:'LINKIMG',
+			uploader:'{:U("Base/upload")}',
+			onUploadStart:function(file){
+				console.log(file.name+'开始上传');
+			},
+			onInit:function(obj){
+				console.log('初始化');
+				console.log(obj);
+			},
+			onUploadComplete:function(file,data){
+				var datas = $.parseJSON(data);
+				if(datas.flag){
+
+					var hjk=$("#num9").val();
+
+					if(hjk==1)
+					{
+						$("#fl_img1").val(datas.fileurl);
+						$("#oneclick1").attr('src',datas.fileurl);
+
+					}else{
+
+						$("#fl_img").val(datas.fileurl);
+						$("#oneclick").attr('src',datas.fileurl);
+
+
+					}
+
+
+				}else{
+					$.anewAlert(datas.msg);
+				}
+			},
+		});
+	  	$(function(){
+			$("#oneclick").click(function(){
+				$("#file_upload_1-button").click();
+				 $("#num9").val(2);
+			});
+			$("#oneclick1").click(function(){
+				$("#file_upload_1-button").click();
+			 $("#num9").val(1);
+
+			});
+		});
+  	</script>
+  	<input id="num9" type="hidden" >
+  	<include file='public:footer'/>
+</body>
+</html>

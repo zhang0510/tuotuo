@@ -1,0 +1,17 @@
+<div id="sidebar">
+			<ul>
+				<volist name="leftprower" id="vo">
+				<li><a href="__MODULE__/{$vo.name}"  class="flag" type="{$vo.id}"><span>{$vo.title}</span><b></b></a></li>
+				</volist>
+			</ul>
+		
+		</div>
+<script type="text/javascript">
+		var id = "{$id}";
+		$('#sidebar ul li a').each(function(index, el) {
+			console.log($(this).attr('type'));
+			if ($(this).attr('type') == id) {
+				$(this).parent().addClass('active');
+			}
+		});
+</script>

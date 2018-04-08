@@ -1,0 +1,466 @@
+<include file="Public:head" />
+<body>
+<include file="Public:header" />
+<div id="main-pyf">
+	<include file="Public:left" />
+
+	<div id="content">
+		<div class="row">
+
+			<div class="tsan113">
+
+				<div class="widget">
+
+					<div class="tabbable">
+						<ul class="nav nav-tabs" id="tabnav">
+						<li id="area">
+							<a href="__MODULE__/Product/area">区域管理</a>
+						</li>
+						<li id="bulk">
+							<a href="__MODULE__/Product/bulk/provincea/f/city/f">集散地管理</a>
+						</li>
+						<li id="star">
+							<a href="__MODULE__/Product/star/provincea/f/city/f/county/f">出发地管理</a>
+						</li>
+						<li id="end">
+							<a href="__MODULE__/Product/end/provincea/f/city/f">送车地管理</a>
+						</li>
+						<li id="visitend">
+							<a href="__MODULE__/Product/visitend/provincea/f/city/f/county/f">上门送车管理</a>
+						</li>
+						<li id="product_line">
+							<a href="__MODULE__/Product/product_line/provincea/f/city/f/county/f">直发管理</a>
+						</li>
+						<li id="maoli">
+							<a href="__MODULE__/Product/maoli/provincea/f/provinceb/f">毛利管理</a>
+						</li>
+						<li id="arctic" class="active">
+							<a href="__MODULE__/Product/arctic/brand/f/type/f">车型加价</a>
+						</li>
+					</ul>
+
+						<div class="tab-content1">
+							<div class="tab-content">
+								<div class="tab-pane active">
+									<form id="edit-profile" class="form-horizontal" />
+									<fieldset>
+										<div class="l_uit">
+											<div class="control-group">
+<script>
+                                                	$(document).ready(function(){
+                                                		$("#tabnav").find('li[id="{$sec}"]').addClass('active').siblings().removeClass();
+                                                		$("#provincea").find('option[value="{$pval.pid}"]').attr('selected',true);
+                                                		if('{$cval.cid}'!=''){
+                                                			$.post('__MODULE__/Product/area_act', {provinceid:'{$pval.pid}'}, function(data) {
+                                                	            var _html = "";
+                                                	            for (var i = 0; i < data.length; i++) {
+                                                	            	if('{$cval.cid}'==data[i]['area_id']){
+                                                	            		_html += "<option value="+data[i]['area_id']+" selected='selected' class='delc'>"+data[i]['area_name']+"</option>"
+                                                	            	}else{
+                                                	            		_html += "<option value="+data[i]['area_id']+" class='delc'>"+data[i]['area_name']+"</option>"
+                                                	            	}
+                                                	                
+                                                	            }
+                                                	            $('#city').append(_html);
+                                                	        },'json');
+                                                		}
+                                                		if('{$tval.cid}'!=''){
+                                                			$.post('__MODULE__/Product/area_act', {provinceid:'{$cval.cid}'}, function(data) {
+                                                	            var _html = "";
+                                                	            for (var i = 0; i < data.length; i++) {
+                                                	            	if('{$tval.cid}'==data[i]['area_id']){
+                                                	            		_html += "<option value="+data[i]['area_id']+" selected='selected' class='delc'>"+data[i]['area_name']+"</option>"
+                                                	            	}else{
+                                                	            		_html += "<option value="+data[i]['area_id']+" class='delc'>"+data[i]['area_name']+"</option>"
+                                                	            	}
+                                                	                
+                                                	            }
+                                                	            $('#county').append(_html);
+                                                	        },'json');
+                                                		}
+                                                		/* if('{$coval.cid}'!=''){
+                                                			$.post('__MODULE__/Product/area_act', {provinceid:'{$cval.cid}'}, function(data) {
+                                                	            var _html = "";
+                                                	            for (var i = 0; i < data.length; i++) {
+                                                	            	if('{$coval.cid}'==data[i]['area_id']){
+                                                	            		_html += "<option value="+data[i]['area_id']+" selected='selected' class='delb'>"+data[i]['area_name']+"</option>"
+                                                	            	}
+                                                	                _html += "<option value="+data[i]['area_id']+">"+data[i]['area_name']+"</option>"
+                                                	            }
+                                                	            $('#county').append(_html);
+                                                	        },'json');
+                                                		}*/
+                                                	}) 
+                                                	//获取市
+    
+                                                </script>
+
+
+
+												<div style="float:left;" class="controls clec_t">
+													<div class="dropdown">
+														<select class="height46" id="provincea" name="">
+															<option value="f">请选择省份</option>
+														
+														 <!-- <empty name="pval.pid">
+															<option selected="selected" value="0">请选择省份</option>
+															<else />
+															<option selected="selected" value="{$pval.pid}">{$pval.area_name}</option>
+														</empty>  -->
+														<volist name="provincea" id="vv">
+															<option value="{$vv.area_id}">{$vv.area_name}</option>
+														</volist>
+													</select>
+													<select class="height46" name="" id="city">
+														<option value="f">请选择市</option>
+													
+													 <!-- <empty name="cval.cid">
+														<option selected="selected" value="0">请选择市</option>
+														<else />
+														<option selected="selected" value="{$cval.cid}">{$cval.area_name}</option>
+													</empty> --> 
+												</select>
+												<select class="height46" name="" id="county">
+														<option value="f">请选择区</option>
+													 <!-- <empty name="cval.cid">
+														<option selected="selected" value="0">请选择市</option>
+														<else />
+														<option selected="selected" value="{$cval.cid}">{$cval.area_name}</option>
+													</empty> --> 
+												</select>
+											</div>
+
+											<div class="v_pb">
+												<button id="btn" class="btn btn-default5" type="button">搜索</button>
+											</div>
+
+										</div>
+										<!-- /controls -->
+										<button data-toggle="modal" data-target="#myModa2" class="red btn btn-default5 fr" id="add" type="button">添加</button>
+
+									</div>
+									<script>
+											$(function(){
+												$('table tr.tr2:odd').css('background','#F0F0F0');
+											});
+											
+										</script>
+									<div class="l_table">
+										<table>
+											<tr class="tr1 height23 bgcolor1">
+												<td colspan='3'>提车地</td>
+												<td colspan='2'>集散地A</td>
+												<td colspan='2'>提车费</td>
+												<td rowspan='2'>操作</td>
+											</tr>
+											<tr class="tr1 height23 bgcolor2">
+												<td>省份</td>
+												<td>市</td>
+												<td>区</td>
+												<td>省份</td>
+												<td>市</td>
+												<td>小板提车</td>
+												<td>司机提车</td>
+											</tr>
+											<volist name="list" id="vo" key="k">
+												<tr class="tr2">
+													<td class="td3">{$vo.p_s_name}</td>
+													<td>{$vo.c_s_name}</td>
+													<td>{$vo.co_s_name}</td>
+													<td class="td3">{$vo.p_e_name}</td>
+													<td>{$vo.c_e_name}</td>
+													<td>{$vo.ti_driver_price}</td>
+													<td>{$vo.ti_platelets_price}</td>
+													<td>
+														<a class="see4" data-code="{$vo.ti_code}">删除</a>
+														<a data-toggle="modal" data-target="#myModa2" 
+															 code="{$vo.ti_code}"
+															 star="{$vo.ti_star}"
+															 end="{$vo.ti_end}"
+															 tp-price="{$vo.ti_platelets_price}"
+															 td-price="{$vo.ti_driver_price}"
+															 psname="{$vo.p_s_name}"
+															 csname="{$vo.c_s_name}"
+															 cosname="{$vo.co_s_name}"
+															 pename="{$vo.p_e_name}"
+															 cename="{$vo.c_e_name}"
+															  class="see1">修改</a>
+													</td>
+												</tr>
+											</volist>
+										</table>
+
+									</div>
+									<div class="l_fenye">
+										<div class="sad">
+											<button type="button" data-toggle="modal" data-target="#hfvei" class="btn btn-default5">导入</button>
+											<a href="__MODULE__/Product/daochu_star"><button type="button" class="btn btn-default6">导出</button></a>
+										</div>
+										{$page}
+									</div>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	<!-- /widget -->
+
+</div>
+<!-- /span11 -->
+
+</div>
+<!-- /row -->
+
+</div>
+</div>
+<!--tanceng-->
+<div id="myModa2" style="display:none; z-index:9999" class="tan1">
+<div class="tan11">
+<h2>出发地管理</h2>
+<div class="dw2">
+<dl>
+	<dt>
+		<select class="dh5" name="sprovince" id="provinceb">
+			<option value="">请选择省</option>
+			<volist name="provincea" id="vv">
+				<option value="{$vv.area_id}">{$vv.area_name}</option>
+			</volist>
+		</select>
+		<select class="dh5" name="scity" id="citya">
+			<option value="">请选择市</option>
+		</select>
+		<select class="dh6" name="scounty" id="countya">
+			<option value="">请选择区</option>
+		</select>
+
+	</dt>
+</dl>
+<dl>
+	<img src="__BACK__/images/dw1.png"></dl>
+<dl>
+	<dt>
+		<select class="dh4" name="eprovince" id="provincec">
+			<option value="">请选择省</option>
+			<volist name="provincea" id="vv">
+				<option value="{$vv.area_id}">{$vv.area_name}</option>
+			</volist>
+		</select>
+		<select class="dh4" name="ecity" id="cityb">
+			<option value="">请选择市</option>
+		</select>
+	</dt>
+</dl>
+<dl>
+	<input type="hidden" name="ti_code" id="code">
+	<input type="text" name="ti_driver_price" id="ti_driver_price" placeholder="请输入小板提车价格" class="put2"></dl>
+<dl>
+	<input type="text" name="ti_platelets_price" id="ti_platelets_price" placeholder="请输入司机提车价格" class="put2"></dl>
+
+</div>
+
+<p>
+<input type="submit" id="sub" class="put1" value="确认"></p>
+</div>
+
+</div>
+<div id="hfvei" style="display:none; z-index:9999" class="tan1">
+<div class="tan11">
+<h2>导入数据</h2>
+<form action="__MODULE__/Product/daoru_star" method="post" enctype="multipart/form-data">
+<div class="dw4">
+	<input type="file" name="csvFile">
+</div>
+<span>注：导入操作会删除原有数据</span>
+<p>
+    <input type="submit" class="put1" value="确认"></p>
+</form></div>
+</div>
+<script>
+	//添加
+	$('#add').click(function(event) {
+		$('#provinceb option').each(function(index, el) {
+            if (0 == $(this).val()) {
+                $(this).attr('selected',true);
+            }
+        });
+        $('#provincec option').each(function(index, el) {
+            if (0 == $(this).val()) {
+                $(this).attr('selected',true);
+            }
+        });
+        var city = "<option value='0'>请选择市</option>";
+        $('#citya').html(city);
+        $('#cityb').html(city);
+    	var county = "<option value='0'>请选择区</option>";
+    	$('#countya').html(county);
+        $('#ti_platelets_price').val('');
+        $('#ti_driver_price').val('');
+        $('#code').val('');
+    });
+	//提交
+	$('#sub').click(function(event) {
+		var sprovince = $('#provinceb').val();
+		var scity = $('#citya').val();
+		var scounty = $('#countya').val();
+		var eprovince = $('#provincec').val();
+		var ecity = $('#cityb').val();
+		var ti_driver_price = $('#ti_driver_price').val();
+		var ti_platelets_price = $('#ti_platelets_price').val();
+		var ti_code = $('#code').val();
+		if (sprovince == '') {
+			$.anewAlert('起始省不能为空！');
+            return false;
+		} else if (scity == "") {
+            $.anewAlert('起始市不能为空！');
+            return false;
+        } else if (scounty == "") {
+            $.anewAlert('起始区不能为空！');
+            return false;
+        } else if (eprovince == "") {
+            $.anewAlert('结束省不能为空！');
+            return false;
+        } else if (ecity == "") {
+            $.anewAlert('结束市不能为空！');
+            return false;
+        } else if (ti_driver_price == "") {
+            $.anewAlert('小板提车价格不能为空！');
+            return false;
+        } else if (ti_platelets_price == "") {
+            $.anewAlert('司机提车价格不能为空！');
+            return false;
+        } else if ((!$.isPositiveNum(ti_platelets_price)) || (!$.isPositiveNum(ti_driver_price))) {
+            $.anewAlert('价格填写错误');
+            return false;
+        }
+		$.post('__MODULE__/Product/staradd', {sprovince:sprovince,scity:scity,scounty:scounty,eprovince:eprovince,ecity:ecity,ti_driver_price:ti_driver_price,ti_platelets_price:ti_platelets_price,ti_code:ti_code}, function(data) {
+			if(data['status'] == 'Y'){
+                $.anewAlert(data['info']);
+                window.location.reload();
+            } else {
+                $.anewAlert(data['info']);
+            }
+		});
+	});
+	//获取市
+    $('#provincea').change(function(event) {
+        // alert($(this).val());
+        var provinceid = $(this).val();
+        $(".delc").remove();
+        $.post('__MODULE__/Product/area_act', {provinceid: provinceid}, function(data) {
+            var _html = "";
+            for (var i = 0; i < data.length; i++) {
+                _html += "<option value='"+data[i]['area_id']+"'class='delc'>"+data[i]['area_name']+"</option>"
+            }
+            $('#city').append(_html);
+        },'json');
+    });
+	//获取添加起始市
+    $('#provinceb').change(function(event) {
+        // alert($(this).val());
+        var provinceid = $(this).val();
+        $.post('__MODULE__/Product/area_act', {provinceid: provinceid}, function(data) {
+            var _html = "<option>请选择市</option>";
+            for (var i = 0; i < data.length; i++) {
+                _html += "<option value="+data[i]['area_id']+">"+data[i]['area_name']+"</option>"
+            }
+            $('#citya').html(_html);
+        },'json');
+    });
+    //获取添加起始区县
+    $('#citya').change(function(event) {
+        var city = $(this).val();
+       // alert(city);
+        $.post('__MODULE__/Product/area_act', {provinceid: city}, function(data) {
+            var _html = "<option>请选择区</option>";
+            for (var i = 0; i < data.length; i++) {
+                _html += "<option value="+data[i]['area_id']+">"+data[i]['area_name']+"</option>"
+            }
+            $('#countya').html(_html);
+        },'json');
+    });
+	//获取添加结束市
+    $('#provincec').change(function(event) {
+        // alert($(this).val());
+        var provinceid = $(this).val();
+        $.post('__MODULE__/Product/area_act', {provinceid: provinceid}, function(data) {
+            var _html = "<option>请选择市</option>";
+            for (var i = 0; i < data.length; i++) {
+                _html += "<option value="+data[i]['area_id']+">"+data[i]['area_name']+"</option>"
+            }
+            $('#cityb').html(_html);
+        },'json');
+    });
+    //获取区县
+    $('#city').change(function(event) {
+        var city = $(this).val();
+        $.post('__MODULE__/Product/area_act', {provinceid: city}, function(data) {
+            var _html = "<option>请选择区</option>";
+            for (var i = 0; i < data.length; i++) {
+                _html += "<option value="+data[i]['area_id']+">"+data[i]['area_name']+"</option>"
+            }
+            $('#county').html(_html);
+        },'json');
+    });
+    //搜索
+    $('#btn').click(function(event) {
+        var provincea = $('#provincea').val();
+        var city = $('#city').val();
+        var county = $("#county").val();
+        window.location.href="__MODULE__/Product/star/provincea/"+provincea+"/city/"+city+"/county/"+county;
+    });
+    //删除    
+    $('.see4').click(function(event) {
+        var code = $(this).attr('data-code');
+        if (confirm('确定删除此信息吗？')) {
+            $.post('__MODULE__/Product/stardel', {code: code}, function(data) {
+                alert(data);
+                window.location.reload();
+            },'json');
+        }
+    })
+    //修改
+    $('.see1').click(function(event) {
+    	var code = $(this).attr('code');
+    	var star = $(this).attr('star');
+    	var end = $(this).attr('end');
+    	var ti_platelets_price = $(this).attr('tp-price');
+    	var ti_driver_price = $(this).attr('td-price');
+    	var p_s_name = $(this).attr('psname');
+    	var c_s_name = $(this).attr('csname');
+    	var co_s_name = $(this).attr('cosname');
+    	var p_e_name = $(this).attr('pename');
+    	var c_e_name = $(this).attr('cename');
+    	var sp = star.split(',')[0];
+    	var sc = star.split(',')[1];
+    	var oc = star.split(',')[2];
+    	var ep = end.split(',')[0];
+    	var ec = end.split(',')[1];
+    	$('#provinceb option').each(function(index, el) {    		
+    		if (sp == $(this).val()) {
+    			$(this).attr('selected',true);
+    		}
+    	});
+        var _htmlt = "<option selected value='"+sc+"'>"+c_s_name+"</option>"
+        $('#citya').html(_htmlt);
+        var _htmlc = "<option selected value='"+oc+"'>"+co_s_name+"</option>"
+        $('#countya').html(_htmlc);
+        $('#provincec option').each(function(index, el) {    		
+    		if (ep == $(this).val()) {
+    			$(this).attr('selected',true);
+    		}
+    	});
+        var _htmlb = "<option selected value='"+ec+"'>"+c_e_name+"</option>"
+        $('#cityb').html(_htmlb);
+        $('#ti_platelets_price').val(ti_platelets_price);
+        $('#ti_driver_price').val(ti_driver_price);
+        $('#code').val(code);
+    });
+</script>
+</body>
+</html>

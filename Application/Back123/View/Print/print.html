@@ -1,0 +1,48 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WEB打印控件LODOP的样例四:打印设计和定位套打票据</title>
+
+<script language="javascript" src="__JS__/LodopFuncs.js"></script>
+</head>
+<body>
+<br>
+<a href="JavaScript:Preview1()">打印预览</a>
+<br>
+<a href="JavaScript:Setup2()">打印维护</a>
+<br>
+<script language="javascript" type="text/javascript">
+    var LODOP; //声明为全局变量   
+    //打印预览
+	function Preview1() {
+		CreateFullBill();
+	  	LODOP.PREVIEW();		
+	};
+	//打印维护
+	function Setup2() {		
+		CreateFullBill();
+		LODOP.PRINT_SETUP();		
+	};
+
+//财务支付凭证
+function CreateFullBill() {
+	LODOP.PRINT_INITA(10,10,831,1177,"{$list['print_Title']}");
+	LODOP.ADD_PRINT_SETUP_BKIMG("C:\\Users\\Administrator\\Desktop\\打印模板\\9-4.jpg");
+	LODOP.SET_SHOW_MODE("BKIMG_LEFT",0);
+	LODOP.SET_SHOW_MODE("BKIMG_TOP",0);
+	LODOP.ADD_PRINT_TEXT(129,172,210,22,"{$list['yd_name']}");
+	LODOP.ADD_PRINT_TEXT(166,172,209,22,"{$list['star']}-{$list['end']}");
+	LODOP.ADD_PRINT_TEXT(203,173,84,22,"{$list['total']}元");
+	LODOP.ADD_PRINT_TEXT(96,385,36,20,"{$list['order_time'][0]}");
+	LODOP.ADD_PRINT_TEXT(95,445,22,20,"{$list['order_time'][1]}");
+	LODOP.ADD_PRINT_TEXT(95,482,21,20,"{$list['order_time'][2]}");
+	LODOP.ADD_PRINT_TEXT(203,645,34,20,"{$list['time'][0]}");
+	LODOP.ADD_PRINT_TEXT(203,725,24,20,"{$list['time'][1]}");
+	LODOP.ADD_PRINT_TEXT(203,688,24,20,"{$list['time'][2]}");
+	LODOP.ADD_PRINT_TEXT(62,561,134,22,"{$list['yd_code']}");
+};
+
+</script> 
+</body>
+</html>

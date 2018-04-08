@@ -1,0 +1,28 @@
+<include file='public:header'/>
+<include file='public:top'/>
+<include file='public:menu'/>
+<!--content-->
+  <div class="banner0">
+<img src="__FRONT__/images/banner7.jpg">
+  </div>
+<div class="new_main">
+<div class="new_body container">
+  <div class="tnew11">
+
+  </div>
+  <div class="tnew2">
+  <foreach name="list" item="vo" >
+	   <div class="nm1">
+		<a href="__MODULE__/GroupBuy/groupOne/num/{$vo.group_star}/code/{$vo.group_code}">
+		    <div class="nm2"><img src="{$vo.group_url}"></div>
+		    <div class="nm3">
+	    		<p>{$vo.group_star}辆 —— 优惠 : <span>￥{$vo['group_scale']/100}元</span></p>
+		 	</div>
+		 </a>
+	    </div>
+  	</foreach>
+ </div>
+</div>
+ </div>
+<!--content-->
+<include file='public:foot'/>

@@ -1,0 +1,108 @@
+<include file='public:header'/>
+<include file='public:top'/>
+<include file='public:menu'/>
+<!--content-->
+<div class="order_body1">
+<div class="order_main container">
+
+  <div class="order_detail">
+    <div class="order_d2">
+	   	  <div class="du3c">
+	   <h2>运单查询</h2>
+
+	  </div>
+	<form  method="post" action="__MODULE__/Ordersel/waybill">
+		<div class="du3d">
+		<if condition="$status eq 2">
+			<input type="text" placeholder="请在此输入订单号" class="cx1" name="keyword" onkeyup="sel(this);" id="keyword" value="{$keyword}">
+		 <else/>
+			<input type="text" placeholder="请在此输入订单号" class="cx1" name="keyword" onkeyup="sel(this);" id="keyword">
+		 </if>
+		<button type="submit"></button>
+			<div id="searchBoxs" ></div>
+		</div>
+	</form>
+	<if condition="$status eq 2">
+   	  <div class="du3t">
+	<if condition="$wayList[0]['time'] neq ''">
+	   <h2>订单跟踪</h2>
+	  </div>
+	<else/>
+		<h2>您好，暂时还没有物流信息哦</h2>
+	   </div>
+	 </if>
+	  	 <div class="du32">
+
+		 <div class="llki">
+		  <div class="llki0"></div>
+		<foreach name="wayList" item="vo" key="k">
+			 <dl>
+				 <dd>
+					<p>{$vo.time}   　　　 {$vo.content}</p>
+				 </dd>
+			</dl>
+		</foreach>
+		   <!--<dl><dd>
+			 <p>2016-07-18       周一    21:35:39     商家正通知快递公司揽件</p>
+			 <p>2016-07-18       周一    21:35:39     商家正通知快递公司揽件</p>
+			 </dd>
+		  </dl>
+		   <dl><dd>
+			 <p>2016-07-18       周一    21:35:39     商家正通知快递公司揽件</p>
+			 <p>2016-07-18       周一    21:35:39     商家正通知快递公司揽件</p>
+			 <p>2016-07-18       周一    21:35:39     商家正通知快递公司揽件</p>
+			 <p>2016-07-18       周一    21:35:39     商家正通知快递公司揽件</p>
+			 </dd>
+		  </dl>
+		   <dl><dd>
+			 <p>2016-07-18       周一    21:35:39     商家正通知快递公司揽件</p>
+			 <p>2016-07-18       周一    21:35:39     商家正通知快递公司揽件</p>
+			 </dd>
+		  </dl>
+		   <dl><dd class="last">
+			 <p>2016-07-18       周一    21:35:39     商家正通知快递公司揽件</p>
+
+			 </dd>
+		  </dl>-->
+	  </div>
+	  </div>
+	 </if>
+
+  </div>
+
+  </div>
+
+</div>
+ </div>
+     <script>
+
+	 function sel(obj){
+	 var inputText= $(obj).val();
+		 $.post("__MODULE__/Ordersel/selList",{keyword:inputText},function(data){
+		 var size = data.length;
+							//alert(size);
+								if(size > 0){
+									$("#searchBoxs").html("");
+									var list="<ul>";
+									for(i=0;i<size;i++){
+										list+="<li class='see' >"+data[i]['order_code']+"</li>";
+									}
+									list+="</ul>";
+									//alert(list);
+									$("#searchBoxs").append(list);
+									//alert(123);
+							$(".see").click(function(){
+								$("#keyword").val($(this).text());//点击某个li就会获取当前的值
+								$("#searchBoxs").hide();
+							})
+									return false;
+								}else{
+									$("#searchBoxs").html("");
+								}
+		 },'json');
+	 }
+
+    </script>
+
+<!--content-->
+<include file='public:foot'/>

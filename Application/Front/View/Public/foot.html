@@ -1,0 +1,264 @@
+<!--footer-->
+<div class="footer-box">
+	<div class="footer-box1">
+		<div class="container">
+			<div class="dnn0">
+				<div class="col-sm-6 col-md-2 jkl1">
+					<div class="dnn1">
+						<h2><a href="javascript:;">妥妥运车</a></h2>
+						<dl>
+							<foreach name="tuoList" item="vo" key="k">
+								<if condition="$vo.title eq '我要运车'">
+									<dd><span><img src="__FRONT__/images/dddd.png">&nbsp;&nbsp;</span><a href="__MODULE__/Order/normal">{$vo.title}</a></dd>
+									<else />
+									<dd><span><img src="__FRONT__/images/dddd.png">&nbsp;&nbsp;</span><a href="__MODULE__/Footer/detail/code/{$vo.article_code}">{$vo.title}</a></dd>
+								</if>
+							</foreach>
+							<!--<dd><a href="">企业运车</a></dd>
+                            <dd><a href="">时效查询</a></dd>
+                            <dd><a href="">服务网点</a></dd>-->
+
+						</dl>
+					</div>
+				</div>
+				<!-- <div class="col-sm-6 col-md-2 jkl1">
+                         <div class="dnn1">
+                        <h2><a href="javascript:;">服务产品</a></h2>
+                        <dl>
+                    <foreach name="serviceList" item="vo" key="k">
+                         <dd><a href="__MODULE__/Footer/detail/code/{$vo.article_code}">{$vo.title}</a></dd>
+                    </foreach>
+
+                        </dl>
+                        </div>
+                </div>-->
+				<div class="col-sm-6 col-md-2 jkl1">
+					<div class="dnn1">
+						<h2><a href="javascript:;">帮助中心</a></h2>
+						<dl>
+							<foreach name="helpList" item="vo" key="k">
+								<dd><span><img src="__FRONT__/images/dddd.png">&nbsp;&nbsp;</span><a href="__MODULE__/Footer/detail/code/{$vo.article_code}">{$vo.title}</a></dd>
+							</foreach>
+						</dl>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-md-2 jkl1">
+					<div class="dnn1">
+						<h2><a href="javascript:;">支付方式</a></h2>
+						<dl>
+							<foreach name="payList" item="vo" key="k">
+								<dd><span><img src="__FRONT__/images/dddd.png">&nbsp;&nbsp;</span><a href="__MODULE__/Footer/detail/code/{$vo.article_code}">{$vo.title}</a></dd>
+							</foreach>
+						</dl>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-2 jkl1 jkl1b">
+					<div class="dnn1">
+						<h2><a href="javascript:;">关于妥妥</a></h2>
+						<dl>
+							<dd>妥妥运车，运车妥妥，微笑服务，专注服务。</dd>
+							<dd><span><img src="__FRONT__/images/jtphoto.png">&nbsp;&nbsp;</span>机场东路翼之城4号楼</dd>
+							<dd><span><img src="__FRONT__/images/xfphoto.png">&nbsp;&nbsp;</span>postmaster@tuotuoyunche.com</dd>
+							<dd><span><img src="__FRONT__/images/tell.png">&nbsp;&nbsp;</span>400-877-1107</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-2 jkl1 jkl1c">
+					<img src="__FRONT__/images/shx.png">
+				</div>
+				<div class="col-sm-6 col-md-2 jkl1 jkl1a">
+
+					<div class="dnn1  ffdsf">
+						<span class="pc">关注我们<br><br></span>
+						<h2 class="phone">关注我们</h2>
+						<div class="hoof2">
+							<div class="bdsharebuttonbox">
+								<img style="width:158px;height:158px;" src="/Public/Front/images/wskk1.jpg">
+								<div class="hoof2">
+									<div class="bdsharebuttonbox"><a title="分享到新浪微博" href="#" class="bds_tsina te11" data-cmd="tsina"></a>
+										<a title="分享到QQ好友" href="#" class="bds_sqq te12" data-cmd="sqq"></a>
+										<a title="分享到微信" href="#" class="bds_weixin te13" data-cmd="weixin"></a>
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="fooh1">
+			<div class="fooh2 container">
+				<div class="fooh21">
+					<p><span>©2016 安达承运物流 京ICP备16022345号-1</span></p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+</div>
+<div class="phone xin1">
+	<ul>
+		<li style="width:50%;"><a href="tel:4008771107"><h2>电话咨询</h2></a></li>
+		<!--<li><a target="_blank" href="http://p.qiao.baidu.com/cps/chat?siteId=10022073&userId=20439003"><h2>在线咨询</h2></a></li>0-->
+		<li class="xin4" style="width:50%;"><h2>在线留言</h2></li>
+	</ul>
+</div>
+<div class="phone xin2">
+	<div class="xin3">
+		<div class="xin6">
+			<a><img src="/Public/Front/images/xin6.png"/></a>
+		</div>
+
+		<h3>在线留言</h3>
+		<dl>
+			<h2>您的电话：</h2>
+			<input type="text" id="phone" name="" value="" placeholder="电话">
+		</dl>
+		<dl>
+			<h2>您的需求：</h2>
+			<textarea id="cont" name="" placeholder="需求信息"></textarea>
+		</dl>
+
+		<button type="submit" id="zixun">确定</button>
+
+	</div>
+</div>
+<!-- <div class="xin5">
+	<h2>感谢您的信任，请保持工作日电话畅通。</h2>
+</div> -->
+<!-- 留言框 -->
+<script>
+	$(".xin4").click(function(){
+		$(".xin2").show();
+	});
+	/* $(".xin3 button").click(function(){
+	 layer.msg('感谢您的信任，请保持工作日电话畅通。');
+	 }); */
+	$(".xin6").click(function(){
+		$(".xin2").hide();
+	});
+	$("#zixun").click(function(){
+		var phone=$("#phone").val();
+		var content=$("#cont").val();
+		if(phone == ''){
+			layer.msg('手机号不能为空！');
+			return false;
+		}
+		if(content == ''){
+			layer.msg('内容不能为空！');
+			return false;
+		}
+		var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|17[6789]|18[0-9]|14[57])[0-9]{8}$/;
+		var r = phone.match(reg);
+		if(r==null){
+			layer.msg('手机号格式不对！');
+			return false;
+		}
+		$.post("__MODULE__/Liu/add",{phone:phone,content:content},function(data){
+			if(data.status == 'Y'){
+				layer.msg('感谢您的信任，请保持工作日电话畅通。');
+				$(".xin2").hide();
+			}else{
+				layer.msg('咨询失败，我们正在处理！');
+			}
+		})
+
+	})
+</script>
+<script>
+	$(".qqr01 ul li").click(function(){
+		$(this).addClass("on").siblings().removeClass('on');
+		var tt=$(this).index();
+		$(".part13  .part3b").eq(tt).show().siblings().hide();
+
+
+	});
+
+
+
+
+	$(".inko").click(function(){
+		$(this).siblings(".selected").show();
+		//$(this).siblings(".selected0").show();
+
+	});
+	$(".xiandan").click(function(){
+		$(".korder0").animate({width:"100%"});
+
+	});
+	$(".close2").click(function(){
+		$(".korder0").animate({width:"0%"});
+
+	});
+
+
+
+
+	$(".selected li").click(function(){
+		$(this).parent().parent().hide();
+		var oop= $(this).html();
+		$(this).parent().parent().siblings('.inko').val(oop);
+
+	});
+
+
+	$(".mess1 p").click(function(){
+		$(this).parent().parent().hide();
+
+	});
+	$('.xiandan').hide();
+	$(function(){
+		$(window).scroll(function() {
+			if($(window).scrollTop() >= 400){
+				$('.xiandan').fadeIn(300);
+			}else{
+				$('.xiandan').fadeOut(300);
+			}
+		});
+
+	});
+
+	function ceshi3(obj){
+		$(obj).siblings(".selected0").show();
+	}
+
+
+
+
+
+</script>
+
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+<script>
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "https://hm.baidu.com/hm.js?fadb8c3f2b777cb42752d48990106a58";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hm, s);
+	})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<!--footer-->
+
+</body></html>

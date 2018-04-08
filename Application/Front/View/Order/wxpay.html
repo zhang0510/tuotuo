@@ -1,0 +1,40 @@
+<include file='public:header'/>
+<include file='public:top'/>
+<include file='public:menu'/>
+<script>
+	$(document).ready(function () {
+		setInterval("ajaxstatus()", 3000);
+
+	});
+	function ajaxstatus(){
+		var code = '{$code}';
+		//var wxpay = '{$wxpay}';
+		$.post('__MODULE__/Payment/checkStatus',{'code':code},function(data){
+			if(data['pay_status']=='Y'&&data['wxpay']['sign']=='S'){
+				//支付成功
+				window.location="__MODULE__/Payment/wxRes/res/s";
+			}else if(data['pay_status']=='Y'&&data['wxpay']['sign']=='E1'){
+				//支付成功，数据处理出现问题
+				window.location="__MODULE__/Payment/wxRes/res/e1";
+
+			}else if(data['pay_status']=='Y'&&data['wxpay']['sign']=='E2'){
+				//重复支付
+				window.location="__MODULE__/Payment/wxRes/res/e2";
+			}
+		});
+	}
+
+
+</script>
+<div class="dengm2">
+<div class="deng0">
+<p  style="margin: 30px auto;display:block;font-size:24px;color:#27AE61;text-align:center;">请用其他支付方式</p>
+<!--
+<p  style="margin: 30px auto;display:block;font-size:24px;color:#27AE61;text-align:center;">请用微信扫一扫支付</p>
+<img  style="margin: 0px auto 30px;display:block;" src="__MODULE__/Payment/makeQRImgTwo"/>
+-->
+</div>
+
+</div>
+
+<include file='public:foot'/>

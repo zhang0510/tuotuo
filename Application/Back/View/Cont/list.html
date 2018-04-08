@@ -1,0 +1,117 @@
+<include file='public:head'/>
+<body>
+	<include file='public:header'/>
+	<div id="main-pyf">
+		<include file='public:left'/>
+		<div id="content">
+			<!-- 		<div class="ico-pt span12">
+			<h4>店铺管理</h4>
+		</div>
+		-->
+		<div class="row">
+
+			<div class="tsan113">
+
+				<div class="widget">
+
+					<div class="tabbable">
+						<ul class="nav nav-tabs" id="tabnav">
+							<li class="active">
+								<a href="__MODULE__/Worklwt/contList">内容维护</a>
+							</li>
+							<li>
+								<a href="__MODULE__/Worklwt/ideaList">意见反馈</a>
+							</li>
+						</ul>
+						<div class="tab-content1">
+							<div class="tab-content">
+								<div class="tab-pane active">
+									<form id="edit-profile" class="form-horizontal" />
+									<fieldset>
+										<div class="l_uit">
+											<div class="control-group">
+
+												<div style="float:left;" class="controls clec_t">
+												<div class="dropdown">
+													<select class="height46" name="" id="afeo">
+														<option value="">请选择类型</option>
+														<foreach name="sk" item="vo" key="k">
+															<option value="{$k}" <if condition="$k eq $type">selected</if> >{$vo}</option>
+														</foreach>
+													</select>
+													</div>
+													<div class="v_pb">
+														<input type="text" id="fskj" placeholder="请输入广告标题" value="{$name}" class="i_n text2 width360">
+														<button class="btn btn-default5" onclick="awdfuns();" type="button">搜索</button>
+													</div>
+
+												</div>
+												<!-- /controls -->
+												<a href="__MODULE__/Worklwt/contAdd"><button class="red btn btn-default5 fr" type="button">添加内容</button></a>
+
+											</div>
+											<script>
+												$(function(){
+													$('table tr.tr2 height70:odd').css('background','#F0F0F0');
+												});
+												function awdfuns(){
+													var ss = $("#fskj").val();
+													var dd = $("#afeo").val();
+													if(ss !="" && dd !=""){
+														window.location.href="__MODULE__/Worklwt/contList/name/"+ss+'/type/'+dd;
+													}else if(ss !="" && dd ==""){
+														window.location.href="__MODULE__/Worklwt/contList/name/"+ss;
+													}else if(ss =="" && dd !=""){
+														window.location.href="__MODULE__/Worklwt/contList/type/"+dd;
+													}else{
+														$.anewAlert('请选择或输入搜索条件');
+											  			return false;
+													}
+												}
+											</script>
+											<div class="l_table">
+												<table>
+													<tr class="tr1">
+														<td>标题</td>
+														<td>类型</td>
+														<td>时间</td>
+														<td>操作</td>
+													</tr>
+													<foreach name="list.list" item="vo">
+													<tr class="tr2">
+														<td>{$vo.title}</td>
+														<td>{$vo.dis}</td>
+														<td>{$vo.article_time}</td>
+														<td class="td_d2">
+															<a href="__MODULE__/Worklwt/contAdd/id/{$vo.article_id}" class="see1">修改</a>
+														</td>
+													</tr>
+													</foreach>
+												</table>
+											</div>
+											<div class="l_fenye">
+												{$list.show}
+											</div>
+										</div>
+										</fieldset>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /widget -->
+				</div>
+				<!-- /span11 -->
+			</div>
+			<!-- /row -->
+		</div>
+	</div>
+<script>
+<!-- 页面自带样式JS -->
+		$(function(){
+			$('table tr.tr2:odd').css('background','#F0F0F0');
+		});
+</script>
+</body>
+</html>

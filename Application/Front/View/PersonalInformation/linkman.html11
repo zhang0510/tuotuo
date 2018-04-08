@@ -1,0 +1,196 @@
+<include file='public:header'/>
+<include file='public:top'/>
+<include file='public:menu'/>
+<!--logo and nav-->
+
+
+
+
+<!--content-->
+<div class="dengm">
+ <div class="deng0">
+   <div class="tan11">
+    <h2>常用联系人</h2>
+   <div class="clist" style="overflow:auto;height:300px;">
+      <volist name="linkList" id="v">
+		  <div class="clist1">
+			<b></b><input type="checkbox" name="bb[]" value="{$v.link_code}" class="del" ><span class="bm1">姓名:{$v.link_name}</span><span class="bm2">手机号:{$v.link_tel}</span><span class="bm3">身份证号:{$v.link_num}</span>
+		  </div>
+	 </volist>
+
+     <!-- <div class="clist1">
+	    <b></b><input type="checkbox" name="bb[]" value="1"><span class="bm1">姓名：张小三</span><span class="bm2">手机号：18686382651</span><span class="bm3">身份证号：220183199409070046</span>
+	  </div>-->
+
+   </div>
+
+     <p>
+	 <button class="put2" type="button" id="add">添加</button>
+	 <button class="put3" type="button" id="del" onclick="delLink()">删除</button>
+	 </p>
+   </div>
+ </div>
+ <form action="" method="post" id="linkAdd">
+	<div  id="bgs" class="bg"  style="display:none;"></div>
+	<div  style="display:none;" id="tan1s" class="tan1" style="display:none;">
+	   <div class="tan11">
+   <a class="closed">X</a>
+		<h2>常用联系人</h2>
+
+		<dl>
+		<dt>姓名：</dt>
+		<dd><input type="text" id="username" class="put1" placeholder="" name="username" onblur="aaa(this);"></dd>
+
+
+		</dl>
+			<dl>
+		<dt>手机号：</dt>
+		<dd><input type="text" id="call" class="put1" placeholder="" id="call" onblur="bbb(this);"></dd>
+
+
+		</dl>
+			<dl>
+		<dt>身份证号：</dt>
+		<dd><input type="text" id="idNum" class="put1" placeholder="" id="idNum" onblur="ccc(this);"></dd>
+
+
+		</dl>
+
+		 <p>
+		 <button class="put4" type="button" id="addLink">添加</button>
+	<!-- 	 <input type="submit" onclick="changeTel();" value="确认" class="put2">
+		 <input type="reset" onclick="closeF();" value="取消" class="put3"> -->
+		 </p>
+	   </div>
+
+	</div>
+</form>
+</div>
+
+
+
+<!--content-->
+<!--footer-->
+<include file='public:foot'/>
+
+<!-- 留言框 -->
+
+  <script>
+<!-- 页面自带JS开始-->
+    $(".clist1").click(function(){
+
+	if($(this).find('input').prop('checked')==true){
+	$(this).find('input').prop('checked',false);
+	 $(this).removeClass('on');
+	}else{
+	$(this).find('input').prop('checked',true);
+	 $(this).addClass("on");
+
+	}
+
+  });
+
+
+
+
+
+  $(".qqr01 ul li").click(function(){
+  $(this).addClass("on").siblings().removeClass('on');
+  var tt=$(this).index();
+  $(".part13  .part3b").eq(tt).show().siblings().hide();
+
+
+  });
+
+    $(".mess1 p").click(function(){
+  $(this).parent().parent().hide();
+
+  });
+  <!-- 页面自带JS开始结束 -->
+  <!-- 常用发车人 添加弹层 -->
+$('#add').click(function(){
+
+	$('#bg').hide();
+	$('#tan1').hide();
+	$('#bgs').show();
+	$('#tan1s').show();
+	$("#addLink").click(function(){
+
+		var username=$("#username").val();
+		var tel=$("#call").val();
+		var idNum=$("#idNum").val();
+		if(username != "" && tel != "" && idNum != ""){
+			$.post("__MODULE__/Personal/linkAdd",{"username":username,"tel":tel,"idNum":idNum},function(data){
+				$.anewAlert(data);
+                window.location.reload();
+			},'json')
+				$("#username").html("");
+				$("#call").html("");
+				$("#idNum").html("");
+		}else{
+			$.anewAlert("请将信息补充完整");
+		}
+	});
+
+
+})
+<!-- 常用发车人添加 消失弹层 -->
+$('#bgs,.closed').click(function(){
+	$('#bgs').hide();
+	$('#tan1s').hide();
+
+})
+
+<!-- 添加页面的 身份信息验证 -->
+	function aaa(){
+		var username = $("#username").val();
+		if(username == " "){
+			$.anewAlert("请填写姓名");
+		}
+
+	}
+	function bbb(){
+		var call = $('#call').val();
+		if(call!=''){
+			if(!$.check_Mobile(call)){
+				$.anewAlert("手机号格式不对");
+			}
+		}else{
+			$.anewAlert('请填写手机号');
+			return false;
+		}
+	}
+	function ccc(){
+		var idNum = $('#idNum').val();
+		if(idNum!=''){
+			if(!$.isIdCardNo(idNum)){
+				$.anewAlert("身份证格式不对");
+			}
+		}else{
+			$.anewAlert('请填写身份证信息');
+			return false;
+		}
+
+	}
+
+		<!-- 删除  包括单删和全删 -->
+	function delLink(){
+		var selid = '';
+		  $(".del:checked").each(function(){
+			   if(selid==''){
+				   selid=$(this).val();
+			   }else{
+				   selid = selid+','+$(this).val();
+			   }
+			$.post("__MODULE__/Personal/delLink",{"code":selid},function(data){
+				$.anewAlert(data);
+                window.location.reload();
+			},'json')
+
+		  })
+	}
+  </script>
+  
+<!--footer-->
+
+</body></html>

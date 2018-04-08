@@ -1,0 +1,130 @@
+<include file='public:head'/>
+<script src="__JS__/jquerytool_1.0v.js"></script>
+<script>
+	function del(obj){
+		var cid = $(obj).attr('cid');
+		var uid = $(obj).attr('uid');
+		if(confirm("是否删除")){
+			$.post('__MODULE__/Member/companyMemDel',{'cid':cid,'uid':uid},function(data){
+				if(data.sign=='Y'){
+					$.anewAlert(data.info);
+					window.location.reload();
+				}else{
+					$.anewAlert(data.info);
+				}
+			})
+		}else{
+			return false;
+		}
+	}
+</script>
+<body>
+	<include file='public:header'/>
+	<div id="main-pyf">
+		<include file='public:left'/>
+
+		<div id="content">
+			<!-- 		<div class="ico-pt span12">
+			<h4>店铺管理</h4>
+		</div>
+		-->
+		<div class="row">
+
+			<div class="tsan113">
+
+				<div class="widget">
+
+					<div class="tabbable">
+						<ul class="nav nav-tabs" id="tabnav">
+							<li>
+								<a href="__MODULE__/Member/getCommonMem">普通会员</a>
+							</li>
+							<li class="active">
+								<a href="__MODULE__/Member/getComMem">大客户管理</a>
+							</li>
+							<!-- <li>
+								<a href="__MODULE__/Worklwt/latencyMemberList">潜在会员</a>
+							</li> -->
+						</ul>
+
+						<div class="tab-content1">
+							<div class="tab-content">
+								<div class="tab-pane active">
+									<form id="edit-profile" class="form-horizontal" />
+									<fieldset>
+										<div class="l_uit">
+											<div class="control-group">
+
+												<div style="float:left;" class="controls clec_t">
+													<div class="v_pb">
+														<form method="get" action="__MEDOLE__/Member/getComMem">
+														<input type="text" placeholder="请输入公司名称" class="i_n text2 width360" name="company_name" value="{$name}">
+														<button class="btn btn-default5" type="submit">搜索</button>
+														</form>
+													</div>
+												</div>
+												<!-- /controls -->
+												<a href="__MODULE__/Member/companyMemAdd"><button class="red btn btn-default5 fr" type="button">添加大客户</button></a>
+											</div>
+											<script>
+												$(function(){
+													$('table tr.tr2:odd').css('background','#F0F0F0');
+												});
+												
+											</script>
+											<div class="l_table">
+												<table>
+													<tr class="tr1">
+														<td>客户公司名称</td>
+														<td>客户公司业务</td>
+														<td>联系电话</td>
+														<td>优惠幅度</td>
+														<td>注册时间</td>
+														<td>操作</td>
+
+													</tr>
+													<foreach name="info" item="vo">
+													<tr class="tr2">
+														<td class="td3">{$vo.company_name}</td>
+														<td>{$vo.company_business}</td>
+														<td>{$vo.tel}</td>
+														<td>{$vo['coupon_price']/100}元</td>
+														<td>{$vo.company_create}</td>
+														<td>
+															<a href="__MODULE__/Member/companyMemEdit/id/{$vo.id}" class="see1">修改</a>
+															<a class="see2" href="javascript:;" cid="{$vo.id}" uid="{$vo.uid}" onclick="del(this);">删除</a>
+														</td>
+													</tr>
+													</foreach>
+												</table>
+
+											</div>
+											<div class="l_fenye">
+											<if condition="$num neq 0">
+												{$page}
+											</if>
+											</div>
+										</div>
+											</fieldset>
+										</form>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+					<!-- /widget -->
+
+				</div>
+				<!-- /span11 -->
+
+			</div>
+			<!-- /row -->
+
+		</div>
+	</div>
+
+</body>
+</html>

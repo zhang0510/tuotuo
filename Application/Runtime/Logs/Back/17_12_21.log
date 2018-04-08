@@ -1,0 +1,262 @@
+[ 2017-12-21T18:00:03+08:00 ] 125.33.204.237 /Back/Orderyjh/orderList/order_status/A
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000392s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated /guzai/TTYC/ThinkPHP/Library/DES_PHP/DESPHP.class.php 第 47 行.
+NOTIC: [8192] Function mcrypt_cbc() is deprecated /guzai/TTYC/ThinkPHP/Library/DES_PHP/DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_rule` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tuo_auth_rule`  [ RunTime:0.0002s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated /guzai/TTYC/ThinkPHP/Library/DES_PHP/DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_group_access` [ RunTime:0.0003s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tuo_auth_group_access a INNER JOIN tuo_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1")  ) AND `pid` = 0 AND `status` = '1' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated /guzai/TTYC/ThinkPHP/Library/DES_PHP/DESPHP.class.php 第 47 行.
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1" AND status="1")  ) AND `pid` = 0 ORDER BY id  [ RunTime:0.0001s ]
+INFO: 2017-12-21 18:00:03订单---条件---查询:A
+SQL: SHOW COLUMNS FROM `tuo_order_assistant` [ RunTime:0.0006s ]
+INFO: 2017-12-21 18:00:03订单---条判断条件中的件---查询:A
+INFO: 2017-12-21 18:00:03订单条件查询:{"order_status":["eq","A"],"0":"1=1"}
+SQL: SHOW COLUMNS FROM `tuo_area` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tuo_position_tracking_record` [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'A' AND (  1=1 ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: html /guzai/TTYC/ThinkPHP/Library/Pages/Page.class.php 第 227 行.
+NOTIC: [8] Undefined variable: html /guzai/TTYC/ThinkPHP/Library/Pages/Page.class.php 第 246 行.
+NOTIC: [8] Undefined variable: html /guzai/TTYC/ThinkPHP/Library/Pages/Page.class.php 第 258 行.
+NOTIC: [8] Undefined variable: html /guzai/TTYC/ThinkPHP/Library/Pages/Page.class.php 第 238 行.
+NOTIC: [8] Undefined offset: 0 /guzai/TTYC/ThinkPHP/Library/Pages/Page.class.php 第 282 行.
+NOTIC: [8] Undefined offset: 1 /guzai/TTYC/ThinkPHP/Library/Pages/Page.class.php 第 282 行.
+SQL: SELECT * FROM `tuo_order_assistant` WHERE `order_status` = 'A' AND (  1=1 ) ORDER BY order_time desc LIMIT 0,10   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3904' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3905' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '4281' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2049' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2061' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05100527' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2703' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2762' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2767' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1100' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1101' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05402161' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1326' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1385' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1394' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1540' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1541' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05402159' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1100' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1101' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3591' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1743' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1812' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05100522' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1100' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1101' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3591' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1743' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1812' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05100520' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2660' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '4056' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '4066' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1326' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1361' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05100519' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1100' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1101' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3588' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2676' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2677' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05100512' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3561' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3562' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3570' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3184' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3186' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05402132' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3561' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3562' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3570' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3184' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3186' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05402131' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1683' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1684' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1686' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1326' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1361' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05402114' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0001s ]
+INFO: 2017-12-21 18:00:03查询条件:{"order_status":["eq","A"],"0":"1=1"}
+NOTIC: [8] Undefined index: OrderInfo /guzai/TTYC/Application/Back/Controller/OrderyjhController.class.php 第 79 行.
+NOTIC: [8] Undefined index: OrderInfo /guzai/TTYC/Application/Back/Controller/OrderyjhController.class.php 第 79 行.
+NOTIC: [8] Undefined index: OrderInfo /guzai/TTYC/Application/Back/Controller/OrderyjhController.class.php 第 79 行.
+NOTIC: [8] Undefined index: OrderInfo /guzai/TTYC/Application/Back/Controller/OrderyjhController.class.php 第 79 行.
+NOTIC: [8] Undefined index: OrderInfo /guzai/TTYC/Application/Back/Controller/OrderyjhController.class.php 第 79 行.
+NOTIC: [8] Undefined index: OrderInfo /guzai/TTYC/Application/Back/Controller/OrderyjhController.class.php 第 79 行.
+NOTIC: [8] Undefined index: OrderInfo /guzai/TTYC/Application/Back/Controller/OrderyjhController.class.php 第 79 行.
+NOTIC: [8] Undefined index: OrderInfo /guzai/TTYC/Application/Back/Controller/OrderyjhController.class.php 第 79 行.
+NOTIC: [8] Undefined index: OrderInfo /guzai/TTYC/Application/Back/Controller/OrderyjhController.class.php 第 79 行.
+NOTIC: [8] Undefined index: OrderInfo /guzai/TTYC/Application/Back/Controller/OrderyjhController.class.php 第 79 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `kefu_shi` = 'N' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'S' AND `sh_status` = '' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'A' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'T' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `verify` = 'N' AND `order_status` = 'T' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'Y' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'M' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'N' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'B' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'G' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'D' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'W' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `visit` = 'Y' AND `is_visit` = 'N' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `receipt` = 'Y' AND `is_hui` = 'N' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'S' AND `sh_status` = 'N' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'DIE' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_type` = 1  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000252s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000301s ]
+NOTIC: [8] Undefined variable: arry /guzai/TTYC/Application/Runtime/Cache/Back/acc93fb97b4eb71b0000237159cc27c7.php 第 214 行.
+NOTIC: [8] Undefined variable: arry /guzai/TTYC/Application/Runtime/Cache/Back/acc93fb97b4eb71b0000237159cc27c7.php 第 232 行.
+NOTIC: [8] Undefined variable: pay /guzai/TTYC/Application/Runtime/Cache/Back/acc93fb97b4eb71b0000237159cc27c7.php 第 429 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013948s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013993s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000125s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000171s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000294s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000348s ]
+
+[ 2017-12-21T18:00:05+08:00 ] 125.33.204.237 /Back/Orderyjh/orderinfo/order_code/05100527
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated /guzai/TTYC/ThinkPHP/Library/DES_PHP/DESPHP.class.php 第 47 行.
+NOTIC: [8192] Function mcrypt_cbc() is deprecated /guzai/TTYC/ThinkPHP/Library/DES_PHP/DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_rule` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tuo_auth_rule`  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE `id` = 53 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated /guzai/TTYC/ThinkPHP/Library/DES_PHP/DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_group_access` [ RunTime:0.0003s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tuo_auth_group_access a INNER JOIN tuo_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1")  ) AND `pid` = 0 AND `status` = '1' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated /guzai/TTYC/ThinkPHP/Library/DES_PHP/DESPHP.class.php 第 47 行.
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1" AND status="1")  ) AND `pid` = 0 ORDER BY id  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_order_assistant` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tuo_area` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tuo_order_assistant` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tuo_yundan` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tuo_wuliu` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tuo_user` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tuo_position_tracking_record` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tuo_verify_car_info` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tuo_verify_car_img` [ RunTime:0.0002s ]
+SQL: SELECT * FROM `tuo_order_assistant` WHERE `order_code` = '05100527' LIMIT 1   [ RunTime:0.0001s ]
+SQL: UPDATE `tuo_order_assistant` SET `kefu_shi`='Y' WHERE `order_code` = '05100527' [ RunTime:0.0042s ]
+SQL: SELECT * FROM `tuo_yundan` WHERE `order_code` = '05100527'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_yundan` WHERE `order_code` = '05100527' AND `yd_type` = 'A' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `yd_code`,`yd_name`,`yd_price` FROM `tuo_yundan` WHERE `order_code` = '05100527' AND `yd_status` <> 'Y' AND `yd_price` <> 0  [ RunTime:0.0001s ]
+SQL: SELECT count('yd_id') as nums FROM `tuo_yundan` WHERE `order_code` = '05100527' AND `yd_status` <> 'Y' AND `yd_price` <> 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_wuliu` WHERE `order_code` = '05100527'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_position_tracking_record` WHERE `order_code` = '05100527' ORDER BY time desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_verify_car_info` WHERE `order_code` = '05100527' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_verify_car_img` WHERE `order_code` = '05100527'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_user` WHERE `tel` = '13086099616' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3904' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3905' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '4281' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2049' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2061' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_system` [ RunTime:0.0003s ]
+SQL: SELECT `pay_time` FROM `tuo_system` LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: fav_price /guzai/TTYC/Application/Back/Controller/OrderyjhController.class.php 第 158 行.
+SQL: SHOW COLUMNS FROM `tuo_favorable` [ RunTime:0.0003s ]
+SQL: SELECT `fav_price` FROM `tuo_favorable` WHERE ( fav_code='' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: CarOrder /guzai/TTYC/Application/Back/Controller/OrderyjhController.class.php 第 181 行.
+SQL: SELECT * FROM `tuo_carxing` WHERE `cxjj_id` = '' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined offset: 1 /guzai/TTYC/Application/Back/Controller/OrderyjhController.class.php 第 183 行.
+SQL: SELECT * FROM `tuo_carxing` WHERE `cxjj_id` = null LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: CarOrder /guzai/TTYC/Application/Back/Controller/OrderyjhController.class.php 第 185 行.
+SQL: SELECT * FROM `tuo_area` WHERE `area_type` = 1  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: CarOrder /guzai/TTYC/Application/Back/Controller/OrderyjhController.class.php 第 207 行.
+SQL: SHOW COLUMNS FROM `tuo_log` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_log` WHERE `order_code` = '05100527' ORDER BY log_time desc  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000857s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000920s ]
+NOTIC: [8] Undefined index:  /guzai/TTYC/Application/Runtime/Cache/Back/2785def0ea9fbc783d45b5edeafaf0eb.php 第 112 行.
+NOTIC: [8] Undefined offset: 1 /guzai/TTYC/Application/Runtime/Cache/Back/2785def0ea9fbc783d45b5edeafaf0eb.php 第 470 行.
+NOTIC: [8] Undefined offset: 2 /guzai/TTYC/Application/Runtime/Cache/Back/2785def0ea9fbc783d45b5edeafaf0eb.php 第 471 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037614s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037665s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000127s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000355s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000401s ]
+
+[ 2017-12-21T18:00:19+08:00 ] 112.65.193.15 /Back/Orderyjh/orderList/order_status/A
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated /guzai/TTYC/ThinkPHP/Library/DES_PHP/DESPHP.class.php 第 47 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003308s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003357s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000145s ]
+
+[ 2017-12-21T18:00:34+08:00 ] 58.247.212.61 /Back/Orderyjh/orderList/order_status/C
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated /guzai/TTYC/ThinkPHP/Library/DES_PHP/DESPHP.class.php 第 47 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003373s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003420s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000105s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000143s ]
+
+[ 2017-12-21T18:01:05+08:00 ] 58.247.212.140 /Back/Orderyjh/orderinfo/order_code/05100527
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000367s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated /guzai/TTYC/ThinkPHP/Library/DES_PHP/DESPHP.class.php 第 47 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003382s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003428s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000156s ]
+

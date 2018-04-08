@@ -1,0 +1,164 @@
+<include file='public:head'/>
+<script src="__JS__/jquerytool_1.0v.js"></script>
+<script>
+	function del(obj){
+		var uid = $(obj).attr('name');
+		if(confirm("是否删除")){
+			$.post('__MODULE__/Memberyjh/commonMemDel',{'uid':uid},function(data){
+				if(data.sign=='Y'){
+					$.anewAlert(data.info);
+					window.location.reload();
+				}else{
+					$.anewAlert(data.info);
+				}
+			})
+		}else{
+			return false;
+		}
+	}
+	
+</script>
+<body>
+
+	<include file='public:header'/>
+	<div id="main-pyf">
+		<include file='public:left'/>
+
+		<div id="content">
+			<!-- 		<div class="ico-pt span12">
+			<h4>店铺管理</h4>
+		</div>
+		-->
+		<div class="row">
+
+			<div class="tsan113">
+
+				<div class="widget">
+
+					<div class="tabbable">
+						<ul class="nav nav-tabs" id="tabnav">
+							
+						</ul>
+
+						<div class="tab-content1">
+							<div class="tab-content">
+								<div class="tab-pane active">
+									<form id="edit-profile" class="form-horizontal" />
+									<fieldset>
+										<div class="l_uit">
+											<div class="control-group">
+												<div style="float:left;" class="controls clec_t">
+													<div class="v_pb">
+													<form action="__MODULE__/Memberyjh/getCommonMem">
+														<input type="text" placeholder="请输入关键词搜索" name="user_name" value="{$name}" class="i_n text2 width360">
+														<button class="btn btn-default5" type="submit">搜索</button>
+													</form>
+													</div>
+												</div>
+												<!-- /controls -->
+												<a href="__MODULE__/Member/commonMemAdd"><button class="red btn btn-default5 fr" type="button">添加会员</button></a>
+											</div>
+											<script>
+												$(function(){
+													$('table tr.tr2:odd').css('background','#F0F0F0');
+												});
+											</script>
+											<input type="hidden" id="num" value="{$num}" />
+											<div class="l_table">
+												<table>
+													<tr class="tr1">
+														<td>用户ID</td>
+														<td>用户姓名</td>
+														<td>手机号</td>
+														<td>注册时间</td>
+														<td>操作</td>
+
+													</tr>
+													<foreach name="info" item="vo">
+														<tr class="tr2">
+															<td class="td3">{$vo.id}</td>
+															<td>{$vo.user_name}</td>
+															<td>{$vo.tel}</td>
+															<td>{$vo.addtime}</td>
+															
+															<td>
+															    <a class="see1 getHistory" data-id="{$vo.id}" >查看</a>
+																<a class="see1" href="__MODULE__/Memberyjh/userEdit/id/{$vo.id}">修改</a>
+																<a class="see2" href="javascript:;" name="{$vo.id}" onclick="del(this);">删除</a>
+															</td>
+														</tr>
+													</foreach>
+
+												</table>
+     
+											</div>
+											<div class="l_fenye">
+											<if condition="$num neq 0">
+												{$page}
+											</if>
+											</div>
+										</div>
+											</fieldset>
+										</form>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+					<!-- /widget -->
+
+				</div>
+				<!-- /span11 -->
+
+			</div>
+			<!-- /row -->
+
+		</div>
+	</div>
+<div id="astr1" style="display:none;z-index:9999" class="tan1">
+	<div class="tan11">
+		<a class="closed">X</a>
+		<h2>查看</h2>
+		<div class="asc">
+			<div class="asc1" id="hisList">
+				
+			</div>
+			
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(".getHistory").click(function(){
+	var id=$(this).attr("data-id");
+		$.ajax({
+			   url:"__MODULE__/Memberyjh/getHistory",
+			   async:false,
+			   type:'post',
+			   data:'id='+id,
+			   dataType:'json',
+			   success: function(data){
+					$("#hisList").html('');
+					var str="<h2>会员ID：<span>"+data['userinfo']['id']+"</span></h2><h2>微信ID：<span>"+data['userinfo']['opin']+"</span></h2><h2>历史备注：</h2><ul><li>称呼："+data['userinfo']['user_name']+"   电话："+data['userinfo']['tel']+"</li>";		
+				    var len=data['list'].length;
+					if(len > 0){
+						for(var i=0;i<len;i++){
+							str+="<li>"+data['list'][i]+"</li></ul>";
+						}
+					}else{
+						str+="<li>无记录</li></ul>";
+					}
+					
+					$("#hisList").append(str);
+					$("#astr1").css('display','block');
+			   }
+		   });
+});
+$('.closed').click(function(){
+	$('#astr1').css('display','none');
+});
+</script>
+</body>
+</html>

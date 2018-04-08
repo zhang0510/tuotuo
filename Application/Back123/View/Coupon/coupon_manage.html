@@ -1,0 +1,308 @@
+<include file='public:head'/>
+<script src="__JS__/jquerytool_1.0v.js"></script>
+<script>
+	$(document).ready(function(){
+		var type=$("#ftype").val();
+		var status = $("#fstatus").val();
+		if(type!=''){
+			$("#"+type).attr('selected',true);
+		}
+		$("#li"+status).siblings().removeClass('active');
+		$("#li"+status).addClass('active');
+	});
+	function add(){
+		//$.anewAlert(1);
+		$("#tan").show();
+		$("#bg").show();
+	}
+	function closeFun(){
+		$("#tan").hide();
+		$("#bg").hide();
+	}
+	function delFun(obj){
+		var type=$("#ftype").val();
+		var id = $(obj).attr('name');
+		if(confirm("是否删除")){
+			$.post('__MODULE__/Coupon/del',{'id':id},function(data){
+				if(data.sign=='Y'){
+					$.anewAlert(data.msg);
+					window.location.reload();
+				}else{
+					$.anewAlert(data.msg);
+				}
+			})
+		}else{
+			return false;
+		}
+	}
+	function selectAll(){
+		if($(".td3").children('input:checked').length==0){
+			$(".td3").children().attr('checked',true);
+		}else{
+			$(".td3").children().removeAttr('checked');
+		}
+	}
+	function delAll(){
+		var obj = $("input[name='code[]']:checked");
+		var arr = new Array();
+		obj.each(function(key,val){
+			arr[key]=$(val).val();
+		}
+		);
+		//alert(arr);
+		if(confirm("是否删除")){
+			$.post('__MODULE__/Coupon/delAll',{'arr':arr},function(data){
+				 if(data['sign']=='Y'){
+					$.anewAlert(data['msg']);
+					window.location.reload();
+				}else{
+					$.anewAlert(data['msg']);
+				} 
+			});
+		}else{
+			return false;
+		}
+
+	}
+	function send(obj){
+		var id = $(obj).attr("name");
+		$("#asCodeId").val(id);
+		$("#bg").show();
+		$("#assign").show();
+	}
+	function closeAssign(){
+		$("#bg").hide();
+		$("#assign").hide();
+	}
+	function assigns(obj){
+		var phoneNum = $(obj).parent().prev().children("input").val();
+		var codeId = $(obj).parent().prev().prev().val();
+		$.post('__MODULE__/Coupon/assigns',{'phoneNum':phoneNum,'codeId':codeId},function(data){
+			if(data['sign']=='Y'){
+				$.anewAlert(data['msg']);
+				window.location.reload();
+			}else{
+				$.anewAlert(data['msg']);
+			} 
+		})
+	}
+</script>
+<body>
+
+	<include file='public:header'/>	
+	<div class="clear_both"></div>
+	<div id="main-pyf">
+		<include file='public:left'/>
+
+		<div id="content">
+			<!-- 		<div class="ico-pt span12">
+			<h4>店铺管理</h4>
+		</div>
+		-->
+		<div class="row">
+
+			<div class="tsan113">
+
+				<div class="widget">
+
+					<div class="tabbable">
+						<input type="hidden" id="fstatus" value="{$status}"/>
+						<ul class="nav nav-tabs" id="tabnav">
+							<li class="active" id='liY'>
+								<a href="__MODULE__/Coupon/couponList/status/Y">未发放</a><!-- <em>99+</em> -->
+							</li>
+							<li id='liN'>
+								<a href="__MODULE__/Coupon/couponList/status/N">已发放</a>
+							</li>
+							<li id='liU'>
+								<a href="__MODULE__/Coupon/couponList/status/U">已使用</a>
+							</li>
+						</ul>
+
+						<div class="tab-content1">
+							<div class="tab-content">
+								<div class="tab-pane active">
+									<form id="edit-profile" class="form-horizontal" />
+									<fieldset>
+										<div class="l_uit">
+											<div class="control-group">
+
+												<div style="float:left;" class="controls clec_t">
+												<input type="hidden" id="ftype" value="{$type}"/>
+												<form method="get" action="__MODUlE__/Coupon/couponList">
+												<div class="dropdown">
+													<select class="height46" name="type" id="">
+														<option value="">种类选择</option>
+														<option value="C" id='C'>Ⅰ 类优惠券</option>
+														<option value="J" id='J'>Ⅱ 类优惠券</option>
+														<option value="M" id='M'>Ⅲ类优惠券</option>
+														<option value="W" id='W'>通用优惠卷</option>
+													</select>
+												</div>
+												<div class="v_pb">
+													<input type="text" placeholder="请输入优惠券编码" class="i_n text2 width360" name="code" value="{$code}"/>
+													<button class="btn btn-default5" type="submit">搜索</button>
+												</div>
+												</form>
+												</div>
+												<!-- /controls -->
+												<button class="red btn btn-default5 fr" type="button" onclick="add();">添加优惠券</button>
+
+											</div>
+											<script>
+												$(function(){
+													$('table tr.tr2:odd').css('background','#F0F0F0');
+												});
+												
+											</script>
+											<div class="l_table">
+												<table>
+													<tr class="tr1">
+														<td><input type="checkbox" id="" onclick="selectAll();"/>全选</td>
+														<td>优惠券编码</td>
+														<td>分类</td>
+														<td>优惠卷可用开始时间</td>
+														<td>优惠卷可用结束时间</td>
+														<td>类型</td>
+														<td>面值</td>
+														<td>操作</td>
+													</tr>
+													<foreach name="list" item="vo">
+													<tr class="tr2">
+														<td class="td3"><input name="code[]" type="checkbox" name="id" value="{$vo.fav_code}" class="box"></td>
+														<td>{$vo.fav_code}</td>
+														<td><if condition="$vo.fav_type eq 'W'">通用优惠券<elseif condition="$vo.fav_type eq 'J'"/>出发目的地<elseif condition="$vo.fav_type eq 'C'"/>出发地优惠券<else/>目的地优惠券</if></td>
+														<td>{$vo.fav_startime}</td>
+														<td>{$vo.fav_endtime}</td>
+														<td class="td_d2">{$vo.fav_num}次</td>
+														<td class="td_d2">{$vo['fav_price']/100}元</td>
+														<td>
+															<if condition="$status eq 'Y'">
+															<a class="see3" name="{$vo.fav_id}" href="javascript:;" onclick="send(this);">发放</a>
+															</if>
+															<!--<a class="see4" href="javascript:;">导出</a>-->
+															<a class="see1" href="__MODULE__/Coupon/couponEdit/id/{$vo.fav_id}/type/{$vo.fav_type}">修改</a>
+															<a class="see2" href="javascript:;" name="{$vo.fav_id}" onclick="delFun(this);">删除</a>
+														</td>
+													</tr>
+													</foreach>
+												</table>
+											</div>
+											<div class="l_fenye">
+												<div class="sad">
+													<button type="button" class="btn btn-default5" onClick="daochu()" >导出</button>
+
+													<button type="button" class="btn btn-default6" onclick="delAll();">删除</button>
+												</div>
+													<if condition="$num neq 0">
+													{$page}
+													</if>
+												</div>
+											</div>
+											</fieldset>
+										</form>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+					<!-- /widget -->
+
+				</div>
+				<!-- /span11 -->
+
+			</div>
+			<!-- /row -->
+
+		</div>
+	</div>
+	<div class="bg" id="bg" style="display:none"></div>
+<div class="tan1" id="tan" style="display:none">
+	<form method="get" action="__MODULE__/Coupon/couponAdd">
+   <div class="tan11">
+    <h2>请选择优惠卷类型</h2>
+     <ul class="tanul">
+	  <li>
+	  <label>
+	  <div class="tana">
+	  <img src="__BACK__/images/dq6.png">
+	  <h2>起始地使用优惠劵</h2>
+	  </div>
+	  <input checked name="rr1" value="1" type="radio">
+	  </label>
+	  </li>
+	   <li>
+	  <label>
+	   <div class="tana">
+	  <img src="__BACK__/images/dq6.png">
+	  <h2>目的地使用优惠劵</h2>
+	  </div>
+	  <input name="rr1" value="2" type="radio">
+	  </label>
+	  </li>
+	    <li>
+	  <label>
+	   <div class="tana">
+	  <img src="__BACK__/images/dq6.png">
+	  <h2>集散地使用优惠劵</h2>
+	  </div>
+	  <input name="rr1" value="3" type="radio">
+	  </label>
+	  </li>
+	    <li>
+	  <label>
+	   <div class="tana">
+	  <img src="__BACK__/images/dq6.png">
+	  <h2>通用类型优惠劵</h2>
+	  </div>
+	  <input name="rr1" value="4" type="radio">
+	  </label>
+	  </li>
+	 </ul>
+      <!-- <p><input type="submit" class="put1" value="确认"></p>
+      <p><input type="button" class="put1" value="取消" onclick="closeFun();"></p> -->
+      <p>
+	 <input type="submit" class="put2" value="确认">
+	 <input type="reset" class="put3" value="取消" onclick="closeFun();">
+	 </p>
+   </div>
+   </form>
+</div>
+<div class="tan1" id="assign" style="display:none">
+   <div class="tan11">
+    <h2>请输入用户手机号</h2>
+    <input type="hidden" name="codeId" id="asCodeId" />
+    <dl><input type="text" placeholder="请输入手机号" class="put1" name="phoneNum"></dl>
+     <p>
+	 <input type="submit" class="put2" value="确认" onclick="assigns(this);">
+	 <input type="reset" class="put3" value="取消" onclick="closeAssign();">
+	 </p>
+	 <!-- <p><input type="submit" class="put1" value="取消" onclick="closeAssign();"></p> -->
+   </div>
+
+</div>
+<script>
+function daochu(){	
+	var selid = '';
+		  $(".box:checked").each(function(){
+			   if(selid==''){
+				   selid=$(this).val();
+			   }else{
+				   selid = selid+','+$(this).val();
+			   }
+			         
+		  })
+		  if(selid == ""){
+			$.anewAlert('请勾选想导出的订单！');
+			return false;
+		  }else{
+			window.location.href="__MODULE__/Coupon/daochu/code/"+selid;
+		  }
+		   
+}
+</script>
+</body>
+</html>

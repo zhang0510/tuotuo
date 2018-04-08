@@ -1,0 +1,641 @@
+<include file='public:header'/>
+<include file='public:top'/>
+<include file='public:menu'/>
+<script>
+	/* $(document).ready(function(){
+		var zong = '{$jump.total}';
+		var bao = '{$jump.sprice}';
+		var yun = '{$jump.tprice}';
+		var ewai = '{$jump.eprice}';
+		if(zong!=''){
+			$("#zong").html(zong);
+			$("#quickshop").show();
+		}
+		if(bao!=''){
+			$("#secu").html(bao);
+		}
+		if(yun!=''&&ewai!=''){
+			$("#trans").html(parseInt(ewai)/100 + parseInt(yun));
+		}
+		var zongz = '{$jumpz["order"]["total"]}';
+		if(zongz!=''){
+			$("#zongz").html(zongz);
+		}
+	}) */
+
+	function ceshi(obj){
+		var qsrcz = $("#qsrcz").val();
+		if(qsrcz.trim()==""){
+			layer.msg("请先选择出发地!");
+			//$("#qepz").hide();
+			//$("#q5").hide();
+			//$("#qecz").hide();
+			//$(".selected0").hide();
+			return false;
+		}else{
+			$(obj).siblings(".selected0").show();
+		}
+	}
+</script>
+<script src="__JS__/indexTuo.js"></script>
+<!--banner-->
+	<div class="banner">
+    	<div class="adv0">
+				<div class="top_search0 container">
+		 	<div class="top_search">
+			  <div class="top_search1">
+			  <span></span>
+			  <h2>车妥妥</h2>
+              <p>一家寄车的物流公司</p>
+			  </div>
+			  <form method="post" action="__MODULE__/Order/normal" id="quickz">
+		   		<div class="korder1b00">
+		   		<!-- 开始地 -->
+				<input type="hidden" name="qsrez" id="qsrez" value="" />
+				<!-- 目的地 -->
+				<input type="hidden" name="qerez" id="qerez" value="" />
+				<!-- 开始地中文名称 -->
+				<input type="hidden" name="qsrezname" id="qsrezname" value="" />
+				<!-- 目的地中文名称 -->
+				<input type="hidden" name="qerezname" id="qerezname" value="" />
+				<!-- 车品牌 -->
+				<input type="hidden" name="qsctez" id="qsctez" value="" />
+				<!-- 车型号 -->
+				<input type="hidden" name="qsctcz" id="qsctcz" value="" />
+				<!-- 车id -->
+				<input type="hidden" name="carids" id="carids" value="" />
+				<!-- 运费 -->
+				<input type="hidden" name="lineprice" id="lineprice" value="0" />
+				<!-- 类型 -->
+				<input type="hidden" name="product_type" id="product_type" value="0" />
+				<!-- 总费 -->
+				<input type="hidden" name="totalz" id="totalz" value="0" />
+				<!-- 提车费 -->
+				<input type="hidden" name="tiz" id="tiz" value="0" />
+				<!-- 送车费 -->
+				<input type="hidden" name="songz" id="songz" value="0" />
+				<!-- 集散地起点 -->
+				<input type="hidden" name="sansz" id="sansz" value="" />
+				<!-- 集散地重点 -->
+				<input type="hidden" name="sanez" id="sanez" value="" />
+				<!-- 提车地id -->
+				<input type="hidden" name="tidz" id="tidz" value="" />
+				<!-- 送车地id -->
+				<input type="hidden" name="sidz" id="sidz" value="" />
+				<!-- 毛利 -->
+				<input type="hidden" name="maoliz" id="maoliz" value="0" />
+				<!-- 普通下单钱数第一部分 -->
+				<input type="hidden" name="ptxd1" id="ptxd1" value=0 />
+				<!-- 普通下单钱数第二部分 -->
+				<input type="hidden" name="ptxd2" id="ptxd2" value=0 />
+				<!-- 集散地B地名（汉字） -->
+				<input type="hidden" name="ptjsd" id="ptjsd" value='' />
+				<!-- 数据是否可用 -->
+				<input type="hidden" name="flag" id="flag" value='N' />
+				<input type="hidden" name="msg" id="msg" value='N' />
+				<div class="aske">	
+					<div class="aske1">
+						<ul>
+							<li class="on"><span>下单</span></li>
+							<li><span>订单查询</span></li>
+						</ul>
+					</div>
+					<div class="tab-cont1">
+					<div class="tab-pay1 top_search2">
+						<dl><dt>出发地：</dt><dd><input type="text" placeholder="" class="txt1a inko" readonly="readonly" name="qsrcz" id="qsrcz" value="{$jumpz['order']['start']}" onclick="ceshi3(this);">
+	               <span class="xxsj"></span>
+	                 <div class="selected0" id="q4">
+							<div class="province star_province" id="qspz">
+							<!-- <li data-id="14">请选择</li> -->
+							<foreach name="pro" item="vo">
+							<li data-id="1"  onclick="getCityz('{$vo.area_id}','S','{$vo.area_name}')">{$vo.area_name}</li>
+							</foreach>
+							</div>
+							<div class="city star_city" data-id="" style="display:none" id="qscz"></div>
+							<div class="county star_county" data-id="" style="display:none" id="qsbz"></div>
+						</div> </dd></dl>
+			 <dl><dt>目的地：</dt><dd><input type="text" placeholder="" class="txt1a inko" readonly="readonly" name="qercz" id="qercz" value="{$jumpz['order']['end']}" onclick="ceshi(this);">
+	               <span class="xxsj"></span>
+	                 <div class="selected0" id="q5">
+							<div class="province star_province" id="qepz">
+							<foreach name="pro" item="vo">
+							<li data-id="1"  onclick="getCityz('{$vo.area_id}','E','{$vo.area_name}')">{$vo.area_name}</li>
+							</foreach>
+							</div>
+							<div class="city star_city" data-id="" id="qecz" style="display:none"></div>
+							<!-- <div class="county star_county" data-id=""></div> -->
+						</div> </dd></dl>
+						 <dl><dt>品牌车系：</dt><dd><input type="text" placeholder="" class="txt1a inko" id="qbtz" name="carInfoz" value="{$jumpz['order']['carInfo']}" onkeyup="serchCar(this);" onclick="ceshi3(this);">
+	               		<span class="xxsj"></span>
+	                 	<div class="selected0" id="q6">
+							<div class="province star_province" id="qbrz">
+							<foreach name="brand" item="vo">
+							<li data-id="1"  onclick="getTypez('{$vo.cxjj_id}','{$vo.cxjj_brand}')">{$vo.cxjj_name}--{$vo.cxjj_brand}</li>
+							</foreach>
+							</div>
+							<div class="city star_city" data-id="" style="display:none" id="qtz"></div>
+							<!-- <div class="county star_county" data-id=""></div> -->
+						</div> </dd></dl>
+						 	 <!-- <dl class="pp1">合计：￥<bold id="zongz">0</bold>元</dl> -->
+						 	 <!-- <dl id="putong1" style="display:none;" class="pp1 pp2">运至 <bold class="ptd1"></bold>：￥<bold id="zongz1">0</bold>元</dl> -->
+							 <!-- <dl id="putong1" style="display:none;" class="pp1 pp2"></dl> -->
+						 	 <dl id="putong2" class="pp1 pp2">
+							 <dt>&nbsp;</dt>
+							 <dd><bold class="ptd1"></bold> 费用：￥<bold id="zongz1">0</bold>元</dd>
+							 </dl>
+						 <dl class="pp1">
+						 <button type="button"  class="qq2" onclick="clearAll();">重新选择</button>
+						 		<button type="button" class="qq1" onclick="goOrder();">确认下单</button>
+						 		</dl>
+					</div>
+					<div class="tab-pay1 aske2">
+					  <div class="csczz">
+					   <p>请输入订单号查询当前订单状况，如果当前订单不存在，请联系客服人员。</p>
+					  
+					  </div>
+						<div class="du3d" id="tiao1">
+							<input type="text" placeholder="请在此输入订单号" class="cx1" id="keyword" ><!-- onkeyup="sel(this);" --><button onclick="tiaoFun();" type="button"></button>
+							<div id="searchBoxs"></div>
+						</div>
+					</div>
+					</div>
+					<script>
+						function tiaoFun(){
+							var keyword = $("#keyword").val();
+							if(keyword==""){
+								layer.msg("请输入订单号");
+								return false;
+							}
+							window.location.href="__MODULE__/Ordersel/orderselView/status/2/keyword/"+keyword;
+						}
+						$('.aske1 ul li').click(function(){
+							$(this).addClass('on').siblings().removeClass('on');
+							$('.tab-cont1 .tab-pay1').eq($(this).index()).fadeIn(300).siblings().hide();
+						});
+					</script>
+				</div>
+			</div>
+			</form>
+		</div>
+	</div>
+
+	
+<div id="banner" class="phone">
+	<div id="pointTip" class="reminder same-tip release">
+		<div class="re-left">
+			<div class="img"></div>
+			<p>温馨<br>提醒</p>
+		</div>
+		<a id="notice_a"  class="re-right">
+			<p style="text-align:center">
+				运车前请仔细检查车辆外观及随车物品
+			</p>
+		</a>
+	</div>
+	<div id="warning">
+		<div class="tips same-tip release">
+			<div class="re-left">
+				<div class="img"></div>
+				<p>防骗<br>警示</p>
+			</div>
+			<a id="warning_a"  class="re-right">
+				<p style="text-align:center">
+					运车前务必核对运车公司资质信息
+				</p>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="pc index_conta7">
+	<div class="index_conta1">
+		<div class="index_contap2">
+			<img src="__FRONT__/images/index_conta6.png">
+		</div>
+		<h2>微信二维码</h2>
+		<div class="index_contap3">
+			<img src="__FRONT__/images/wskk1.png">
+		</div>
+	</div>	
+</div>	
+<script>
+	$(".index_conta1").click(function(){
+	if($(".index_contap3").css("display")=="none"){
+	$(".index_contap3").show();
+	}else{
+	$(".index_contap3").hide();
+	}
+	});
+</script>	
+            <div class="adv_s">
+                <div class="leftLoop">
+                    <div class="bd">
+                      <ul class="picList">
+							<li>
+									<div class="pic">
+										<a ><img src="__FRONT__/images/t2.jpg"></a>
+									</div>
+								</li><li>
+									<div class="pic">
+										<a ><img src="__FRONT__/images/t1.jpg"></a>
+									</div>
+								</li><li>
+				<!-- 					<div class="pic">
+										<a href=""><img src="__FRONT__/images/banner1.jpg"></a>
+									</div> -->
+								</li></ul></div>
+
+                    <div class="hd">
+                    <!-- 	 <div class="sj_mark">
+                            <a class="next"></a>
+                            <a class="prev"></a>
+                        </div> -->
+                        <ul>
+						<li class="">&nbsp;</li><li class="">&nbsp;</li><!-- <li class="on">&nbsp;</li> -->	</ul>
+                    </div>
+<!--                     <div class="tuotuo">
+                      <a  class="fgtt"><img src="__FRONT__/images/close3.png"></a>
+                       <div class="tuotuo1  container">
+                           <div class="tuotuo1a"><img src="__FRONT__/images/tuotuo1.png"></div>
+                       </div>
+                      <div class="tuotuo2"><img src="__FRONT__/images/tuotuo2.png"></div>
+                    </div> -->
+
+
+                </div>
+                <script type="text/javascript">jQuery(".leftLoop").slide({ mainCell:".bd ul",effect:"leftLoop",vis:1,scroll:1,autoPlay:true});</script>
+            </div>
+
+		</div>
+
+    </div>
+<!--banner-->
+
+
+<!--content-->
+	<div class="phone small_nav">
+		<li>
+			<a href="javascript:;" target="_self"><h2><span><img src="__FRONT__/images/nav_span_icon1.png"></span>上门提车</h2></a>
+			<a href="javascript:;" target="_self"><h2><span><img src="__FRONT__/images/nav_span_icon2.png"></span>车到付款</h2></a>
+		</li>
+		<li>
+			<a href="javascript:;" target="_self"><h2><span><img src="__FRONT__/images/nav_span_icon3.png"></span>专车专险</h2></a>
+			<a href="javascript:;" target="_self"><h2><span><img src="__FRONT__/images/nav_span_icon4.png"></span>全程跟踪</h2></a>
+		</li>
+	</div>
+<!--content-->
+
+
+<div class="part1">
+  <div class="part10 container">
+  <div class="part51">
+  <img src="__FRONT__/images/pa1.png">
+   <h2>流程展示</h2>
+   <img src="__FRONT__/images/pa2.png">
+  </div>
+  <div class="part12">
+  <ul>
+   <li class="on">
+   <a href="__MODULE__/ProfessionalServices/sos/code/AC1492053315X4M9">
+    <h2 class="ll1">预约</h2>
+     <p>灵活的预约方式</p>
+	 <div class="rrt1">
+   <h3>灵活的预约方式</h3>
+     <h4>拨打公司热线：400-877-1107；<br>
+网站选择运输线路及车型，下单；<br>
+微信关注“车妥妥”，公众号下单。</h4>
+   </div>
+</a>
+
+
+
+
+
+   </li>
+    <li class="on">
+       <a href="__MODULE__/ProfessionalServices/sos/code/AC1492053315X4M9">
+    <h2 class="ll2">提车</h2>
+     <p>专职司机上门提车</p>
+
+	     <div class="rrt1">
+	<h3>专职司机上门提车</h3>
+     <h4>预约后安排提车司机并提供委托书；<br>
+司机上门提供身份证件供用户核对；<br>
+确认提车司机身份后，司机拍照验车；<br>
+车辆信息交接完成，签订托运合同</h4>
+   </div>
+</a>
+   </li>
+     <li class="on">
+        <a href="__MODULE__/ProfessionalServices/sos/code/AC1492053315X4M9">
+    <h2 class="ll3">运输</h2>
+     <p>专业板车装板运输</p>
+
+	   <div class="rrt1">
+	 <h3>专业板车装板运输</h3>
+     <h4>车辆交接后提供全程等值运输保单；<br>
+司机提车到当地分部停车场装板；<br>
+专职“妥妥”顾问实时跟进物流状态；<br>
+公众号、短信多通道提供发运状态</h4>
+   </div>
+
+</a>
+   </li>
+     <li class="on">
+        <a href="__MODULE__/ProfessionalServices/sos/code/AC1492053315X4M9">
+    <h2 class="ll4">签收</h2>
+     <p>用户验车签收爱车</p>
+	 	   <div class="rrt1">
+	 	 <h3>用户验车签收爱车</h3>
+    <h4>运输到达前告知用户提车时间；<br>
+根据协议前来提车或安排送车；<br>
+收车前请检查、确认运输无损伤；<br>
+到付需车辆要您现结账给送车人。</h4>
+   </div>
+
+
+</a>
+   </li>
+
+  </ul>
+</div>
+
+
+
+
+</div>
+</div>
+
+
+
+<div class="part8">
+  <div class="part80 container">
+  <div class="part51">
+  <img src="__FRONT__/images/dgg2.png">
+   <h2 >妥妥服务</h2>
+   <img src="__FRONT__/images/pa2.png">
+  </div>
+  <div class="part82">
+     <ul>
+	    <li>
+	     <a >
+		<div class="paa0">
+		  <div class="paa01">
+		  <img src="__FRONT__/images/bgg3.jpg">
+		  </div>
+		  <div class="paa02">
+		   <h2>专门保险</h2>
+		    <span></span>
+		   <p>运输高效：全国128个办事处，运输线路辐射全国，多数城市之间专线直达</p>
+		  </div>
+		  </div>
+		  </a>
+		</li>
+		<li>
+	     <a >
+		<div class="paa0">
+		  <div class="paa01">
+		  <img src="__FRONT__/images/bgg4.jpg">
+		  </div>
+		  <div class="paa02">
+		   <h2>专人监管</h2>
+		    <span></span>
+		   <p>价格透明：核算部门严格定价，车妥妥官网透明可查  拒绝盲目要价 </p>
+		  </div>
+		  </div>
+		  </a>
+		</li>
+		<li>
+	     <a >
+		<div class="paa0">
+		  <div class="paa01">
+		  <img src="__FRONT__/images/bgg5.jpg">
+		  </div>
+		  <div class="paa02">
+		   <h2>专业托运</h2>
+		    <span></span>
+		   <p>利益保障：专车专险，车妥妥携手天平洋联合承保，全程保障客户利益  </p>
+		  </div>
+		  </div>
+		  </a>
+		</li>
+		<li>
+	     <a >
+		<div class="paa0">
+		  <div class="paa01">
+		  <img src="__FRONT__/images/bgg6.jpg">
+		  </div>
+		  <div class="paa02">
+		   <h2>专享服务</h2>
+		    <span></span>
+		   <p>下单便捷 ：国内首家实现在线下单的运车公司，公众号、官网均可操作</p>
+		  </div>
+		  </div>
+		  </a>
+		</li>
+	   </ul>
+
+
+  </div>
+
+
+
+
+
+</div>
+
+</div>
+
+<div class="part4">
+  <div class="part40 container">
+  <div class="part51">
+  <img src="__FRONT__/images/pa41.png">
+   <h2 style="color:#fff;">服务保障</h2>
+   <img src="__FRONT__/images/pa42.png">
+  </div>
+   <div class="part42">
+    <ul>
+	  <li>
+	  <a href="__MODULE__/AboutUs/index/code/AC14920644902AGS">
+	    <div class="hh0">
+		  <div class="hh1 hhr1"></div>
+		  <div class="hh2">
+		   <h2>安全</h2>
+              <p>车妥妥4000+优秀驾驶员经验丰富只为赢取客户信任</p>
+
+		  </div>
+
+		</div>
+</a>
+	  </li>
+		  <li>
+		    <a href="__MODULE__/AboutUs/index/code/AC14920644902AGS">
+	    <div class="hh0">
+		  <div class="hh1 hhr2"></div>
+		  <div class="hh2">
+		   <h2>快速</h2>
+              <p>车妥妥300+自有车辆城市直发，保证车辆准时安全达到</p>
+
+		  </div>
+
+		</div>
+</a>
+	  </li>
+
+		  <li>
+		    <a href="__MODULE__/AboutUs/index/code/AC14920644902AGS">
+	    <div class="hh0">
+		  <div class="hh1 hhr3"></div>
+		  <div class="hh2">
+		   <h2>无忧</h2>
+              <p>车妥妥365无休专业运车供应商让您尽可伊一路无忧</p>
+
+		  </div>
+
+		</div>
+</a>
+	  </li>
+
+	 <li>
+	   <a href="__MODULE__/AboutUs/index/code/AC14920644902AGS">
+	    <div class="hh0">
+		  <div class="hh1 hhr4"></div>
+		  <div class="hh2">
+		   <h2>专业</h2>
+              <p>服务合同+运输合同+运输保险全面保障客户利益不受损害</p>
+
+		  </div>
+
+		</div>
+</a>
+	  </li>
+		 <li>
+		   <a href="__MODULE__/AboutUs/index/code/AC14920644902AGS">
+	    <div class="hh0">
+		  <div class="hh1 hhr5"></div>
+		  <div class="hh2">
+		   <h2>必达</h2>
+              <p>车妥妥200+施救车随时待命出发只为保证 使命必达</p>
+
+		  </div>
+
+		</div>
+</a>
+	  </li>
+
+
+	</ul>
+
+
+
+
+   </div>
+
+
+  </div>
+
+</div>
+
+
+
+
+<div class="iske">
+	<div class="container">
+		<div class="part51">
+			<img src="__FRONT__/images/pa51.png"/>
+			<h2>妥妥新闻</h2>
+			<img src="__FRONT__/images/pa52.png"/>
+		</div>
+		<div class="iske1">
+			<div class="iske2">
+				<div class="iske3">
+					<div class="iske4">
+						<a href="__MODULE__/News/detail/code/{$artList[0]['article_code']}"><img src="{$artList[0]['article_img']}"></a>
+						
+								<div class="iske6">
+					<ul>
+						<foreach name="artList2" item="vo">
+							<li>
+								<a href="__MODULE__/News/detail/code/{$vo.article_code}">
+									<h2>{$vo.title}</h2>
+								
+						
+							</li>
+						</foreach>
+					</ul>
+				</div>
+						
+						
+						
+						
+						
+						
+						
+					</div>
+					<div class="iske5">
+						<h3>{$artList[0]['time']|date='m',###} / {$artList[0]['time']|date='d',###} /{$artList[0]['time']|date='Y',###} </h3>
+						<h2>{$artList[0]['title']} <a href="__MODULE__/News/newsList"><span>More+</span></a></h2>
+						<p>{$artList[0]['article_desc']}</p>
+						
+					</div>
+				</div>
+		
+			</div>
+			<div class="iske7">
+				<h2><span>FAQ </span> 常见问题</h2>
+				<ul>
+					<foreach name="cj" item="vo" key="k">
+					<if condition="$k lt 9">
+					<li><a href="__MODULE__/Footer/detail/code/{$vo.article_code}"><p>{$k+1}、{$vo.title}</p></a></li>
+					</if>
+						
+					</foreach>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- <div class="iskt">
+	<div class="container">
+		<div class="part51">
+			<img src="__FRONT__/images/pa51.png"/>
+			<h2>妥妥服务</h2>
+			<img src="__FRONT__/images/pa52.png"/>
+		</div>
+		<div class="iskt1">
+			<ul>
+				<foreach name="ttfws" item="vo">
+					<li>
+						<a href="__MODULE__/Footer/detail/code/{$vo.article_code}">
+							<h3><img src="{$vo.article_img}"/></h3>
+							<h2>{$vo.title}</h2>
+							<p>{$vo.article_desc}</p>
+						</a>
+					</li>
+				</foreach>
+			</ul>
+		</div>
+	</div>
+</div> -->
+
+<div class="part6">
+  <div class="part61 container">
+   <ul>
+   <foreach name="linkList" item="vo" key="k">
+   <li><a href="{$vo.fl_link}" target="_blank">
+   <img  class="nb1"  src="{$vo.fl_img}">
+   <img  class="nb2"  src="{$vo.fl_img1}">
+   </a></li>
+  </foreach>
+   <!--<li><a href=""><img src="__FRONT__/images/logo2.png"></a></li>
+   <li><a href=""><img src="__FRONT__/images/logo3.png"></a></li>
+   <li><a href=""><img src="__FRONT__/images/logo4.png"></a></li>
+   <li><a href=""><img src="__FRONT__/images/logo5.png"></a></li>
+   <li><a href=""><img src="__FRONT__/images/logo6.png"></a></li>-->
+   </ul>
+
+  </div>
+
+</div>
+
+<!--content-->
+<include file='public:foot_coy'/>

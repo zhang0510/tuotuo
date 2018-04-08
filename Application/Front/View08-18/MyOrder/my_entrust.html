@@ -1,0 +1,77 @@
+<include file='public:header'/>
+<include file='public:top'/>
+<include file='public:menu'/>
+<!--content-->
+<div class="order_body">
+<div class="order_main container">
+  <div class="order_h2"><h2>委托合同列表</h2></div>
+<div class="order_list">
+	<foreach name="oList" item="vo" >
+	<div class="order_lisa">
+		<div class="order_lisa1">
+			<h2><a>订单号：{$vo.order_code}</a></h2>
+			<p>订单状态：
+			<a>
+				<if condition="($vo.order_status eq 'S')">
+				 待审核
+				<elseif condition="($vo.order_status eq 'A')"/>
+				 待安排
+				<elseif condition="($vo.order_status eq 'Z')"/>
+				 待核实
+				 <elseif condition="($vo.order_status eq 'Y') OR ($vo.order_status eq 'M') OR ($vo.order_status eq 'N') OR ($vo.order_status eq 'B') OR ($vo.order_status eq 'G') OR ($vo.order_status eq 'D')"/>
+				 运输中
+				 <elseif condition="($vo.order_status eq 'W')"/>
+				 已完成
+				 <else /> 
+				--
+				</if>
+			</a>
+			</p>
+		</div>
+		<div class="order_lisa2">
+			<div class="olist1"><if condition="($vo.start_name neq '') and ($vo.start_name neq null)"> {$vo.start_name}<else />--</if> <img class="eq1" src="__FRONT__/images/ee1.png"><img  class="eq2" src="__FRONT__/images/ee2.png"> <if condition="($vo.end_name neq '') and ($vo.end_name neq null)"> {$vo.end_name}<else />--</if></div>
+			<div class="olist2">
+				<p><span>车型：<if condition="($vo.order_info_type neq '') and ($vo.order_info_type neq null)"> {$vo.order_info_type}<else />--</if></span></p>
+			</div>
+		</div>
+		<div class="fraka1">
+			<h2>提示：</h2>
+			<p>委托书在我们安排好提车司机以后，您可以点击查看，
+			在司机上门提车后，与司机个人身份证核对，确认无误后可
+			进入验车环节，</p>                         
+			<p>运输协议在司机验车完成后，您可以点击查看，核对无误后您可以将爱车托付给妥妥提车司机。</p>
+		</div>
+		<div class="conts">
+			<if condition="($vo.order_status eq 'T') OR ($vo.order_status eq 'Y') OR ($vo.order_status eq 'M') OR ($vo.order_status eq 'N') OR ($vo.order_status eq 'B') OR ($vo.order_status eq 'G') OR ($vo.order_status eq 'D') OR ($vo.order_status eq 'W')">
+				<a href="__MODULE__/PdfPrint/pdf_sqwts/order_code/{$vo.order_code}"><h2>委托书 </h2></a>
+			<else />
+				<a href="__MODULE__/PdfPrint/pdf_sqwts/order_code/{$vo.order_code}/status/N"><h2>委托书 </h2></a>
+			</if>
+			<if condition="($vo.order_status eq 'A') OR ($vo.order_status eq 'T') OR ($vo.order_status eq 'Y') OR ($vo.order_status eq 'M') OR ($vo.order_status eq 'N') OR ($vo.order_status eq 'B') OR ($vo.order_status eq 'G') OR ($vo.order_status eq 'D') OR ($vo.order_status eq 'W')">
+				<a href="__MODULE__/PdfPrint/pdf_fwhtd/order_code/{$vo.order_code}"><h3>运输协议(合同)</h3></a>
+			<else />
+				<a href="__MODULE__/PdfPrint/pdf_fwhtd/order_code/{$vo.order_code}/status/N"><h3>运输协议(合同)</h3></a>
+			</if>
+		</div>
+	</div>
+	</foreach>
+</div>
+	<div class="num">
+		<if condition="$num gt 0 ">
+			{$show}
+		</if>
+	</div>
+</div>
+</div>
+
+<!--content-->
+<script>
+	function pay(code,total,bxd,smsc_car){
+		var str="";
+		if(smsc_car!=""){
+			str += "/smsc_car/"+smsc_car;
+		}
+		window.location.href = '__MODULE__/MyOrder/payNow/code/'+code+'/fee/'+total+'/bxd/'+bxd+str;
+	}
+</script>
+<include file='public:foot'/>

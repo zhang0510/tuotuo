@@ -1,0 +1,193 @@
+<include file='public:head'/>
+ <script src="__BACK__/laydate/laydate.js"></script>
+ <script src="__JS__/jquerytool_1.0v.js"></script>
+<script>
+	$(document).ready(function(){
+		var num = $("#fav_num").val();
+		var s = $('#sF').html();
+		var m = $('#mF').html();
+		if(num!=''){
+			if(num==1){
+				$('.sss1').html(s);
+			}else{
+				$('.sss1').html(m);
+				$("#fav_num").show();
+			}
+		}
+	});
+	/* $("#pro").click(function(){
+		$.anewAlert(1);
+		$.post('__MODULE__/Coupon/provinceQuery',{},function(data){
+			$.anewAlert(1);
+				$(this).append(data);
+		});
+	}); */
+	$.ajaxSetup({
+	    async : false
+	});
+	/* function provinceFun(){
+		//$.anewAlert(1);
+		$.post('__MODULE__/Coupon/provinceQuery',{},function(data){
+			//$.anewAlert(1);
+				$("#pro").append(data);
+		});
+	} */
+	function cityFun(){
+		$("#proP").html('请选择省份');
+		$("#cityP").html('请选择城市');
+		var province = $("#city").prev().val();
+		$.post('__MODULE__/Coupon/cityQuery',{'pro':province},function(data){
+			//$.anewAlert(1);
+				$("#city").children(".city").remove();
+				$("#city").append(data);
+		});
+	}
+	function changeNum(obj){
+		var cont = $(obj).html();
+		var sign = $(obj).attr('name');
+		$(".sss1").html(cont);
+		if(sign=='m'){
+			$("#fav_num").show();
+		}else{
+			$("#fav_num").val(1);
+			//$.anewAlert($("#fav_num").val());
+			$("#fav_num").hide();
+		}
+	}
+	function subFun(){
+		var r = /^[0-9]*[1-9][0-9]*$/;
+		var price = $("#fav_price").val();
+		var pro = $("#pro").val();
+		var city = $("#city").val();
+		var start = $("#startime").val();
+		var end = $("#endtime").val();
+		var num = $("#fav_num").val();
+		if(price==''){
+			$.anewAlert('请输入价格');
+		}else if(pro==''||city==''){
+			$.anewAlert('请完善位置信息');
+		}else if(start==''||end==''||start>=end){
+			$.anewAlert('请输入正确的优惠券有效期');
+		}else if(num==''){
+			$.anewAlert('请填写使用次数');
+		}else if(price==0||num==0){
+			$.anewAlert('请填写正确的数目');
+		}else if(r.test(price)==false){
+			$.anewAlert('请填写正确的价格');
+		}else if(r.test(num)==false){
+			$.anewAlert('请填写正确的数目');
+		}else{
+			 $("#forms").submit();
+		}
+
+	}
+</script>
+	<body>
+		<include file='public:header'/>
+		<div class="clear_both"></div>
+     <div id="main-pyf">
+		<include file='public:left'/>
+
+		<div id="content">
+	<!-- 		<div class="ico-pt span12">
+				<h4>店铺管理</h4>
+			</div> -->
+			<div class="row">
+
+					<div class="tsan113">
+
+						<div class="widget">
+
+								<div class="tabbable">
+						<ul class="nav nav-tabs dd" id="tabnav">
+						<!-- <li class="active">
+						    <a href="">未发放</a><em>200</em>
+						  </li>
+						  <li><a href="">已发放</a></li>
+						   <li><a href="">已使用</a></li> -->
+						</ul>
+						<div class="tab-content1">
+						<div class="dq5">
+						<form method="post" action="__MODULE__/Coupon/couponDoAdd" id="forms">
+	                    <dl><input style="color:#333;" type="text" class="i_n text2" value="优惠卷类型：Ⅰ 类优惠券" disabled/></dl>
+					 <p>请选择可用起始地</p>
+
+			             <dl><select class="dh1" name="province" id="pro" onchange="cityFun();">
+								<option id='proP' value="{$proId}">{$pro?$pro:'请选择省份'}</option>
+								<foreach name="list" item="vo">
+									<option  value="{$vo.area_id}">{$vo.area_name}</option>
+								</foreach>
+								<!-- <option value="">石家庄</option>
+								<option value="">北京</option>
+								<option value="">郑州</option> -->
+							</select>
+							<select class="dh2" name="city" id="city" >
+								<option id='cityP' value="{$cityId}">{$city?$city:'请选择城市'}</option>
+								<!-- <option value="">石家庄</option>
+								<option value="">北京</option>
+								<option value="">郑州</option> -->
+							</select>
+						</dl>
+						<if condition="$type eq ''">
+						<p>请输入生成数量</p>
+
+						<dl><input type="text" class="i_n text2" placeholder="请输入生成数量" name="ge_num" value="{$info['fav_num']}"/></dl>
+						</if>
+						<p>请输入优惠劵面值（元）</p>
+						<dl><input type="text" class="i_n text2" id="fav_price" placeholder="请输入优惠劵面值（元）" name="fav_price" value="{$info['fav_price']/100}"/></dl>
+
+						 <p>请选择优惠劵可用时间</p>
+
+
+						<dl>
+						<input type="text" id="startime"  onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" class="i_n text2 dh1" placeholder="开始时间" name="fav_startime" value="{$info['fav_startime']}"/>
+						<input type="text" id="endtime" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" class="i_n text2 dh2" placeholder="结束时间" name="fav_endtime" value="{$info['fav_endtime']}"/>
+						</dl>
+
+				 <p>请选择优惠劵可用次数</p>
+						<dl><div class="dropdown  dh1">
+								<button data-toggle="dropdown" style="" id="dropdownMenu1" class="btn1 dropdown-toggle" value="" type="button">
+								<span class="sss1">请选择</span>
+								<span class="caret"></span>
+								</button>
+								<ul aria-labelledby="dropdownMenu1" role="menu" class="dropdown-menu">
+								<li role="presentation">
+								<a  tabindex="-1" id='sF' role="menuitem" name="s" onclick="changeNum(this);">一次</a>
+								</li>
+								<li role="presentation">
+								<a  tabindex="-1" id="mF" role="menuitem" name="m" onclick="changeNum(this);">多次</a>
+								</li>
+								</ul>
+								</div>
+								<input type="text" id="fav_num" class="i_n text2 dh2" placeholder="请输入可使用次数 单次不用" name="fav_num" style="display:none" value="{$info['fav_num']}"/>
+								</dl>
+								<input type="hidden" name="type" value="s"/>
+								<input type="hidden" name="types" value="{$Fstatus}"/>
+								<input type="hidden" name="id" value="{$info.fav_id}">
+
+						</form>
+					    </div>
+
+
+						<div style="clear:both"></div>
+
+						<hr>
+						<div class="sad1">
+											<button class="btn btn-default7" type="button" onclick="subFun();">确定</button>
+
+											<a href="__MODULE__/Coupon/couponList/type/C"><button class="btn btn-default8" type="button">取消</button></a>
+											</div>
+						</div>
+
+
+						</div> <!-- /widget -->
+
+					</div> <!-- /span11 -->
+
+				</div> <!-- /row -->
+
+		</div>
+		</div>
+
+	</body>
+</html>

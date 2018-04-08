@@ -1,0 +1,316 @@
+<include file='public:head'/>
+<script src="__JS__/jquerytool_1.0v.js"></script>
+<script>
+	function checkname(){
+		var name = $('#user_name').val();
+		if(name==''){
+			$.anewAlert('请输入用户名');
+			$("#namecheck").val('Y');
+		}else{
+			$("#namecheck").val('');
+		}
+	}
+	function checkpwd(){
+		var pwd = $('#user_pwd').val();
+		if(pwd==''){
+			$.anewAlert('请输入密码');
+			$("#pwdcheck").val('Y');
+		}else if(pwd.length<8||pwd.length>12){
+			$.anewAlert('密码长度为8-12位');
+			$("#pwdcheck").val('Y');
+		}else{
+			$("#pwdcheck").val('');
+		}
+	}
+	function checkide(){
+		var ide = $('#identity').val();
+		if(!$.isIdCardNo(ide)){
+			$.anewAlert("身份证格式不对");
+			$("#idecheck").val('Y');
+		}else{
+			$("#idecheck").val('');
+		}
+	}
+	function checktel(){
+		var tel = $("#tel").val();
+		if(!$.check_Mobile(tel)){
+			$.anewAlert("手机号格式不对");
+			$("#telcheck").val('Y');
+		}else{
+			$("#telcheck").val('');
+		}
+	}
+	function checkemail(){
+		var email = $("#email").val();
+		if(!$.check_Emails(email)){
+			$.anewAlert("邮箱格式不符");
+			$("#emailcheck").val('Y');
+		}else{
+			$("#emailcheck").val('');
+		}
+	}
+	function checkempty(obj){
+		var empty = $(obj).val();
+		if(empty==''){
+			$.anewAlert('数据不能为空');
+			$("#emptycheck").val('Y');
+		}else{
+			$("#emptycheck").val('');
+		}
+	}
+	function checkint(obj){
+		var num = $(obj).val();
+		var z = /^[1-9]\d*$/;
+		if(!z.test(num)){
+			$.anewAlert('填写正确的钱数');
+			$("#intcheck").val('Y');
+		}else{
+			$("#intcheck").val('');
+		}
+	}
+	function submits(){
+		var name = $("#namecheck").val();
+		var pwd = $("#pwdcheck").val();
+		var email = $("#emailcheck").val();
+		var ide = $("#idecheck").val();
+		var tel = $("#telcheck").val();
+		var pic = $('#pic').val();
+		var pics = $('#pics').val();
+		var empty = $('#emptycheck').val();
+		var num = $('#intcheck').val();
+		if(name!='Y'&&pwd!='Y'&&email!='Y'&&ide!='Y'&&tel!='Y'&&empty!='Y'&&pic!=''&&pics!=''&&num!='Y'){
+			$("#add").submit();
+		}else{
+			$.anewAlert('请先完善数据填写');
+		}
+	}
+</script>
+	<body>
+		<include file='public:header'/>
+     <div id="main-pyf">
+		<include file='public:left'/>
+	
+		<div id="content">
+	<!-- 		<div class="ico-pt span12">
+				<h4>店铺管理</h4>
+			</div> -->
+			<div class="row">
+					
+					<div class="tsan113">
+				
+						<div class="widget">
+
+								<div class="tabbable">
+						<ul class="nav nav-tabs" id="tabnav">
+					
+					<!--  <li>
+						    <a href="">普通会员</a>
+						  </li>
+					 <li class="active">
+						    <a href="">大客户管理</a>
+						  </li>
+						   <li>
+						    <a href="">潜在会员</a>
+						  </li> -->
+			
+						</ul>
+						
+						<div class="tab-content1">
+						<form method="post" action="__MODULE__/Member/companyDoAdd" id="add">
+						<div class="dw7">
+						   <div class="dw71">
+							
+							<dl>
+							<div class="fh1">
+							<span>用户姓名:</span>
+							<input type="text" class="i_n text2" name="user_name" id="user_name" placeholder="请输入用户名" onblur="checkname(this);" value="">
+							</div>
+							</dl>
+							<dl>
+							<div class="fh1">
+							<span>公司业务:</span>
+							<input type="text" class="i_n text2" name="company_business" id="company_business" placeholder="请输入公司业务" value="" onblur="checkempty(this);">
+							</div>
+							</dl>
+							<dl>
+							<div class="fh1">
+							<span>客户邮箱:</span>
+							<input type="text" class="i_n text2" name="email" id="email" placeholder="请输入邮箱" onblur="checkemail(this);" value="">
+							</div>
+							</dl>
+							<dl>
+							<div class="fh1">
+							<span>优惠价格:</span>
+							<input type="text" class="i_n text2" name="coupon_price" id="coupon_price" placeholder="请输入优惠价格" value="" onblur="checkint(this);">元
+							</div>
+							</dl>
+							
+						
+							<div class="dw62">
+							   <div class="dw62a">
+							    <h2>记录执照</h2>
+							     <div class="dw62c">
+								 <img id="show" src="__BACK__/images/de1.png">
+								 </div>
+							   </div>
+							   <div class="dw62b">
+							   <input type="hidden" id="pic" name="company_document" value="">
+							   <div id="upload" style="display:none;"></div>
+							   <button class="btn btn-default7" id="oneclick" type="button">点击上传</button>
+							   </div>
+							</div>
+							
+							
+						   </div>
+						    <div class="dw71">
+							
+							<dl>
+							<div class="fh1">
+							<span>手机号码:</span>
+							<input type="text" class="i_n text2" name="tel" id="tel" placeholder="请输入用户手机号用作登录" onblur="checktel(this);" value="">
+							</div>
+							</dl>
+							<dl>
+							<div class="fh1">
+							<span>请输入密码:</span>
+							<input type="text" class="i_n text2" name="user_pwd" id="user_pwd" placeholder="请输入用户密码" onblur="checkpwd(this);" >
+							</div>
+							</dl>
+							<dl>
+							<div class="fh1">
+							<span>公司名称:</span>
+							<input type="text" class="i_n text2" name="company_name" id="company_name" placeholder="请输入公司名称" value="" onblur="checkempty(this);"/>
+							</div>
+							</dl>
+							<dl>
+							<div class="fh1">
+							<span>身份证号码:</span>
+							<input type="text" class="i_n text2" name="identity" id="identity" placeholder="请输入用户身份证号码" onblur="checkide(this);" value="">
+							</div>
+							</dl>
+							
+						
+							<div class="dw62">
+							   <div class="dw62a">
+							    <h2>法人身份证</h2>
+							     <div class="dw62c">
+								 <img id="shows" src="__BACK__/images/de1.png">
+								 </div>
+							   </div>
+							   <div class="dw62b">
+							   <input type="hidden" id="pics" name="identity_img" value="">
+								<div id="uploads" style="display:none;"></div>
+							   <!-- <input type="file" class="i_n text2" value=""> -->
+							   <button class="btn btn-default7" id="oneclicks" type="button">点击上传</button>
+							   </div>
+							</div>
+							
+							
+						   </div>
+						</div>
+				
+						
+						
+						
+						<hr>
+						<input type="hidden" id="namecheck"/>
+						<input type="hidden" id="emailcheck"/>
+						<input type="hidden" id="idecheck"/>
+						<input type="hidden" id="pwdcheck"/>
+						<input type="hidden" id="telcheck"/>
+						<input type="hidden" id="emptycheck"/>
+						<input type="hidden" id="intcheck"/>
+						<div class="sad1">
+						<button class="btn btn-default7"  type="button" onclick="submits();">确定</button>
+						
+						<a href="__MODULE__/Member/getComMem"><button class="btn btn-default8" type="button">取消</button></a>
+						<button class="btn btn-default11" type="button">发送链接</button>
+						</div>
+						</form>
+						
+						</div>
+						
+
+							
+						</div> <!-- /widget -->
+						
+					</div> <!-- /span11 -->
+					
+				</div> <!-- /row -->
+
+		</div>
+		</div>
+
+	</body>
+	<script src="__JS__/jquery.Huploadify.js"></script>
+	<script>
+		$(function(){
+			var up = $('#upload').Huploadify({
+				auto:true,
+				fileTypeExts:'*.jpg;*.gif;*.png;*.jpeg',
+				multi:false,
+				fileSizeLimit:1024,
+				showUploadedPercent:false,
+				showUploadedSize:false,
+				removeTimeout:1000,
+				abs:1,//隐藏按钮序号
+				uploader:'{:U("Base/upload")}',//上传方法路径
+				canshu:'OPINION',//特征值:用于进行上传限制
+				onUploadStart:function(file){
+					console.log(file.name+'开始上传');
+				},
+				onInit:function(obj){
+					console.log('初始化');
+					console.log(obj);
+				},
+				onUploadComplete:function(file,data){
+					var datas = $.parseJSON(data);
+					if(datas.flag){
+						$("#pic").val(datas.fileurl);
+						$("#show").attr('src',datas.fileurl);
+					}else{
+						$.anewAlert(datas.msg);
+					}
+				},
+			});
+			$("#oneclick").click(function(){
+				$("#file_upload_1-button").click();
+			});
+			
+		});
+		$(function(){
+			var up = $('#uploads').Huploadify({
+				auto:true,
+				fileTypeExts:'*.jpg;*.gif;*.png;*.jpeg',
+				multi:false,
+				fileSizeLimit:1024,
+				showUploadedPercent:false,
+				showUploadedSize:false,
+				removeTimeout:1000,
+				abs:2,//隐藏按钮序号
+				uploader:'{:U("Base/upload")}',//上传方法路径
+				canshu:'OPINION',//特征值:用于进行上传限制
+				onUploadStart:function(file){
+					console.log(file.name+'开始上传');
+				},
+				onInit:function(obj){
+					console.log('初始化');
+					console.log(obj);
+				},
+				onUploadComplete:function(file,data){
+					var datas = $.parseJSON(data);
+					if(datas.flag){
+						$("#pics").val(datas.fileurl);
+						$("#shows").attr('src',datas.fileurl);
+					}else{
+						$.anewAlert(datas.msg);
+					}
+				},
+			});
+			$("#oneclicks").click(function(){
+				$("#file_upload_2-button").click();
+			});
+			
+		});
+</script>
+</html>

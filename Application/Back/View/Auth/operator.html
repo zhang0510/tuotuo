@@ -1,0 +1,172 @@
+<include file="Public:head" />
+<body>
+<include file="Public:header" />
+<div id="main-pyf">
+	<include file="Public:left" />
+
+		<div id="content">
+			<!-- 		<div class="ico-pt span12">
+			<h4>店铺管理</h4>
+		</div>
+		-->
+		<div class="row">
+
+			<div class="tsan113">
+
+				<div class="widget">
+
+					<div class="tabbable">
+						<ul class="nav nav-tabs" id="tabnav">
+							<li>
+								<a href="__MODULE__/Auth/grouplist">管理角色</a>
+							</li>
+							<li class="active">
+								<a href="__MODULE__/Auth/operator">操作员管理</a>
+							</li>
+						</ul>
+
+						<div class="tab-content1">
+							<div class="tab-content">
+								<div class="tab-pane active">
+									<form id="edit-profile" class="form-horizontal" />
+									<fieldset>
+										<div class="l_uit">
+											<div class="control-group">
+
+												<div style="float:left;" class="controls clec_t">
+													<div class="dropdown">
+														<select class="height46" name="" id="sel">
+															<option value="0">请选择角色</option>
+															<volist name="nav" id="na">
+																<option value="{$na.id}">{$na.title}</option>
+															</volist>
+														</select>
+													</div>
+
+													<div class="v_pb">
+														<input type="text" id="name" value="{$name}" placeholder="请输入姓名" class="i_n text2 width360">
+														<button id="btn" class="btn btn-default5" type="button">搜索</button>
+													</div>
+
+												</div>
+												<!-- /controls -->
+												<a href="__MODULE__/Auth/operatoradd" style="color:#fff"><button class="red btn btn-default5 fr" type="button">添加操作员</button></a>
+
+											</div>
+											<script>
+												$(function(){
+													$('table tr.tr2:odd').css('background','#F0F0F0');
+												});
+
+											</script>
+											<div class="l_table">
+												<table>
+													<tr class="tr1">
+														<td>选择</td>
+														<td>姓名</td>
+														<td>账号</td>
+														<td>所属角色</td>
+														<td>添加时间</td>
+														<td>操作</td>
+
+													</tr>
+													<volist name="list" id="vo">
+														<tr class="tr2">
+															<td class="td3">
+																<input type="checkbox" class="box" value="{$vo.admin_id}"></td>
+															<td>{$vo.admin_name}</td>
+															<td>{$vo.admin_acc}</td>
+															<td>{$vo.title}</td>
+															<td class="td_d2">{$vo.admin_time}</td>
+															<td>
+																<a class="see1" uodata="{$vo.admin_code}">修改</a>
+																<a class="see2" data-id="{$vo.admin_id}">删除</a>
+															</td>
+
+														</tr>
+													</volist>
+
+												</table>
+
+											</div>
+											<div class="l_fenye">
+												<div class="sad">
+													<button id="qx" type="button" class="btn btn-default5">全选</button>
+
+													<button id="del" type="button" class="btn btn-default6">删除</button>
+												</div>
+												{$page}
+											</div>
+										</div>
+									</fieldset>
+								</form>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+			<!-- /widget -->
+
+		</div>
+		<!-- /span11 -->
+
+	</div>
+	<!-- /row -->
+
+</div>
+</div>
+<script>
+	//全选
+	$('#qx').click(function(event) {
+		$('input[type="checkbox"]').each(function(index, el) {
+			$(this).attr('checked',true);
+		});
+	});
+	//删除
+	$('#del').click(function(event) {
+		var admin_id = ""
+		$('input[type="checkbox"]').each(function(index, el) {
+			if ($(this).is(':checked')) {
+				admin_id += $(this).val()+',';
+			};
+		});
+		if (confirm('确定删除这些信息吗？')) {
+			$.post('__MODULE__/Auth/operatordel', {admin_id: admin_id}, function(data) {
+				alert(data);
+				window.location.reload();
+			},'json');
+		}
+	});
+	$('.see2').click(function(event) {
+		var did = $(this).attr('data-id');
+		if (confirm('确定删除此信息吗？')) {
+			$.post('__MODULE__/Auth/operatordel', {did: did}, function(data) {
+				alert(data);
+				window.location.reload();
+			},'json');
+		}
+	})
+	//修改
+	$('.see1').click(function(event) {
+		var uo = $(this).attr('uodata');
+		window.location.href="__MODULE__/Auth/operatoradd/uo/"+uo;
+	});
+	//搜索
+	$('#btn').click(function(event) {
+		var sel = $('#sel').val();
+		var name = $('#name').val();
+		window.location.href="__MODULE__/Auth/operator/sel/"+sel+"/name/"+name;
+	});
+	//加载运行
+	var sele = "{$sel}";
+	$('#sel option').each(function(index, el) {
+		if (sele == $(this).val()) {
+			$(this).attr('selected',true);
+		};
+	});
+</script>
+</body>
+</html>

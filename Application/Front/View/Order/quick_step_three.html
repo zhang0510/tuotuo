@@ -1,0 +1,289 @@
+<include file='public:header'/>
+<div class="header_top">
+  <div class="header_top0 container">
+  <div class="header_top1">
+  <div class="fss">
+	<if condition="$user.id eq ''">
+		<span>Hi 欢迎来到妥妥运车 </span>
+		<a  class="deng1" href="__MODULE__/Login/pclogin/">请登录</a>
+		<a  class="deng2" href="__MODULE__/Register/index/">请注册</a>
+	<else/>
+		<span>Hi&nbsp;{$user.user_name}&nbsp;</span>
+		<h3>
+		<a  class="deng3" href="__MODULE__/Personal/personalInfo">个人中心</a>
+		<dl>
+			<dt><a href="__MODULE__/Personal/personalInfo">个人资料</a></dt>
+			<dt><a href="__MODULE__/MyOrder/index">我的订单</a></dt>
+			<dt><a href="__MODULE__/MyCoupon/index">我的优惠券</a></dt>
+		</dl>
+		</h3>
+		<a class="deng4" href="#" onclick="loginout();">退出</a>
+		<script>
+			function loginout(){
+				$.post('__MODULE__/Login/logout/',function(data){
+						window.location.reload();
+				})
+			}
+		</script>
+	</if>
+	</div>
+  </div>
+  <div class="header_top2">
+	<p>
+		<a  class="te11" href="">&nbsp;<img src="__FRONT__/images/timg.png"></a>
+		<a  class="te12" href="">&nbsp;<img src="__FRONT__/images/timg1.png"></a>
+		<!-- <a  class="te13" href="">&nbsp;</a> -->
+		<span>400-877-1107</span>
+	</p>
+
+  </div>
+  </div>
+</div>
+<include file='public:menu'/>
+<!--content-->
+<div class="dengm2">
+ <div class="deng0">
+   <div class="deng1">
+    <h2>详细地址</h2>
+   </div>
+   <form method="post" action="__MODULE__/Order/quickOrderTh" id="sub">
+   <div class="deng2e0">
+      <div class="ee1"><h2>{$tstart} <img src="__FRONT__/images/ee1.png"> {$tend}</h2></div>
+	  <div class="ee2">{$order['brand']}  {$order['type']}<span>1辆</span></div>
+	   <div class="rr3">
+	     <div class="rr31">车辆信息</div>
+	     <div class="rr32">
+		   <div class="rr32a">
+		     <span>车牌号：</span><input type="text" class="dsds" name="plate" id="plate"/>
+		   </div>
+		   <div class="rr32b">
+		   <span>估值{$order['carprice']}万元整</span>
+		   </div>
+
+		 </div>
+		 <div class="rr33">车辆信息是为您爱车购买保险的依据，无牌车填写车架号代替。请准确填写，确保您的合法权益</div>
+	   </div>
+	  	<div class="rr4">
+		<div class="rr41">
+		 <h2 class="rra1">发车信息</h2>
+
+		 <h2 class="rra2">发车人  <span  class="hhhh"  onclick='openF("S");'>常用联系人</span></h2>
+		  <div class="rr41a">
+		  <dl><dt>*</dt><dd><input type="text" class="rry1" placeholder="联系人姓名" value="{$order['name']}" id="fname" name="fname"></dd></dl>
+		  <dl><dt>*</dt><dd><input type="text" class="rry1" placeholder="联系人电话" value="{$order['phone']}" id="fphone" name="fphone"></dd></dl>
+		  <dl><dt>*</dt><dd><input type="text" class="rry1" placeholder="联系人身份证号码" id="fiden" name="fiden"></dd></dl>
+
+		  </div>
+
+		   <h2 class="rra2">发车地址</h2>
+		  <div class="rr41a">
+		  <dl><dt>*</dt><dd><input class="txt1a inko" placeholder="北京市"  type="text" value="{$order['start']}" readonly="readonly">
+	   <span class="xxsj"></span>
+	  </dd></dl>
+		  <dl><dt>*</dt><dd><input type="text" class="rry1" placeholder="发车详细地址" id="faddress" name="faddress"></dd></dl>
+
+		  </div>
+
+		</div>
+		<div class="rr41">
+			 <h2 class="rra1">收车信息</h2>
+
+		 <!--<h2 class="rra2">收车人 <span onclick="change();">同发车人</span></h2>-->
+		 <h2 class="rra2">收车人 <span>同发车人</span>  <span   class="hhhh"  onclick='openF("R");'>常用联系人</span></h2>
+		  <div class="rr41a">
+		  <dl><dt>*</dt><dd><input type="text" class="rry1" placeholder="联系人姓名" id="sname" name="sname"></dd></dl>
+		  <dl><dt>*</dt><dd><input type="text" class="rry1" placeholder="联系人电话" id="sphone" name="sphone"></dd></dl>
+		  <dl><dt>*</dt><dd><input type="text" class="rry1" placeholder="联系人身份证号码" id="siden" name="siden"></dd></dl>
+
+		  </div>
+
+		   <h2 class="rra2">收车地址</h2>
+		  <div class="rr41a">
+		  <dl><dt>*</dt><dd><input class="txt1a inko" placeholder="北京市"  type="text" value="{$order['end']}" readonly="readonly">
+	   </dd></dl>
+	   <if condition="$order['order_info_smsc'] eq 'Y'">
+		  <dl><dt>*</dt><dd><input type="text" class="rry1" placeholder="收车详细地址" name="saddress" id="saddress"></dd></dl>
+		</if>
+		  </div>
+
+
+
+		</div>
+
+		</div>
+		<div style="clear:both;"></div>
+	  	  <div class="rr5">
+		  <textarea name="note">备注：</textarea>
+
+		  </div>
+
+
+
+
+
+ <div class="ee81"><button type="button" onclick="submitF();">确定发车</button></div>
+   </div>
+   </form>
+ </div>
+</div>
+
+  <div  id="bg" class="bg" style="display:none;"></div>
+<div  id="tan1" class="tan1"  style="display:none;">
+   <div class="tan11">
+         <a class="closed" id="closed">X</a>
+    <h2>常用联系人</h2>
+   <div class="clist" style="overflow:auto;height:300px;">
+   <volist name="linkList" id="v">
+      <div class="clist1">
+	    <b></b><input type="radio" name="bb[]" value="{$v.link_code}" class="del" ><span class="bm1" name="{$v.link_name}">姓名：{$v.link_name}</span><span class="bm2" name="{$v.link_tel}">手机号：{$v.link_tel}</span><span class="bm3" name="{$v.link_num}">身份证号：{$v.link_num}</span>
+	  </div>
+	</volist>
+
+   </div>
+
+     <p>
+	 <button class="put2" type="button" id="sel" name="S" onclick="selectF(this)">选择</button>
+	 <!-- <button class="put3" type="button" id="del" onclick="delLink()">删除</button> -->
+	 </p>
+   </div>
+
+</div>
+
+<script>
+	$(".ee71 span,.rra2 span").click(function(){
+	  if($(this).hasClass('on')){
+	  	$(this).removeClass('on');
+	  	$("#sname").val('');
+		$("#sphone").val('');
+		$("#siden").val('');
+	  }else{
+	  	$(this).addClass("on");
+	  	$("#sname").val($("#fname").val());
+		$("#sphone").val($("#fphone").val());
+		$("#siden").val($("#fiden").val());
+	  }
+	});
+	function submitF(){
+		var pai = $("#plate").val();
+		var fname = $("#fname").val();
+		var fphone = $("#fphone").val();
+		var fiden = $("#fiden").val();
+		var sname = $("#sname").val();
+		var sphone = $("#sphone").val();
+		var siden = $("#siden").val();
+		var faddress = $("#faddress").val();
+		var saddress = $("#saddress").val();
+		var sign = '{$order.order_info_smsc}';
+		if(pai==''){
+			$.anewAlert('请输入车牌号');
+			return false;
+		}
+		if(fname==''){
+			$.anewAlert('请输入发车人姓名');
+			return false;
+		}
+		if(faddress==''){
+			$.anewAlert('请输入发车详细地址');
+			return false;
+		}
+		if(sign=='Y'&&saddress==''){
+			$.anewAlert('请输入收车详细地址');
+			return false;
+		}
+
+		if(sname==''){
+			$.anewAlert('请输入收车人姓名');
+			return false;
+		}
+		if(!$.check_Mobile(fphone)){
+			$.anewAlert('请输入正确的手机号');
+			return false;
+		}
+		if(!$.check_Mobile(sphone)){
+			$.anewAlert('请输入正确的手机号');
+			return false;
+		}
+		if(!$.isIdCardNo(siden)){
+			$.anewAlert("身份证格式不对");
+			return false;
+		}
+		if(!$.isIdCardNo(fiden)){
+			$.anewAlert("身份证格式不对");
+			return false;
+		}
+		$("#sub").submit();
+	}
+	$("#fname").blur(function(){
+		if($(this).val()==''){
+			$.anewAlert('请输入发车人姓名');
+		}
+	});
+	$("#sname").blur(function(){
+		if($(this).val()==''){
+			$.anewAlert('请输入收车人姓名');
+		}
+	});
+	$("#fphone").blur(function(){
+		if(!$.check_Mobile($(this).val())){
+			$.anewAlert('请输入正确的手机号');
+		}
+	});
+	$("#sphone").blur(function(){
+		if(!$.check_Mobile($(this).val())){
+			$.anewAlert('请输入正确的手机号');
+		}
+	});
+	$("#fiden").blur(function(){
+		if(!$.isIdCardNo($(this).val())){
+			$.anewAlert('身份证格式不对');
+		}
+	});
+	$("#siden").blur(function(){
+		if(!$.isIdCardNo($(this).val())){
+			$.anewAlert('身份证格式不对');
+		}
+	});
+	$("#faddress").blur(function(){
+		if($(this).val()==''){
+			$.anewAlert('请输入发车详细地址');
+		}
+	});
+	$("#saddress").blur(function(){
+		var sign = '{$order.order_info_smsc}';
+		if($(this).val()==''&&sign=='Y'){
+			$.anewAlert('请输入收车详细地址');
+		}
+	});
+	function openF(sign){
+		$("#bg").show();
+		$("#tan1").show();
+		$("#sel").attr('name',sign);
+	}
+	function selectF(obj){
+		var sign = $(obj).attr('name');
+		var name = $(".clist1.on").find('.bm1').attr('name');
+		var phone = $(".clist1.on").find('.bm2').attr('name');
+		var iden = $(".clist1.on").find('.bm3').attr('name');
+		if(sign=='S'){
+			$("#fname").val(name);
+			$("#fphone").val(phone);
+			$("#fiden").val(iden);
+		}else{
+			$("#sname").val(name);
+			$("#sphone").val(phone);
+			$("#siden").val(iden);
+		}
+		$("#bg").hide();
+		$("#tan1").hide();
+	}
+	$(".clist1").click(function(){
+		$(this).addClass("on").siblings().removeClass('on');
+	});
+	$("#closed").click(function(){
+		$("#bg").hide();
+		$("#tan1").hide();
+	})
+</script>
+
+<!--content-->
+<include file='public:foot'/>

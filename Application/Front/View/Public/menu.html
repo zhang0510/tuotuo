@@ -1,0 +1,78 @@
+<!--logo and nav-->
+<nav class="navbar navbar-default">
+	<div id="sasa" class="container">
+		<div class="head1">
+			<a class="navbar-brand0" href="/"><img class="logoimg" src="__FRONT__/images/logo.png"></a>
+		</div>
+		<a href="__MODULE__/Personal/personalInfo">
+		<img class="phone renimg" src="__FRONT__/images/ren.png">
+		</a>
+		<a href="javascript:volid(0);" data-toggle="collapse" data-target="#sousuok" aria-expanded="false" aria-controls="sousuok">
+		<img class="phone sousuoimg" src="__FRONT__/images/sousuo.png">
+		</a>
+		<a href="javascript:volid(0);" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			<img class="phone dhimg" src="__FRONT__/images/sjdh.png" style="width: 6%">
+		</a>
+		<div id="sousuok" class="phone du3d">
+			<input type="text" placeholder="请在此输入订单号" class="cx1" id="keyword" ><!-- onkeyup="sel(this);" --><button onclick="tiaoFun();" type="button"></button>
+			<div id="searchBoxs"></div>
+		</div>
+		<div id="navbar" class="collapse navbar-collapse">
+			<div class="baotio">
+				<ul class="nav navbar-nav">
+					<li  <if condition="$Think.const.CONTROLLER_NAME  eq 'Index'">class="active"</if>>
+					<h2><a href="/">首页</a></h2>
+					</li>
+
+					<li <if condition="$Think.const.CONTROLLER_NAME  eq 'ProfessionalServices'">class="active"</if>><h2><a  href="javascript:;">妥妥服务</a></h2>
+					<dl>
+						<div class="fgrr"></div>
+						<foreach name="ttfw" item="vo">
+							<dd><a href="__MODULE__/ProfessionalServices/sos/code/{$vo.article_code}">{$vo.title}</a></dd>
+						</foreach>
+						<!-- <dd><a href="__MODULE__/Worklwt/lineDis">长途托运</a></dd> -->
+					</dl>
+					</li>
+					</li>
+					<!-- <li id="tt1"><h2><a href="javascript:;">托车优惠</a></h2>
+                         <dl>
+                          <div class="fgrr"></div>
+
+                          <dd><a href="__MODULE__/Worklwt/lineDisList">优惠线路</a></dd>
+                          <dd><a href="__MODULE__/GroupBuy/gotoGroupBuy">团购线路</a></dd>
+
+                         </dl>
+                    </li> -->
+					</li>
+					<li <if condition="$Think.const.CONTROLLER_NAME  eq 'SecurityGuarantee'">class="active"</if>><h2><a  href="javascript:;">安全保障</a></h2>
+					<dl>
+						<div class="fgrr"></div>
+						<foreach name="aq" item="vo">
+							<dd><a href="__MODULE__/SecurityGuarantee/index/code/{$vo.article_code}">{$vo.title}</a></dd>
+						</foreach>
+
+					</dl>
+					</li>
+					</li>
+					<li  <if condition="$Think.const.CONTROLLER_NAME  eq  'AboutUs'">class="active"</if>><h2><a  href="javascript:;">关于妥妥</a></h2>
+					<dl>
+						<div class="fgrr"></div>
+						<foreach name="dh" item="vo">
+							<dd><a href="__MODULE__/AboutUs/index/code/{$vo.article_code}">{$vo.title}</a></dd>
+						</foreach>
+
+						<dd><a href="__MODULE__/News/newsList">妥妥新闻</a></dd>
+					</dl>
+					</li>
+					<li><h2><a href="__MODULE__/Ordersel/orderselView">运单查询</a></h2>
+
+					</li>
+
+				</ul>
+
+			</div>
+		</div>
+
+	</div>
+</nav>
+<!--logo and nav-->

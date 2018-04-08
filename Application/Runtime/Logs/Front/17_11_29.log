@@ -1,0 +1,792 @@
+[ 2017-11-29T23:51:32+08:00 ] 180.76.14.15 /?jh=sj-yd&kd=sanyaqichetuoyun&e_adposition=%7Badposition%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+SQL: SHOW COLUMNS FROM `tuo_article` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'GY'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'LX'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'JR'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'QQ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FK'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'BZ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FW'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'AQ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'DH'  [ RunTime:0.0001s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated /guzai/TTYC/ThinkPHP/Library/DES_PHP/DESPHP.class.php 第 47 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Front/Controller/IndexController.class.php 第 17 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Front/Controller/IndexController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `tuo_area` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_pid` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_carxing` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_carxing` WHERE `cxjj_pid` = 0  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_img` <> '' ORDER BY article_time desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_id` <> '36' ORDER BY article_time desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'CJ' ORDER BY article_time desc LIMIT 10   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'TTFW' ORDER BY article_id asc LIMIT 6   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_link` WHERE `fl_status` = 'Y' ORDER BY fl_sort LIMIT 6   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_adv_img` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_adv_img` WHERE `adv_code` = 'A'  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000205s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000262s ]
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 8 行.
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 12 行.
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 16 行.
+NOTIC: [2] Illegal string offset 'total' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 175 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 175 行.
+NOTIC: [2] Illegal string offset 'sprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 176 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 176 行.
+NOTIC: [2] Illegal string offset 'tprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 177 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 177 行.
+NOTIC: [2] Illegal string offset 'eprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 178 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 178 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [2] Illegal string offset 'total' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [2] Illegal string offset 'start' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [2] Illegal string offset 'end' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [2] Illegal string offset 'carInfo' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019234s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019280s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000172s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000330s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000375s ]
+
+[ 2017-11-29T23:51:32+08:00 ] 180.76.14.13 /?jh=quanguo-yd&kd=chezituoyungongsi&e_adposition=%7Badposition%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000363s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+SQL: SHOW COLUMNS FROM `tuo_article` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'GY'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'LX'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'JR'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'QQ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FK'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'BZ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FW'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'AQ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'DH'  [ RunTime:0.0001s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated /guzai/TTYC/ThinkPHP/Library/DES_PHP/DESPHP.class.php 第 47 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Front/Controller/IndexController.class.php 第 17 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Front/Controller/IndexController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `tuo_area` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_pid` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_carxing` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_carxing` WHERE `cxjj_pid` = 0  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_img` <> '' ORDER BY article_time desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_id` <> '36' ORDER BY article_time desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'CJ' ORDER BY article_time desc LIMIT 10   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'TTFW' ORDER BY article_id asc LIMIT 6   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_link` WHERE `fl_status` = 'Y' ORDER BY fl_sort LIMIT 6   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_adv_img` [ RunTime:0.0002s ]
+SQL: SELECT * FROM `tuo_adv_img` WHERE `adv_code` = 'A'  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000240s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000309s ]
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 8 行.
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 12 行.
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 16 行.
+NOTIC: [2] Illegal string offset 'total' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 175 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 175 行.
+NOTIC: [2] Illegal string offset 'sprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 176 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 176 行.
+NOTIC: [2] Illegal string offset 'tprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 177 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 177 行.
+NOTIC: [2] Illegal string offset 'eprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 178 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 178 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [2] Illegal string offset 'total' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [2] Illegal string offset 'start' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [2] Illegal string offset 'end' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [2] Illegal string offset 'carInfo' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019852s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019902s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000173s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000328s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000375s ]
+
+[ 2017-11-29T23:51:32+08:00 ] 180.76.14.136 /?jh=tp-yd&kd=jiaochetuoyungongsidianhua&e_adposition=%7Badposition%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000366s ]
+SQL: SHOW COLUMNS FROM `tuo_article` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'GY'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'LX'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'JR'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'QQ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FK'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'BZ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FW'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'AQ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'DH'  [ RunTime:0.0001s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated /guzai/TTYC/ThinkPHP/Library/DES_PHP/DESPHP.class.php 第 47 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Front/Controller/IndexController.class.php 第 17 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Front/Controller/IndexController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `tuo_area` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_pid` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_carxing` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tuo_carxing` WHERE `cxjj_pid` = 0  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_img` <> '' ORDER BY article_time desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_id` <> '36' ORDER BY article_time desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'CJ' ORDER BY article_time desc LIMIT 10   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'TTFW' ORDER BY article_id asc LIMIT 6   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_link` WHERE `fl_status` = 'Y' ORDER BY fl_sort LIMIT 6   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_adv_img` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_adv_img` WHERE `adv_code` = 'A'  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000204s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000258s ]
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 8 行.
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 12 行.
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 16 行.
+NOTIC: [2] Illegal string offset 'total' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 175 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 175 行.
+NOTIC: [2] Illegal string offset 'sprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 176 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 176 行.
+NOTIC: [2] Illegal string offset 'tprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 177 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 177 行.
+NOTIC: [2] Illegal string offset 'eprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 178 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 178 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [2] Illegal string offset 'total' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [2] Illegal string offset 'start' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [2] Illegal string offset 'end' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [2] Illegal string offset 'carInfo' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019036s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019080s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000123s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000164s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000305s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000350s ]
+
+[ 2017-11-29T23:51:33+08:00 ] 180.76.14.18 /?jh=quanguo-yd&kd=jiaochetuoyunyouxiangongsi&e_adposition=%7Badposition%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+SQL: SHOW COLUMNS FROM `tuo_article` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'GY'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'LX'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'JR'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'QQ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FK'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'BZ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FW'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'AQ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'DH'  [ RunTime:0.0001s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated /guzai/TTYC/ThinkPHP/Library/DES_PHP/DESPHP.class.php 第 47 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Front/Controller/IndexController.class.php 第 17 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Front/Controller/IndexController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `tuo_area` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_pid` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_carxing` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_carxing` WHERE `cxjj_pid` = 0  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_img` <> '' ORDER BY article_time desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_id` <> '36' ORDER BY article_time desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'CJ' ORDER BY article_time desc LIMIT 10   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'TTFW' ORDER BY article_id asc LIMIT 6   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_link` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tuo_link` WHERE `fl_status` = 'Y' ORDER BY fl_sort LIMIT 6   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_adv_img` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_adv_img` WHERE `adv_code` = 'A'  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000258s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000320s ]
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 8 行.
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 12 行.
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 16 行.
+NOTIC: [2] Illegal string offset 'total' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 175 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 175 行.
+NOTIC: [2] Illegal string offset 'sprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 176 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 176 行.
+NOTIC: [2] Illegal string offset 'tprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 177 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 177 行.
+NOTIC: [2] Illegal string offset 'eprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 178 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 178 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [2] Illegal string offset 'total' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [2] Illegal string offset 'start' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [2] Illegal string offset 'end' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [2] Illegal string offset 'carInfo' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021349s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021399s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000161s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000341s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000396s ]
+
+[ 2017-11-29T23:51:33+08:00 ] 180.76.14.139 /?jh=quanguo-yd&kd=chezenmetuoyun&e_adposition=%7Badposition%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000339s ]
+SQL: SHOW COLUMNS FROM `tuo_article` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'GY'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'LX'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'JR'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'QQ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FK'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'BZ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FW'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'AQ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'DH'  [ RunTime:0.0001s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated /guzai/TTYC/ThinkPHP/Library/DES_PHP/DESPHP.class.php 第 47 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Front/Controller/IndexController.class.php 第 17 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Front/Controller/IndexController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `tuo_area` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_pid` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_carxing` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_carxing` WHERE `cxjj_pid` = 0  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_img` <> '' ORDER BY article_time desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_id` <> '36' ORDER BY article_time desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'CJ' ORDER BY article_time desc LIMIT 10   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'TTFW' ORDER BY article_id asc LIMIT 6   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_link` WHERE `fl_status` = 'Y' ORDER BY fl_sort LIMIT 6   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_adv_img` [ RunTime:0.0002s ]
+SQL: SELECT * FROM `tuo_adv_img` WHERE `adv_code` = 'A'  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000204s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000256s ]
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 8 行.
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 12 行.
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 16 行.
+NOTIC: [2] Illegal string offset 'total' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 175 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 175 行.
+NOTIC: [2] Illegal string offset 'sprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 176 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 176 行.
+NOTIC: [2] Illegal string offset 'tprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 177 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 177 行.
+NOTIC: [2] Illegal string offset 'eprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 178 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 178 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [2] Illegal string offset 'total' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [2] Illegal string offset 'start' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [2] Illegal string offset 'end' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [2] Illegal string offset 'carInfo' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019095s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019139s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000315s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000361s ]
+
+[ 2017-11-29T23:51:33+08:00 ] 180.76.14.14 /?jh=quanguo-yd&kd=jiaochetuoyunfeiyaoduoshaoqian&e_adposition=%7Badposition%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000355s ]
+SQL: SHOW COLUMNS FROM `tuo_article` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'GY'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'LX'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'JR'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'QQ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FK'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'BZ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FW'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'AQ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'DH'  [ RunTime:0.0001s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated /guzai/TTYC/ThinkPHP/Library/DES_PHP/DESPHP.class.php 第 47 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Front/Controller/IndexController.class.php 第 17 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Front/Controller/IndexController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `tuo_area` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_pid` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_carxing` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_carxing` WHERE `cxjj_pid` = 0  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_img` <> '' ORDER BY article_time desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_id` <> '36' ORDER BY article_time desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'CJ' ORDER BY article_time desc LIMIT 10   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'TTFW' ORDER BY article_id asc LIMIT 6   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_link` [ RunTime:0.0002s ]
+SQL: SELECT * FROM `tuo_link` WHERE `fl_status` = 'Y' ORDER BY fl_sort LIMIT 6   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_adv_img` [ RunTime:0.0002s ]
+SQL: SELECT * FROM `tuo_adv_img` WHERE `adv_code` = 'A'  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000225s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000282s ]
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 8 行.
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 12 行.
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 16 行.
+NOTIC: [2] Illegal string offset 'total' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 175 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 175 行.
+NOTIC: [2] Illegal string offset 'sprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 176 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 176 行.
+NOTIC: [2] Illegal string offset 'tprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 177 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 177 行.
+NOTIC: [2] Illegal string offset 'eprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 178 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 178 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [2] Illegal string offset 'total' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [2] Illegal string offset 'start' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [2] Illegal string offset 'end' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [2] Illegal string offset 'carInfo' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019894s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019943s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000168s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000307s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000351s ]
+
+[ 2017-11-29T23:53:46+08:00 ] 218.30.103.18 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+SQL: SHOW COLUMNS FROM `tuo_article` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'GY'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'LX'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'JR'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'QQ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FK'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'BZ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FW'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'AQ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'DH'  [ RunTime:0.0001s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated /guzai/TTYC/ThinkPHP/Library/DES_PHP/DESPHP.class.php 第 47 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Front/Controller/IndexController.class.php 第 17 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Front/Controller/IndexController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `tuo_area` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_pid` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_carxing` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_carxing` WHERE `cxjj_pid` = 0  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_img` <> '' ORDER BY article_time desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_id` <> '36' ORDER BY article_time desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'CJ' ORDER BY article_time desc LIMIT 10   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'TTFW' ORDER BY article_id asc LIMIT 6   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_link` WHERE `fl_status` = 'Y' ORDER BY fl_sort LIMIT 6   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_adv_img` [ RunTime:0.0002s ]
+SQL: SELECT * FROM `tuo_adv_img` WHERE `adv_code` = 'A'  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000216s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000273s ]
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 8 行.
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 12 行.
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 16 行.
+NOTIC: [2] Illegal string offset 'total' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 175 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 175 行.
+NOTIC: [2] Illegal string offset 'sprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 176 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 176 行.
+NOTIC: [2] Illegal string offset 'tprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 177 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 177 行.
+NOTIC: [2] Illegal string offset 'eprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 178 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 178 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [2] Illegal string offset 'total' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [2] Illegal string offset 'start' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [2] Illegal string offset 'end' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [2] Illegal string offset 'carInfo' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019973s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020019s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000304s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000350s ]
+
+[ 2017-11-29T23:56:34+08:00 ] 220.181.108.187 /&source=baidu/&plan=sj-pc/&keyword=ningbojiaochetuoyungongsi/&e_creative=18013508827/&e_adposition=mt3/&e_keywordid=68545807904
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+SQL: SHOW COLUMNS FROM `tuo_article` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'GY'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'LX'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'JR'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'QQ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FK'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'BZ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FW'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'AQ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'DH'  [ RunTime:0.0001s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated /guzai/TTYC/ThinkPHP/Library/DES_PHP/DESPHP.class.php 第 47 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Front/Controller/IndexController.class.php 第 17 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Front/Controller/IndexController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `tuo_area` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_pid` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_carxing` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_carxing` WHERE `cxjj_pid` = 0  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_img` <> '' ORDER BY article_time desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_id` <> '36' ORDER BY article_time desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'CJ' ORDER BY article_time desc LIMIT 10   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'TTFW' ORDER BY article_id asc LIMIT 6   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_link` [ RunTime:0.0002s ]
+SQL: SELECT * FROM `tuo_link` WHERE `fl_status` = 'Y' ORDER BY fl_sort LIMIT 6   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_adv_img` [ RunTime:0.0002s ]
+SQL: SELECT * FROM `tuo_adv_img` WHERE `adv_code` = 'A'  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000215s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000278s ]
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 8 行.
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 12 行.
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 16 行.
+NOTIC: [2] Illegal string offset 'total' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 175 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 175 行.
+NOTIC: [2] Illegal string offset 'sprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 176 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 176 行.
+NOTIC: [2] Illegal string offset 'tprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 177 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 177 行.
+NOTIC: [2] Illegal string offset 'eprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 178 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 178 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [2] Illegal string offset 'total' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [2] Illegal string offset 'start' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [2] Illegal string offset 'end' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [2] Illegal string offset 'carInfo' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019408s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019456s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000130s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000172s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000312s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000358s ]
+
+[ 2017-11-29T23:57:50+08:00 ] 61.135.165.43 /?source=baidu&jh=QC-P&keyword=shenzhenqicheyunshugongsi&e_creative=%7Bcreative%7D&e_adposition=%7Badposition%7D&e_keywordid=69225999300
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000338s ]
+SQL: SHOW COLUMNS FROM `tuo_article` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'GY'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'LX'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'JR'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'QQ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FK'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'BZ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FW'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'AQ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'DH'  [ RunTime:0.0001s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated /guzai/TTYC/ThinkPHP/Library/DES_PHP/DESPHP.class.php 第 47 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Front/Controller/IndexController.class.php 第 17 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Front/Controller/IndexController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `tuo_area` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_pid` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tuo_carxing` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_carxing` WHERE `cxjj_pid` = 0  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_img` <> '' ORDER BY article_time desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_id` <> '36' ORDER BY article_time desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'CJ' ORDER BY article_time desc LIMIT 10   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'TTFW' ORDER BY article_id asc LIMIT 6   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_link` [ RunTime:0.0002s ]
+SQL: SELECT * FROM `tuo_link` WHERE `fl_status` = 'Y' ORDER BY fl_sort LIMIT 6   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_adv_img` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_adv_img` WHERE `adv_code` = 'A'  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000209s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000262s ]
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 8 行.
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 12 行.
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 16 行.
+NOTIC: [2] Illegal string offset 'total' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 175 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 175 行.
+NOTIC: [2] Illegal string offset 'sprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 176 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 176 行.
+NOTIC: [2] Illegal string offset 'tprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 177 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 177 行.
+NOTIC: [2] Illegal string offset 'eprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 178 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 178 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [2] Illegal string offset 'total' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [2] Illegal string offset 'start' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [2] Illegal string offset 'end' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [2] Illegal string offset 'carInfo' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019660s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019707s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000302s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000346s ]
+
+[ 2017-11-29T23:58:49+08:00 ] 61.135.169.41 /?source=baidu&jh=SJ-P&keyword=shenzhenjiaochetuoyungongsi&e_creative=%7Bcreative%7D&e_adposition=%7Badposition%7D&e_keywordid=68538768778
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000360s ]
+SQL: SHOW COLUMNS FROM `tuo_article` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'GY'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'LX'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'JR'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'QQ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FK'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'BZ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FW'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'AQ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'DH'  [ RunTime:0.0001s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated /guzai/TTYC/ThinkPHP/Library/DES_PHP/DESPHP.class.php 第 47 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Front/Controller/IndexController.class.php 第 17 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Front/Controller/IndexController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `tuo_area` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_pid` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_carxing` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_carxing` WHERE `cxjj_pid` = 0  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_img` <> '' ORDER BY article_time desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_id` <> '36' ORDER BY article_time desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'CJ' ORDER BY article_time desc LIMIT 10   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'TTFW' ORDER BY article_id asc LIMIT 6   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_link` [ RunTime:0.0002s ]
+SQL: SELECT * FROM `tuo_link` WHERE `fl_status` = 'Y' ORDER BY fl_sort LIMIT 6   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_adv_img` [ RunTime:0.0002s ]
+SQL: SELECT * FROM `tuo_adv_img` WHERE `adv_code` = 'A'  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000202s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000255s ]
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 8 行.
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 12 行.
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 16 行.
+NOTIC: [2] Illegal string offset 'total' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 175 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 175 行.
+NOTIC: [2] Illegal string offset 'sprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 176 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 176 行.
+NOTIC: [2] Illegal string offset 'tprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 177 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 177 行.
+NOTIC: [2] Illegal string offset 'eprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 178 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 178 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [2] Illegal string offset 'total' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [2] Illegal string offset 'start' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [2] Illegal string offset 'end' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [2] Illegal string offset 'carInfo' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019484s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019528s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000309s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000354s ]
+
+[ 2017-11-29T23:59:13+08:00 ] 61.135.165.40 /?source=baidu&jh=GL-P&keyword=cheliangtuoyun2000liduoshaoqian&e_creative=%7Bcreative%7D&e_adposition=%7Badposition%7D&e_keywordid=71606230161
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000347s ]
+SQL: SHOW COLUMNS FROM `tuo_article` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'GY'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'LX'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'JR'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'QQ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FK'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'BZ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FW'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'AQ'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'DH'  [ RunTime:0.0001s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated /guzai/TTYC/ThinkPHP/Library/DES_PHP/DESPHP.class.php 第 47 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Front/Controller/IndexController.class.php 第 17 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Front/Controller/IndexController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `tuo_area` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_pid` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_carxing` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_carxing` WHERE `cxjj_pid` = 0  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_img` <> '' ORDER BY article_time desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_id` <> '36' ORDER BY article_time desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'CJ' ORDER BY article_time desc LIMIT 10   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'TTFW' ORDER BY article_id asc LIMIT 6   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_link` WHERE `fl_status` = 'Y' ORDER BY fl_sort LIMIT 6   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tuo_adv_img` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tuo_adv_img` WHERE `adv_code` = 'A'  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000208s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000271s ]
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 8 行.
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 12 行.
+NOTIC: [8] Undefined variable: news /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 16 行.
+NOTIC: [2] Illegal string offset 'total' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 175 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 175 行.
+NOTIC: [2] Illegal string offset 'sprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 176 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 176 行.
+NOTIC: [2] Illegal string offset 'tprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 177 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 177 行.
+NOTIC: [2] Illegal string offset 'eprice' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 178 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 178 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [2] Illegal string offset 'total' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 189 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [2] Illegal string offset 'start' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 274 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [2] Illegal string offset 'end' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 284 行.
+NOTIC: [2] Illegal string offset 'order' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [2] Illegal string offset 'carInfo' /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+NOTIC: [8] Uninitialized string offset: 0 /guzai/TTYC/Application/Runtime/Cache/Front/4741b996fde22d44b7262dab482a2184.php 第 293 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019425s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019473s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000138s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000188s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000336s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000384s ]
+

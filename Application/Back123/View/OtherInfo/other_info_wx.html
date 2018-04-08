@@ -1,0 +1,153 @@
+<include file='public:head'/>
+<script src="__JS__/jquery.Huploadify.js"></script>
+<link rel="stylesheet" href="__PUBLIC__/kindeditor/themes/default/default.css" />
+<script charset="utf-8" src="__PUBLIC__/kindeditor/kindeditor-min.js"></script>
+<script charset="utf-8" src="__PUBLIC__/kindeditor/lang/zh_CN.js"></script>
+	<body>
+		<include file='public:header'/>
+     <div id="main-pyf">
+		<include file='public:left'/>
+		<div id="content">
+	<!-- 		<div class="ico-pt span12">
+				<h4>店铺管理</h4>
+			</div> -->
+			<div class="row">
+				<div class="tsan113">
+					<div class="widget">
+						<div class="tabbable">
+						<ul class="nav nav-tabs" id="tabnav">
+					 	    <li class="active">
+								<a href="__MODULE__/Worklwt/contList">微信提车员自动回复设置</a>
+							</li>
+							<!-- 
+							<li>
+								<a href="__MODULE__/Worklwt/ideaList">意见反馈</a>
+							</li>
+							 -->
+						</ul>
+						<div class="tab-content1">
+						<form action="__MODULE__/OtherInfo/eventReturnAdd"   method="post" >
+						<div class="dw6" style="height: 1250px;">
+						   <div class="dw61" style="height: 550px;">
+						   <dl>
+						   	<input type="text" name="title" id="title" class="i_n text2" placeholder="请输入文章标题" value="{$otherInfo.title}">
+						   </dl>
+							<dl><input type="text" name="urlpath" id="urlpath" class="i_n text2" placeholder="请输入链接" value="{$otherInfo.urlpath}"></dl>
+							<dl id="desc">
+								<textarea id='des' name='des' placeholder="请输入描述" style="height: 120px;width: 430px;">{$otherInfo.des}</textarea>
+							</dl>
+							<div class="dw62" style="margin-top: 105px;">
+							   <div class="dw62a">
+							    <h2>上传图片(340*190)</h2>
+							     <div class="dw62c">
+							     <if condition="$otherInfo.picurl eq ''">
+							    	 <img id="oneclick" src="__BACK__/images/de1.png">
+							     <else />
+							    	 <img id="oneclick" src="{$otherInfo.picurl}">
+							     </if>
+								 </div>
+							   </div>
+							   <div class="dw62b">
+							   </div>
+							</div>
+		 					<input type="hidden" id='article_id' name='id' value='{$otherInfo.id}'>
+		 					<input type="hidden" id='picurl' name='picurl' value='{$otherInfo.picurl}'>
+		 					<br/>
+		 					<dl>
+		 					<textarea id='contents' name='content' placeholder="内容" style="width: 1000px;height: 600px;">{$otherInfo.content}</textarea>
+						    </dl>
+						</div>
+						</div>
+						
+						<hr>
+						<div class="sad1">
+						<button class="btn btn-default7" type="submit" onclick="bttonFun();">确定</button>
+						<!-- <button class="btn btn-default8" type="button">取消</button> -->
+						</div>
+						</form>
+						</div>
+						</div> <!-- /widget -->
+					</div> <!-- /span11 -->
+				</div> <!-- /row -->
+			</div>
+		</div>
+		<div id="upload" style="display:none;"></div>
+		<script>
+		KindEditor.ready(function(K) {
+	        var editor2 = K.create('textarea[name="content"]', {
+	            cssPath : '__PUBLIC__/kindeditor/plugins/code/prettify.css',
+	            uploadJson : '__PUBLIC__/kindeditor/php/upload_json.php',
+	            fileManagerJson : '__PUBLIC__/kindeditor/php/file_manager_json.php',
+	            allowFileManager : true,
+	            afterCreate : function() {
+	                var self = this;
+	                K.ctrl(document, 13, function() {
+	                    self.sync();
+	                    K('form[name=example]')[0].submit();
+	                });
+	                K.ctrl(self.edit.doc, 13, function() {
+	                    self.sync();
+	                    K('form[name=example]')[0].submit();
+	                });
+	            }
+	         
+	        });
+	    });
+		//添加或修改微信自动回复内容
+		/* function bttonFun(){
+			var title = $("#title").val();
+			var urlpath = $("#urlpath").val();
+			var des = $("#des").val();
+			var picurl = $("#picurl").val();
+			var id = $("#article_id").val();
+			
+			var content=$("#contents").html();
+			alert(content);
+			return false;
+			$.post("__MODULE__/OtherInfo/eventReturnAdd",{title:title,urlpath:urlpath,des:des,picurl:picurl,id:id,content:content},function(data){
+				if(data){
+					$.anewAlert("修改成功!");
+				}else{
+					$.anewAlert("修改失败!");
+					return false;
+				};
+			});
+			
+		} */
+  		var up = $('#upload').Huploadify({
+			auto:true,
+			fileTypeExts:'*.jpg;*.gif;*.png;*.jpeg',
+			multi:false,
+			fileSizeLimit:1024,
+			showUploadedPercent:false,
+			showUploadedSize:false,
+			removeTimeout:1000,
+			abs:1,
+			canshu:'TCYWX',
+			uploader:'{:U("Base/upload")}',
+			onUploadStart:function(file){
+				console.log(file.name+'开始上传');
+			},
+			onInit:function(obj){
+				console.log('初始化');
+				console.log(obj);
+			},
+			onUploadComplete:function(file,data){
+				var datas = $.parseJSON(data);
+				if(datas.flag){
+					$("#picurl").val(datas.fileurl);
+					$("#oneclick").attr('src',datas.fileurl);
+				}else{
+					$.anewAlert(datas.msg);
+				}
+			},
+		});
+	  	$(function(){
+			$("#oneclick").click(function(){
+				$("#file_upload_1-button").click();
+			});
+			
+		});
+  	</script>
+	</body>
+</html>

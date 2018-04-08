@@ -1,0 +1,227 @@
+<include file='public:header'/>
+<div class="header_top">
+  <div class="header_top0 container">
+  <div class="header_top1">
+  <div class="fss">
+	<if condition="$user.id eq ''">
+		<span>Hi 欢迎来到车妥妥 </span>
+		<a  class="deng1" href="__MODULE__/Login/pclogin/">请登录</a>
+		<a  class="deng2" href="__MODULE__/Register/index/">请注册</a>
+	<else/>
+		<span>Hi&nbsp;{$user['user_name']==null?$user['tel']:$user['user_name']}&nbsp;</span>
+		<h3>
+		<a  class="deng3" href="__MODULE__/Personal/personalInfo">个人中心</a>
+		<dl>
+			<dt><a href="__MODULE__/Personal/personalInfo">个人资料</a></dt>
+			<dt><a href="__MODULE__/MyOrder/index">我的订单</a></dt>
+			<dt><a href="__MODULE__/MyCoupon/index">我的优惠券</a></dt>
+		</dl>
+		</h3>
+		<a class="deng4" href="#" onclick="loginout();">退出</a>
+		<script>
+			function loginout(){
+				$.post('__MODULE__/Login/logout/',function(data){
+						window.location.reload();
+				})
+			}
+		</script>
+	</if>
+	</div>
+  </div>
+  <div class="header_top2">
+	<p>
+		<a  class="te11" href="">&nbsp;<img src="__FRONT__/images/timg.png"></a>
+		<a  class="te12" href="">&nbsp;<img src="__FRONT__/images/timg1.png"></a>
+		<!-- <a  class="te13" href="">&nbsp;</a> -->
+		<span>400-877-1107</span>
+	</p>
+
+  </div>
+  </div>
+</div>
+<include file='public:menu'/>
+<script src="__JS__/indexTuo.js"></script>
+<!--content-->
+<div class="dengm">
+ <div class="deng0  container">
+   <div class="deng1">
+    <h2>我要发车</h2>
+   </div>
+   <div class="deng5"><div class="kuai2"></div></div>
+   <form method="post" action="__MODULE__/Order/normalOrderT" id="quickz">
+   <div class="deng2" style="padding:0px;">
+     <div class="deng2b">
+	   <div class="deng2b1">
+		<dl><dt><p class="bm1"><b>运输费</b></p></dt></dl>
+		<dl>
+			<dt>出发地：</dt>
+			<dd>
+				<input type="text" class="txt1a inko" readonly="readonly" name="qsrcz" id="qsrcz" value="{$order.qsrezname}" >
+				<span class="xxsj"></span>
+				<div class="selected" id="q4">
+					<div class="province star_province" id="qspz">
+						<foreach name="pro" item="vo">
+						<li data-id="1" onclick="getCityz('{$vo.area_id}','S','{$vo.area_name}')">{$vo.area_name}</li>
+						</foreach>
+					</div>
+					<div class="city star_city" data-id="" " id="qscz"></div>
+					<div class="county star_county" data-id=""  id="qsbz"></div>
+				</div> 
+			</dd>
+		</dl>
+		<dl>
+			<dt>目的地：</dt>
+			<dd>
+				<input type="text" class="txt1a inko" readonly="readonly" name="qercz" id="qercz" value="{$order.qerezname}" onclick="ceshi(this);">
+				<span class="xxsj"></span>
+				<div class="selected" id="q5">
+					<div class="province star_province" id="qepz">
+					<foreach name="pro" item="vo">
+					<li data-id="1"  onclick="getCityz('{$vo.area_id}','E','{$vo.area_name}')">{$vo.area_name}</li>
+					</foreach>
+					</div>
+					<div class="city star_city" data-id="" id="qecz" style="display:none"></div>
+				</div> 
+			</dd>
+		</dl>
+		<dl>
+			<dt>品牌车型：</dt>
+			<dd>
+				<input type="text" class="txt1a inko" readonly="readonly" id="qbtz" name="carInfoz" value="{$order.qsctez}-{$order.qsctcz}" >
+				<span class="xxsj"></span>
+				<div class="selected" id="q6">
+					<div class="province star_province" id="qbrz">
+					<foreach name="brand" item="vo">
+					<li data-id="1"  onclick="getTypez('{$vo.cxjj_id}','{$vo.cxjj_brand}')">{$vo.cxjj_brand}</li>
+					</foreach>
+					</div>
+					<div class="city star_city" data-id="" style="display:none" id="qtz"></div>
+				</div> 
+			</dd>
+		</dl>
+		<dl><dt>运费：</dt><dd><b id="totelz">{$order.totalz}</b>元</dd></dl>
+		<dl><dt><p class="bm1"><b>保险费</b></p></dt></dl>
+		<dl><dt>保额：</dt><dd><input type="text" class="txt1" onblur="baojia();" onkeyup="if(event.keyCode !=37 && event.keyCode != 39){if (!/^[\d]+$/ig.test(this.value)){this.value='';}}" id="car_baojia"><font style="color:red;">(*请输入车辆当前价值单位:万)</font></dd></dl>
+		<dl><dt>保险费：</dt><dd><b id="baoprice">0</b>元</dd></dl>
+		<dl><dt>合计费用：</dt><dd><b id="heji">{$order.totalz}</b>元</dd></dl>
+		<!-- 开始地 -->
+		<input type="hidden" name="qsrez" id="qsrez" value="{$order.qsrez}" />
+		<!-- 目的地 -->
+		<input type="hidden" name="qerez" id="qerez" value="{$order.qerez}" />
+		<!-- 开始地中文名称 -->
+		<input type="hidden" name="qsrezname" id="qsrezname" value="{$order.qsrezname}" />
+		<!-- 目的地中文名称 -->
+		<input type="hidden" name="qerezname" id="qerezname" value="{$order.qerezname}" />
+		<!-- 车品牌 -->
+		<input type="hidden" name="qsctez" id="qsctez" value="{$order.qsctez}" />
+		<!-- 车型号 -->
+		<input type="hidden" name="qsctcz" id="qsctcz" value="{$order.qsctcz}" />
+		<!-- 车id -->
+		<input type="hidden" name="carids" id="carids" value="{$order.carids}" />
+		<!-- 运费 -->
+		<input type="hidden" name="lineprice" id="lineprice" value="{$order.lineprice}" />
+		<!-- 类型 -->
+		<input type="hidden" name="product_type" id="product_type" value="{$order.product_type}" />
+		<!-- 总费 -->
+		<input type="hidden" name="totalz" id="totalz" value="{$order.totalz}" />
+		<!-- 提车费 -->
+		<input type="hidden" name="tiz" id="tiz" value="{$order.tiz}" />
+		<!-- 送车费 -->
+		<input type="hidden" name="songz" id="songz" value="{$order.songz}" />
+		<!-- 集散地起点 -->
+		<input type="hidden" name="sansz" id="sansz" value="" />
+		<!-- 集散地重点 -->
+		<input type="hidden" name="sanez" id="sanez" value="" />
+		<!-- 提车地id -->
+		<input type="hidden" name="tidz" id="tidz" value="" />
+		<!-- 送车地id -->
+		<input type="hidden" name="sidz" id="sidz" value="" />
+		<!-- 毛利 -->
+		<input type="hidden" name="maoliz" id="maoliz" value="{$order.maoliz}" />
+		<!-- 普通下单钱数第一部分 -->
+		<input type="hidden" name="ptxd1" id="ptxd1" value=0 />
+		<!-- 普通下单钱数第二部分 -->
+		<input type="hidden" name="ptxd2" id="ptxd2" value=0 />
+		<!-- 集散地B地名（汉字） -->
+		<input type="hidden" name="ptjsd" id="ptjsd" value='' />
+		<!-- 数据是否可用 -->
+		<input type="hidden" name="flag" id="flag" value='{$order.flag|default="N"}' />
+		<input type="hidden" name="msg" id="msg" value='' />
+		<!-- 车价 -->
+		<input type="hidden" name="order_info_price" id="order_info_price" value=0 />
+		<!-- 保价 -->
+		<input type="hidden" name="order_info_bxd" id="order_info_bxd" value='' />
+		<div class="txt4"><input type="button" onclick="queFun();" value="确定"></div>
+	 </div>
+	   <div class="deng2b2">
+	 
+	 </div>
+	 
+	 
+	 </div>
+   
+   </div>
+   </form>
+ </div>
+</div>
+
+<!--content-->
+<script>
+//下一步
+function queFun(){
+	var baoprice = $('#baoprice').html();
+	var car_baojia = $("#car_baojia").val();
+	var flag = $("#flag").val();
+	var msg = $("#msg").val();
+	if(car_baojia.length >5){
+		$('#baoprice').html(0);
+		layer.msg("保价最多输入5位");
+		return false;
+	}
+	/* if(flag== "N"){
+		layer.msg(msg);
+		return false;
+	} */
+	if(baoprice==0 || car_baojia==0 || car_baojia==""){
+		layer.msg("请先输入保额");
+		return false;
+	}
+	
+	$("#quickz").submit();
+}
+//保费查询
+function baojia(){
+	var car_baojia = $("#car_baojia").val();
+	if(!$.isPositiveNum(car_baojia))car_baojia=0;
+	if(car_baojia == "" || car_baojia == 0){
+		layer.msg("请输入保额");
+		return false;
+	}
+	var flag = $("#flag").val();
+	/* if(flag == 'N'){
+		layer.msg($("#msg").val());
+		return false;
+	} */
+	$.post("__MODULE__/Order/getAcale",{car_baojia:car_baojia},function(data){
+		$("#baoprice").html(data);
+		$("#order_info_price").val(car_baojia);
+		$("#order_info_bxd").val(data);
+		totelFun();
+	},'json');
+}
+function ceshi(obj){
+	var qsrcz = $("#qsrcz").val();
+	if(qsrcz.trim()==""){
+		layer.msg("请先选择出发地!");
+		//$("#qepz").hide();
+		//$("#q5").hide();
+		//$("#qecz").hide();
+		//$(".selected0").hide();
+		return false;
+	}else{
+		$(obj).siblings(".selected0").show();
+	}
+}
+	  
+</script>
+<include file='public:foot'/>

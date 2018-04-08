@@ -1,0 +1,1198 @@
+[ 2018-03-29T14:25:26+08:00 ] ::1 /Back/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000542s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006170s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006217s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000435s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000467s ]
+
+[ 2018-03-29T14:25:26+08:00 ] ::1 /Back/Login/verify_c.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001083s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001196s ]
+
+[ 2018-03-29T14:25:28+08:00 ] ::1 /Back/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000288s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000323s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004404s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004506s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000660s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000743s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001267s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001379s ]
+
+[ 2018-03-29T14:25:28+08:00 ] ::1 /Back/Login/verify_c.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000467s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000491s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000443s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000491s ]
+
+[ 2018-03-29T14:25:35+08:00 ] ::1 /Back/Login/doLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000473s ]
+NOTIC: [8] Use of undefined constant Y - assumed 'Y' D:\phpStudy\WWW\Application\Back\Controller\LoginController.class.php 第 36 行.
+SQL: SHOW COLUMNS FROM `tuo_admin` [ RunTime:0.0221s ]
+SQL: SELECT * FROM `tuo_admin` WHERE `admin_pwd` = 'adc3949' AND `admin_acc` = 'admin' AND `admin_flag` = 'Y' LIMIT 1   [ RunTime:0.0415s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005459s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005509s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000186s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000209s ]
+
+[ 2018-03-29T14:25:37+08:00 ] ::1 /Back/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000296s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003115s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003155s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000200s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000347s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000382s ]
+
+[ 2018-03-29T14:25:37+08:00 ] ::1 /Back/Login/verify_c.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000449s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000992s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001073s ]
+
+[ 2018-03-29T14:25:42+08:00 ] ::1 /Back/Login/doLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000344s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000625s ]
+NOTIC: [8] Use of undefined constant Y - assumed 'Y' D:\phpStudy\WWW\Application\Back\Controller\LoginController.class.php 第 36 行.
+SQL: SHOW COLUMNS FROM `tuo_admin` [ RunTime:0.0207s ]
+SQL: SELECT * FROM `tuo_admin` WHERE `admin_pwd` = 'adc3949' AND `admin_acc` = 'admin' AND `admin_flag` = 'Y' LIMIT 1   [ RunTime:0.0215s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007892s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007999s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000513s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000617s ]
+
+[ 2018-03-29T14:25:44+08:00 ] ::1 /Back/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000265s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000299s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004209s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004242s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000154s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000174s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000289s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000312s ]
+
+[ 2018-03-29T14:25:44+08:00 ] ::1 /Back/Login/verify_c.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000487s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000508s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000559s ]
+
+[ 2018-03-29T14:26:20+08:00 ] ::1 /Back/Login/doLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000382s ]
+NOTIC: [8] Use of undefined constant Y - assumed 'Y' D:\phpStudy\WWW\Application\Back\Controller\LoginController.class.php 第 36 行.
+SQL: SHOW COLUMNS FROM `tuo_admin` [ RunTime:0.0229s ]
+SQL: SELECT * FROM `tuo_admin` WHERE `admin_pwd` = '99e7e39' AND `admin_acc` = 'admin' AND `admin_flag` = 'Y' LIMIT 1   [ RunTime:0.0581s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 36 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026731s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026845s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000537s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001195s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001249s ]
+
+[ 2018-03-29T14:26:24+08:00 ] ::1 /Back/Orderyjh/orderList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000541s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000590s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_rule` [ RunTime:0.0215s ]
+SQL: SELECT * FROM `tuo_auth_rule`  [ RunTime:0.0462s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_group_access` [ RunTime:0.0220s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tuo_auth_group_access a INNER JOIN tuo_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0195s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1")  ) AND `pid` = 0 AND `status` = '1' LIMIT 1   [ RunTime:0.0213s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1" AND status="1")  ) AND `pid` = 0 ORDER BY id  [ RunTime:0.0232s ]
+INFO: 2018-03-29 14:26:21订单---条件---查询:
+SQL: SHOW COLUMNS FROM `tuo_order_assistant` [ RunTime:0.0467s ]
+INFO: 2018-03-29 14:26:21订单条件查询:{"sh_status":["neq","N"],"order_status":["neq","DIE"],"0":"1=1"}
+SQL: SHOW COLUMNS FROM `tuo_area` [ RunTime:0.0207s ]
+SQL: SHOW COLUMNS FROM `tuo_position_tracking_record` [ RunTime:0.0204s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `sh_status` <> 'N' AND `order_status` <> 'DIE' AND (  1=1 ) LIMIT 1   [ RunTime:0.0198s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 227 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 246 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 258 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 238 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 282 行.
+NOTIC: [8] Undefined offset: 1 D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 282 行.
+SQL: SELECT * FROM `tuo_order_assistant` WHERE `sh_status` <> 'N' AND `order_status` <> 'DIE' AND (  1=1 ) ORDER BY order_time desc LIMIT 0,10   [ RunTime:0.0408s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1100' LIMIT 1   [ RunTime:0.0205s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1101' LIMIT 1   [ RunTime:0.0193s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3575' LIMIT 1   [ RunTime:0.0257s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3405' LIMIT 1   [ RunTime:0.0398s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3407' LIMIT 1   [ RunTime:0.0215s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05100751' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0214s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2503' LIMIT 1   [ RunTime:0.0870s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2506' LIMIT 1   [ RunTime:0.0195s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2516' LIMIT 1   [ RunTime:0.0246s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3561' LIMIT 1   [ RunTime:0.0202s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3574' LIMIT 1   [ RunTime:0.0217s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05100750' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0194s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2049' LIMIT 1   [ RunTime:0.0206s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2051' LIMIT 1   [ RunTime:0.0766s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2060' LIMIT 1   [ RunTime:0.0229s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1108' LIMIT 1   [ RunTime:0.0355s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1273' LIMIT 1   [ RunTime:0.0193s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05100749' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0238s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1100' LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1101' LIMIT 1   [ RunTime:0.0346s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3589' LIMIT 1   [ RunTime:0.0203s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2703' LIMIT 1   [ RunTime:0.0214s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2705' LIMIT 1   [ RunTime:0.0207s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05100748' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0215s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2703' LIMIT 1   [ RunTime:0.0381s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2705' LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2714' LIMIT 1   [ RunTime:0.0448s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1100' LIMIT 1   [ RunTime:0.0191s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1101' LIMIT 1   [ RunTime:0.0198s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05100747' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0229s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3561' LIMIT 1   [ RunTime:0.0203s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3562' LIMIT 1   [ RunTime:0.0568s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3570' LIMIT 1   [ RunTime:0.0222s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2703' LIMIT 1   [ RunTime:0.0226s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2800' LIMIT 1   [ RunTime:0.0284s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05402361' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0331s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1326' LIMIT 1   [ RunTime:0.0202s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1361' LIMIT 1   [ RunTime:0.0194s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1380' LIMIT 1   [ RunTime:0.0666s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1918' LIMIT 1   [ RunTime:0.0213s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3468' LIMIT 1   [ RunTime:0.0332s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05100746' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0201s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3651' LIMIT 1   [ RunTime:0.0232s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3652' LIMIT 1   [ RunTime:0.0217s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3662' LIMIT 1   [ RunTime:0.0191s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1100' LIMIT 1   [ RunTime:0.0181s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1101' LIMIT 1   [ RunTime:0.0207s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05402360' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0196s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2016' LIMIT 1   [ RunTime:0.0181s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2446' LIMIT 1   [ RunTime:0.0185s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2447' LIMIT 1   [ RunTime:0.0230s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1100' LIMIT 1   [ RunTime:0.0208s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1101' LIMIT 1   [ RunTime:0.0575s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05100745' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0237s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1540' LIMIT 1   [ RunTime:0.0193s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1541' LIMIT 1   [ RunTime:0.0212s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1545' LIMIT 1   [ RunTime:0.0194s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1100' LIMIT 1   [ RunTime:0.0443s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1101' LIMIT 1   [ RunTime:0.0196s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05100744' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0197s ]
+INFO: 2018-03-29 14:26:23查询条件:{"sh_status":["neq","N"],"order_status":["neq","DIE"],"0":"1=1"}
+NOTIC: [8] Undefined index: OrderInfo D:\phpStudy\WWW\Application\Back\Controller\OrderyjhController.class.php 第 79 行.
+SQL: SHOW COLUMNS FROM `tuo_yundan` [ RunTime:0.0227s ]
+SQL: SELECT * FROM `tuo_yundan` WHERE ( order_code = '05100751' and yd_type ='C' ) ORDER BY yd_id desc LIMIT 1   [ RunTime:0.0378s ]
+NOTIC: [8] Undefined index: OrderInfo D:\phpStudy\WWW\Application\Back\Controller\OrderyjhController.class.php 第 79 行.
+SQL: SELECT * FROM `tuo_yundan` WHERE ( order_code = '05100750' and yd_type ='C' ) ORDER BY yd_id desc LIMIT 1   [ RunTime:0.0339s ]
+NOTIC: [8] Undefined index: OrderInfo D:\phpStudy\WWW\Application\Back\Controller\OrderyjhController.class.php 第 79 行.
+SQL: SELECT * FROM `tuo_yundan` WHERE ( order_code = '05100749' and yd_type ='C' ) ORDER BY yd_id desc LIMIT 1   [ RunTime:0.0315s ]
+NOTIC: [8] Undefined index: OrderInfo D:\phpStudy\WWW\Application\Back\Controller\OrderyjhController.class.php 第 79 行.
+SQL: SELECT * FROM `tuo_yundan` WHERE ( order_code = '05100748' and yd_type ='C' ) ORDER BY yd_id desc LIMIT 1   [ RunTime:0.0394s ]
+NOTIC: [8] Undefined index: OrderInfo D:\phpStudy\WWW\Application\Back\Controller\OrderyjhController.class.php 第 79 行.
+SQL: SELECT * FROM `tuo_yundan` WHERE ( order_code = '05100747' and yd_type ='C' ) ORDER BY yd_id desc LIMIT 1   [ RunTime:0.0755s ]
+NOTIC: [8] Undefined index: OrderInfo D:\phpStudy\WWW\Application\Back\Controller\OrderyjhController.class.php 第 79 行.
+SQL: SELECT * FROM `tuo_yundan` WHERE ( order_code = '05402361' and yd_type ='C' ) ORDER BY yd_id desc LIMIT 1   [ RunTime:0.0422s ]
+NOTIC: [8] Undefined index: OrderInfo D:\phpStudy\WWW\Application\Back\Controller\OrderyjhController.class.php 第 79 行.
+SQL: SELECT * FROM `tuo_yundan` WHERE ( order_code = '05100746' and yd_type ='C' ) ORDER BY yd_id desc LIMIT 1   [ RunTime:0.0418s ]
+NOTIC: [8] Undefined index: OrderInfo D:\phpStudy\WWW\Application\Back\Controller\OrderyjhController.class.php 第 79 行.
+SQL: SELECT * FROM `tuo_yundan` WHERE ( order_code = '05402360' and yd_type ='C' ) ORDER BY yd_id desc LIMIT 1   [ RunTime:0.0324s ]
+NOTIC: [8] Undefined index: OrderInfo D:\phpStudy\WWW\Application\Back\Controller\OrderyjhController.class.php 第 79 行.
+SQL: SELECT * FROM `tuo_yundan` WHERE ( order_code = '05100745' and yd_type ='C' ) ORDER BY yd_id desc LIMIT 1   [ RunTime:0.0387s ]
+NOTIC: [8] Undefined index: OrderInfo D:\phpStudy\WWW\Application\Back\Controller\OrderyjhController.class.php 第 79 行.
+SQL: SELECT * FROM `tuo_yundan` WHERE ( order_code = '05100744' and yd_type ='C' ) ORDER BY yd_id desc LIMIT 1   [ RunTime:0.0522s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `kefu_shi` = 'N' LIMIT 1   [ RunTime:0.0218s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'S' AND `sh_status` = '' LIMIT 1   [ RunTime:0.0255s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'A' LIMIT 1   [ RunTime:0.0189s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'T' LIMIT 1   [ RunTime:0.0212s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `verify` = 'N' AND `order_status` = 'T' LIMIT 1   [ RunTime:0.0219s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'Y' LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'M' LIMIT 1   [ RunTime:0.0195s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'N' LIMIT 1   [ RunTime:0.0215s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'B' LIMIT 1   [ RunTime:0.0206s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'G' LIMIT 1   [ RunTime:0.0596s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'D' LIMIT 1   [ RunTime:0.0196s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'W' LIMIT 1   [ RunTime:0.0194s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `visit` = 'Y' AND `is_visit` = 'N' LIMIT 1   [ RunTime:0.0187s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `receipt` = 'Y' AND `is_hui` = 'N' LIMIT 1   [ RunTime:0.0339s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'S' AND `sh_status` = 'N' LIMIT 1   [ RunTime:0.0193s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'DIE' LIMIT 1   [ RunTime:0.0208s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_type` = 1  [ RunTime:0.0259s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000458s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000504s ]
+NOTIC: [8] Undefined variable: arry D:\phpStudy\WWW\Application\Runtime\Cache\Back\acc93fb97b4eb71b0000237159cc27c7.php 第 214 行.
+NOTIC: [8] Undefined variable: arry D:\phpStudy\WWW\Application\Runtime\Cache\Back\acc93fb97b4eb71b0000237159cc27c7.php 第 232 行.
+NOTIC: [8] Undefined variable: pay D:\phpStudy\WWW\Application\Runtime\Cache\Back\acc93fb97b4eb71b0000237159cc27c7.php 第 431 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035522s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035621s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000229s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000400s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000437s ]
+
+[ 2018-03-29T14:26:27+08:00 ] ::1 /Back/Orderyjh/orderList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000220s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000268s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000301s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_rule` [ RunTime:0.0202s ]
+SQL: SELECT * FROM `tuo_auth_rule`  [ RunTime:0.0415s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_group_access` [ RunTime:0.0210s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tuo_auth_group_access a INNER JOIN tuo_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0207s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1")  ) AND `pid` = 0 AND `status` = '1' LIMIT 1   [ RunTime:0.0199s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1" AND status="1")  ) AND `pid` = 0 ORDER BY id  [ RunTime:0.0197s ]
+INFO: 2018-03-29 14:26:25订单---条件---查询:
+SQL: SHOW COLUMNS FROM `tuo_order_assistant` [ RunTime:0.0205s ]
+INFO: 2018-03-29 14:26:25订单条件查询:{"sh_status":["neq","N"],"order_status":["neq","DIE"],"0":"1=1"}
+SQL: SHOW COLUMNS FROM `tuo_area` [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `tuo_position_tracking_record` [ RunTime:0.0191s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `sh_status` <> 'N' AND `order_status` <> 'DIE' AND (  1=1 ) LIMIT 1   [ RunTime:0.0206s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 227 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 246 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 258 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 238 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 282 行.
+NOTIC: [8] Undefined offset: 1 D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 282 行.
+SQL: SELECT * FROM `tuo_order_assistant` WHERE `sh_status` <> 'N' AND `order_status` <> 'DIE' AND (  1=1 ) ORDER BY order_time desc LIMIT 0,10   [ RunTime:0.0202s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1100' LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1101' LIMIT 1   [ RunTime:0.0194s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3575' LIMIT 1   [ RunTime:0.0192s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3405' LIMIT 1   [ RunTime:0.0182s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3407' LIMIT 1   [ RunTime:0.0189s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05100751' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0184s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2503' LIMIT 1   [ RunTime:0.0188s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2506' LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2516' LIMIT 1   [ RunTime:0.0194s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3561' LIMIT 1   [ RunTime:0.0196s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3574' LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05100750' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0185s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2049' LIMIT 1   [ RunTime:0.0182s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2051' LIMIT 1   [ RunTime:0.0187s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2060' LIMIT 1   [ RunTime:0.0191s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1108' LIMIT 1   [ RunTime:0.0187s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1273' LIMIT 1   [ RunTime:0.0183s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05100749' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0205s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1100' LIMIT 1   [ RunTime:0.0198s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1101' LIMIT 1   [ RunTime:0.0193s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3589' LIMIT 1   [ RunTime:0.0192s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2703' LIMIT 1   [ RunTime:0.0186s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2705' LIMIT 1   [ RunTime:0.0208s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05100748' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0209s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2703' LIMIT 1   [ RunTime:0.0233s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2705' LIMIT 1   [ RunTime:0.0198s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2714' LIMIT 1   [ RunTime:0.0198s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1100' LIMIT 1   [ RunTime:0.0217s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1101' LIMIT 1   [ RunTime:0.0181s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05100747' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0209s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3561' LIMIT 1   [ RunTime:0.0192s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3562' LIMIT 1   [ RunTime:0.0195s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3570' LIMIT 1   [ RunTime:0.0181s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2703' LIMIT 1   [ RunTime:0.0192s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2800' LIMIT 1   [ RunTime:0.0192s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05402361' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0222s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1326' LIMIT 1   [ RunTime:0.0195s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1361' LIMIT 1   [ RunTime:0.0197s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1380' LIMIT 1   [ RunTime:0.0191s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1918' LIMIT 1   [ RunTime:0.0207s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3468' LIMIT 1   [ RunTime:0.0243s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05100746' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0196s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3651' LIMIT 1   [ RunTime:0.0202s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3652' LIMIT 1   [ RunTime:0.0195s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '3662' LIMIT 1   [ RunTime:0.0237s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1100' LIMIT 1   [ RunTime:0.0182s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1101' LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05402360' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0186s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2016' LIMIT 1   [ RunTime:0.0179s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2446' LIMIT 1   [ RunTime:0.0195s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '2447' LIMIT 1   [ RunTime:0.0186s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1100' LIMIT 1   [ RunTime:0.0195s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1101' LIMIT 1   [ RunTime:0.0203s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05100745' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0212s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1540' LIMIT 1   [ RunTime:0.0396s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1541' LIMIT 1   [ RunTime:0.0206s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1545' LIMIT 1   [ RunTime:0.0194s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1100' LIMIT 1   [ RunTime:0.0206s ]
+SQL: SELECT `area_name` FROM `tuo_area` WHERE `area_id` = '1101' LIMIT 1   [ RunTime:0.0219s ]
+SQL: SELECT `content` FROM `tuo_position_tracking_record` WHERE ( order_code ='05100744' ) ORDER BY time desc LIMIT 1   [ RunTime:0.0194s ]
+INFO: 2018-03-29 14:26:26查询条件:{"sh_status":["neq","N"],"order_status":["neq","DIE"],"0":"1=1"}
+NOTIC: [8] Undefined index: OrderInfo D:\phpStudy\WWW\Application\Back\Controller\OrderyjhController.class.php 第 79 行.
+SQL: SHOW COLUMNS FROM `tuo_yundan` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `tuo_yundan` WHERE ( order_code = '05100751' and yd_type ='C' ) ORDER BY yd_id desc LIMIT 1   [ RunTime:0.0207s ]
+NOTIC: [8] Undefined index: OrderInfo D:\phpStudy\WWW\Application\Back\Controller\OrderyjhController.class.php 第 79 行.
+SQL: SELECT * FROM `tuo_yundan` WHERE ( order_code = '05100750' and yd_type ='C' ) ORDER BY yd_id desc LIMIT 1   [ RunTime:0.0209s ]
+NOTIC: [8] Undefined index: OrderInfo D:\phpStudy\WWW\Application\Back\Controller\OrderyjhController.class.php 第 79 行.
+SQL: SELECT * FROM `tuo_yundan` WHERE ( order_code = '05100749' and yd_type ='C' ) ORDER BY yd_id desc LIMIT 1   [ RunTime:0.0206s ]
+NOTIC: [8] Undefined index: OrderInfo D:\phpStudy\WWW\Application\Back\Controller\OrderyjhController.class.php 第 79 行.
+SQL: SELECT * FROM `tuo_yundan` WHERE ( order_code = '05100748' and yd_type ='C' ) ORDER BY yd_id desc LIMIT 1   [ RunTime:0.0201s ]
+NOTIC: [8] Undefined index: OrderInfo D:\phpStudy\WWW\Application\Back\Controller\OrderyjhController.class.php 第 79 行.
+SQL: SELECT * FROM `tuo_yundan` WHERE ( order_code = '05100747' and yd_type ='C' ) ORDER BY yd_id desc LIMIT 1   [ RunTime:0.0205s ]
+NOTIC: [8] Undefined index: OrderInfo D:\phpStudy\WWW\Application\Back\Controller\OrderyjhController.class.php 第 79 行.
+SQL: SELECT * FROM `tuo_yundan` WHERE ( order_code = '05402361' and yd_type ='C' ) ORDER BY yd_id desc LIMIT 1   [ RunTime:0.0207s ]
+NOTIC: [8] Undefined index: OrderInfo D:\phpStudy\WWW\Application\Back\Controller\OrderyjhController.class.php 第 79 行.
+SQL: SELECT * FROM `tuo_yundan` WHERE ( order_code = '05100746' and yd_type ='C' ) ORDER BY yd_id desc LIMIT 1   [ RunTime:0.0206s ]
+NOTIC: [8] Undefined index: OrderInfo D:\phpStudy\WWW\Application\Back\Controller\OrderyjhController.class.php 第 79 行.
+SQL: SELECT * FROM `tuo_yundan` WHERE ( order_code = '05402360' and yd_type ='C' ) ORDER BY yd_id desc LIMIT 1   [ RunTime:0.0192s ]
+NOTIC: [8] Undefined index: OrderInfo D:\phpStudy\WWW\Application\Back\Controller\OrderyjhController.class.php 第 79 行.
+SQL: SELECT * FROM `tuo_yundan` WHERE ( order_code = '05100745' and yd_type ='C' ) ORDER BY yd_id desc LIMIT 1   [ RunTime:0.0205s ]
+NOTIC: [8] Undefined index: OrderInfo D:\phpStudy\WWW\Application\Back\Controller\OrderyjhController.class.php 第 79 行.
+SQL: SELECT * FROM `tuo_yundan` WHERE ( order_code = '05100744' and yd_type ='C' ) ORDER BY yd_id desc LIMIT 1   [ RunTime:0.0246s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `kefu_shi` = 'N' LIMIT 1   [ RunTime:0.0188s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'S' AND `sh_status` = '' LIMIT 1   [ RunTime:0.0186s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'A' LIMIT 1   [ RunTime:0.0194s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'T' LIMIT 1   [ RunTime:0.0192s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `verify` = 'N' AND `order_status` = 'T' LIMIT 1   [ RunTime:0.0193s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'Y' LIMIT 1   [ RunTime:0.0183s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'M' LIMIT 1   [ RunTime:0.0196s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'N' LIMIT 1   [ RunTime:0.0194s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'B' LIMIT 1   [ RunTime:0.0192s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'G' LIMIT 1   [ RunTime:0.0196s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'D' LIMIT 1   [ RunTime:0.0213s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'W' LIMIT 1   [ RunTime:0.0194s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `visit` = 'Y' AND `is_visit` = 'N' LIMIT 1   [ RunTime:0.0208s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `receipt` = 'Y' AND `is_hui` = 'N' LIMIT 1   [ RunTime:0.0184s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'S' AND `sh_status` = 'N' LIMIT 1   [ RunTime:0.0196s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_order_assistant` WHERE `order_status` = 'DIE' LIMIT 1   [ RunTime:0.0219s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_type` = 1  [ RunTime:0.0202s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000316s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000348s ]
+NOTIC: [8] Undefined variable: arry D:\phpStudy\WWW\Application\Runtime\Cache\Back\acc93fb97b4eb71b0000237159cc27c7.php 第 214 行.
+NOTIC: [8] Undefined variable: arry D:\phpStudy\WWW\Application\Runtime\Cache\Back\acc93fb97b4eb71b0000237159cc27c7.php 第 232 行.
+NOTIC: [8] Undefined variable: pay D:\phpStudy\WWW\Application\Runtime\Cache\Back\acc93fb97b4eb71b0000237159cc27c7.php 第 431 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011661s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011699s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000164s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000184s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000400s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000438s ]
+
+[ 2018-03-29T14:26:31+08:00 ] ::1 /Back/Worktwo/referOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000339s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_rule` [ RunTime:0.0213s ]
+SQL: SELECT * FROM `tuo_auth_rule`  [ RunTime:0.0204s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_group_access` [ RunTime:0.0189s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tuo_auth_group_access a INNER JOIN tuo_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0208s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1")  ) AND `pid` = 0 AND `status` = '1' LIMIT 1   [ RunTime:0.0200s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1" AND status="1")  ) AND `pid` = 0 ORDER BY id  [ RunTime:0.0252s ]
+SQL: SHOW COLUMNS FROM `tuo_carxing` [ RunTime:0.0227s ]
+SQL: SELECT * FROM `tuo_carxing` WHERE `cxjj_pid` = 0  [ RunTime:0.0218s ]
+SQL: SHOW COLUMNS FROM `tuo_area` [ RunTime:0.0202s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_pid` = 1  [ RunTime:0.0225s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000520s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000555s ]
+NOTIC: [8] Undefined variable: pval D:\phpStudy\WWW\Application\Runtime\Cache\Back\9ed2f3127f694d03faaacdc929af6ad5.php 第 118 行.
+NOTIC: [8] Undefined variable: cval D:\phpStudy\WWW\Application\Runtime\Cache\Back\9ed2f3127f694d03faaacdc929af6ad5.php 第 126 行.
+NOTIC: [8] Undefined variable: coval D:\phpStudy\WWW\Application\Runtime\Cache\Back\9ed2f3127f694d03faaacdc929af6ad5.php 第 135 行.
+NOTIC: [8] Undefined variable: pval D:\phpStudy\WWW\Application\Runtime\Cache\Back\9ed2f3127f694d03faaacdc929af6ad5.php 第 167 行.
+NOTIC: [8] Undefined variable: cval D:\phpStudy\WWW\Application\Runtime\Cache\Back\9ed2f3127f694d03faaacdc929af6ad5.php 第 175 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015384s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015479s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000177s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000199s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000599s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000802s ]
+
+[ 2018-03-29T14:26:35+08:00 ] ::1 /Back/Auth/grouplist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000329s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_rule` [ RunTime:0.0207s ]
+SQL: SELECT * FROM `tuo_auth_rule`  [ RunTime:0.0227s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0208s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_group_access` [ RunTime:0.0200s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tuo_auth_group_access a INNER JOIN tuo_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0194s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1")  ) AND `pid` = 0 AND `status` = '1' LIMIT 1   [ RunTime:0.0210s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1" AND status="1")  ) AND `pid` = 0 ORDER BY id  [ RunTime:0.0213s ]
+SQL: SHOW COLUMNS FROM `tuo_auth_group` [ RunTime:0.0208s ]
+SQL: SHOW COLUMNS FROM `tuo_auth_group_access` [ RunTime:0.0199s ]
+SQL: SELECT * FROM `tuo_auth_group` WHERE `title` LIKE '%%'  [ RunTime:0.0196s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_auth_group_access` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0195s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_auth_group_access` WHERE `group_id` = 2 LIMIT 1   [ RunTime:0.0199s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_auth_group_access` WHERE `group_id` = 3 LIMIT 1   [ RunTime:0.0196s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_auth_group_access` WHERE `group_id` = 8 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_auth_group_access` WHERE `group_id` = 10 LIMIT 1   [ RunTime:0.0194s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007838s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007942s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000197s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000385s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000413s ]
+
+[ 2018-03-29T14:26:38+08:00 ] ::1 /Back/Auth/operator
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000473s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_rule` [ RunTime:0.0189s ]
+SQL: SELECT * FROM `tuo_auth_rule`  [ RunTime:0.0199s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_group_access` [ RunTime:0.0192s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tuo_auth_group_access a INNER JOIN tuo_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0206s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1")  ) AND `pid` = 0 AND `status` = '1' LIMIT 1   [ RunTime:0.0177s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1" AND status="1")  ) AND `pid` = 0 ORDER BY id  [ RunTime:0.0188s ]
+SQL: SHOW COLUMNS FROM `tuo_auth_group` [ RunTime:0.0344s ]
+SQL: SHOW COLUMNS FROM `tuo_auth_group_access` [ RunTime:0.0183s ]
+NOTIC: [8] Undefined variable: uiddata D:\phpStudy\WWW\Application\Back\Controller\AuthController.class.php 第 85 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\Application\Back\Controller\AuthController.class.php 第 85 行.
+SQL: SELECT * FROM `tuo_auth_group`  [ RunTime:0.0216s ]
+SQL: SHOW COLUMNS FROM `tuo_admin` [ RunTime:0.0191s ]
+NOTIC: [8] Undefined variable: where D:\phpStudy\WWW\Application\Back\Model\AdminModel.class.php 第 18 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_admin` LIMIT 1   [ RunTime:0.0185s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 227 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 246 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 258 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 238 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 282 行.
+NOTIC: [8] Undefined offset: 1 D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 282 行.
+NOTIC: [8] Undefined variable: where D:\phpStudy\WWW\Application\Back\Model\AdminModel.class.php 第 21 行.
+SQL: SELECT * FROM `tuo_admin` LIMIT 0,10   [ RunTime:0.0210s ]
+SQL: SELECT * FROM `tuo_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0194s ]
+SQL: SELECT * FROM `tuo_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0192s ]
+SQL: SELECT * FROM `tuo_auth_group_access` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0202s ]
+SQL: SELECT * FROM `tuo_auth_group` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0189s ]
+SQL: SELECT * FROM `tuo_auth_group_access` WHERE `uid` = 30 LIMIT 1   [ RunTime:0.0198s ]
+SQL: SELECT * FROM `tuo_auth_group` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0206s ]
+SQL: SELECT * FROM `tuo_auth_group_access` WHERE `uid` = 32 LIMIT 1   [ RunTime:0.0196s ]
+SQL: SELECT * FROM `tuo_auth_group` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0189s ]
+SQL: SELECT * FROM `tuo_auth_group_access` WHERE `uid` = 44 LIMIT 1   [ RunTime:0.0188s ]
+SQL: SELECT * FROM `tuo_auth_group` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0205s ]
+SQL: SELECT * FROM `tuo_auth_group_access` WHERE `uid` = 43 LIMIT 1   [ RunTime:0.0183s ]
+SQL: SELECT * FROM `tuo_auth_group` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0182s ]
+SQL: SELECT * FROM `tuo_auth_group_access` WHERE `uid` = 42 LIMIT 1   [ RunTime:0.0195s ]
+SQL: SELECT * FROM `tuo_auth_group` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0237s ]
+SQL: SELECT * FROM `tuo_auth_group_access` WHERE `uid` = 49 LIMIT 1   [ RunTime:0.0188s ]
+SQL: SELECT * FROM `tuo_auth_group` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0182s ]
+SQL: SELECT * FROM `tuo_auth_group_access` WHERE `uid` = 46 LIMIT 1   [ RunTime:0.0176s ]
+SQL: SELECT * FROM `tuo_auth_group` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0189s ]
+SQL: SELECT * FROM `tuo_auth_group_access` WHERE `uid` = 45 LIMIT 1   [ RunTime:0.0187s ]
+SQL: SELECT * FROM `tuo_auth_group` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0192s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011567s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011633s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000178s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000199s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000294s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000316s ]
+
+[ 2018-03-29T14:26:53+08:00 ] ::1 /Back/Product/area
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000425s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_rule` [ RunTime:0.0229s ]
+SQL: SELECT * FROM `tuo_auth_rule`  [ RunTime:0.0207s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE `id` = 18 LIMIT 1   [ RunTime:0.0187s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_group_access` [ RunTime:0.0246s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tuo_auth_group_access a INNER JOIN tuo_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0204s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1")  ) AND `pid` = 0 AND `status` = '1' LIMIT 1   [ RunTime:0.0193s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1" AND status="1")  ) AND `pid` = 0 ORDER BY id  [ RunTime:0.0190s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_area` WHERE `area_type` = 3 LIMIT 1   [ RunTime:0.0235s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 227 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 246 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 258 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 238 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 282 行.
+NOTIC: [8] Undefined offset: 1 D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 282 行.
+SQL: SELECT `area_id`,`area_pid`,`area_name`,`area_add_time`,`area_type`,`area_get` FROM `tuo_area` WHERE `area_type` = 3 LIMIT 0,10   [ RunTime:0.0265s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_id` = '1607' LIMIT 1   [ RunTime:0.0245s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_id` = '1540' LIMIT 1   [ RunTime:0.0262s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_id` = '1104' LIMIT 1   [ RunTime:0.0285s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_id` = '1103' LIMIT 1   [ RunTime:0.0195s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_id` = '1312' LIMIT 1   [ RunTime:0.0263s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_id` = '1310' LIMIT 1   [ RunTime:0.0434s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_id` = '1507' LIMIT 1   [ RunTime:0.1816s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_id` = '1310' LIMIT 1   [ RunTime:0.0201s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_id` = '1507' LIMIT 1   [ RunTime:0.0305s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_id` = '1310' LIMIT 1   [ RunTime:0.0214s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_id` = '1312' LIMIT 1   [ RunTime:0.0428s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_id` = '1310' LIMIT 1   [ RunTime:0.0206s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_id` = '1312' LIMIT 1   [ RunTime:0.0257s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_id` = '1310' LIMIT 1   [ RunTime:0.0229s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_id` = '1109' LIMIT 1   [ RunTime:0.0216s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_id` = '1108' LIMIT 1   [ RunTime:0.0211s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_id` = '1385' LIMIT 1   [ RunTime:0.0207s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_id` = '1326' LIMIT 1   [ RunTime:0.0575s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_id` = '1109' LIMIT 1   [ RunTime:0.0382s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_id` = '1108' LIMIT 1   [ RunTime:0.0489s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_type` = 1  [ RunTime:0.0446s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000320s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000367s ]
+NOTIC: [8] Undefined index: area_name D:\phpStudy\WWW\Application\Runtime\Cache\Back\202ffbafb3fd94a5f9554c68637a31d2.php 第 143 行.
+NOTIC: [8] Undefined index: area_name D:\phpStudy\WWW\Application\Runtime\Cache\Back\202ffbafb3fd94a5f9554c68637a31d2.php 第 152 行.
+NOTIC: [8] Undefined index: area_name D:\phpStudy\WWW\Application\Runtime\Cache\Back\202ffbafb3fd94a5f9554c68637a31d2.php 第 161 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014750s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014797s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000207s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000322s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000349s ]
+
+[ 2018-03-29T14:26:58+08:00 ] ::1 /Back/Log/logList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000339s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_rule` [ RunTime:0.0215s ]
+SQL: SELECT * FROM `tuo_auth_rule`  [ RunTime:0.0219s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_group_access` [ RunTime:0.0185s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tuo_auth_group_access a INNER JOIN tuo_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0203s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1")  ) AND `pid` = 0 AND `status` = '1' LIMIT 1   [ RunTime:0.0222s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1" AND status="1")  ) AND `pid` = 0 ORDER BY id  [ RunTime:0.0202s ]
+SQL: SHOW COLUMNS FROM `tuo_log` [ RunTime:0.0246s ]
+NOTIC: [8] Undefined variable: map D:\phpStudy\WWW\Application\Back\Model\LogModel.class.php 第 15 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_log` LIMIT 1   [ RunTime:0.0294s ]
+NOTIC: [8] Undefined variable: map D:\phpStudy\WWW\Application\Back\Model\LogModel.class.php 第 17 行.
+SQL: SELECT * FROM `tuo_log` ORDER BY log_time desc LIMIT 0,10   [ RunTime:0.0380s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 227 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 246 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 258 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 238 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 282 行.
+NOTIC: [8] Undefined offset: 1 D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 282 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000196s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000230s ]
+NOTIC: [8] Undefined variable: order_status D:\phpStudy\WWW\Application\Runtime\Cache\Back\acb4690d31b91ee136b31d3a970d2092.php 第 157 行.
+NOTIC: [8] Undefined variable: pay D:\phpStudy\WWW\Application\Runtime\Cache\Back\acb4690d31b91ee136b31d3a970d2092.php 第 164 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007777s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007822s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000158s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000178s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000359s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000388s ]
+
+[ 2018-03-29T14:27:00+08:00 ] ::1 /Back/OtherInfo/eventReturn
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000335s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_rule` [ RunTime:0.0246s ]
+SQL: SELECT * FROM `tuo_auth_rule`  [ RunTime:0.0197s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_group_access` [ RunTime:0.0263s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tuo_auth_group_access a INNER JOIN tuo_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0226s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1")  ) AND `pid` = 0 AND `status` = '1' LIMIT 1   [ RunTime:0.0224s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1" AND status="1")  ) AND `pid` = 0 ORDER BY id  [ RunTime:0.0198s ]
+SQL: SHOW COLUMNS FROM `tuo_other_info` [ RunTime:0.0198s ]
+SQL: SELECT * FROM `tuo_other_info` LIMIT 1   [ RunTime:0.0201s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015153s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015202s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000169s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000192s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000369s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000394s ]
+
+[ 2018-03-29T14:27:06+08:00 ] ::1 /Back/Auth/grouplist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000273s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000307s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_rule` [ RunTime:0.0241s ]
+SQL: SELECT * FROM `tuo_auth_rule`  [ RunTime:0.0247s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0198s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0244s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_group_access` [ RunTime:0.0205s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tuo_auth_group_access a INNER JOIN tuo_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0201s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1")  ) AND `pid` = 0 AND `status` = '1' LIMIT 1   [ RunTime:0.0182s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1" AND status="1")  ) AND `pid` = 0 ORDER BY id  [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `tuo_auth_group` [ RunTime:0.0201s ]
+SQL: SHOW COLUMNS FROM `tuo_auth_group_access` [ RunTime:0.0199s ]
+SQL: SELECT * FROM `tuo_auth_group` WHERE `title` LIKE '%%'  [ RunTime:0.0214s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_auth_group_access` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_auth_group_access` WHERE `group_id` = 2 LIMIT 1   [ RunTime:0.0436s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_auth_group_access` WHERE `group_id` = 3 LIMIT 1   [ RunTime:0.0196s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_auth_group_access` WHERE `group_id` = 8 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_auth_group_access` WHERE `group_id` = 10 LIMIT 1   [ RunTime:0.0187s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000190s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009013s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009089s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000419s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000450s ]
+
+[ 2018-03-29T14:27:08+08:00 ] ::1 /Back/Worktwo/referOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000277s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000313s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_rule` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `tuo_auth_rule`  [ RunTime:0.0203s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_group_access` [ RunTime:0.0308s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tuo_auth_group_access a INNER JOIN tuo_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0221s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1")  ) AND `pid` = 0 AND `status` = '1' LIMIT 1   [ RunTime:0.0217s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1" AND status="1")  ) AND `pid` = 0 ORDER BY id  [ RunTime:0.0566s ]
+SQL: SHOW COLUMNS FROM `tuo_carxing` [ RunTime:0.0221s ]
+SQL: SELECT * FROM `tuo_carxing` WHERE `cxjj_pid` = 0  [ RunTime:0.0634s ]
+SQL: SHOW COLUMNS FROM `tuo_area` [ RunTime:0.0215s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_pid` = 1  [ RunTime:0.0229s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000516s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000552s ]
+NOTIC: [8] Undefined variable: pval D:\phpStudy\WWW\Application\Runtime\Cache\Back\9ed2f3127f694d03faaacdc929af6ad5.php 第 118 行.
+NOTIC: [8] Undefined variable: cval D:\phpStudy\WWW\Application\Runtime\Cache\Back\9ed2f3127f694d03faaacdc929af6ad5.php 第 126 行.
+NOTIC: [8] Undefined variable: coval D:\phpStudy\WWW\Application\Runtime\Cache\Back\9ed2f3127f694d03faaacdc929af6ad5.php 第 135 行.
+NOTIC: [8] Undefined variable: pval D:\phpStudy\WWW\Application\Runtime\Cache\Back\9ed2f3127f694d03faaacdc929af6ad5.php 第 167 行.
+NOTIC: [8] Undefined variable: cval D:\phpStudy\WWW\Application\Runtime\Cache\Back\9ed2f3127f694d03faaacdc929af6ad5.php 第 175 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013867s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013919s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000198s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000220s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000361s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000405s ]
+
+[ 2018-03-29T14:27:10+08:00 ] ::1 /Back/Couponyjh/couponList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000302s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_rule` [ RunTime:0.0259s ]
+SQL: SELECT * FROM `tuo_auth_rule`  [ RunTime:0.0432s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_group_access` [ RunTime:0.0195s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tuo_auth_group_access a INNER JOIN tuo_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0201s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1")  ) AND `pid` = 0 AND `status` = '1' LIMIT 1   [ RunTime:0.0204s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1" AND status="1")  ) AND `pid` = 0 ORDER BY id  [ RunTime:0.0207s ]
+NOTIC: [8] Undefined variable: status D:\phpStudy\WWW\Application\Back\Controller\CouponyjhController.class.php 第 12 行.
+NOTIC: [8] Undefined variable: type D:\phpStudy\WWW\Application\Back\Controller\CouponyjhController.class.php 第 12 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_favorable` WHERE `fav_flag` = 'Y' AND (  1=1 ) LIMIT 1   [ RunTime:0.0322s ]
+NOTIC: [8] Undefined variable: par D:\phpStudy\WWW\Application\Back\Model\FavorableModel.class.php 第 29 行.
+SQL: SELECT * FROM `tuo_favorable` WHERE `fav_flag` = 'Y' AND (  1=1 ) ORDER BY fav_id desc LIMIT 0,10   [ RunTime:0.0429s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 227 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 246 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 258 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 238 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 282 行.
+NOTIC: [8] Undefined offset: 1 D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 282 行.
+NOTIC: [8] Undefined variable: type D:\phpStudy\WWW\Application\Back\Controller\CouponyjhController.class.php 第 17 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007607s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007649s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000166s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000188s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000355s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000387s ]
+
+[ 2018-03-29T14:27:12+08:00 ] ::1 /Back/Memberyjh/getUserList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000430s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000399s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000450s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_rule` [ RunTime:0.0198s ]
+SQL: SELECT * FROM `tuo_auth_rule`  [ RunTime:0.0275s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_group_access` [ RunTime:0.0482s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tuo_auth_group_access a INNER JOIN tuo_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0209s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1")  ) AND `pid` = 0 AND `status` = '1' LIMIT 1   [ RunTime:0.0200s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1" AND status="1")  ) AND `pid` = 0 ORDER BY id  [ RunTime:0.0192s ]
+SQL: SHOW COLUMNS FROM `tuo_user` [ RunTime:0.0196s ]
+NOTIC: [8] Undefined variable: map D:\phpStudy\WWW\Application\Back\Model\UserModel.class.php 第 36 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_user` LIMIT 1   [ RunTime:0.0211s ]
+NOTIC: [8] Undefined variable: map D:\phpStudy\WWW\Application\Back\Model\UserModel.class.php 第 38 行.
+SQL: SELECT * FROM `tuo_user` ORDER BY addtime desc LIMIT 0,10   [ RunTime:0.0379s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 227 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 246 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 258 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 238 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 282 行.
+NOTIC: [8] Undefined offset: 1 D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 282 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007560s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007619s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000245s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000477s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000513s ]
+
+[ 2018-03-29T14:27:15+08:00 ] ::1 /Back/Worktwo/referOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_rule` [ RunTime:0.0212s ]
+SQL: SELECT * FROM `tuo_auth_rule`  [ RunTime:0.0235s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_group_access` [ RunTime:0.0199s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tuo_auth_group_access a INNER JOIN tuo_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0195s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1")  ) AND `pid` = 0 AND `status` = '1' LIMIT 1   [ RunTime:0.0199s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1" AND status="1")  ) AND `pid` = 0 ORDER BY id  [ RunTime:0.0318s ]
+SQL: SHOW COLUMNS FROM `tuo_carxing` [ RunTime:0.0243s ]
+SQL: SELECT * FROM `tuo_carxing` WHERE `cxjj_pid` = 0  [ RunTime:0.0416s ]
+SQL: SHOW COLUMNS FROM `tuo_area` [ RunTime:0.0207s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_pid` = 1  [ RunTime:0.0230s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000697s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000744s ]
+NOTIC: [8] Undefined variable: pval D:\phpStudy\WWW\Application\Runtime\Cache\Back\9ed2f3127f694d03faaacdc929af6ad5.php 第 118 行.
+NOTIC: [8] Undefined variable: cval D:\phpStudy\WWW\Application\Runtime\Cache\Back\9ed2f3127f694d03faaacdc929af6ad5.php 第 126 行.
+NOTIC: [8] Undefined variable: coval D:\phpStudy\WWW\Application\Runtime\Cache\Back\9ed2f3127f694d03faaacdc929af6ad5.php 第 135 行.
+NOTIC: [8] Undefined variable: pval D:\phpStudy\WWW\Application\Runtime\Cache\Back\9ed2f3127f694d03faaacdc929af6ad5.php 第 167 行.
+NOTIC: [8] Undefined variable: cval D:\phpStudy\WWW\Application\Runtime\Cache\Back\9ed2f3127f694d03faaacdc929af6ad5.php 第 175 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029858s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029996s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000215s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000826s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000916s ]
+
+[ 2018-03-29T14:27:17+08:00 ] ::1 /Back/Memberyjh/getUserList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000274s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000305s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_rule` [ RunTime:0.0205s ]
+SQL: SELECT * FROM `tuo_auth_rule`  [ RunTime:0.0364s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_group_access` [ RunTime:0.0214s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tuo_auth_group_access a INNER JOIN tuo_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0199s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1")  ) AND `pid` = 0 AND `status` = '1' LIMIT 1   [ RunTime:0.0213s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1" AND status="1")  ) AND `pid` = 0 ORDER BY id  [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `tuo_user` [ RunTime:0.0214s ]
+NOTIC: [8] Undefined variable: map D:\phpStudy\WWW\Application\Back\Model\UserModel.class.php 第 36 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_user` LIMIT 1   [ RunTime:0.0382s ]
+NOTIC: [8] Undefined variable: map D:\phpStudy\WWW\Application\Back\Model\UserModel.class.php 第 38 行.
+SQL: SELECT * FROM `tuo_user` ORDER BY addtime desc LIMIT 0,10   [ RunTime:0.0792s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 227 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 246 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 258 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 238 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 282 行.
+NOTIC: [8] Undefined offset: 1 D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 282 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005756s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005793s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000153s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000175s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000322s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000345s ]
+
+[ 2018-03-29T14:27:28+08:00 ] ::1 /Back/Memberyjh/getUserList?&page=363
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000273s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000300s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_rule` [ RunTime:0.0197s ]
+SQL: SELECT * FROM `tuo_auth_rule`  [ RunTime:0.0199s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_group_access` [ RunTime:0.0185s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tuo_auth_group_access a INNER JOIN tuo_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0195s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1")  ) AND `pid` = 0 AND `status` = '1' LIMIT 1   [ RunTime:0.0210s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1" AND status="1")  ) AND `pid` = 0 ORDER BY id  [ RunTime:0.0196s ]
+SQL: SHOW COLUMNS FROM `tuo_user` [ RunTime:0.0203s ]
+NOTIC: [8] Undefined variable: map D:\phpStudy\WWW\Application\Back\Model\UserModel.class.php 第 36 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_user` LIMIT 1   [ RunTime:0.0234s ]
+NOTIC: [8] Undefined variable: map D:\phpStudy\WWW\Application\Back\Model\UserModel.class.php 第 38 行.
+SQL: SELECT * FROM `tuo_user` ORDER BY addtime desc LIMIT 3620,10   [ RunTime:0.0296s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 229 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 248 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 256 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 236 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 282 行.
+NOTIC: [8] Undefined offset: 1 D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 282 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006184s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006231s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000153s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000173s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000384s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000409s ]
+
+[ 2018-03-29T14:27:36+08:00 ] ::1 /Back/Memberyjh/userEdit/id/3670
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000387s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000274s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000309s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_rule` [ RunTime:0.2607s ]
+SQL: SELECT * FROM `tuo_auth_rule`  [ RunTime:1.6103s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0224s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_group_access` [ RunTime:0.0185s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tuo_auth_group_access a INNER JOIN tuo_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0196s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1")  ) AND `pid` = 0 AND `status` = '1' LIMIT 1   [ RunTime:0.0194s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1" AND status="1")  ) AND `pid` = 0 ORDER BY id  [ RunTime:0.0211s ]
+SQL: SHOW COLUMNS FROM `tuo_user` [ RunTime:0.0205s ]
+SQL: SELECT * FROM `tuo_user` WHERE `id` = '3670' LIMIT 1   [ RunTime:0.0199s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006960s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000171s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000192s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000342s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000371s ]
+
+[ 2018-03-29T14:28:07+08:00 ] ::1 /Back/Memberyjh/doEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000265s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000298s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_rule` [ RunTime:0.0188s ]
+SQL: SELECT * FROM `tuo_auth_rule`  [ RunTime:0.0185s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE `id` = 135 LIMIT 1   [ RunTime:0.0178s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0182s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_group_access` [ RunTime:0.0190s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tuo_auth_group_access a INNER JOIN tuo_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0206s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1")  ) AND `pid` = 0 AND `status` = '1' LIMIT 1   [ RunTime:0.0213s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1" AND status="1")  ) AND `pid` = 0 ORDER BY id  [ RunTime:0.0205s ]
+SQL: SHOW COLUMNS FROM `tuo_user` [ RunTime:0.0194s ]
+SQL: UPDATE `tuo_user` SET `user_pwd`='25d55ad283aa400af464c76d713c07ad',`user_name`='zhangwen',`email`='',`identity`='123123',`portrait`='',`tel`='18514430012' WHERE `id` = '3670' [ RunTime:0.0203s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000064s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003158s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003195s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000144s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000164s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000392s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000423s ]
+
+[ 2018-03-29T14:28:08+08:00 ] ::1 /Back/Memberyjh/getUserList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000317s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_rule` [ RunTime:0.0195s ]
+SQL: SELECT * FROM `tuo_auth_rule`  [ RunTime:0.0216s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_group_access` [ RunTime:0.0214s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tuo_auth_group_access a INNER JOIN tuo_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0199s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1")  ) AND `pid` = 0 AND `status` = '1' LIMIT 1   [ RunTime:0.0212s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1" AND status="1")  ) AND `pid` = 0 ORDER BY id  [ RunTime:0.0195s ]
+SQL: SHOW COLUMNS FROM `tuo_user` [ RunTime:0.0211s ]
+NOTIC: [8] Undefined variable: map D:\phpStudy\WWW\Application\Back\Model\UserModel.class.php 第 36 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_user` LIMIT 1   [ RunTime:0.0322s ]
+NOTIC: [8] Undefined variable: map D:\phpStudy\WWW\Application\Back\Model\UserModel.class.php 第 38 行.
+SQL: SELECT * FROM `tuo_user` ORDER BY addtime desc LIMIT 0,10   [ RunTime:0.0201s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 227 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 246 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 258 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 238 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 282 行.
+NOTIC: [8] Undefined offset: 1 D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 282 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000166s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007835s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007937s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000340s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000386s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000432s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000465s ]
+
+[ 2018-03-29T14:28:09+08:00 ] ::1 /Back/Couponyjh/couponList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000330s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000646s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_rule` [ RunTime:0.0192s ]
+SQL: SELECT * FROM `tuo_auth_rule`  [ RunTime:0.0262s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SHOW COLUMNS FROM `tuo_auth_group_access` [ RunTime:0.0224s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tuo_auth_group_access a INNER JOIN tuo_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0196s ]
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1")  ) AND `pid` = 0 AND `status` = '1' LIMIT 1   [ RunTime:0.0268s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated D:\phpStudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+SQL: SELECT * FROM `tuo_auth_rule` WHERE (  (level = "1" AND status="1")  ) AND `pid` = 0 ORDER BY id  [ RunTime:0.0201s ]
+NOTIC: [8] Undefined variable: status D:\phpStudy\WWW\Application\Back\Controller\CouponyjhController.class.php 第 12 行.
+NOTIC: [8] Undefined variable: type D:\phpStudy\WWW\Application\Back\Controller\CouponyjhController.class.php 第 12 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tuo_favorable` WHERE `fav_flag` = 'Y' AND (  1=1 ) LIMIT 1   [ RunTime:0.0190s ]
+NOTIC: [8] Undefined variable: par D:\phpStudy\WWW\Application\Back\Model\FavorableModel.class.php 第 29 行.
+SQL: SELECT * FROM `tuo_favorable` WHERE `fav_flag` = 'Y' AND (  1=1 ) ORDER BY fav_id desc LIMIT 0,10   [ RunTime:0.0213s ]
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 227 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 246 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 258 行.
+NOTIC: [8] Undefined variable: html D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 238 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 282 行.
+NOTIC: [8] Undefined offset: 1 D:\phpStudy\WWW\ThinkPHP\Library\Pages\Page.class.php 第 282 行.
+NOTIC: [8] Undefined variable: type D:\phpStudy\WWW\Application\Back\Controller\CouponyjhController.class.php 第 17 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000242s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000321s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017296s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017369s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000316s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000538s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000590s ]
+

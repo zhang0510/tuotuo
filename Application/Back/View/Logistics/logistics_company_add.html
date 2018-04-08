@@ -1,0 +1,159 @@
+<include file='public:head'/>
+<script src="__JS__/jquerytool_1.0v.js"></script>
+<script>
+	function submits(){
+		var lc_short_name = $("#lc_short_name").val().trim();//公司简称
+		var lc_lxrs = $("#lc_lxrs").val().trim();//负责人
+		var lc_tel = $("#lc_tel").val().trim();//负责人电话
+		var lc_diao = $("#lc_diao").val().trim();//调度员
+		var lc_diao_tel = $("#lc_diao_tel").val().trim();//调度员电话
+ 		var lc_gen = $("#lc_gen").val().trim();//跟踪
+		var lc_gen_tel = $("#lc_gen_tel").val().trim();//跟踪员电话
+		
+		if(lc_short_name!=''&&lc_lxrs!=''&&lc_tel!=''&&lc_diao!=''&&lc_diao_tel!=''&&lc_gen!=''&&lc_gen_tel!=''){
+			$("#sub").submit();
+		}else{
+			alert('请先完善数据填写');
+		}
+	}
+</script>
+	<body>
+		<include file='public:header'/>
+		<div class="clear_both"></div>
+     <div id="main-pyf">
+		<include file='public:left'/>
+	
+		<div id="content">
+	<!-- 		<div class="ico-pt span12">
+				<h4>店铺管理</h4>
+			</div> -->
+			<div class="row">
+					
+					<div class="tsan113">
+				
+						<div class="widget">
+
+								<div class="tabbable">
+						<ul class="nav nav-tabs" id="tabnav">
+					
+					 	  <li class="active">
+						    <a>物流公司添加|编辑</a>
+						  </li>
+					
+			
+						</ul>
+						
+						<div class="tab-content1">
+						<form method="post" action="__MODULE__/Logistics/compamyDoAdd" id="sub">
+						<div class="dw7">
+						   <div class="dw71">
+							<dl>
+							<div class="fh1">
+							<span>*公司简称:</span>
+							<input type="text" class="i_n text2" name="lc_short_name" id="lc_short_name"  value="{$list.lc_short_name}">
+							</div>
+							</dl>
+							
+							<dl>
+							<div class="fh1">
+							<span>公司全称:</span>
+							<input type="text" class="i_n text2" name="lc_name" id="lc_name"  value="{$list.lc_name}">
+							</div>
+							</dl>
+							
+							
+							<dl>
+							<div class="fh1">
+							<span>*负责人姓名:</span>
+							<input type="text" class="i_n text2" name="lc_lxrs" id="lc_lxrs"  value="{$list.lc_lxrs}">
+							</div>
+							</dl>
+							<dl>
+							<div class="fh1">
+							<span>*负责人手机号:</span>
+							<input type="text" class="i_n text2" name="lc_tel" id="lc_tel"   value="{$list.lc_tel}">
+							</div>
+							</dl>
+							
+							<dl>
+							<div class="fh1">
+							<span>*调度员姓名:</span>
+							<input type="text" class="i_n text2" name="lc_diao" id="lc_diao"   value="{$list.lc_diao}">
+							</div>
+							</dl>
+							<dl>
+							<div class="fh1">
+							<span>*调度员手机号:</span>
+							<input type="text" class="i_n text2" name="lc_diao_tel" id="lc_diao_tel"   value="{$list.lc_diao_tel}">
+							</div>
+							</dl>
+							
+							<dl>
+							<div class="fh1">
+							<span>*跟踪员姓名:</span>
+							<input type="text" class="i_n text2" name="lc_gen" id="lc_gen"   value="{$list.lc_gen}">
+							</div>
+							</dl>
+							<dl>
+							<div class="fh1">
+							<span>*跟踪员手机号:</span>
+							<input type="text" class="i_n text2" name="lc_gen_tel" id="lc_gen_tel"   value="{$list.lc_gen_tel}">
+							</div>
+							</dl>
+							
+							<dl>
+							<div class="fh1">
+							<span>合同编号:</span>
+							<input type="text" class="i_n text2" name="lc_ht_code" id="lc_ht_code" value="{$list.lc_ht_code}">
+							</div>
+							</dl>
+							
+							<dl>
+							<div class="fh1">
+							<span>*是否有效:</span>
+							<if condition="($list.lc_status eq 'Y')">
+								<input type="radio" class="i_n " name="lc_status" value="Y" checked="checked">是
+								<input type="radio" class="i_n " name="lc_status" value="N">否
+							<elseif condition="($list.lc_status eq 'N')"/>
+								<input type="radio" class="i_n " name="lc_status" value="Y">是
+								<input type="radio" class="i_n " name="lc_status" value="N" checked="checked">否
+							<else />
+								<input type="radio" class="i_n " name="lc_status" value="Y" checked="checked">是
+								<input type="radio" class="i_n " name="lc_status" value="N">否
+							</if>
+														
+							</div>
+							</dl>
+							
+							<dl>
+							<div class="fh1">
+							<span>备注:</span>
+							<textarea rows="20" cols="30" name="lc_bei" id="lc_bei" class="i_n text2">{$list.lc_bei}</textarea>
+							</div>
+							</dl>
+							
+						   </div>
+						</div>
+						<input type="hidden" name="lc_code" value="{$list.lc_code}" />
+						</form>
+						
+						<hr>
+						<div class="sad1">
+						<button class="btn btn-default7"  type="button" onclick="submits();">确定</button>
+						<a href="__MODULE__/Logistics/companyShow"><button class="btn btn-default8" type="button">取消</button></a>
+						</div>
+						</div>
+							
+							
+						</div> <!-- /widget -->
+						
+					</div> <!-- /span11 -->
+					
+				</div> <!-- /row -->
+
+		</div>
+		</div>
+
+	</body>
+	
+</html>

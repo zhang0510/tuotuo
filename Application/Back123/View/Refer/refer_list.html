@@ -1,0 +1,130 @@
+<include file='public:head'/>
+<body>
+	<include file='public:header'/>
+	<div id="main-pyf">
+		<include file='public:left'/>
+		<div id="content">
+			<!-- 		<div class="ico-pt span12">
+			<h4>店铺管理</h4>
+		</div>
+		-->
+		<div class="row">
+
+			<div class="tsan113">
+
+				<div class="widget">
+
+					<div class="tabbable">
+						<ul class="nav nav-tabs" id="tabnav">
+							<li >
+                                <a href="__MODULE__/Worktwo/referOrder">咨询下单</a>
+                            </li>
+							<li class="active">
+                                <a >咨询列表</a>
+                            </li>
+                            <li >
+                                <a href="__MODULE__/Worktwo/referMarkList">待回电</a>
+                            </li>
+							<li>
+                                <a href="__MODULE__/Worktwo/huiList">待回访</a>
+                            </li>
+							<li>
+                                <a href="__MODULE__/Worktwo/qHuiList">全部回访</a>
+                            </li>
+						</ul>
+
+						<div class="tab-content1">
+							<div class="tab-content">
+								<div class="tab-pane active">
+									<form id="edit-profile" class="form-horizontal" />
+									<fieldset>
+										<div class="l_uit">
+											<!-- <div class="control-group">
+
+												<div style="float:left;" class="controls clec_t">
+													<div class="v_pb">
+														<input type="text" id="fskj" placeholder="请输入手机号" value="{$name}" class="i_n text2 width360">
+														<button class="btn btn-default5" onclick="awdfuns();" type="button">搜索</button>
+													</div>
+												</div>
+												/controls
+												<a href="__MODULE__/Worklwt/latencyMemberAdd"><button class="red btn btn-default5 fr" type="button">添加潜在会员</button></a>
+											</div> -->
+											<script>
+												$(function(){
+													$('table tr.tr2:odd').css('background','#F0F0F0');
+												});
+												/* function awdfuns(){
+													var ss = $("#fskj").val();
+													window.location.href="__MODULE__/Worklwt/latencyMemberList/name/"+ss;
+												} */
+											</script>
+											<div class="l_table">
+												<table>
+													<tr class="tr1">
+														<td>咨询日期</td>
+														<td>咨询编号</td>
+														<td>客服</td>
+														<td>客户</td>
+														<td>车辆信息</td>
+														<td>发运线路</td>
+														<td>共计费用</td>
+														<td>是否回电</td>
+														<td>回电备注</td>
+													</tr>
+													<foreach name="list.list" item="vo">
+														<tr class="tr2">
+														<td>{$vo.tr_duan|default="-"}</td>
+														<td>{$vo.tr_id|default="-"}</td>
+														<td>{$vo.adname|default="-"}</td>
+														<td>{$vo.tr_name|default="-"}</td>
+														<td>{$vo.tr_carxing|default="-"}</td>
+														<td>{$vo.line|default="-"}</td>
+														<td>{$vo['tr_yun']/100}</td>
+														<td><if condition="$vo.tr_mark eq 'Y'">是<else />否</if></td>
+														<td>{$vo.tr_bei|default="-"}</td>
+														</tr>
+													</foreach>
+												</table>
+											</div>
+											<div class="l_fenye">
+												{$list.show}
+											</div>
+											</div>
+										</fieldset>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /widget -->
+				</div>
+				<!-- /span11 -->
+			</div>
+			<!-- /row
+,{$vo.order_info_zj},{$vo.c_shi},{$vo.z_shi},{$vo.order_info_brand},{$vo.order_info_type}
+tel,total,start,end,brand,type
+			-->
+		</div>
+	</div>
+<script>
+		function queFun(id){
+			if(window.confirm('确定回电?')){
+				$.post("__MODULE__/Worktwo/checkRefer",{id:id},function(data){
+					if(data){
+						layer.msg("确认成功");
+						window.location.reload();
+					}else{
+						layer.msg("确认失败");
+						return false;
+					}
+					
+				},'json');
+             }else{
+                return false;
+            }
+		}
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<include file='public:header'/>
+<include file='public:top'/>
+<include file='public:menu'/>
+<!--content-->
+<div class="order_body">
+<div class="order_main container">
+  <div class="order_h2"><h2>承运保单列表</h2></div>
+<div class="order_list">
+	<foreach name="oList" item="vo" >
+	<div class="order_lisa">
+		<div class="order_lisa1">
+			<h2><a>订单号：{$vo.order_code}</a></h2>
+			<p>订单状态：
+			<a>
+				<if condition="($vo.order_status eq 'S')">
+				 待审核
+				<elseif condition="($vo.order_status eq 'A')"/>
+				 待安排
+				<elseif condition="($vo.order_status eq 'Z')"/>
+				 待核实
+				 <elseif condition="($vo.order_status eq 'Y') OR ($vo.order_status eq 'M') OR ($vo.order_status eq 'N') OR ($vo.order_status eq 'B') OR ($vo.order_status eq 'G') OR ($vo.order_status eq 'D')"/>
+				 运输中
+				 <elseif condition="($vo.order_status eq 'W')"/>
+				 已完成
+				 <else /> 
+				--
+				</if>
+			</a>
+			</p>
+		</div>
+		<div class="fraka2">
+			<div class="order_lisa2">
+				<div class="olist1"><if condition="($vo.start_name neq '') and ($vo.start_name neq null)"> {$vo.start_name}<else />--</if> <img class="eq1" src="__FRONT__/images/ee1.png"><img  class="eq2" src="__FRONT__/images/ee2.png"> <if condition="($vo.end_name neq '') and ($vo.end_name neq null)"> {$vo.end_name}<else />--</if></div>
+				<div class="olist2">
+					<p><span>车型：<if condition="($vo.order_info_type neq '') and ($vo.order_info_type neq null)"> {$vo.order_info_type}<else />--</if></span></p>
+				</div>
+			</div>
+			<div class="fraka3">
+				<if condition="($vo.order_status eq 'Y') OR ($vo.order_status eq 'M') OR ($vo.order_status eq 'N') OR ($vo.order_status eq 'B') OR ($vo.order_status eq 'G') OR ($vo.order_status eq 'D') OR ($vo.order_status eq 'W')">
+				<a href="__MODULE__/MyOrder/verifyCar/code/{$vo.order_code}"><h2>验车照片 </h2></a>
+				</if>
+			</div>
+		</div>
+		<div class="fraka1">
+			<h2>提示：</h2>
+			<p> 在妥妥运车接到您的车辆之前，点击查看保险单您看到
+				的是保险单样本，待我们接到您的车辆以后，当天装板之前
+				为您购买好相应保险，并上传保险单。上传以后客服会通知
+				到您，您可以点击查看爱车保险，拨打太平洋官方热线95500
+				查询保单有效性
+				</p>
+		</div>
+		<div class="conts">
+			<if condition="$vo.bxd neq ''">
+			<a href="{$vo.bxd}"><h3>查看保险单</h3></a>
+			</if>
+		</div>
+	</div>
+	</foreach>
+</div>
+	<div class="num">
+		<if condition="$num gt 0 ">
+			{$show}
+		</if>
+	</div>
+</div>
+</div>
+
+<!--content-->
+<script>
+	function pay(code,total,bxd,smsc_car){
+		var str="";
+		if(smsc_car!=""){
+			str += "/smsc_car/"+smsc_car;
+		}
+		window.location.href = '__MODULE__/MyOrder/payNow/code/'+code+'/fee/'+total+'/bxd/'+bxd+str;
+	}
+</script>
+<include file='public:foot'/>

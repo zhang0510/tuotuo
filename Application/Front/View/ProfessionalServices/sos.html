@@ -1,0 +1,22 @@
+<include file='public:header'/>
+<include file='public:top'/>
+<include file='public:menu'/>
+<include file='public:up'/>
+<!--content-->
+<div style="width: 40%;margin: auto;padding-bottom: 100px">
+   <!-- <div style="margin-top: -25px">
+        <center><strong><font style="font-size: 22px;">{$ret.title}</font></strong></center>
+    </div>-->
+    <div style="font-size: 18px;margin-top: 20px;color:#999 ">
+        {$ret.content}
+    </div>
+</div>
+<if condition="$ret.title eq 我要运车">
+<script>
+    window.location.href="__MODULE__/Order/normal"
+</script>
+</if>
+<!--content-->
+<include file='public:foot'/>
+
+

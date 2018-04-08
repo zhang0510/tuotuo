@@ -1,0 +1,107 @@
+<include file='public:header'/>
+<include file='public:top'/>
+<include file='public:menu'/>
+
+<!--content-->
+<div class="dengm">
+ <div class="deng0">
+   <div class="deng1">
+    <h2>欢迎登录</h2>
+   </div>
+	   <div class="deng2">
+	     <div class="deng2a">
+		  <p><a class="ww1 on" href="javascript:void(0);">普通登录方式</a><a class="ww2" href="__MODULE__/Login/mobilelogin">手机动态码登录</a></p>
+		 </div>
+	     <div class="deng2b">
+		   <div class="deng2b1">
+		    <dl><dt>手机号码：</dt><dd><input id="tel" name="tel" type="text" class="txt1"></dd></dl>
+		     <dl><dt>输入密码：</dt><dd><input id="user_pwd" name="user_pwd" type="password" class="txt1"></dd></dl>
+		    <dl>
+		    	<dt>输入验证码：</dt>
+		    	<dd>
+		    		<input id="VCode" name="VCode" type="text" class="txt2" placeholder="请输入验证码" >
+		    		<span id="captcha-container" class="txt3"><img style="height:46px" src="{:U('Login/verify_c',array())}" title="点击刷新" onclick="verify_img()"></span>
+		    	</dd>
+		    </dl>
+			
+			<div class="txt4"><input type="button" value="登录" onclick="Login_Check()"> <a href="__MODULE__/Register/index/">注册</a></div>
+	
+		 
+		 </div>
+		   <div class="deng2b2">
+		 
+		 </div>
+		 
+		 
+		 </div>
+	   </div>
+ </div>
+</div>
+
+<script>
+//验证码
+function verify_img(){ 
+	var captcha_img = $('#captcha-container').find('img'); 
+	captcha_img.attr("src", '__MODULE__/Login/verify_c?random='+Math.random());
+};
+
+function Login_Check(){
+	//接收参数
+	var tel=$('#tel').val().trim();
+	var user_pwd=$('#user_pwd').val().trim();
+	var VCode=$('#VCode').val().trim();
+	
+	//验证手机号
+	if(tel!=""){
+		if(!$.check_Mobile(tel)){
+			$.anewAlert("请输入正确的手机号");	
+			return false;
+		}else{
+			$.post('__MODULE__/Login/verifyPhone',{'tel':tel},function(data_tel){
+				if(data_tel<=0){
+					$.anewAlert("对不起 你还不是注册用户");
+					return false;
+				}else{
+					//验证密码
+					if(user_pwd!=""){
+						if(VCode!=""){
+							$.post('__MODULE__/Login/verifyCode',{'VCode':VCode},function(data_VCode){
+								if(data_VCode==0){
+									$.anewAlert("亲，验证码输错了哦！");
+									return false;
+								}else{
+									//提交
+									$.post('__MODULE__/Login/pc_Login_Verify',{'tel':tel,'user_pwd':user_pwd,'VCode':VCode},function(data){
+										if(data.type==0){
+											$.anewAlert(data.info);
+										}else{
+											if(data.loginJump!="null"){
+												window.location.href="__MODULE__/"+data.loginJump;
+											}else{
+												window.location.href="__MODULE__/Index/homePage/";
+											}
+										}
+									})
+								}
+							})
+						}else{
+							$.anewAlert("验证码不能为空");	
+							return false;
+						}
+					}else{
+						$.anewAlert("密码不能为空");	
+						return false;
+					}
+				}
+			})
+		}
+	}else{
+		$.anewAlert("手机号不能为空");	
+		return false;
+	}
+}
+</script>
+
+<!--content-->
+
+<include file='public:foot'/>

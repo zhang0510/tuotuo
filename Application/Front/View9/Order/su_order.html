@@ -1,0 +1,103 @@
+<include file='public:header'/>
+<div class="header_top"> 
+  <div class="header_top0 container">
+  <div class="header_top1">
+  <div class="fss">
+	<if condition="$user.id eq ''">
+		<span>Hi 欢迎来到车妥妥 </span>
+		<a  class="deng1" href="__MODULE__/Login/pclogin/">请登录</a>
+		<a  class="deng2" href="__MODULE__/Register/index/">请注册</a>
+	<else/>
+		<span>Hi&nbsp;{$user['user_name']==null?$user['tel']:$user['user_name']}&nbsp;</span>
+		<h3>
+		<a  class="deng3" href="__MODULE__/Personal/personalInfo">个人中心</a>
+		<dl>
+			<dt><a href="__MODULE__/Personal/personalInfo">个人资料</a></dt>
+			<dt><a href="__MODULE__/MyOrder/index">我的订单</a></dt>
+			<dt><a href="__MODULE__/MyCoupon/index">我的优惠券</a></dt>
+		</dl>
+		</h3>
+		<a class="deng4" href="#" onclick="loginout();">退出</a>
+		<script>
+			function loginout(){
+				$.post('__MODULE__/Login/logout/',function(data){
+						window.location.reload();
+				})
+			}
+		</script>
+	</if>
+	</div>
+  </div>
+  <div class="header_top2">
+	<p>
+		<a  class="te11" href="">&nbsp;<img src="__FRONT__/images/timg.png"></a>
+		<a  class="te12" href="">&nbsp;<img src="__FRONT__/images/timg1.png"></a>
+		<!-- <a  class="te13" href="">&nbsp;</a> -->
+		<span>400-877-1107</span>
+	</p>
+  
+  </div>
+  </div>
+</div>
+<include file='public:menu'/>
+
+<!--content-->
+<div class="dengm2">
+ <div class="deng0 container">
+   <div class="deng1">
+    <h2>我的订单</h2>
+   </div>
+    <div class="deng5"><div class="kuai2"></div></div>
+   <div class="deng2e0">
+		<div class="rr4">
+			<div class="rr41 frake1 frake3 fee3">
+			<h2 class="rra2">订单信息</h2>
+				<div class="deng2b1">
+				<div class="frake4 fee1">
+					<p>车型：{$info.order_info_brand} {$info.order_info_type}</p></div>
+					<div class="olist1  fee2">{$info.str}<img class="eq1" src="__FRONT__/images/ee1.png">{$info.end}</div>
+				</div>
+			</div>
+
+		</div>  
+			<div class="rr4">
+			<div class="rr41 frake1 frake3 fee3">
+			<h2 class="rra2">支付</h2>
+				<div class="deng2b1">
+				 <ul class="zff0">
+				  <li class="zff1 on" data="Z">支付宝</li>
+				  <li class="zff2" data="H">货到付款</li>
+				  <li class="zff3" data="W">微信支付</li>
+				 
+				 </ul>
+				</div>
+			</div>
+
+		</div> 
+		
+		
+		<div style="clear:both;"></div>
+		<div class="ee81 fee4"><button type="button" onclick="queFun();">确认支付</button></div>
+   </div>
+   <form action="__MODULE__/Order/paynow" method="post" id="formSubmit">
+   		<input type="hidden" name="code" value="{$info.order_code}">
+   		<input type="hidden" id="payway" name="payway" value="Z">
+   		<input type="hidden" name="fee" value="{$info['order_info_zj']/100}">
+   </form>
+ </div>
+</div>
+<script>
+	function queFun(){
+		$("#formSubmit").submit();
+	}
+	$(".zff0 li").click(function(){
+	$("#payway").val($(this).attr("data"));
+	$(this).addClass('on').siblings().removeClass('on');
+	
+	});
+	
+	
+	
+</script>
+
+<include file='public:foot'/>

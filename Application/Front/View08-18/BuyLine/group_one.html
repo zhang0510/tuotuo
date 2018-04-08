@@ -1,0 +1,295 @@
+<include file='public:header'/>
+<include file='public:top'/>
+<include file='public:menu'/>
+<script type="text/javascript">
+//---------------------起始地START--------------------------
+//获取市
+function getIndexCity(id,name){
+	$.post("__MODULE__/GroupBuy/getGroupCity",{id:id},function(data){
+		var size = data.length;
+		var html='';
+		for(var i=0;i<size;i++){
+			html += '<li data-id="ct_'+i+'" value="'+data[i]['area_id']+'" onclick="getGroupArea(\''+data[i]['area_id']+'\',\''+data[i]['area_name']+'\');">'+data[i]['area_name']+'</li>';
+		}
+		 $("#cityarea_name").val(name);
+		 $("#cityarea_id").val(id);
+		 $("#startcity_id").html(html);
+		 $("#startprovince_id").hide();
+		 $("#startcity_id").show();
+	});
+}
+//获取区
+function getGroupArea(id,name){
+	$.post("__MODULE__/GroupBuy/getGroupArea",{id:id},function(data){
+		var size = data.length;
+		var html='';
+		for(var i=0;i<size;i++){
+			html += '<li data-id="ct_'+i+'" value="'+data[i]['area_id']+'" onclick="getGroupAreaOnly(\''+data[i]['area_id']+'\',\''+data[i]['area_name']+'\');">'+data[i]['area_name']+'</li>';
+		}
+		 //$("#cityarea_name").val(name);
+		 var names = $("#cityarea_name").val();
+		 $("#cityarea_name").val(names+"-"+name);
+		 var ids = $("#cityarea_id").val();
+		 $("#cityarea_id").val(ids+","+id);
+		 $("#area_id").html(html);
+		 $("#startcity_id").hide();
+		 $("#area_id").show();
+	});
+}
+//整理
+function getGroupAreaOnly(id,name){
+	var names = $("#cityarea_name").val();
+	 $("#cityarea_name").val(names+"-"+name);
+	 var ids = $("#cityarea_id").val();
+	 $("#cityarea_id").val(ids+","+id);
+	 $("#area_id").hide();
+	 $("#selected_id").hide();
+}
+function provineFun(){
+	$("#selected_id").show();
+	$("#startprovince_id").show();
+}
+//---------------------起始地END--------------------------
+//---------------------目的地START--------------------------
+//获取目的地 市
+function getAimCity(id,name){
+	$.post("__MODULE__/GroupBuy/getGroupCity",{id:id},function(data){
+		var size = data.length;
+		var html='';
+		for(var i=0;i<size;i++){
+			html += '<li data-id="ct_'+i+'" value="'+data[i]['area_id']+'" onclick="getAimGroupAreaOnly(\''+data[i]['area_id']+'\',\''+data[i]['area_name']+'\');">'+data[i]['area_name']+'</li>';
+		}
+		 $("#aim_cityarea_name").val(name);
+		 $("#aim_cityarea_id").val(id);
+		 $("#aim_startcity_id").html(html);
+		 $("#aim_selected_id").show();
+		 $("#aim_startcity_id").show();
+		 $("#aim_startprovince_id").hide();
+	});
+}
+//目的地获取市
+function getAimGroupAreaOnly(id,name){
+	 var names = $("#aim_cityarea_name").val();
+	 $("#aim_cityarea_name").val(names+"-"+name);
+	 var ids = $("#aim_cityarea_id").val();
+	 $("#aim_cityarea_id").val(ids+","+id);
+	 $("#aim_startcity_id").hide();
+	 $("#aim_selected_id").hide();
+}
+function aimProvineFun(){
+	$("#aim_selected_id").show();
+	$("#aim_startprovince_id").show();
+}
+//---------------------目的地END--------------------------------
+//---------------------品牌-车型START--------------------------------
+//获取车型
+function getCarType(id,name){
+	$.post("__MODULE__/GroupBuy/getCarType",{id:id},function(data){
+		var size = data.length;
+		var html='';
+		for(var i=0;i<size;i++){
+			html += '<li data-id="ct_'+i+'" value="'+data[i]['cxjj_id']+'" onclick="getCarTypeOnly(\''+data[i]['cxjj_id']+'\',\''+data[i]['cxjj_brand']+'\');">'+data[i]['cxjj_brand']+'</li>';
+		}
+		 $("#type_cityarea_name").val(name);
+		 $("#type_cityarea_id").val(id);
+		 $("#type_startcity_id").html(html);
+		 
+		 $("#type_selected_id").show();
+		 $("#type_startcity_id").show();
+		 $("#type_startprovince_id").hide();
+	});
+}
+//整理车型
+function getCarTypeOnly(id,name){
+	 var names = $("#type_cityarea_name").val();
+	 $("#type_cityarea_name").val(names+"-"+name);
+	 var ids = $("#type_cityarea_id").val();
+	 $("#type_cityarea_id").val(ids+","+id);
+	 $("#type_startcity_id").hide();
+	 $("#type_selected_id").hide();
+}
+function typeProvineFun(){
+	$("#type_selected_id").show();
+	$("#type_startprovince_id").show();
+}
+
+//---------------------品牌-车型END--------------------------------
+//---------------------车型车辆变动START--------------------------------
+
+//++
+function jian(){
+	var nums_id = parseInt($("#nums_id").val().trim()==""?1:$("#nums_id").val().trim());
+	var num_input = parseInt($("#num_id_input").val().trim()==""?0:$("#num_id_input").val().trim());
+	if(num_input > nums_id){
+		num_input--;
+		$("#num_id_input").val(num_input);
+	}
+}
+//--
+function jia(){
+	var num_input = parseInt($("#num_id_input").val().trim()==""?0:$("#num_id_input").val());
+	num_input++;
+	$("#num_id_input").val(num_input);
+	
+}
+//---------------------车型车辆变动END-------------------------------
+//---------------------车型添加START-------------------------------
+//添加品牌车型
+function carTypeAdd(){
+	var numinput = $("#num_id_input").val();//车辆数
+	var nums_id = $("#nums_id").val();//最少车辆数
+	
+	var cartype = $("#type_cityarea_name").val().trim();//车型 
+	var cartypeid = $("#type_cityarea_id").val();//车型编号
+	if(cartype!="请选择品牌车型"&&cartype!=""){
+		var arr = cartype.split("-");  
+		var html = '<p>'+arr[0]+' '+arr[1]+'<b onclick="del_b(this);">X</b><span>'+numinput+'辆</span><input type="hidden" value="'+cartypeid+','+numinput+'" name="cartype_code"/></p>';
+		$("#carNum_div_id").append(html);
+		$("#type_cityarea_name").val("请选择品牌车型");
+		$("#num_id_input").val(1);//还原车辆数初始值
+	}
+}
+//删除品牌车型
+function del_b(obj){
+	$(obj).parent("p").remove();
+}
+//---------------------车型添加END-------------------------------
+//---------------------提交下一步数据START-------------------------------
+function submitFun(){
+	//团购需要达到的车辆数量
+	var car_num = $("#nums_id").val();
+	//出发地
+	var startCity = $("#cityarea_id").val().trim();
+	//目的地
+	var endCity = $("#aim_cityarea_id").val().trim();
+	//获取车的品牌车型
+	var carTypeObj = $("input[name='cartype_code']");
+	var size = carTypeObj.size();
+	if(size<parseInt(car_num)){
+		$.anewAlert("您团购的车辆数必须大于或等于"+car_num+"辆!");
+		return false;
+	}
+	var xml='';
+	for(var i=0;i<size;i++){
+		xml += $(carTypeObj[i]).val()+"-";
+	}
+	xml = xml.substr(0,(xml.length-1));
+	if(startCity==""){
+		$.anewAlert("请选择出发地!");
+		return false;
+	}else{
+		$("#startCity").val(startCity);
+	}
+	if(endCity==""){
+		$.anewAlert("请选择目的地!");
+		return false;
+	}else{
+		$("#endCity").val(endCity);
+	}
+	if(xml==""){
+		$.anewAlert("请选择车型并加入车型列表!");
+		return false;
+	}else{
+		$("#carType").val(xml);
+	}
+	$("#form_one_id").submit();
+}
+//---------------------提交下一步数据END-------------------------------
+
+</script>
+
+<!--content-->
+<div class="dengm">
+ <div class="deng0">
+   <div class="deng1">
+    <h2>我要发车</h2>
+   </div>
+   <div class="deng2" style="padding:0px;">
+     <div class="deng2b">
+	   <div class="deng2b1">
+	   <form method="post" action="__MODULE__/GroupBuy/groupTwo" id="form_one_id">
+	   <input type="hidden" name="favorableSum" id="favorableSum" value="{$code}"/>
+	   
+	   <input type="hidden" name="startCity" id="startCity" value=""/>
+	   <input type="hidden" name="endCity" id="endCity" value=""/>
+	   <input type="hidden" name="carType" id="carType" value=""/>
+	   <dl><dt>出发地：</dt>
+	   <dd>
+	   <input type="text" class="txt1a inko" id="cityarea_name" onclick="provineFun();" placeholder="出发地"/>
+	   <input type="hidden" class="txt1a inko" id="cityarea_id">
+	   <span class="xxsj"></span>
+	  	<div class="selected0" id="selected_id">
+			<div class="province star_province" id="startprovince_id">
+				<foreach name="list" item="vo" key="k">
+					<li data-id="{$k}" value="{$vo.area_id}" onclick="getIndexCity('{$vo.area_id}','{$vo.area_name}')">{$vo.area_name}</li>
+				</foreach>
+			</div>
+			<div  class="city star_city" id="startcity_id"></div>
+			<div  class="county star_county" id="area_id"></div>
+		</div> 
+	   </dd>
+	   </dl>
+	   <dl>
+	   	   <dt>目的地：</dt>
+		   <dd>
+		   		<input type="text" class="txt1a inko" id="aim_cityarea_name" onclick="aimProvineFun();" placeholder="目的地"/>
+		   		<input type="hidden" class="txt1a inko" id="aim_cityarea_id">
+		      <span class="xxsj"></span>
+		  		<div class="selected" id="aim_selected_id">
+					<div class="province star_province" id="aim_startprovince_id">
+						<foreach name="list" item="vo" key="k">
+							<li data-id="{$k}" value="{$vo.area_id}" onclick="getAimCity('{$vo.area_id}','{$vo.area_name}')">{$vo.area_name}</li>
+						</foreach>
+					</div>
+					<div class="city star_city" id="aim_startcity_id"></div>
+				</div> 
+		   
+		   </dd>
+	   </dl>
+	   
+	   <dl><dt>品牌车型：</dt>
+	   <dd>
+	   	<input type="text" class="txt1a inko" id="type_cityarea_name" onclick="typeProvineFun();" value="请选择品牌车型">
+	   	<input type="hidden" class="txt1a inko" id="type_cityarea_id">
+	    <span class="xxsj"></span>
+	   <div class="selected" id="type_selected_id">
+			<div class="province star_province" id="type_startprovince_id">
+			<foreach name="brand" item="vo" key="k">
+				<li data-id="14" value="{$vo.cxjj_id}" onclick="getCarType('{$vo.cxjj_id}','{$vo.cxjj_brand}');">{$vo.cxjj_brand}</li>
+			</foreach>
+			</div>
+			<div data-id="" class="city star_city" id="type_startcity_id"></div>
+		</div> 
+	   
+	   </dd></dl>
+
+		   <dl><dt>&nbsp;</dt><dd>
+		    <div class="lm1">
+			 <div class="lmc">
+			 	 <input type="hidden" value="{$num}" id="nums_id"/>
+				<!--  <a class="jian" onclick="jian();">-</a> -->
+				 	<input class="lm1a" type="text" value="1" readonly id="num_id_input">
+				<!--  <a class="jia" onclick="jia();">+</a> -->
+			 </div>
+			<button type="button" class="lm1b" onclick="carTypeAdd();">加入车型列表</button>
+			</div>
+		   
+		   
+		   </dd></dl>
+		    <div style="clear:both"></div>
+		   <dl><dt>车型列表</dt></dl>
+		   <div class="txt1w" id="carNum_div_id">
+		    
+		   </div>
+	
+		<div class="txt4"><input type="submit" value="确定" onclick="return submitFun();"></div>
+		</form>
+	 </div>
+	   <div class="deng2b2">
+	 </div>
+	 </div>
+   </div>
+ </div>
+</div>
+<!--content-->
+<include file='public:foot'/>

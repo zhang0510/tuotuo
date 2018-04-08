@@ -1,0 +1,140 @@
+<include file='public:head'/>
+<script src="__BACK__/laydate/laydate.js"></script>
+<script type="text/javascript">
+  window.onload = function(){
+    showTime();
+  }
+ 
+  function showTime(){
+    var myDate = new Date();
+    var year = myDate.getFullYear();
+    var month = myDate.getMonth() + 1;
+    var date = myDate.getDate();
+    var dateArr = ["日","一",'二','三','四','五','六'];
+    var day = myDate.getDay();
+    var hours = myDate.getHours();
+    var minutes = formatTime(myDate.getMinutes());
+    var seconds = formatTime(myDate.getSeconds());
+ 
+    var systemTime = document.getElementById("time");
+    systemTime.innerHTML = "北京时间：  " + year + "年" + month +"月" + date + "日" + " 星期" + dateArr[day] + " " + hours + ":" + minutes + ":" + seconds;
+    setTimeout("showTime()",500);
+  }
+ 
+  //格式化时间：分秒。
+  function formatTime (i){
+    if(i < 10){
+      i = "0" + i;
+    }
+    return i;
+  }
+ 
+  </script>
+<body>
+
+	<include file='public:header'/>	
+	<div class="clear_both"></div>
+	<div id="main-pyf">
+		<include file="public:left" />
+
+		<div id="content">
+			<!-- 		<div class="ico-pt span12">
+			<h4>店铺管理</h4>
+		</div>
+		-->
+		<div class="row">
+
+			<div class="tsan113">
+
+				<div class="widget">
+
+					<div class="tabbable">
+
+						<div class="tab-content1">
+							<div class="tab-content">
+								<div class="tab-pane active">
+									<div class="dq0">
+										<div class="dq1">
+											<h2>您好，欢迎登陆车妥妥后台管理系统！</h2>
+											<div id ='time'></div>
+
+										</div>
+										<div class="dq2" style="width:auto;">
+											<iframe width="274" scrolling="no" height="54" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=42&icon=1&num=3"></iframe>
+										</div>
+									</div>
+									<div class="dq3">
+										<ul>
+											<li>
+												<div class="dq31">
+													<h2>当前会员总数</h2>
+													<p>{$userNum}</p>
+												</div>
+											</li>
+											<li>
+												<div class="dq31">
+													<h2>当前订单总数</h2>
+													<p>{$orderNum}</p>
+												</div>
+											</li>
+											<li>
+												<div class="dq31">
+													<h2>当前提车人数量</h2>
+													<p>{$carHeaderNum}</p>
+												</div>
+											</li>
+											<li>
+												<div class="dq31">
+													<h2>大客户数量</h2>
+													<p>{$companyNum}</p>
+												</div>
+											</li>
+											<li>
+												<div class="dq31">
+													<h2>财务统计收入总计（元）</h2>
+													<p>{$orderFee}</p>
+												</div>
+											</li>
+											<li>
+												<div class="dq31">
+													<h2>财务统计调度费用总计（元）</h2>
+													<p>{$cwglNum}</p>
+												</div>
+											</li>
+											<li>
+												<div class="dq31">
+													<h2>保险费用总计（元）</h2>
+													<p>{$premium}</p>
+												</div>
+											</li>
+											<li>
+												<div class="dq31">
+													<h2>毛利总计（元）</h2>
+													<p>{$maoli}</p>
+												</div>
+											</li>
+
+										</ul>
+
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+				<!-- /widget -->
+
+			</div>
+			<!-- /span11 -->
+
+		</div>
+		<!-- /row -->
+
+	</div>
+</div>
+
+</body>
+</html>

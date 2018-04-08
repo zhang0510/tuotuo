@@ -1,0 +1,223 @@
+	    <!DOCTYPE html>
+	<html>
+	<head>
+		<title>数据库备份</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, ,initial-scale=0.5,minimum-scale=0.5,maximum-scale=0.5, user-scalable=no" />
+		<link rel="stylesheet" href="__BACK__/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="__BACK__/css/bootstrap-responsive.min.css" />
+		<link rel="stylesheet" href="__BACK__/css/unicorn.main.css" />
+		<link rel="stylesheet" href="__BACK__/css/unicorn.grey.css" class="skin-color" />
+		<link rel="stylesheet" href="__BACK__/css/li.css" class="skin-color" />
+		<link href="__BACK__/css/adminia.css" rel="stylesheet" />
+		<link href="__BACK__/css/yao.css" rel="stylesheet" class="skin-color" />
+	
+		<script src="__JS__/jquery-1.7.2.min.js"></script>
+		<script src="__BACK__/js/bootstrap.js"></script>
+		<!--[if lt IE 9]>
+		<script src="js/html5.js"></script>
+		<![endif]-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<style>.l_table table tr td.td_d{width:200px;}</style>
+	</head>
+    <body>
+        <include file='public:header'/>
+        </div>
+        <div id="main-pyf">
+            <include file='public:left'/>
+            <div id="content">
+                <!-- <div class="ico-pt span12">
+                <h4>店铺管理</h4>
+                </div>
+                -->
+                <div class="row">
+                    <div class="tsan113">
+                        <div class="widget">
+                            <div class="tabbable">
+                                <ul class="nav nav-tabs" id="tabnav">
+                                    <li class="active">
+                                        <a href="{:U('Database/exportPage')}">
+                                            	数据库备份
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{:U('Database/importPage')}">
+                                            	数据库还原
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content1">
+                                    <div class="tab-content">
+                                        <div class="control-group">
+                                            &nbsp;&nbsp;&nbsp;
+                                            <button onclick="dbExportFun('A');" class="btn btn-default5" type="button">
+                                                	立即备份
+                                            </button>
+                                            &nbsp;&nbsp;&nbsp;
+                                            <button class="btn btn-default6" onclick="dbExportFun('B');" type="button">
+                                                	优化表
+                                            </button>
+                                            &nbsp;&nbsp;&nbsp;
+                                            <button onclick="dbExportFun('C');" class="btn btn-default7" type="button">
+                                                	修复表
+                                            </button>
+                                            &nbsp;&nbsp;&nbsp;
+                                            <button class="btn btn-default8" type="button">
+                                                	共{$count}张表
+                                            </button>
+                                        </div>
+                                        <div class="tab-pane active">
+                                            <form id="edit-profile" class="form-horizontal" />
+                                            <fieldset>
+                                                <div class="l_uit">
+                                                    <script>
+                                                        $(function() {
+                                                            $('table tr.tr2:odd').css('background', '#F0F0F0');
+                                                        });
+                                                    </script>
+                                                    <div class="l_table">
+                                                        <table>
+                                                            <tr class="tr1">
+                                                                <td>
+                                                                	<input class="check-all" checked="checked"  type="checkbox" onclick="checkboxALLFun(this);" id="checkboxAllid">
+                                                                </td>
+                                                                <td>
+                                                                	表名
+                                                                </td>
+                                                                <td>
+                                                                	数据量
+                                                                </td>
+                                                                <td>
+                                                                	数据大小
+                                                                </td>
+                                                                <td>
+                                                                	创建时间
+                                                                </td>
+                                                                <td>
+                                                                	备份时间
+                                                                </td>
+                                                                <td>
+                                                                	备份状态
+                                                                </td>
+                                                                <td>
+                                                                	操作
+                                                                </td>
+                                                            </tr>
+                                                            <volist name="list" id="table" key="k">
+                                                            	<tr class="tr2">
+	                                                                <td class="td3 num">
+	                                                                    <input class="ids"  type="checkbox" name="tables_{$k}" value="{$table.name}" onclick="checkboxOnlyFun(this);">
+	                                                                </td>
+                                                                	<td>{$table.name}</td>
+                                                                	<td>{$table.rows}</td>
+                    												<td>{$table.data_length|format_bytes}</td>
+                    												<td class="td_d2">{$table.create_time}</td>
+                    												<td class="td_d2">{$table.backups_date}</td>
+                                                                	<td class="td_d2">
+												                    	<if condition="$table.status eq 'Y'">
+																			已备份
+																		    <else />
+																		        未备份
+																		</if>
+																	</td>
+                                                                <td>
+                                                                    <a class="see1" href="{:U('Database/optimize?tables='.$table['name'])}">优化表</a>&nbsp;
+                        											<a class="see2" href="{:U('Database/repair?tables='.$table['name'])}">修复表</a>
+                                                                </td>
+                                                            </tr>
+                                                            </volist>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /widget -->
+                    </div>
+                    <!-- /span11 -->
+                </div>
+                <!-- /row -->
+            </div>
+        </div>
+
+ <script type="text/javascript">
+  	function checkboxALLFun(obj){
+  		if($(obj).is(':checked')){
+  			 $("input[name^='tables_']").attr("checked", true);
+  		}else{
+  			$("input[name^='tables_']").attr("checked", false);
+  		}
+  	}
+  	function checkboxOnlyFun(obj){
+  		if($(obj).is(':checked')){
+  			var flag = true;
+ 			 $("input[name^='tables_']").each(function () {
+ 				 if(!$(this).is(':checked')){
+ 					 $("#checkboxAllid").attr("checked", false);
+ 					 flag = false;
+ 					 return false;
+ 				 }
+ 			 });
+ 			 if(flag){
+	 			$("#checkboxAllid").attr("checked", true);
+ 			 }else{
+ 				$("#checkboxAllid").attr("checked", false);
+ 			 }
+ 		}else{
+ 			$("#checkboxAllid").attr("checked", false);
+ 		}
+  	}
+  	
+  	//数据备份
+    function dbExportFun(mark){
+  		$("#loading").show();
+  		var tablename = "";
+    	$("input[name^='tables_']").each(function () {
+			 if($(this).is(':checked')){
+				 tablename += $(this).val()+";";
+			 }
+		 });
+    	tablename = tablename.substring(0,(tablename.length-1));
+    	if(tablename==""){
+    		alert("请选择需要备份的表");
+    		return false;
+    	}
+    	var url="__MODULE__/Database/export";
+    	if(mark=="B"){
+    		/*
+    		if(tablename.indexOf(';')>0){
+    			tablename = tablename.split(";");
+    		}
+    		*/
+    		url='__MODULE__/Database/optimize';
+    	}else if(mark=="C"){
+    		/*
+    		if(tablename.indexOf(';')>0){
+    			tablename = tablename.split(";");
+    		}
+    		*/
+    		url='__MODULE__/Database/repair';
+    	}
+    	$.post(url,{tables:tablename,mark:mark},function(data){
+    		if(data.flag){
+    			alert(data.msg);
+    			$("#loading").hide();
+    			window.location.href = "__MODULE__/Database/exportPage.html";
+    		}else{
+    			alert(data.msg);
+    			$("#loading").hide();
+    		}
+    	})
+    }
+    </script>
+<!-- 弹出层 -->
+<div id="loading" style="position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.8);text-align:center;z-index:10000;display: none;">
+<img src="__BACK__/images/loading.gif" style="padding-top:18%;" />
+</div>
+<!-- 弹出层 -->
+</body>
+</html>

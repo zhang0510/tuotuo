@@ -1,0 +1,116 @@
+<include file='public:header'/>
+<div class="header_top">
+  <div class="header_top0 container">
+  <div class="header_top1">
+  <div class="fss">
+	<if condition="$user.id eq ''">
+		<span>Hi 欢迎来到妥妥运车 </span>
+		<a  class="deng1" href="__MODULE__/Login/pclogin/">请登录</a>
+		<a  class="deng2" href="__MODULE__/Register/index/">请注册</a>
+	<else/>
+		<span>Hi&nbsp;{$user.user_name}&nbsp;</span>
+		<h3>
+		<a  class="deng3" href="__MODULE__/Personal/personalInfo">个人中心</a>
+		<dl>
+			<dt><a href="">个人资料</a></dt>
+			<dt><a href="__MODULE__/MyOrder/index">我的订单</a></dt>
+			<dt><a href="__MODULE__/MyCoupon/index">我的优惠券</a></dt>
+		</dl>
+		</h3>
+		<a class="deng4" href="#" onclick="loginout();">退出</a>
+		<script>
+			function loginout(){
+				$.post('__MODULE__/Login/logout/',function(data){
+						window.location.reload();
+				})
+			}
+		</script>
+	</if>
+	</div>
+  </div>
+  <div class="header_top2">
+	<p>
+		<a  class="te11" href="">&nbsp;<img src="__FRONT__/images/timg.png"></a>
+		<a  class="te12" href="">&nbsp;<img src="__FRONT__/images/timg1.png"></a>
+		<!-- <a  class="te13" href="">&nbsp;</a> -->
+		<span>400-877-1107</span>
+	</p>
+
+  </div>
+  </div>
+</div>
+<include file='public:menu'/>
+
+<div class="order_body1">
+<div class="order_main container">
+
+  <div class="order_detail">
+    <div class="order_d1">
+
+	  <div class="du32">
+	   <p>积分抵扣：￥0元</p>
+	   <p>奖券抵扣：-￥{$order['couponNum']/100}元</p>
+	   <p>运输价格（含提车费）：￥{$order['all_price']|default="0"}元</p>
+	   <p>上门送车价格：￥{$order.visit|default="0"}元</p>
+	   <p>车辆保险价格：￥{$order['sprice']|default="0"}元</p>
+	  <p class="on">共计：<span><b>￥<em>{$order.total|default="0"}</em>元</b></span></p>
+	  </div>
+
+	  <div class="du339">
+		<div class="du339a">
+	   <ul>
+	     <li class="on">
+			 <img src="__FRONT__/images/zf1.png">
+			 <p>支付宝</p>
+			 <input value="1" type="radio" name="Z">
+		 </li>
+		 <!--
+		 <li>
+			 <img src="__FRONT__/images/zf2.png">
+			 <p>微信</p>
+			 <input value="2" type="radio" name="W">
+		 </li>
+		 -->
+	   </ul>
+
+	</div>
+	 <div class="du339b">
+	<form method="post" action="__MODULE__/Order/paynow" id="sub">
+		<input type="hidden" name="payway" value="Z" id="payway"/>
+		<input type="hidden" name="code" value="{$code}"/>
+		<input type="hidden" name="fee" value="{$fee}"/>
+	</form>
+	 <button type="button" onclick="$('#sub').submit();">确定付款</button>
+
+	  </div>
+	  </div>
+  </div>
+
+  </div>
+
+</div>
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script>
+    $(".du339a ul li").click(function(){
+  		$(this).addClass('on').siblings().removeClass('on');
+  		var payway = $(this).find('input').attr('name');
+  		$("#payway").val(payway);
+  	});
+  </script>
+<include file='public:foot'/>

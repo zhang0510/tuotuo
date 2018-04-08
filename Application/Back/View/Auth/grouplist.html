@@ -1,0 +1,119 @@
+<include file="Public:head" />
+<body>
+<include file="Public:header" />
+<div id="main-pyf">
+	<include file="Public:left" />
+
+		<div id="content">
+			<!-- 		<div class="ico-pt span12">
+			<h4>店铺管理</h4>
+		</div>
+		-->
+		<div class="row">
+
+			<div class="tsan113">
+
+				<div class="widget">
+
+					<div class="tabbable">
+						<ul class="nav nav-tabs" id="tabnav">
+							<li class="active">
+								<a href="__MODULE__/Auth/grouplist">管理角色</a>
+							</li>
+							<li>
+								<a href="__MODULE__/Auth/operator">操作员管理</a>
+							</li>
+						</ul>
+
+						<div class="tab-content1">
+							<div class="tab-content">
+								<div class="tab-pane active">
+									<form id="edit-profile" class="form-horizontal" />
+									<fieldset>
+										<div class="l_uit">
+											<div class="control-group">
+
+												<div style="float:left;" class="controls clec_t">
+													<div class="v_pb">
+														<input type="text" value="{$val}" placeholder="请输入关键词搜索" class="i_n text2 width360">
+														<button id="btn" class="btn btn-default5" type="button">搜索</button>
+													</div>
+												</div>
+												<!-- /controls -->
+												<a href="__MODULE__/Auth/groupadd" style="color:#fff"><button class="red btn btn-default5 fr" type="button">添加角色</button></a>
+											</div>
+											<script>
+												$(function(){
+													$('table tr.tr2:odd').css('background','#F0F0F0');
+												});
+												
+											</script>
+											<div class="l_table">
+												<table>
+													<tr class="tr1">
+														<td>角色</td>
+														<td>下属操作员数量</td>
+														<td>管理描述</td>
+														<td>操作</td>
+
+													</tr>
+													<volist name="list" id="vo" key="k">
+													<tr class="tr2">
+														<td class="td3">{$vo.title}</td>
+														<td>{$vo.num}</td>
+														<td>{$vo.description}</td>
+														<td>
+														<if condition="$k eq 1 ">
+															<a class="see1">修改</a>
+														<else />
+															<a  href="__MODULE__/Auth/groupadd/pid/{$vo.id}" class="see1">修改</a>
+															<a del="{$vo.id}" class="see2">删除</a>
+														</if>
+														</td>
+													</tr>
+													</volist>
+
+												</table>
+
+											</div>
+											<div class="l_fenye">
+													</div>
+												</div>
+											</fieldset>
+										</form>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+					<!-- /widget -->
+
+				</div>
+				<!-- /span11 -->
+
+			</div>
+			<!-- /row -->
+
+		</div>
+	</div>
+<script>
+	$('#btn').click(function(event) {
+		var val = $('.text2').val();
+		window.location.href="__MODULE__/Auth/grouplist/val/"+val;
+	});
+    //删除    
+    $('.see2').click(function(event) {
+        var pid = $(this).attr('del');
+        if (confirm('确定删除此信息吗？')) {
+            $.post('__MODULE__/Auth/group_del', {pid: pid}, function(data) {
+                alert(data);
+                window.location.reload();
+            },'json');
+        }
+    })
+</script>
+</body>
+</html>

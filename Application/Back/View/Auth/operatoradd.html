@@ -1,0 +1,83 @@
+<include file="Public:head" />
+<body>
+<include file="Public:header" />
+<div id="main-pyf">
+	<include file="Public:left" />
+
+		<div id="content">
+			<!-- 		<div class="ico-pt span12">
+			<h4>店铺管理</h4>
+		</div>
+		-->
+		<div class="row">
+
+			<div class="tsan113">
+
+				<div class="widget">
+
+					<div class="tabbable">
+						<ul class="nav nav-tabs" id="tabnav">
+							<li>
+								<a href="__MODULE__/Auth/grouplist">管理角色</a>
+							</li>
+							<li class="active">
+								<a href="__MODULE__/Auth/operator">操作员管理</a>
+							</li>
+						</ul>
+
+						<div class="tab-content1">
+							<form id="form" action="__MODULE__/Auth/operatoradd_act" method="post">
+							<div class="dq5  dq5x">
+								<dl>
+									<div class="dropdown">
+										<select class="height46" style="width:100%" name="group" id="sel">
+											<option value="0">请选择角色</option>
+											<volist name="nav" id="na">
+												<option value="{$na.id}">{$na.title}</option>
+											</volist>
+										</select>
+									</div>
+								</dl>
+								<input type="hidden" name="admin_code" value="{$data.admin_code}">
+								<dl>
+									<input type="text" name="admin_name" class="i_n text2" value="{$data.admin_name}" placeholder="请输入操作员姓名"></dl>
+								<dl>
+									<input type="text" name="admin_acc" class="i_n text2" value="{$data.admin_acc}" placeholder="请输入操作员帐号（手机号码，用作登陆）"></dl>
+								<dl>
+									<input type="text" name="admin_pwd" class="i_n text2" value="" placeholder="请输入操作员密码"></dl>
+
+							</div>
+							</form>
+							<hr>
+							<div class="sad1">
+								<button id="btn" class="btn btn-default7" type="button">确定</button>
+
+								<button class="btn btn-default8" type="button"><a href="__MODULE__/Auth/operator" style="color:#fff">取消</a></button>
+							</div>
+						</div>
+
+					</div>
+					<!-- /widget -->
+
+				</div>
+				<!-- /span11 -->
+
+			</div>
+			<!-- /row -->
+
+		</div>
+	</div>
+<script>
+	$('#btn').click(function(event) {
+		$('#form').submit();
+	});
+
+	var gid = "{$data.gid}";
+	$('#sel option').each(function(index, el) {
+		if ($(this).val() == gid) {
+			$(this).attr('selected',true);
+		}
+	});
+</script>
+</body>
+</html>

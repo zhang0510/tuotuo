@@ -1,0 +1,63 @@
+<include file='public:header'/>
+<include file='public:top'/>
+<include file='public:menu'/>
+<!--content-->
+  <div class="banner0">
+  <img src="__FRONT__/images/banner8.jpg">
+  </div>
+<div class="new_main">
+<div class="new_body container">
+  	<div class="tnew11">
+  	</div>
+    <div class="tnew12">
+	<img src="{$adv.adv_img}">
+	  <div class="tnew12a">
+		  <div class="tnew12b">
+			  <div class="tnew12c">
+				<h2>{$adv.adv_img_title}</h2>
+				<span></span>
+			    <p>{$adv.adv_img_info}</p>
+			  </div>
+		  </div>
+  	  </div>
+  </div>
+  <div class="pnew2">
+   <foreach name="list.list" item="vo">
+   		<div class="col-sm-6 col-md-4 pnem1">
+	   	<a href="javascript:;" onclick="autoCarFun('{$vo.line_code}');">
+		   <div class="pnew2a"><img src="{$vo.line_img}"></div>
+		   <div class="pe4a">
+			 	<div class="pnew4a">
+					<h2>{$vo.line_name}</h2>
+					<span></span>
+		    		<p>{$vo.start_city}-->{$vo.end_city}</p>
+			 	</div>
+			 	<div class="pnew3a">
+					<h2>￥{$vo['price']['fuc']-$vo['line_discount']/100}起</h2>
+		    		<p>原价￥{$vo['price']['fuc']}</p>
+				</div>
+		 	</div>
+		 </a>
+    	</div>
+   </foreach>
+ </div>
+ 	<div class="num">
+	{$list.show}
+	</div>
+</div>
+ </div>
+
+<script>
+	function autoCarFun(code){
+		$.post("__MODULE__/Worklwt/checkLogins",{},function(data){
+			if(data.flag){
+				window.location.href='__MODULE__/Worklwt/lineDis/code/'+code;
+			}else{
+				$.anewAlert(data.msg,0,1,'__MODULE__/Login/pclogin');
+			}
+
+		},'json');
+	}
+</script>
+<!--content-->
+<include file='public:foot'/>
