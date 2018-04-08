@@ -71,3 +71,514 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000313s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000337s ]
 
+[ 2018-04-08T13:18:53+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000261s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000288s ]
+SQL: SHOW COLUMNS FROM `tuo_article` [ RunTime:0.0178s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'GY'  [ RunTime:0.0182s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'LX'  [ RunTime:0.0188s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'JR'  [ RunTime:0.0361s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'QQ'  [ RunTime:0.0189s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FK'  [ RunTime:0.0353s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'BZ'  [ RunTime:0.0198s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FW'  [ RunTime:0.0177s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'AQ'  [ RunTime:0.0179s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'DH'  [ RunTime:0.0188s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated E:\phpstudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\WWW\Application\Front\Controller\IndexController.class.php 第 21 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Front\Controller\IndexController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `tuo_area` [ RunTime:0.0171s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_pid` = 1  [ RunTime:0.0172s ]
+SQL: SHOW COLUMNS FROM `tuo_carxing` [ RunTime:0.0165s ]
+SQL: SELECT * FROM `tuo_carxing` WHERE `cxjj_pid` = 0  [ RunTime:0.0189s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_img` <> '' ORDER BY article_time desc LIMIT 1   [ RunTime:0.0187s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_id` <> '35' ORDER BY article_time desc LIMIT 3   [ RunTime:0.0352s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'CJ' ORDER BY article_time desc LIMIT 10   [ RunTime:0.0496s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'TTFW' ORDER BY article_id asc LIMIT 6   [ RunTime:0.0189s ]
+SQL: SHOW COLUMNS FROM `tuo_link` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `tuo_link` WHERE `fl_status` = 'Y' ORDER BY fl_sort LIMIT 6   [ RunTime:0.0183s ]
+SQL: SHOW COLUMNS FROM `tuo_adv_img` [ RunTime:0.0169s ]
+SQL: SELECT * FROM `tuo_adv_img` WHERE `adv_code` = 'A'  [ RunTime:0.0169s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000208s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000253s ]
+NOTIC: [8] Undefined variable: news E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 8 行.
+NOTIC: [8] Undefined variable: news E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 12 行.
+NOTIC: [8] Undefined variable: news E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 16 行.
+NOTIC: [2] Illegal string offset 'total' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 184 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 184 行.
+NOTIC: [2] Illegal string offset 'sprice' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 185 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 185 行.
+NOTIC: [2] Illegal string offset 'tprice' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 186 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 186 行.
+NOTIC: [2] Illegal string offset 'eprice' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 187 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 187 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 198 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 198 行.
+NOTIC: [2] Illegal string offset 'total' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 198 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 198 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 403 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 403 行.
+NOTIC: [2] Illegal string offset 'start' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 403 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 403 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 432 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 432 行.
+NOTIC: [2] Illegal string offset 'end' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 432 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 432 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 449 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 449 行.
+NOTIC: [2] Illegal string offset 'carInfo' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 449 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 449 行.
+NOTIC: [8] Use of undefined constant content - assumed 'content' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 549 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047205s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047242s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000277s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000307s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000359s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000398s ]
+
+[ 2018-04-08T13:21:55+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000064s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000265s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000293s ]
+SQL: SHOW COLUMNS FROM `tuo_article` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'GY'  [ RunTime:0.0181s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'LX'  [ RunTime:0.0189s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'JR'  [ RunTime:0.0365s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'QQ'  [ RunTime:0.0342s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FK'  [ RunTime:0.0338s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'BZ'  [ RunTime:0.0185s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FW'  [ RunTime:0.0185s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'AQ'  [ RunTime:0.0176s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'DH'  [ RunTime:0.0192s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated E:\phpstudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\WWW\Application\Front\Controller\IndexController.class.php 第 21 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Front\Controller\IndexController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `tuo_area` [ RunTime:0.0164s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_pid` = 1  [ RunTime:0.0178s ]
+SQL: SHOW COLUMNS FROM `tuo_carxing` [ RunTime:0.0172s ]
+SQL: SELECT * FROM `tuo_carxing` WHERE `cxjj_pid` = 0  [ RunTime:0.0188s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_img` <> '' ORDER BY article_time desc LIMIT 1   [ RunTime:0.0165s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_id` <> '35' ORDER BY article_time desc LIMIT 3   [ RunTime:0.0359s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'CJ' ORDER BY article_time desc LIMIT 10   [ RunTime:0.0507s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'TTFW' ORDER BY article_id asc LIMIT 6   [ RunTime:0.0195s ]
+SQL: SHOW COLUMNS FROM `tuo_link` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `tuo_link` WHERE `fl_status` = 'Y' ORDER BY fl_sort LIMIT 6   [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `tuo_adv_img` [ RunTime:0.0175s ]
+SQL: SELECT * FROM `tuo_adv_img` WHERE `adv_code` = 'A'  [ RunTime:0.0172s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000200s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+NOTIC: [8] Undefined variable: news E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 8 行.
+NOTIC: [8] Undefined variable: news E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 12 行.
+NOTIC: [8] Undefined variable: news E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 16 行.
+NOTIC: [2] Illegal string offset 'total' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 184 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 184 行.
+NOTIC: [2] Illegal string offset 'sprice' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 185 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 185 行.
+NOTIC: [2] Illegal string offset 'tprice' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 186 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 186 行.
+NOTIC: [2] Illegal string offset 'eprice' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 187 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 187 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 198 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 198 行.
+NOTIC: [2] Illegal string offset 'total' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 198 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 198 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 403 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 403 行.
+NOTIC: [2] Illegal string offset 'start' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 403 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 403 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 432 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 432 行.
+NOTIC: [2] Illegal string offset 'end' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 432 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 432 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 449 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 449 行.
+NOTIC: [2] Illegal string offset 'carInfo' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 449 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 449 行.
+NOTIC: [8] Use of undefined constant content - assumed 'content' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 549 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032122s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032174s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000175s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000191s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000366s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000390s ]
+
+[ 2018-04-08T13:56:18+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000039s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000269s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000299s ]
+SQL: SHOW COLUMNS FROM `tuo_article` [ RunTime:0.0161s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'GY'  [ RunTime:0.0513s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'LX'  [ RunTime:0.0160s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'JR'  [ RunTime:0.0346s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'QQ'  [ RunTime:0.0327s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FK'  [ RunTime:0.0333s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'BZ'  [ RunTime:0.0184s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FW'  [ RunTime:0.0177s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'AQ'  [ RunTime:0.0177s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'DH'  [ RunTime:0.0173s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated E:\phpstudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\WWW\Application\Front\Controller\IndexController.class.php 第 21 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Front\Controller\IndexController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `tuo_area` [ RunTime:0.0165s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_pid` = 1  [ RunTime:0.0165s ]
+SQL: SHOW COLUMNS FROM `tuo_carxing` [ RunTime:0.0174s ]
+SQL: SELECT * FROM `tuo_carxing` WHERE `cxjj_pid` = 0  [ RunTime:0.0171s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_img` <> '' ORDER BY article_time desc LIMIT 1   [ RunTime:0.0179s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_id` <> '35' ORDER BY article_time desc LIMIT 3   [ RunTime:0.0341s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'CJ' ORDER BY article_time desc LIMIT 10   [ RunTime:0.0550s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'TTFW' ORDER BY article_id asc LIMIT 6   [ RunTime:0.0378s ]
+SQL: SHOW COLUMNS FROM `tuo_link` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `tuo_link` WHERE `fl_status` = 'Y' ORDER BY fl_sort LIMIT 6   [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `tuo_adv_img` [ RunTime:0.0163s ]
+SQL: SELECT * FROM `tuo_adv_img` WHERE `adv_code` = 'A'  [ RunTime:0.0163s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000201s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000232s ]
+NOTIC: [8] Undefined variable: news E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 8 行.
+NOTIC: [8] Undefined variable: news E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 12 行.
+NOTIC: [8] Undefined variable: news E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 16 行.
+NOTIC: [2] Illegal string offset 'total' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 184 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 184 行.
+NOTIC: [2] Illegal string offset 'sprice' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 185 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 185 行.
+NOTIC: [2] Illegal string offset 'tprice' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 186 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 186 行.
+NOTIC: [2] Illegal string offset 'eprice' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 187 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 187 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 198 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 198 行.
+NOTIC: [2] Illegal string offset 'total' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 198 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 198 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 403 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 403 行.
+NOTIC: [2] Illegal string offset 'start' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 403 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 403 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 432 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 432 行.
+NOTIC: [2] Illegal string offset 'end' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 432 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 432 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 449 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 449 行.
+NOTIC: [2] Illegal string offset 'carInfo' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 449 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 449 行.
+NOTIC: [8] Use of undefined constant content - assumed 'content' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 549 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021054s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021078s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000171s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000188s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000489s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000530s ]
+
+[ 2018-04-08T15:50:41+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+SQL: SHOW COLUMNS FROM `tuo_article` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'GY'  [ RunTime:0.0178s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'LX'  [ RunTime:0.0175s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'JR'  [ RunTime:0.0331s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'QQ'  [ RunTime:0.0181s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FK'  [ RunTime:0.0335s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'BZ'  [ RunTime:0.0181s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FW'  [ RunTime:0.0181s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'AQ'  [ RunTime:0.0176s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'DH'  [ RunTime:0.0183s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated E:\phpstudy\WWW\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\WWW\Application\Front\Controller\IndexController.class.php 第 21 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Front\Controller\IndexController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `tuo_area` [ RunTime:0.0169s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_pid` = 1  [ RunTime:0.0171s ]
+SQL: SHOW COLUMNS FROM `tuo_carxing` [ RunTime:0.0163s ]
+SQL: SELECT * FROM `tuo_carxing` WHERE `cxjj_pid` = 0  [ RunTime:0.0181s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_img` <> '' ORDER BY article_time desc LIMIT 1   [ RunTime:0.0178s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_id` <> '35' ORDER BY article_time desc LIMIT 3   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'CJ' ORDER BY article_time desc LIMIT 10   [ RunTime:0.0485s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'TTFW' ORDER BY article_id asc LIMIT 6   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `tuo_link` [ RunTime:0.0168s ]
+SQL: SELECT * FROM `tuo_link` WHERE `fl_status` = 'Y' ORDER BY fl_sort LIMIT 6   [ RunTime:0.0163s ]
+SQL: SHOW COLUMNS FROM `tuo_adv_img` [ RunTime:0.0172s ]
+SQL: SELECT * FROM `tuo_adv_img` WHERE `adv_code` = 'A'  [ RunTime:0.0168s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000209s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000242s ]
+NOTIC: [8] Undefined variable: news E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 8 行.
+NOTIC: [8] Undefined variable: news E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 12 行.
+NOTIC: [8] Undefined variable: news E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 16 行.
+NOTIC: [2] Illegal string offset 'total' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 184 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 184 行.
+NOTIC: [2] Illegal string offset 'sprice' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 185 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 185 行.
+NOTIC: [2] Illegal string offset 'tprice' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 186 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 186 行.
+NOTIC: [2] Illegal string offset 'eprice' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 187 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 187 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 198 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 198 行.
+NOTIC: [2] Illegal string offset 'total' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 198 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 198 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 403 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 403 行.
+NOTIC: [2] Illegal string offset 'start' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 403 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 403 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 432 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 432 行.
+NOTIC: [2] Illegal string offset 'end' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 432 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 432 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 449 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 449 行.
+NOTIC: [2] Illegal string offset 'carInfo' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 449 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 449 行.
+NOTIC: [8] Use of undefined constant content - assumed 'content' E:\phpstudy\WWW\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 549 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022607s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022637s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000178s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000195s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000429s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000466s ]
+
+[ 2018-04-08T16:02:09+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000048s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000568s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000605s ]
+SQL: SHOW COLUMNS FROM `tuo_article` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'GY'  [ RunTime:0.0180s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'LX'  [ RunTime:0.0176s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'JR'  [ RunTime:0.0348s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'QQ'  [ RunTime:0.0180s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FK'  [ RunTime:0.0330s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'BZ'  [ RunTime:0.0187s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FW'  [ RunTime:0.0176s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'AQ'  [ RunTime:0.0183s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'DH'  [ RunTime:0.0182s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated E:\phpstudy\tuo\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\tuo\Application\Front\Controller\IndexController.class.php 第 21 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Front\Controller\IndexController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `tuo_area` [ RunTime:0.0169s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_pid` = 1  [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `tuo_carxing` [ RunTime:0.0171s ]
+SQL: SELECT * FROM `tuo_carxing` WHERE `cxjj_pid` = 0  [ RunTime:0.0178s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_img` <> '' ORDER BY article_time desc LIMIT 1   [ RunTime:0.0186s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_id` <> '35' ORDER BY article_time desc LIMIT 3   [ RunTime:0.0352s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'CJ' ORDER BY article_time desc LIMIT 10   [ RunTime:0.0483s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'TTFW' ORDER BY article_id asc LIMIT 6   [ RunTime:0.0189s ]
+SQL: SHOW COLUMNS FROM `tuo_link` [ RunTime:0.0184s ]
+SQL: SELECT * FROM `tuo_link` WHERE `fl_status` = 'Y' ORDER BY fl_sort LIMIT 6   [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `tuo_adv_img` [ RunTime:0.0168s ]
+SQL: SELECT * FROM `tuo_adv_img` WHERE `adv_code` = 'A'  [ RunTime:0.0179s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000198s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000226s ]
+NOTIC: [8] Undefined variable: news E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 8 行.
+NOTIC: [8] Undefined variable: news E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 12 行.
+NOTIC: [8] Undefined variable: news E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 16 行.
+NOTIC: [2] Illegal string offset 'total' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 184 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 184 行.
+NOTIC: [2] Illegal string offset 'sprice' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 185 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 185 行.
+NOTIC: [2] Illegal string offset 'tprice' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 186 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 186 行.
+NOTIC: [2] Illegal string offset 'eprice' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 187 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 187 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 198 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 198 行.
+NOTIC: [2] Illegal string offset 'total' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 198 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 198 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 403 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 403 行.
+NOTIC: [2] Illegal string offset 'start' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 403 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 403 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 432 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 432 行.
+NOTIC: [2] Illegal string offset 'end' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 432 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 432 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 449 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 449 行.
+NOTIC: [2] Illegal string offset 'carInfo' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 449 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 449 行.
+NOTIC: [8] Use of undefined constant content - assumed 'content' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 549 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060701s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060737s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.060934s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.060966s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000664s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000695s ]
+
+[ 2018-04-08T16:02:12+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000031s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000220s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000244s ]
+SQL: SHOW COLUMNS FROM `tuo_article` [ RunTime:0.0192s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'GY'  [ RunTime:0.0183s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'LX'  [ RunTime:0.0178s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'JR'  [ RunTime:0.0365s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'QQ'  [ RunTime:0.0176s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FK'  [ RunTime:0.0356s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'BZ'  [ RunTime:0.0187s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FW'  [ RunTime:0.0179s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'AQ'  [ RunTime:0.0168s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'DH'  [ RunTime:0.0188s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated E:\phpstudy\tuo\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\tuo\Application\Front\Controller\IndexController.class.php 第 21 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Front\Controller\IndexController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `tuo_area` [ RunTime:0.0165s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_pid` = 1  [ RunTime:0.0164s ]
+SQL: SHOW COLUMNS FROM `tuo_carxing` [ RunTime:0.0169s ]
+SQL: SELECT * FROM `tuo_carxing` WHERE `cxjj_pid` = 0  [ RunTime:0.0174s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_img` <> '' ORDER BY article_time desc LIMIT 1   [ RunTime:0.0182s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_id` <> '35' ORDER BY article_time desc LIMIT 3   [ RunTime:0.0468s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'CJ' ORDER BY article_time desc LIMIT 10   [ RunTime:0.0530s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'TTFW' ORDER BY article_id asc LIMIT 6   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `tuo_link` [ RunTime:0.0183s ]
+SQL: SELECT * FROM `tuo_link` WHERE `fl_status` = 'Y' ORDER BY fl_sort LIMIT 6   [ RunTime:0.0179s ]
+SQL: SHOW COLUMNS FROM `tuo_adv_img` [ RunTime:0.0171s ]
+SQL: SELECT * FROM `tuo_adv_img` WHERE `adv_code` = 'A'  [ RunTime:0.0190s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000193s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000222s ]
+NOTIC: [8] Undefined variable: news E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 8 行.
+NOTIC: [8] Undefined variable: news E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 12 行.
+NOTIC: [8] Undefined variable: news E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 16 行.
+NOTIC: [2] Illegal string offset 'total' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 184 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 184 行.
+NOTIC: [2] Illegal string offset 'sprice' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 185 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 185 行.
+NOTIC: [2] Illegal string offset 'tprice' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 186 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 186 行.
+NOTIC: [2] Illegal string offset 'eprice' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 187 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 187 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 198 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 198 行.
+NOTIC: [2] Illegal string offset 'total' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 198 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 198 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 403 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 403 行.
+NOTIC: [2] Illegal string offset 'start' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 403 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 403 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 432 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 432 行.
+NOTIC: [2] Illegal string offset 'end' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 432 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 432 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 449 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 449 行.
+NOTIC: [2] Illegal string offset 'carInfo' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 449 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 449 行.
+NOTIC: [8] Use of undefined constant content - assumed 'content' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 549 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013925s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014044s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000131s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000364s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000388s ]
+
+[ 2018-04-08T16:02:26+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000029s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000234s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000259s ]
+SQL: SHOW COLUMNS FROM `tuo_article` [ RunTime:0.0162s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'GY'  [ RunTime:0.0178s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'LX'  [ RunTime:0.0181s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'JR'  [ RunTime:0.0352s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'QQ'  [ RunTime:0.0187s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FK'  [ RunTime:0.0343s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'BZ'  [ RunTime:0.0187s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'FW'  [ RunTime:0.0177s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'AQ'  [ RunTime:0.0172s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'DH'  [ RunTime:0.0176s ]
+NOTIC: [8192] Function mcrypt_cbc() is deprecated E:\phpstudy\tuo\ThinkPHP\Library\DES_PHP\DESPHP.class.php 第 47 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\tuo\Application\Front\Controller\IndexController.class.php 第 21 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Front\Controller\IndexController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `tuo_area` [ RunTime:0.0169s ]
+SQL: SELECT * FROM `tuo_area` WHERE `area_pid` = 1  [ RunTime:0.0176s ]
+SQL: SHOW COLUMNS FROM `tuo_carxing` [ RunTime:0.0162s ]
+SQL: SELECT * FROM `tuo_carxing` WHERE `cxjj_pid` = 0  [ RunTime:0.0181s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_img` <> '' ORDER BY article_time desc LIMIT 1   [ RunTime:0.0170s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'XW' AND `article_id` <> '35' ORDER BY article_time desc LIMIT 3   [ RunTime:0.0345s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'CJ' ORDER BY article_time desc LIMIT 10   [ RunTime:0.0511s ]
+SQL: SELECT * FROM `tuo_article` WHERE `article_pid` = 'TTFW' ORDER BY article_id asc LIMIT 6   [ RunTime:0.0186s ]
+SQL: SHOW COLUMNS FROM `tuo_link` [ RunTime:0.0167s ]
+SQL: SELECT * FROM `tuo_link` WHERE `fl_status` = 'Y' ORDER BY fl_sort LIMIT 6   [ RunTime:0.0174s ]
+SQL: SHOW COLUMNS FROM `tuo_adv_img` [ RunTime:0.0165s ]
+SQL: SELECT * FROM `tuo_adv_img` WHERE `adv_code` = 'A'  [ RunTime:0.0159s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000236s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000283s ]
+NOTIC: [8] Undefined variable: news E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 8 行.
+NOTIC: [8] Undefined variable: news E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 12 行.
+NOTIC: [8] Undefined variable: news E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 16 行.
+NOTIC: [2] Illegal string offset 'total' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 184 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 184 行.
+NOTIC: [2] Illegal string offset 'sprice' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 185 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 185 行.
+NOTIC: [2] Illegal string offset 'tprice' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 186 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 186 行.
+NOTIC: [2] Illegal string offset 'eprice' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 187 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 187 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 198 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 198 行.
+NOTIC: [2] Illegal string offset 'total' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 198 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 198 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 403 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 403 行.
+NOTIC: [2] Illegal string offset 'start' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 403 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 403 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 432 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 432 行.
+NOTIC: [2] Illegal string offset 'end' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 432 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 432 行.
+NOTIC: [2] Illegal string offset 'order' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 449 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 449 行.
+NOTIC: [2] Illegal string offset 'carInfo' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 449 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 449 行.
+NOTIC: [8] Use of undefined constant content - assumed 'content' E:\phpstudy\tuo\Application\Runtime\Cache\Front\4741b996fde22d44b7262dab482a2184.php 第 549 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017110s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017136s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000168s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000184s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000284s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000310s ]
+
