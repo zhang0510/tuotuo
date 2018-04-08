@@ -9,7 +9,7 @@
 
 .parth3{margin-top:10px;}
 	/**banner**/
-	.banner{margin-top:-5%;z-index: 1}
+	.banner{z-index: 1}
 	.banner_pic{background:url(../images/banner.jpg) no-repeat 55px center;height:610px;}
 	.banner_con{position:absolute;width:100%;height:100%;top:0px;left:0px;display:table;}
 	.banner_con span{display:block;font-size:20px;color:#fff;line-height:1.5;padding:30px 0;}
@@ -1385,8 +1385,6 @@ select {
     .fwtable1{display:none;width:95%;margin-left:5%}
     .serchimg{width:275px;height:70px;float: right;background: url(../images/dingdanchaxun.png);}
     .xiadan{width:273px;height:70px;float: left;background: url(../images/dingdanchaxun.png);}
-    .descrimg1{position: absolute;margin-top: 1%;margin-left: 1%;}
-    .descrimg2{width: 113%;height: 137%;padding-left: 65%;}
     .ycfont1{font-size: 24px;color:#1f1f1f}
     .ycfont2{font-size: 24px;}
     .ycfont3{font-size: 20px;color:#1f1f1f}
@@ -1400,24 +1398,28 @@ select {
     .xdchild{padding-top: 14px;}
     .xdfont{font-size: 24px;}
     .xdfont a{color:#FFFFFF}
-    .imgtd{width:40%}
     .fwtd{width:40%;padding-left: 7%;}
     .xdfont{font-size: 14px;}
-    .blacktd{width:16%}
+    .blacktd{width:18%}
     .heighttd{height:24px}
-    .xddfont{font-size: 20px}
+    .xddfont{font-size: 26px}
     .heighttd{height:12px}
     .xddfont a{color:#FFFFFF}
     .part8{padding-top: 6%;}
     .searchtd{height:150px;}
-    .tiaofun{padding-top: 14px;}
+    .tiaofun{padding-top: 16px;}
     .jiange{ height:10px; }
     .jkl1c{width:1px;padding-top: 85px;margin-left: 20px;}
     .anq0 p,.container p{color: #999}
     .new3b1{height: 475px;width: 669px;margin: 50px auto 0px;}
     .new3b1 p{float:left;writing-mode: tb-rl;margin-left: 90px;}
 
-    .bannerdiv{width:549px;height:516px;background: url('/Public/Front/images/di.png');position: absolute;margin-top: 9%;margin-left: 36%;}
+    .bannerdiv{width: 549px;height: 516px;background: url(/Public/Front/images/di.png); position:absolute;left:50%;margin-top: 69px;margin-left: -275px;}
+    .bannerdiv1{width: 80px;height: 20px;position:absolute;left:50%;margin-top: 618px;margin-left: -40px;}
+    .bannerimg{height:750px;width:100%}
+    .yuan1{  width: 20px;  height:20px;margin-right: 33px;background: red;  border-radius: 50%;  border: 2px solid #1AA1E1;display: inline-block;box-sizing: border-box;}
+    .yuan2{  width: 20px;  height:20px; background: red; border-radius: 50%;  border: 2px solid #1AA1E1;display: inline-block;box-sizing: border-box;}
+    .ksfw{margin: 95px 25px;height: 400px;}
 
 }
 

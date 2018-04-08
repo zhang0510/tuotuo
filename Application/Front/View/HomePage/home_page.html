@@ -51,8 +51,144 @@
 					<center><strong><font class="xddfont"><a style="color:#FFFFFF">订单查询</a></font></strong></center>
 				</div>
 			</div>
+			<div class="ksfw">
+				<table id="searchtable" class="pc fwtable1">
+					<tr>
+						<td style="width:5%"><img class="bfb" onclick="last()" src="__FRONT__/images/dj2.png"></td>
+						<td style="width:25%"></td>
+						<td style="width:40%;">
+							<div class="csczz">
+								<p>请输入订单号查询当前订单状况，如果当前订单不存在，请联系客服人员。</p>
+							</div>
+							<div class="du3d" id="tiao1">
+								<input type="text" placeholder="请在此输入订单号" class="cx1" id="keyword" ><!-- onkeyup="sel(this);" --><button onclick="tiaoFun();" type="button"></button>
+								<div id="searchBoxs"></div>
+							</div>
+						</td>
+						<td style="width:25%"></td>
+						<td style="width:5%"><img class="bfb" onclick="next()" src="__FRONT__/images/dj1.png"></td>
+					</tr>
+					<tr class="searchtd">
+						<td colspan="2"></td>
+						<td>
+							<div class="serchimg">
+								<div class="tiaofun"  onclick="tiaoFun();">
+									<center><strong><font class="xddfont"><a style="color:#FFFFFF">订单查询</a></font></strong></center>
+								</div>
+							</div>
+
+						</td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td colspan="3">
+							<font class="ycfont1">妥妥运车</font>&nbsp;&nbsp;&nbsp;<font class="ycfont2">爱车与您同在</font>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3"><font class="ycfont3">Happy every day</font></td>
+					</tr>
+					<tr class="jiange"></tr>
+					<tr>
+						<td class="blacktd"><div class="buttonblack1"><center><font>出发地</font></center></div></td>
+						<td style="width:45%"><!-- 开始地 -->
+							<div class="tab-pay1 top_search2">
+								<dl class="dlbottom">
+									<dd>
+										<input type="text" placeholder="" class="txt1a inko" readonly="readonly" name="qsrcz" id="qsrcz" value="{$jumpz['order']['start']}" onclick="ceshi3(this);">
+										<span class="xxsj"></span>
+										<div class="selected0" id="q4">
+											<div class="province star_province" id="qspz">
+												<!-- <li data-id="14">请选择</li> -->
+												<foreach name="pro" item="vo">
+													<li data-id="1"  onclick="getCityz('{$vo.area_id}','S','{$vo.area_name}')">{$vo.area_name}</li>
+												</foreach>
+											</div>
+											<div class="city star_city" data-id="" style="display:none" id="qscz"></div>
+											<div class="county star_county" data-id="" style="display:none" id="qsbz"></div>
+										</div>
+									</dd>
+								</dl>
+							</div>
+						</td>
+						<td rowspan="5">
+							<div class="moneydiv">
+								<div class="moneydiv2">
+									<center><strong>
+										<font class="moneyfont"><bold id="zongz1">0</bold><sup>￥</sup></font>
+									</strong></center>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr class="jiange"></tr>
+					<tr>
+						<td><div class="buttonblack1"><center><font>目的地</font></center></div></td>
+						<td><!-- 目的地 -->
+							<div class="tab-pay1 top_search2">
+								<dl class="dlbottom"><dd><input type="text" placeholder="" class="txt1a inko" readonly="readonly" name="qercz" id="qercz" value="{$jumpz['order']['end']}" onclick="ceshi(this);">
+									<span class="xxsj"></span>
+									<div class="selected0" id="q5">
+										<div class="province star_province" id="qepz">
+											<foreach name="pro" item="vo">
+												<li data-id="1"  onclick="getCityz('{$vo.area_id}','E','{$vo.area_name}')">{$vo.area_name}</li>
+											</foreach>
+										</div>
+										<div class="city star_city" data-id="" id="qecz" style="display:none"></div>
+										<!-- <div class="county star_county" data-id=""></div> -->
+									</div> </dd></dl>
+							</div>
+						<td></td>
+					</tr>
+					<tr class="jiange"></tr>
+					<tr>
+						<td><div class="buttonblack2"><center><font>品牌车系</font></center></div></td>
+						<td><!-- 车品牌 -->
+							<div class="tab-pay1 top_search2">
+								<dl class="dlbottom"><dd><input type="text" placeholder="" class="txt1a inko" id="qbtz" name="carInfoz" value="{$jumpz['order']['carInfo']}" onkeyup="serchCar(this);" onclick="ceshi3(this);">
+									<span class="xxsj"></span>
+									<div class="selected0" id="q6">
+										<div class="province star_province" id="qbrz">
+											<foreach name="brand" item="vo">
+												<li data-id="1"  onclick="getTypez('{$vo.cxjj_id}','{$vo.cxjj_brand}')">{$vo.cxjj_name}--{$vo.cxjj_brand}</li>
+											</foreach>
+										</div>
+										<div class="city star_city" data-id="" style="display:none" id="qtz"></div>
+										<!-- <div class="county star_county" data-id=""></div> -->
+									</div> </dd></dl>
+							</div>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td colspan="3" class="heighttd"></td>
+					</tr>
+					<tr>
+						<td colspan="3" class="xdtd">
+							<font class="pc xdfont">如果你不知道如何下单，打电话告诉我们，我们帮助您下单。电话：400-877-1107</font>
+							<font class="phone xdfont">如果你不知道如何下单，打电话告诉我们，我们帮助您下单。电话：</font><font class="phone" style="color:#ea5512;text-align: center;font-size:18px;">400-877-1107</font>
+						</td>
+					</tr>
+					<tr style="height:50px;">
+						<td colspan="2"></td>
+						<td>
+							<div class="xddiv">
+								<div class="xdchild"  onclick="goOrder();">
+									<center><strong><font class="xddfont"><a>立即下单</a></font></strong></center>
+								</div>
+							</div>
+
+						</td>
+					</tr>
+				</table>
+			</div>
 		</div>
-		<img src="/Public/Front/images/BANNER.png" style="width: 100%">
+		<div class="bannerdiv1">
+			<div class="yuan1" onmouseover="yuan1()" ></div>
+			<div class="yuan2" onmouseover="yuan2()" ></div>
+		</div>
+		<img class="bannerimg" src="/Public/Front/images/BANNER.png">
 	</div>
 <!--content-->
 <div class="part1" style="width: 100%">
@@ -180,150 +316,6 @@
 			  </a>
 			</li>
 		   </ul>-->
-			<table id="searchtable" class="pc fwtable1">
-				<tr>
-					<td style="width:5%"><img class="bfb" onclick="last()" src="__FRONT__/images/dj2.png"></td>
-					<td style="width:25%"></td>
-					<td style="width:40%;">
-						<div class="csczz">
-							<p>请输入订单号查询当前订单状况，如果当前订单不存在，请联系客服人员。</p>
-						</div>
-						<div class="du3d" id="tiao1">
-							<input type="text" placeholder="请在此输入订单号" class="cx1" id="keyword" ><!-- onkeyup="sel(this);" --><button onclick="tiaoFun();" type="button"></button>
-							<div id="searchBoxs"></div>
-						</div>
-					</td>
-					<td style="width:25%"></td>
-					<td style="width:5%"><img class="bfb" onclick="next()" src="__FRONT__/images/dj1.png"></td>
-				</tr>
-				<tr class="searchtd">
-					<td colspan="2"></td>
-					<td>
-						<div class="serchimg">
-							<div class="tiaofun"  onclick="tiaoFun();">
-								<center><strong><font class="xddfont"><a style="color:#FFFFFF">订单查询</a></font></strong></center>
-							</div>
-						</div>
-
-					</td>
-				</tr>
-			</table>
-			<table id="inserttable">
-				<tr>
-					<td style="width:5%"><img class="pc bfb" onclick="last()" src="__FRONT__/images/dj2.png"></td>
-					<td class="imgtd">
-						<div class="descrimg1">
-							<img src="__FRONT__/images/description.png"/>
-						</div>
-						<img class="descrimg2" src="__FRONT__/images/hd3.jpg">
-					</td>
-					<td class="fwtd">
-						<table>
-							<tr>
-								<td colspan="3">
-									<font class="ycfont1">妥妥运车</font>&nbsp;&nbsp;&nbsp;<font class="ycfont2">爱车与您同在</font>
-								</td>
-							</tr>
-							<tr>
-								<td colspan="3"><font class="ycfont3">Happy every day</font></td>
-							</tr>
-							<tr class="jiange"></tr>
-							<tr>
-								<td class="blacktd"><div class="buttonblack1"><center><font>出发地</font></center></div></td>
-								<td style="width:45%"><!-- 开始地 -->
-									<div class="tab-pay1 top_search2">
-										<dl class="dlbottom">
-											<dd>
-												<input type="text" placeholder="" class="txt1a inko" readonly="readonly" name="qsrcz" id="qsrcz" value="{$jumpz['order']['start']}" onclick="ceshi3(this);">
-												<span class="xxsj"></span>
-												<div class="selected0" id="q4">
-													<div class="province star_province" id="qspz">
-														<!-- <li data-id="14">请选择</li> -->
-														<foreach name="pro" item="vo">
-															<li data-id="1"  onclick="getCityz('{$vo.area_id}','S','{$vo.area_name}')">{$vo.area_name}</li>
-														</foreach>
-													</div>
-													<div class="city star_city" data-id="" style="display:none" id="qscz"></div>
-													<div class="county star_county" data-id="" style="display:none" id="qsbz"></div>
-												</div>
-											</dd>
-										</dl>
-									</div>
-								</td>
-								<td rowspan="5">
-									<div class="moneydiv">
-										<div class="moneydiv2">
-											<center><strong>
-												<font class="moneyfont"><bold id="zongz1">0</bold><sup>￥</sup></font>
-											</strong></center>
-										</div>
-									</div>
-								</td>
-							</tr>
-							<tr class="jiange"></tr>
-							<tr>
-								<td><div class="buttonblack1"><center><font>目的地</font></center></div></td>
-								<td><!-- 目的地 -->
-									<div class="tab-pay1 top_search2">
-										<dl class="dlbottom"><dd><input type="text" placeholder="" class="txt1a inko" readonly="readonly" name="qercz" id="qercz" value="{$jumpz['order']['end']}" onclick="ceshi(this);">
-											<span class="xxsj"></span>
-											<div class="selected0" id="q5">
-												<div class="province star_province" id="qepz">
-													<foreach name="pro" item="vo">
-														<li data-id="1"  onclick="getCityz('{$vo.area_id}','E','{$vo.area_name}')">{$vo.area_name}</li>
-													</foreach>
-												</div>
-												<div class="city star_city" data-id="" id="qecz" style="display:none"></div>
-												<!-- <div class="county star_county" data-id=""></div> -->
-											</div> </dd></dl>
-									</div>
-								<td></td>
-							</tr>
-							<tr class="jiange"></tr>
-							<tr>
-								<td><div class="buttonblack2"><center><font>品牌车系</font></center></div></td>
-								<td><!-- 车品牌 -->
-									<div class="tab-pay1 top_search2">
-										<dl class="dlbottom"><dd><input type="text" placeholder="" class="txt1a inko" id="qbtz" name="carInfoz" value="{$jumpz['order']['carInfo']}" onkeyup="serchCar(this);" onclick="ceshi3(this);">
-											<span class="xxsj"></span>
-											<div class="selected0" id="q6">
-												<div class="province star_province" id="qbrz">
-													<foreach name="brand" item="vo">
-														<li data-id="1"  onclick="getTypez('{$vo.cxjj_id}','{$vo.cxjj_brand}')">{$vo.cxjj_name}--{$vo.cxjj_brand}</li>
-													</foreach>
-												</div>
-												<div class="city star_city" data-id="" style="display:none" id="qtz"></div>
-												<!-- <div class="county star_county" data-id=""></div> -->
-											</div> </dd></dl>
-									</div>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td colspan="3" class="heighttd"></td>
-							</tr>
-							<tr>
-								<td colspan="3" class="xdtd">
-									<font class="pc xdfont">如果你不知道如何下单，打电话告诉我们，我们帮助您下单。电话：400-877-1107</font>
-									<font class="phone xdfont">如果你不知道如何下单，打电话告诉我们，我们帮助您下单。电话：</font><font class="phone" style="color:#ea5512;text-align: center;font-size:18px;">400-877-1107</font>
-								</td>
-							</tr>
-						</table>
-					</td>
-					<td style="width:5%"><img class="pc bfb" onclick="next()" src="__FRONT__/images/dj1.png"></td>
-				</tr>
-				<tr style="height:119px;">
-					<td colspan="2"></td>
-					<td>
-						<div class="xddiv">
-							<div class="xdchild"  onclick="goOrder();">
-								<center><strong><font class="xddfont"><a>立即下单</a></font></strong></center>
-							</div>
-						</div>
-
-					</td>
-				</tr>
-			</table>
 	  </div>
 	  </form>
   </div>
@@ -432,6 +424,18 @@
    </ul>
 </div>
 <script>
+	function yuan1(){
+		alert(123);
+	}
+	function yuan2(){
+		alert(456);
+	}
+	function lunbo(){
+		alert(789);
+	}
+	/*setInterval(function(){
+		lunbo();
+	},5000);*/
 	function next(){
 		$("#inserttable").hide();
 		$("#searchtable").show();
