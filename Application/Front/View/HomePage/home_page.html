@@ -42,20 +42,18 @@
 	<div class="banner">
 		<div class="bannerdiv">
 			<div class="serchimg">
-				<div class="tiaofun"  onclick="tiaoFun();">
-					<center><strong><font class="xddfont"><a style="color:#FFFFFF">订单查询</a></font></strong></center>
+				<div class="tiaofun"  onclick="ddxs()">
+					<center><font class="tbddfont"><a class="dfontd">订单查询</a></font></center>
 				</div>
 			</div>
 			<div class="xiadan">
-				<div class="tiaofun"  onclick="tiaoFun();">
-					<center><strong><font class="xddfont"><a style="color:#FFFFFF">订单查询</a></font></strong></center>
+				<div class="tiaofun"  onclick="xdxs()">
+					<center><font class="tbxdfont"><a class="xfontd">下&nbsp;单</a></font></center>
 				</div>
 			</div>
 			<div class="ksfw">
 				<table id="searchtable" class="pc fwtable1">
 					<tr>
-						<td style="width:5%"><img class="bfb" onclick="last()" src="__FRONT__/images/dj2.png"></td>
-						<td style="width:25%"></td>
 						<td style="width:40%;">
 							<div class="csczz">
 								<p>请输入订单号查询当前订单状况，如果当前订单不存在，请联系客服人员。</p>
@@ -65,33 +63,75 @@
 								<div id="searchBoxs"></div>
 							</div>
 						</td>
-						<td style="width:25%"></td>
-						<td style="width:5%"><img class="bfb" onclick="next()" src="__FRONT__/images/dj1.png"></td>
 					</tr>
 					<tr class="searchtd">
-						<td colspan="2"></td>
 						<td>
-							<div class="serchimg">
-								<div class="tiaofun"  onclick="tiaoFun();">
-									<center><strong><font class="xddfont"><a style="color:#FFFFFF">订单查询</a></font></strong></center>
+							<div class="xddiv">
+								<div class="xdchild"  onclick="tiaoFun();">
+									<center><font class="xddfont"><a>订单查询</a></font></center>
 								</div>
 							</div>
-
 						</td>
 					</tr>
 				</table>
-				<table>
+				<table id="xdtable">
+					<form method="post" action="__MODULE__/Order/normal" id="quickz">
+						<div style="display: none">
+							<!-- 开始地 -->
+							<input type="hidden" name="qsrez" id="qsrez" value="" />
+							<!-- 目的地 -->
+							<input type="hidden" name="qerez" id="qerez" value="" />
+							<!-- 开始地中文名称 -->
+							<input type="hidden" name="qsrezname" id="qsrezname" value="" />
+							<!-- 目的地中文名称 -->
+							<input type="hidden" name="qerezname" id="qerezname" value="" />
+							<!-- 车品牌 -->
+							<input type="hidden" name="qsctez" id="qsctez" value="" />
+							<!-- 车型号 -->
+							<input type="hidden" name="qsctcz" id="qsctcz" value="" />
+							<!-- 车id -->
+							<input type="hidden" name="carids" id="carids" value="" />
+							<!-- 运费 -->
+							<input type="hidden" name="lineprice" id="lineprice" value="0" />
+							<!-- 类型 -->
+							<input type="hidden" name="product_type" id="product_type" value="0" />
+							<!-- 总费 -->
+							<input type="hidden" name="totalz" id="totalz" value="0" />
+							<!-- 提车费 -->
+							<input type="hidden" name="tiz" id="tiz" value="0" />
+							<!-- 送车费 -->
+							<input type="hidden" name="songz" id="songz" value="0" />
+							<!-- 集散地起点 -->
+							<input type="hidden" name="sansz" id="sansz" value="" />
+							<!-- 集散地重点 -->
+							<input type="hidden" name="sanez" id="sanez" value="" />
+							<!-- 提车地id -->
+							<input type="hidden" name="tidz" id="tidz" value="" />
+							<!-- 送车地id -->
+							<input type="hidden" name="sidz" id="sidz" value="" />
+							<!-- 毛利 -->
+							<input type="hidden" name="maoliz" id="maoliz" value="0" />
+							<!-- 普通下单钱数第一部分 -->
+							<input type="hidden" name="ptxd1" id="ptxd1" value=0 />
+							<!-- 普通下单钱数第二部分 -->
+							<input type="hidden" name="ptxd2" id="ptxd2" value=0 />
+							<!-- 集散地B地名（汉字） -->
+							<input type="hidden" name="ptjsd" id="ptjsd" value='' />
+							<!-- 数据是否可用 -->
+							<input type="hidden" name="flag" id="flag" value='N' />
+							<input type="hidden" name="msg" id="msg" value='N' />
+						</div>
 					<tr>
-						<td colspan="3">
+						<td colspan="2">
 							<font class="ycfont1">妥妥运车</font>&nbsp;&nbsp;&nbsp;<font class="ycfont2">爱车与您同在</font>
 						</td>
 					</tr>
 					<tr>
-						<td colspan="3"><font class="ycfont3">Happy every day</font></td>
+						<td colspan="2"><font class="ycfont3">Happy every day</font></td>
 					</tr>
 					<tr class="jiange"></tr>
 					<tr>
-						<td class="blacktd"><div class="buttonblack1"><center><font>出发地</font></center></div></td>
+						<td class="blacktd"><div class="buttonblack1"><font>出发地:</font></div></td>
 						<td style="width:45%"><!-- 开始地 -->
 							<div class="tab-pay1 top_search2">
 								<dl class="dlbottom">
@@ -112,19 +152,10 @@
 								</dl>
 							</div>
 						</td>
-						<td rowspan="5">
-							<div class="moneydiv">
-								<div class="moneydiv2">
-									<center><strong>
-										<font class="moneyfont"><bold id="zongz1">0</bold><sup>￥</sup></font>
-									</strong></center>
-								</div>
-							</div>
-						</td>
 					</tr>
 					<tr class="jiange"></tr>
 					<tr>
-						<td><div class="buttonblack1"><center><font>目的地</font></center></div></td>
+						<td><div class="buttonblack1"><font>目的地:</font></div></td>
 						<td><!-- 目的地 -->
 							<div class="tab-pay1 top_search2">
 								<dl class="dlbottom"><dd><input type="text" placeholder="" class="txt1a inko" readonly="readonly" name="qercz" id="qercz" value="{$jumpz['order']['end']}" onclick="ceshi(this);">
@@ -139,11 +170,11 @@
 										<!-- <div class="county star_county" data-id=""></div> -->
 									</div> </dd></dl>
 							</div>
-						<td></td>
+						</td>
 					</tr>
 					<tr class="jiange"></tr>
 					<tr>
-						<td><div class="buttonblack2"><center><font>品牌车系</font></center></div></td>
+						<td><div class="buttonblack1"><font>品牌车系:</font></div></td>
 						<td><!-- 车品牌 -->
 							<div class="tab-pay1 top_search2">
 								<dl class="dlbottom"><dd><input type="text" placeholder="" class="txt1a inko" id="qbtz" name="carInfoz" value="{$jumpz['order']['carInfo']}" onkeyup="serchCar(this);" onclick="ceshi3(this);">
@@ -159,34 +190,39 @@
 									</div> </dd></dl>
 							</div>
 						</td>
-						<td></td>
 					</tr>
 					<tr>
-						<td colspan="3" class="heighttd"></td>
+						<td colspan="2" class="heighttd"></td>
 					</tr>
 					<tr>
-						<td colspan="3" class="xdtd">
-							<font class="pc xdfont">如果你不知道如何下单，打电话告诉我们，我们帮助您下单。电话：400-877-1107</font>
-							<font class="phone xdfont">如果你不知道如何下单，打电话告诉我们，我们帮助您下单。电话：</font><font class="phone" style="color:#ea5512;text-align: center;font-size:18px;">400-877-1107</font>
+						<td colspan="2">
+							<center>
+								<font class="moneyfont">费用：&nbsp;￥<bold id="zongz1">0</bold>元</font>
+							</center>
 						</td>
 					</tr>
 					<tr style="height:50px;">
-						<td colspan="2"></td>
-						<td>
+						<td colspan="2">
 							<div class="xddiv">
 								<div class="xdchild"  onclick="goOrder();">
-									<center><strong><font class="xddfont"><a>立即下单</a></font></strong></center>
+									<center><font class="xddfont"><a>立即下单</a></font></center>
 								</div>
 							</div>
-
 						</td>
 					</tr>
+					</form>
 				</table>
 			</div>
 		</div>
 		<div class="bannerdiv1">
 			<div class="yuan1" onmouseover="yuan1()" ></div>
 			<div class="yuan2" onmouseover="yuan2()" ></div>
+		</div>
+		<div class="bannerdiv2">
+			<img src="/Public/Front/images/zhishijiantou.png">
+		</div>
+		<div class="bannerdiv3">
+			<img src="/Public/Front/images/wskk1.jpg">
 		</div>
 		<img class="bannerimg" src="/Public/Front/images/BANNER.png">
 	</div>
@@ -205,202 +241,113 @@
 	</div>
 </div>
 <div class="part8">
-  <div class="part80 container">
-	  <div class="fwfont">
-	   <font><strong>快速服务</strong></font>
-	   <h3>Fast service</h3>
-	   <img src="__FRONT__/images/Rectangle.png">
-	  </div>
-	  <form method="post" action="__MODULE__/Order/normal" id="quickz">
-		<div class="korder1b00">
-			  <!-- 开始地 -->
-			  <input type="hidden" name="qsrez" id="qsrez" value="" />
-			  <!-- 目的地 -->
-			  <input type="hidden" name="qerez" id="qerez" value="" />
-			  <!-- 开始地中文名称 -->
-			  <input type="hidden" name="qsrezname" id="qsrezname" value="" />
-			  <!-- 目的地中文名称 -->
-			  <input type="hidden" name="qerezname" id="qerezname" value="" />
-			  <!-- 车品牌 -->
-			  <input type="hidden" name="qsctez" id="qsctez" value="" />
-			  <!-- 车型号 -->
-			  <input type="hidden" name="qsctcz" id="qsctcz" value="" />
-			  <!-- 车id -->
-			  <input type="hidden" name="carids" id="carids" value="" />
-			  <!-- 运费 -->
-			  <input type="hidden" name="lineprice" id="lineprice" value="0" />
-			  <!-- 类型 -->
-			  <input type="hidden" name="product_type" id="product_type" value="0" />
-			  <!-- 总费 -->
-			  <input type="hidden" name="totalz" id="totalz" value="0" />
-			  <!-- 提车费 -->
-			  <input type="hidden" name="tiz" id="tiz" value="0" />
-			  <!-- 送车费 -->
-			  <input type="hidden" name="songz" id="songz" value="0" />
-			  <!-- 集散地起点 -->
-			  <input type="hidden" name="sansz" id="sansz" value="" />
-			  <!-- 集散地重点 -->
-			  <input type="hidden" name="sanez" id="sanez" value="" />
-			  <!-- 提车地id -->
-			  <input type="hidden" name="tidz" id="tidz" value="" />
-			  <!-- 送车地id -->
-			  <input type="hidden" name="sidz" id="sidz" value="" />
-			  <!-- 毛利 -->
-			  <input type="hidden" name="maoliz" id="maoliz" value="0" />
-			  <!-- 普通下单钱数第一部分 -->
-			  <input type="hidden" name="ptxd1" id="ptxd1" value=0 />
-			  <!-- 普通下单钱数第二部分 -->
-			  <input type="hidden" name="ptxd2" id="ptxd2" value=0 />
-			  <!-- 集散地B地名（汉字） -->
-			  <input type="hidden" name="ptjsd" id="ptjsd" value='' />
-			  <!-- 数据是否可用 -->
-			  <input type="hidden" name="flag" id="flag" value='N' />
-			  <input type="hidden" name="msg" id="msg" value='N' />
+	  <div style="width:50%;float:left;">
+		  <img style="width:100%" src="/Public/Front/images/gongsijieshao.png">
+		  <div class="gsjsfont">
+			  <div class="fwfont gslc">
+				  <font>妥妥运车&nbsp;<strong><span class="jsbzfont">公司介绍</span></strong></font>
+				  <h3>Company introduction</h3>
+			  </div>
+			  <div class="xddiv xddivxg">
+				  <div class="xdchild">
+					  <center><font class="xddfont"><a>详情</a></font></center>
+				  </div>
+			  </div>
 		  </div>
-		<div class="part82">
-		 <!--<ul>
-			<li>
-			 <a >
-			<div class="paa0">
-			  <div class="paa01">
-			  <img src="__FRONT__/images/bgg3.jpg">
-			  </div>
-			  <div class="paa02">
-			   <h2>专门保险</h2>
-				<span></span>
-			   <p>运输高效：全国128个办事处，运输线路辐射全国，多数城市之间专线直达</p>
-			  </div>
-			  </div>
-			  </a>
-			</li>
-			<li>
-			 <a >
-			<div class="paa0">
-			  <div class="paa01">
-			  <img src="__FRONT__/images/bgg4.jpg">
-			  </div>
-			  <div class="paa02">
-			   <h2>专人监管</h2>
-				<span></span>
-			   <p>价格透明：核算部门严格定价，妥妥运车官网透明可查  拒绝盲目要价 </p>
-			  </div>
-			  </div>
-			  </a>
-			</li>
-			<li>
-			 <a >
-			<div class="paa0">
-			  <div class="paa01">
-			  <img src="__FRONT__/images/bgg5.jpg">
-			  </div>
-			  <div class="paa02">
-			   <h2>专业托运</h2>
-				<span></span>
-			   <p>利益保障：专车专险，妥妥运车携手天平洋联合承保，全程保障客户利益  </p>
-			  </div>
-			  </div>
-			  </a>
-			</li>
-			<li>
-			 <a >
-			<div class="paa0">
-			  <div class="paa01">
-			  <img src="__FRONT__/images/bgg6.jpg">
-			  </div>
-			  <div class="paa02">
-			   <h2>专享服务</h2>
-				<span></span>
-			   <p>下单便捷 ：国内首家实现在线下单的运车公司，公众号、官网均可操作</p>
-			  </div>
-			  </div>
-			  </a>
-			</li>
-		   </ul>-->
 	  </div>
-	  </form>
-  </div>
+	  <div style="width:50%;float:right;">
+		  <img style="width:100%" src="/Public/Front/images/fuwubaozhang.png">
+		  <div class="fwbzfont">
+			  <div class="fwfont gslc">
+				  <font>妥妥运车&nbsp;<strong><span class="jsbzfont">服务保障</span></strong></font>
+				  <h3>Service guarantee</h3>
+			  </div>
+			  <div class="xddiv xddivxg">
+				  <div class="xdchild">
+					  <center><font class="xddfont"><a>更多</a></font></center>
+				  </div>
+			  </div>
+		  </div>
+	  </div>
 </div>
 
 <div class="ttxw">
-	<!--<div class="container">
-		<div class="part51">
-			<img src="__FRONT__/images/pa51.png"/>
-			<h2>妥妥新闻</h2>
-			<img src="__FRONT__/images/pa52.png"/>
-		</div>
+	<img class="pc" src="/Public/Front/images/HEARTONFIRE2.png"  style="width: 100%">
+	<img class="phone" src="/Public/Front/images/qiche.png"  style="width: 100%">
+	<div class="fwfont fwfontx">
+		<font><strong>妥妥新闻</strong></font>
+		<h3>Proper news</h3>
+		<img src="__FRONT__/images/Rectangle.png">
+	</div>
+	<div class="container">
 		<div class="iske1">
 			<div class="iske2">
-				<div class="iske3">
-					<div class="iske4">
-						<a href="__MODULE__/News/detail/code/{$artList[0]['article_code']}"><img src="{$artList[0]['article_img']}"></a>
-
-								<div class="iske6">
-					<ul>
-						<foreach name="artList2" item="vo">
-							<li>
-								<a href="__MODULE__/News/detail/code/{$vo.article_code}">
-									<h2>{$vo.title}</h2>
-
-
-							</li>
-						</foreach>
-					</ul>
-				</div>
-
-
-
-
-
-
-
-					</div>
-					<div class="iske5">
-						<h3>{$artList[0]['time']|date='m',###} / {$artList[0]['time']|date='d',###} /{$artList[0]['time']|date='Y',###} </h3>
-						<h2>{$artList[0]['title']} <a href="__MODULE__/News/newsList"><span>More+</span></a></h2>
-						<p>{$artList[0]['article_desc']}</p>
-
-					</div>
-				</div>
-
+				<table class="xwtable">
+					<tr>
+						<td class="xdtd1">
+							<div>
+								<img src="/Public/Front/images/neirongtu.png">
+							</div>
+							<div class="xddiv1">
+								<font>"妥妥运车"就是这么得天独厚</font>
+							</div>
+							<div class="xddiv2">
+								<font>2018-01-26 14:03:04</font>
+							</div>
+							<div class="xddiv3">
+								<font>妥妥运车业务的进展速度很快。“妥妥运车”是</font>
+							</div>
+							<div class="xddiv4">
+								<div class="more">
+									<div class="morechild">
+										<center><font class="morefont"><a>MORE</a></font></center>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="xdtd1">
+							<div>
+								<img src="/Public/Front/images/neirongtu1.png">
+							</div>
+							<div class="xddiv1">
+								<font>"妥妥运车"就是这么得天独厚</font>
+							</div>
+							<div class="xddiv2">
+								<font>2018-01-26 14:03:04</font>
+							</div>
+							<div class="xddiv3">
+								<font>妥妥运车业务的进展速度很快。“妥妥运车”是</font>
+							</div>
+							<div class="xddiv4">
+								<div class="more">
+									<div class="morechild">
+										<center><font class="morefont"><a>MORE</a></font></center>
+									</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
 			</div>
 			<div class="iske7">
 				<h2><span>FAQ </span> 常见问题</h2>
 				<ul>
 					<foreach name="cj" item="vo" key="k">
-					<if condition="$k lt 9">
-					<li><a href="__MODULE__/Footer/detail/code/{$vo.article_code}"><p>{$k+1}、{$vo.title}</p></a></li>
-					</if>
-
+						<if condition="$k lt 7">
+							<li><a href="__MODULE__/Footer/detail/code/{$vo.article_code}"><p>{$k+1}、{$vo.title}</p></a></li>
+						</if>
 					</foreach>
 				</ul>
-			</div>
-		</div>
-	</div>-->
-	<div class="pc ttxwpng1">
-		<img style="width:100%;" src="__FRONT__/images/ttxw.png" >
-	</div>
-	<div class="ttxww">
-		<div class="ttfont">
-			<font><strong>妥妥新闻</strong></font>
-			<h3>Proper news</h3>
-		</div>
-		<div class="ttxwp">
-			<p readonly="readonly">{$artList[0][content]}...</p>
-		</div>
-		<div class="ttxwbutton">
-			<div class="ttbutton1">
-				<div class="xwdiv">
-					<center><strong><a href="__MODULE__/News/detail/code/{$artList[0]['article_code']}" class="xwfont">查看全文</a></strong></center>
-				</div>
-			</div>
-			<div class="ttbutton2">
-				<div class="xwdiv">
-					<center><strong><a href="__MODULE__/News/newsList" class="xwfont">更多</a></strong></center>
+				<div style="margin-top: 50px;">
+					<div class="more">
+						<div class="morechild">
+							<center><font class="morefont"><a>MORE</a></font></center>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div style="width:100px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pc"><br></span><br>&nbsp;&nbsp;</div>
 </div>
 
 <div style="padding-bottom: 64px;" class="part61 container">
@@ -424,26 +371,51 @@
    </ul>
 </div>
 <script>
+	var navtime = 0;
+	var type = 2;
 	function yuan1(){
-		alert(123);
+        $(".yuan1").attr("style","background: #ff8000; border: 1px solid #ffffff;");
+        $(".yuan2").attr("style","background: #ffffff;border: 1px solid #ff8000;");
+        $(".bannerimg").attr("src","/Public/Front/images/BANNER.png");
+        $(".bannerdiv").attr("style","margin-left:-242px;");
+        $(".bannerdiv2, .bannerdiv3").hide();
+        navtime = 0;
+        type = 2;
 	}
 	function yuan2(){
-		alert(456);
+		$(".yuan1").attr("style","background: #ffffff;border: 1px solid #ff8000;");
+		$(".yuan2").attr("style","background: #ff8000; border: 1px solid #ffffff;");
+		$(".bannerimg").attr("src","/Public/Front/images/banner1.png");
+		$(".bannerdiv").attr("style","margin-left:-510px;");
+		$(".bannerdiv2, .bannerdiv3").show();
+        navtime = 0;
+        type = 1;
 	}
-	function lunbo(){
-		alert(789);
+	function timejia(){
+	    navtime++;
 	}
-	/*setInterval(function(){
-		lunbo();
-	},5000);*/
-	function next(){
-		$("#inserttable").hide();
-		$("#searchtable").show();
+	setInterval(function(){
+        timejia();
+        if(navtime == 5){
+            //window['yuan'+type]();
+		}
+	},3000);
+	function ddxs(){
+		$(".xiadan").attr("style","background:url(/Public/Front/images/xiadanf.png)");
+		$(".serchimg").attr("style","background:url(/Public/Front/images/dingdanchaxunb.png)");
+	    $("#searchtable").show();
+	    $("#xdtable").hide();
+	    $(".dfontd").attr("style","color:#ff8000");
+	    $(".xfontd").attr("style","color:#FFFFFF");
 	}
-	function last(){
-		$("#searchtable").hide();
-		$("#inserttable").show();
-	}
+    function xdxs(){
+        $(".xiadan").attr("style","background:url(/Public/Front/images/xiadanb.png)");
+        $(".serchimg").attr("style","background:url(/Public/Front/images/dingdanchaxun.png)");
+        $("#searchtable").hide();
+        $("#xdtable").show();
+        $(".dfontd").attr("style","color:#FFFFFF")
+        $(".xfontd").attr("style","color:#ff8000")
+    }
 	function tiaoFun(){
 		var keyword = $("#keyword").val();
 		if(keyword==""){
