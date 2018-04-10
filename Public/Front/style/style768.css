@@ -1490,4 +1490,6 @@ select {
     .td1div img{width:200px;height:200px;}
     .bannerdiv2 img{width:70px;height:50px;}
     .bannerdiv3 img{width:150px;height:150px;}
+    .part8left{width:50%;float:left;}
+    .part8right{width:50%;float:right;}
 }

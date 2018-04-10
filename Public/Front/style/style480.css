@@ -15,7 +15,7 @@
     font-weight: 700;
     padding: 0 10px 0 46px;}
 	/**banner**/
-	.banner{margin-top:0px;}
+	.banner{margin-bottom:76px;height:861px;border-bottom: 1px solid #d6d6d6;}
 	.banner_pic{background:url(../images/banner.jpg) no-repeat 55px center;height:610px;}
 	.banner_con{position:absolute;width:100%;height:100%;top:0px;left:0px;display:table;}
 	.banner_con span{display:block;font-size:20px;color:#fff;line-height:1.5;padding:30px 0;}
@@ -737,7 +737,7 @@ select {
     text-align: center;
     vertical-align: middle;}
 .tnew12c h2{font-size:30px;font-weight:700;color:#fff;line-height:35px;margin:0px;}
-.tnew12c span{display:inline-block;width:235px;height:1px;background:#fff;margin:10px 0px 10px;}
+.tnew12c span{display:inline-block;width:260px;height:1px;background:#fff;margin:10px 0px 10px;}
 .tnew12c p{font-size:24px;font-weight:400;color:#fff;line-height:25px;}
 
 
@@ -865,7 +865,7 @@ select {
 .pae0:hover  h2{color:#30AC63;}
 .part22 ul li:hover .pae0{border-right:4px solid #30AC63;}
 
-.part1{padding-bottom:60px;background:#fff;}
+.part1{background:#fff;margin-bottom: 64px;}
 .part12 ul{}
 
 .part12 ul li h2{width:100px;height:100px;background:url(../images/pa4.png) no-repeat center center;line-height:100px;text-align:center;color:#2FAD63;font-size:28px;margin:0 auto;}
@@ -889,7 +889,7 @@ select {
 .part12 ul li:nth-child(4).on .rrt1{display:block;}
 .top_search1{text-align:center;}
 .top_search2{margin-top:8px;}
-.top_search2 dl{background:#fff;width:208px;margin-bottom:10px;height:35px;}
+.top_search2 dl{background:#fff;width:235px;margin-bottom:10px;height:35px;}
 
 .top_search2 dl dt{width:100px;float:left;font-size:18px;color:#000;line-height:35px;font-weight:400;text-indent:10px;}
 .top_search2 dl dd{position:relative;float:left;}
@@ -898,8 +898,7 @@ select {
     border: medium none;
     line-height: 35px;
     text-indent: 8px;
-    margin: 0 5px;
-    width: 98%;position:relative;font-size:18px;color:#333;border:1px solid #e1e1e1;
+    width: 260px;position:relative;font-size:18px;color:#333;border:1px solid #e1e1e1;
 }
 .fr{float:right;}
 .fl{float:left;}
@@ -944,7 +943,7 @@ body{position:relative;}
     border: medium none;
     line-height: 40px;
     text-indent: 20px;
-    width: 275px;position:relative;font-size:18px;color:#333;
+    width: 260px;position:relative;font-size:18px;color:#333;
 }
 
 .korder1b dl dd .txt1b {
@@ -1315,7 +1314,7 @@ body{position:relative;}
 
 
 
-	.part8{padding-bottom:60px;}
+.part8{padding:0px 10px 20px;background:url(../images/di1.png);overflow: hidden;}
 
 .part82{overflow:hidden;}
 	.part82 ul li{float:left;width:94%;margin:0px 3%;}
@@ -1446,11 +1445,11 @@ body{position:relative;}
 #pointTip:hover  #notice_a{width:177px;}
 #warning:hover  #warning_a{width:177px;}
 
-    .ttxw{margin:0 6% 12%;padding-top: 10px;background: url(/Public/Front/images/wt.png) no-repeat scroll right 10px center;}
+    .ttxw{}
     .ttxwpng1{width:48%;float:left;padding-left:5%}
     .ttxww{padding: 0 5%;}
     .ttfont{margin-top: 6%;text-align: center;}
-    .fwfont font,.ttfont font{font-size: 26px;}
+    .fwfont font,.ttfont font{font-size: 22px;}
     .fwfont h3,.ttfont h3{margin-top: 10px;}
     .ttxwp{margin-top: 5%;width: 97%;}
     .ttxwp p{font-size: 18px;color: #999;text-indent: 36px;}
@@ -1461,44 +1460,80 @@ body{position:relative;}
     .ttbutton2{float:right;width:120px;height:45px;background: url(../images/gdbutton.png);}
 
     .fwfont{text-align:center;}
-    .fwfontx{width:100%}
+    .fwfontx{width:100%;margin-bottom: 30px;}
     .fwtable1{display:none;width:95%;margin-left:5%}
-    .serchimg{width:100px;height:32px;margin-left:30%;background: url(../images/xdbutton960.png);}
+    .serchimg{width:243px;height:62px;float: right;background: url(../images/dingdanchaxunsj1.png);}
+    .xiadan{width:242px;height:62px;float: left;background: url(../images/xiadansj0.png);}
     .descrimg1{position: absolute;margin-top: 2.5%;margin-left: 1%;}
     .descrimg2{height: 120%;padding-left: 39%;}
     .descrimg1 img{width:80%}
     .moneydiv{width:142px;height:112px;background: url(/Public/Front/images/Rectangle4.png) no-repeat scroll right 10px center;}
     .moneydiv2{padding-top: 37px;}
-    .moneyfont{font-size: 24px;color:#FFFFFF}
+    .moneyfont{font-size: 24px;}
     .dlbottom{margin-bottom:0px;}
-    .xddiv{width:194px;height:69px;margin-left:-166%;background: url(../images/lijixiadan.png);}
-    .xdchild{padding-top: 16px;}
+    .xddiv{width:145px;height:49px;margin-left:110px;margin-top: 10px;background: url(../images/sjxnn.png);}
+    .xdchild{padding-top: 8px;}
     .xdfont{font-size: 24px;}
     .imgtd{width:57%}
-    .navbar-brand0 img,.banner img,.descrimg1 img,.descrimg2,.bfb,.ttxwpng1 img,.nb1{width:75%}
-    .ycfont1{font-size: 26px;color:#1f1f1f;margin-left: 21%;}
+    .navbar-brand0 img,.descrimg1 img,.descrimg2,.bfb,.ttxwpng1 img,.nb1{width:75%}
+    .ycfont1{font-size: 26px;color:#ff8000;}
     .ycfont2{font-size: 26px;}
-    .ycfont3{font-size: 26px;color:#1f1f1f;margin-left: 27%;}
+    .ycfont3{font-size: 26px;color:#1f1f1f;}
     .xdtd{padding-left: 18%;padding-right: 23%}
     .xdfont{font-size: 18px;}
-    .buttonblack2 font{font-size: 16px;color: #FFFFFF;}
-    .buttonblack1 font{font-size: 16px;color: #FFFFFF;}
+    .buttonblack2 font{font-size: 22px;}
+    .buttonblack1 font{font-size: 22px;}
     .fwtd table{margin-left: 0%;}
     .xddfont{font-size: 24px}
     .heighttd{height:12px}
     .xddfont a{color:#FFFFFF}
-    .part8{padding-top: 6%;}
     .part1{margin-top:-5.5%;}
     .fwfont h3,.ttfont h3{margin-top: 0px;}
     .searchtd{height:80px;}
-    .fwfont h3, .ttfont h3 {font-size: 24px;}
+    .fwfont h3, .ttfont h3 {font-size: 20px;}
     .logoimg{width: 65%;margin-left: 15%;}
-    .tiaofun{padding-top: 6px;}
-    .buttonblack1{width: 85px;background:url(../images/Rectangle3.png);padding:9% 9%;}
+    .tiaofun{padding-top: 14px;}
     .buttonblack2{background:url(../images/Rectangle3.png);padding:9% 7%;}
     .dhimg{float:left;margin-top: -33px;margin-left: 10px;}
     .renimg{width: 6%;float:right;margin-left: 25px;margin-right: 5px;margin-top: -33px;}
     .sousuoimg{width: 6%;float:right;margin-top: -33px;margin-bottom: 15px;margin-right: 10px;}
     #inserttable{display:block;width:76%;margin: auto;}
+
+    .bannerdiv{width: 485px;height: 456px;background: url(/Public/Front/images/di.png); position:absolute;left:50%;margin-top: 333px;margin-left: -248px;}
+    .bannerdiv1{width: 70px;height: 20px;position:absolute;left:50%;margin-top: 260px;margin-left: -35px;}
+    .bannerdiv2{width: 80px;height: 20px;position:absolute;left:50%;margin-top: 148px;margin-left: 50px;display: none;}
+    .bannerdiv3{width: 172px;height: 172px;position:absolute;left:50%;margin-top: 35px;margin-left: -86px;}
+    .bannerimg{height:293px;width:100%}
+    .yuan1{  width: 20px;  height:20px;margin-right: 23px;background: #ff8000;  border-radius: 50%;  border: 1px solid #ffffff;display: inline-block;box-sizing: border-box;}
+    .yuan2{  width: 20px;  height:20px; background: #ffffff; border-radius: 50%;  border: 1px solid #ff8000;display: inline-block;box-sizing: border-box;}
+    .ksfw{margin: 91px 53px;height: 333px;}
+    .tbddfont{font-size:24px}
+    .tbxdfont{font-size:24px;}
+    .dfontd,.dfontd:hover{color:#FFFFFF;}
+    .xfontd,.xfontd:hover{color:#ff8000;}
+    .gsjsfont{width: 253px;margin:auto}
+    .fwbzfont{width: 253px;margin:auto}
+    .jsbzfont{font-size: 18px;color:#ff8000;}
+    .gslc{padding-bottom: 0px;margin: 20px 0px;}
+    .more{width:85px;height:33px;margin-left:38px;background: url(../images/gengduoanqiu.png);margin-top: 23px;}
+    .morechild{padding-top: 8px;}
+    .morefont{font-size: 14px;}
+    .morefont a{color:#FFFFFF}
+    .xwtable{margin: 5px 2px;}
+    .xdtd1{padding-right: 20px}
+    .xddiv1{margin-top: 15px}
+    .xddiv1 font{font-size:14px;}
+    .xddiv2{margin-top: 5px}
+    .xddiv2 font{font-size:12px;color:#999}
+    .xddiv3{padding-top:10px;margin-top: 15px;border-top:1px solid #e1e1e1}
+    .xddiv3 font{font-size:14px;color:#999}
+    .xddiv4{margin-top: 10px}
+    .xddivxg{margin:auto;}
+    .td1div img{width:200px;height:200px;}
+    .bannerdiv2 img{width:70px;height:50px;}
+    .bannerdiv3 img{width:172px;height:172px;}
+    .blacktd{width:23%}
+    .part8left{width:49%;float:left;}
+    .part8right{width:49%;float:right;}
 
 }

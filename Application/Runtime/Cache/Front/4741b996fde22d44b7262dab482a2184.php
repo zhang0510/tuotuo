@@ -389,13 +389,15 @@
 			<div class="yuan1" onmouseover="yuan1()" ></div>
 			<div class="yuan2" onmouseover="yuan2()" ></div>
 		</div>
-		<div class="bannerdiv2">
+		<div class="pc bannerdiv2">
 			<img src="/Public/Front/images/zhishijiantou.png">
 		</div>
 		<div class="bannerdiv3">
+			<center><strong><span style="font-size:28px;">关注我们</span></strong></center>
 			<img src="/Public/Front/images/wskk1.jpg">
 		</div>
-		<img class="bannerimg" src="/Public/Front/images/BANNER.png">
+		<img class="pc bannerimg" src="/Public/Front/images/BANNER.png">
+		<img class="phone bannerimg" src="/Public/Front/images/bannersj.png">
 	</div>
 <!--content-->
 <div class="part1" style="width: 100%">
@@ -408,11 +410,11 @@
 	</div>
 	<div style="text-align: center;">
 		<img class="pc" src="/Public/Front/images/HEARTONFIRE1.png" style="width: 90%;margin-left: 5%;">
-		<img class="phone" src="/Public/Front/images/liucheng.png" style="width: 100%">
+		<img class="phone" src="/Public/Front/images/liucheng.png" style="width: 80%;margin-left: 10%;">
 	</div>
 </div>
 <div class="part8">
-	  <div style="width:50%;float:left;">
+	  <div class="part8left">
 		  <img style="width:100%" src="/Public/Front/images/gongsijieshao.png">
 		  <div class="gsjsfont">
 			  <div class="fwfont gslc">
@@ -426,7 +428,7 @@
 			  </div>
 		  </div>
 	  </div>
-	  <div style="width:50%;float:right;">
+	  <div class="part8right">
 		  <img style="width:100%" src="/Public/Front/images/fuwubaozhang.png">
 		  <div class="fwbzfont">
 			  <div class="fwfont gslc">
@@ -457,7 +459,8 @@
 					<tr>
 						<td class="xdtd1">
 							<div class="td1div">
-								<img src="/Public/Front/images/neirongtu.png">
+								<img class="pc" src="/Public/Front/images/neirongtu.png">
+								<img class="phone" src="/Public/Front/images/neirongtusj.png">
 							</div>
 							<div class="xddiv1">
 								<font>"妥妥运车"就是这么得天独厚</font>
@@ -478,7 +481,8 @@
 						</td>
 						<td class="xdtd1">
 							<div class="td1div">
-								<img src="/Public/Front/images/neirongtu1.png">
+								<img class="pc" src="/Public/Front/images/neirongtu1.png">
+								<img class="phone" src="/Public/Front/images/neirongtusj1.png">
 							</div>
 							<div class="xddiv1">
 								<font>"妥妥运车"就是这么得天独厚</font>

@@ -1447,6 +1447,8 @@
     .td1div img{width:275px;height:275px;}
     .bannerdiv2 img{width:100px;height:80px;}
     .bannerdiv3 img{width:200px;height:200px;}
+    .part8left{width:50%;float:left;}
+    .part8right{width:50%;float:right;}
 
 }
 
