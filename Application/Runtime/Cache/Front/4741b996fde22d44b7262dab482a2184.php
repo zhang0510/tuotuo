@@ -456,7 +456,7 @@
 				<table class="xwtable">
 					<tr>
 						<td class="xdtd1">
-							<div>
+							<div class="td1div">
 								<img src="/Public/Front/images/neirongtu.png">
 							</div>
 							<div class="xddiv1">
@@ -477,7 +477,7 @@
 							</div>
 						</td>
 						<td class="xdtd1">
-							<div>
+							<div class="td1div">
 								<img src="/Public/Front/images/neirongtu1.png">
 							</div>
 							<div class="xddiv1">
@@ -542,7 +542,7 @@
         $(".yuan1").attr("style","background: #ff8000; border: 1px solid #ffffff;");
         $(".yuan2").attr("style","background: #ffffff;border: 1px solid #ff8000;");
         $(".bannerimg").attr("src","/Public/Front/images/BANNER.png");
-        $(".bannerdiv").attr("style","margin-left:-242px;");
+        $(".bannerdiv").attr("style","left:50%");
         $(".bannerdiv2, .bannerdiv3").hide();
         navtime = 0;
         type = 2;
@@ -551,7 +551,7 @@
 		$(".yuan1").attr("style","background: #ffffff;border: 1px solid #ff8000;");
 		$(".yuan2").attr("style","background: #ff8000; border: 1px solid #ffffff;");
 		$(".bannerimg").attr("src","/Public/Front/images/banner1.png");
-		$(".bannerdiv").attr("style","margin-left:-510px;");
+		$(".bannerdiv").attr("style","margin-left:-35%;");
 		$(".bannerdiv2, .bannerdiv3").show();
         navtime = 0;
         type = 1;

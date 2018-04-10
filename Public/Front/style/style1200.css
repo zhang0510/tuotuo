@@ -1413,7 +1413,7 @@ select {
     .bannerdiv{width: 485px;height: 456px;background: url(/Public/Front/images/di.png); position:absolute;left:50%;margin-top: 183px;margin-left: -242px;}
     .bannerdiv1{width: 80px;height: 20px;position:absolute;left:50%;margin-top: 656px;margin-left: -40px;}
     .bannerdiv2{width: 80px;height: 20px;position:absolute;left:50%;margin-top: 361px;margin-left: 86px;display: none;}
-    .bannerdiv3{width: 80px;height: 20px;position:absolute;left:50%;margin-top: 286px;margin-left: 295px;display: none;}
+    .bannerdiv3{width: 80px;height: 20px;position:absolute;left:50%;margin-top: 286px;margin-left: 350px;display: none;}
     .bannerimg{height:750px;width:100%}
     .yuan1{  width: 20px;  height:20px;margin-right: 33px;background: #ff8000;  border-radius: 50%;  border: 1px solid #ffffff;display: inline-block;box-sizing: border-box;}
     .yuan2{  width: 20px;  height:20px; background: #ffffff; border-radius: 50%;  border: 1px solid #ff8000;display: inline-block;box-sizing: border-box;}
@@ -1440,6 +1440,7 @@ select {
     .xddiv3 font{font-size:16px;color:#999}
     .xddiv4{margin-top: 10px}
     .xddivxg{margin-left: 66px;}
+    .td1div img{width:309px;height:309px;}
 
 }
 
