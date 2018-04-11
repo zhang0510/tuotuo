@@ -21,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="home_page.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home_page.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Front/View/HomePage/home_page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="355" column="86" lean-forward="false" selection-start-line="355" selection-start-column="86" selection-end-line="355" selection-end-column="86" />
+            <state relative-caret-position="626">
+              <caret line="472" column="0" lean-forward="false" selection-start-line="472" selection-start-column="0" selection-end-line="472" selection-end-column="0" />
               <folding>
                 <element signature="n#div#0;n#!!top" expanded="false" />
                 <element signature="e#1252#1258#0" expanded="true" />
@@ -43,11 +43,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndexController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Front/Controller/IndexController.class.php">
+      <file leaf-file-name="style480.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Public/Front/style/style480.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="31" column="10" lean-forward="false" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+            <state relative-caret-position="746">
+              <caret line="1541" column="4" lean-forward="true" selection-start-line="1541" selection-start-column="4" selection-end-line="1542" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style960.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Public/Front/style/style960.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="667">
+              <caret line="1452" column="30" lean-forward="true" selection-start-line="1452" selection-start-column="30" selection-end-line="1452" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style1200.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Public/Front/style/style1200.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="1412" column="64" lean-forward="true" selection-start-line="1411" selection-start-column="4" selection-end-line="1412" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style320.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Public/Front/style/style320.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="747">
+              <caret line="1504" column="0" lean-forward="false" selection-start-line="1504" selection-start-column="0" selection-end-line="1505" selection-end-column="82" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style768.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Public/Front/style/style768.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="772" column="26" lean-forward="false" selection-start-line="772" selection-start-column="26" selection-end-line="772" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -57,8 +97,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>part1</find>
-      <find>serchimg</find>
       <find>ycfont1</find>
       <find>ycfont</find>
       <find>buttonblack1</find>
@@ -85,8 +123,10 @@
       <find>ddxs</find>
       <find>deng0</find>
       <find>ff8f00</find>
-      <find>详情</find>
       <find>article_desc</find>
+      <find>serchimg</find>
+      <find>详情</find>
+      <find>new3b1</find>
     </findStrings>
     <dirStrings>
       <dir>E:\phpstudy\tuotuo</dir>
@@ -101,16 +141,16 @@
         <option value="$PROJECT_DIR$/Application/Common/Conf/config.php" />
         <option value="$PROJECT_DIR$/Application/Front/View/Public/top.html" />
         <option value="$PROJECT_DIR$/Public/Front/style/style1200.css" />
-        <option value="$PROJECT_DIR$/Public/Front/style/style768.css" />
-        <option value="$PROJECT_DIR$/Public/Front/style/style960.css" />
         <option value="$PROJECT_DIR$/Application/Front/Controller/PersonalController.class.php" />
         <option value="$PROJECT_DIR$/Application/Front/View/PersonalInformation/personal_information.html" />
         <option value="$PROJECT_DIR$/Application/Front/View/PersonalInformation/linkman.html" />
-        <option value="$PROJECT_DIR$/Public/Front/style/style480.css" />
-        <option value="$PROJECT_DIR$/Public/Front/style/style320.css" />
         <option value="$PROJECT_DIR$/ThinkPHP/Library/Think/Model.class.php" />
         <option value="$PROJECT_DIR$/Application/Front/Controller/IndexController.class.php" />
         <option value="$PROJECT_DIR$/Application/Front/View/HomePage/home_page.html" />
+        <option value="$PROJECT_DIR$/Public/Front/style/style320.css" />
+        <option value="$PROJECT_DIR$/Public/Front/style/style480.css" />
+        <option value="$PROJECT_DIR$/Public/Front/style/style960.css" />
+        <option value="$PROJECT_DIR$/Public/Front/style/style768.css" />
       </list>
     </option>
   </component>
@@ -155,47 +195,6 @@
             <path>
               <item name="tuotuo" type="b2602c69:ProjectViewProjectNode" />
               <item name="tuotuo" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="tuotuo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tuotuo" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Front" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="tuotuo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tuotuo" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Front" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="tuotuo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tuotuo" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Front" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="tuotuo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tuotuo" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Front" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Login" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="tuotuo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tuotuo" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Front" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="PersonalInformation" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="tuotuo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tuotuo" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -203,6 +202,13 @@
               <item name="tuotuo" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Front" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="tuotuo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tuotuo" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Front" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="style" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -248,18 +254,18 @@
       <workItem from="1523236024839" duration="27900000" />
       <workItem from="1523273030358" duration="1608000" />
       <workItem from="1523322496893" duration="23469000" />
-      <workItem from="1523408810954" duration="24333000" />
+      <workItem from="1523408810954" duration="27897000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87386000" />
+    <option name="totallyTimeSpent" value="90950000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="816" height="576" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16770834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.315" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -526,30 +532,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Front/style/style768.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Front/style/style960.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Front/style/style1200.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Front/Controller/PersonalController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -585,26 +567,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Front/style/style480.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="347" column="39" lean-forward="false" selection-start-line="347" selection-start-column="39" selection-end-line="347" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Front/View/PersonalInformation/linkman.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="21" column="22" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Front/style/style320.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="381" column="39" lean-forward="false" selection-start-line="381" selection-start-column="39" selection-end-line="381" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -625,10 +591,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Front/style/style320.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="747">
+          <caret line="1504" column="0" lean-forward="false" selection-start-line="1504" selection-start-column="0" selection-end-line="1505" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Front/View/HomePage/home_page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="355" column="86" lean-forward="false" selection-start-line="355" selection-start-column="86" selection-end-line="355" selection-end-column="86" />
+        <state relative-caret-position="626">
+          <caret line="472" column="0" lean-forward="false" selection-start-line="472" selection-start-column="0" selection-end-line="472" selection-end-column="0" />
           <folding>
             <element signature="n#div#0;n#!!top" expanded="false" />
             <element signature="e#1252#1258#0" expanded="true" />
@@ -642,6 +616,38 @@
             <element signature="e#9481#9487#0" expanded="true" />
             <element signature="e#9993#9999#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Front/style/style960.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="1452" column="30" lean-forward="true" selection-start-line="1452" selection-start-column="30" selection-end-line="1452" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Front/style/style1200.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="1412" column="64" lean-forward="true" selection-start-line="1411" selection-start-column="4" selection-end-line="1412" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Front/style/style480.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="746">
+          <caret line="1541" column="4" lean-forward="true" selection-start-line="1541" selection-start-column="4" selection-end-line="1542" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Front/style/style768.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="772" column="26" lean-forward="false" selection-start-line="772" selection-start-column="26" selection-end-line="772" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -186,7 +186,7 @@
         cursor: pointer;
     }
     .dengm{background:url(../images/qq.jpg) no-repeat center center;min-height:400px;overflow:hidden;}
-    .deng0{min-height:100px;background:url(../images/bhh1.png) repeat;margin:33px auto;padding:15px 0px 50px;width:1000px;}
+    .deng0{min-height:100px;background:url(../images/bhh1.png) repeat;margin:-35px auto;padding:15px 0px 50px;width:1000px;}
     .fss{font-size: 14px;color:#ea5512;}
     .login{padding-bottom:3px;border-bottom:1px solid #ea5512;}
     .deng1,.deng1:hover{color:#ea5512;}
@@ -196,11 +196,11 @@
     .deng2a{line-height:40px;text-align:center;}
     .deng2a p a{display:inline-block;}
     .deng2a p a.ww1{background:url(../images/ww1a.png) no-repeat 0px center; padding:0px 0px 0px 35px;margin:0px 20px 0px 0px;font-size:16px;color:#000;}
-    .deng2a p a.ww1.on,.deng2a p a.ww1:hover{background:url(../images/ww1.png) no-repeat 0px center; color:#FF8900;}
+    .deng2a p a.ww1.on,.deng2a p a.ww1:hover{background:url(../images/ww1.png) no-repeat 0px center; color:#ea5512;}
 
 
     .deng2a p a.ww2{background:url(../images/ww2.png) no-repeat 0px center; padding:0px 0px 0px 35px;margin:0px 0px 0px 20px;font-size:16px;color:#000;}
-    .deng2a p a.ww2.on,.deng2a p a.ww2:hover{background:url(../images/ww2a.png) no-repeat 0px center; color:#FF8900;}
+    .deng2a p a.ww2.on,.deng2a p a.ww2:hover{background:url(../images/ww2a.png) no-repeat 0px center; color:#ea5512;}
     .deng2b1{padding:40px 15% 40px;}
     .deng2b1 dl{margin-bottom:15px;height:44px;}
     .deng2b1 dl dt{width:22%;float:left;line-height:44px;text-align:right;font-size:18px;color:#000;font-weight:700;}
@@ -209,17 +209,17 @@
     .deng2b1 dl dd .txt2{border:1px solid #d4d4d4;text-indent:10px;width:50%;}
     .deng2b1 dl dd .txt3{float:right;}
     .deng2b1 .txt4{margin-top:40px;width:90%;margin:40px auto 20px;text-align:center;}
-    .deng2b1 .txt4 input{background:#27AD61;color:#fff;text-align:center;font-size:18px;line-height:44px;display:inline-block;width:35%;border:1px solid #27AD61;margin:0 auto; border-radius:5px;}
+    .deng2b1 .txt4 input{background:#ff8000;color:#fff;text-align:center;font-size:18px;line-height:44px;display:inline-block;width:35%;border:1px solid #ff8000;margin:0 auto; border-radius:5px;}
     .deng2b1 .txt5{margin-top:40px;width:90%;margin:0px auto;}
-    .deng2b1 .txt4 a{background:#fff;color:#27AD61;text-align:center;font-size:18px;line-height:44px;display:inline-block;width:35%;border:1px solid #27AD61;margin-left:30px; }
+    .deng2b1 .txt4 a{background:#fff;color:#ff8000;text-align:center;font-size:18px;line-height:44px;display:inline-block;width:35%;border:1px solid #ff8000;margin-left:30px; }
     .deng2b1 .txt5 a:hover{background:#27AD61;color:#fff;}
     .deng2b1 dl dd .txt6{float:right;width:45%;background:#F7991F;font-size:16px;color:#fff;border:0px;}
 
     .deng2b1 .txt7{margin-top:40px;width:90%;margin:0px auto;}
-    .deng2b1 .txt7 a{color:#F7991F;font-size:14px;line-height:24px;}
-    .deng2b1 .txt7 a:hover{color:#27AD61;font-size:14px;line-height:24px;}
+    .deng2b1 .txt7 a{color:#ea5512;font-size:14px;line-height:24px;}
+    .deng2b1 .txt7 a:hover{color:#ea5512;font-size:14px;line-height:24px;}
     .txt8{text-align:center;color:#000;font-size:14px;font-weight:400;}
-    .txt8 a{color:#27AD61;text-decoration:underline;}
+    .txt8 a{color:#ea5512;text-decoration:underline;}
     .txt9{font-size:16px;color:#000;}
     .txt9 a{display:inline-block;width:30px;background:url(../images/ww4.png) no-repeat center center;}
     .txt10 label{margin-right:40px;display:inline-block;font-size:14px;}
@@ -1383,7 +1383,7 @@
 
     .fwfont{text-align:center;padding-bottom: 34px;}
     .fwtable1{display:none;width:95%;margin-left:5%}
-    .serchimg{width:160px;height:40px;float: right;background: url(../images/dingdanchaxun.png);}
+    .serchimg{width:160px;height:40px;float: right;background: url(../images/dingdanchaxun.png) right top no-repeat;}
     .xiadan{width:160px;height:40px;float: left;background: url(../images/xiadanb.png);}
     .descrimg1{position: absolute;margin-top: 4%;margin-left: 1%;}
     .descrimg2{width:77%;height: 120%;padding-left: 39%;}
@@ -1451,6 +1451,8 @@
     .part8left{width:50%;float:left;}
     .part8right{width:50%;float:right;}
     .header_top1{float:right;}
+    .new3b1{height: 475px;width: 669px;margin: 50px auto 0px;}
+    .new3b1 p{float:left;writing-mode: tb-rl;margin-left: 90px;}
 
 }
 
