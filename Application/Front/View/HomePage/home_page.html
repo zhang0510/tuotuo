@@ -385,11 +385,41 @@
 <script>
 	var navtime = 0;
 	var type = 2;
+	var navtimesj = 0;
+	var typesj = 2;
+	IsPC();
+	function IsPC() {
+		var userAgentInfo = navigator.userAgent;
+		var Agents = ["Android", "iPhone",
+			"SymbianOS", "Windows Phone"];
+		var flag = true;
+		for (var v = 0; v < Agents.length; v++) {
+			if (userAgentInfo.indexOf(Agents[v]) > 0) {
+				flag = false;
+				break;
+			}
+		}
+		if(flag == false){
+			setInterval(function(){
+				timejiasj();
+				if(window.navtimesj == 2){
+					window['yuansj'+typesj]();
+				}
+			},3000);
+		}else{
+			setInterval(function(){
+				timejia();
+				if(navtime == 2){
+					window['yuan'+type]();
+				}
+			},3000);
+		}
+	}
 	function yuan1(){
 		$(".yuan1").attr("style","background: #ff8000; border: 1px solid #ffffff;");
 		$(".yuan2").attr("style","background: #ffffff;border: 1px solid #ff8000;");
 		$(".bannerimg").attr("src","/Public/Front/images/BANNER.png");
-		$(".bannerdiv").attr("style","left:50%");
+		$(".bannerdiv").animate({'left':'50%' })
 		$(".bannerdiv2, .bannerdiv3").hide();
 		navtime = 0;
 		type = 2;
@@ -398,7 +428,8 @@
 		$(".yuan1").attr("style","background: #ffffff;border: 1px solid #ff8000;");
 		$(".yuan2").attr("style","background: #ff8000; border: 1px solid #ffffff;");
 		$(".bannerimg").attr("src","/Public/Front/images/banner1.png");
-		$(".bannerdiv").attr("style","margin-left:-35%;");
+		//$(".bannerdiv").attr("style","margin-left:-35%;");
+		$(".bannerdiv").animate({'left':'30%' })
 		$(".bannerdiv2, .bannerdiv3").show();
 		navtime = 0;
 		type = 1;
@@ -406,12 +437,7 @@
 	function timejia(){
 		navtime++;
 	}
-	setInterval(function(){
-		timejia();
-		if(navtime == 5){
-			//window['yuan'+type]();
-		}
-	},3000);
+
 
 	function yuansj1(){
 		$(".yuan1").attr("style","background: #ff8000; border: 1px solid #ffffff;");
@@ -430,12 +456,7 @@
 	function timejiasj(){
 		window.navtimesj++;
 	}
-	setInterval(function(){
-		timejiasj();
-		if(window.navtimesj == 2){
-			window['yuansj'+typesj]();
-		}
-	},3000);
+
 
 	function ddxs(){
 		$(".xiadan").attr("style","background:url(/Public/Front/images/xiadanf.png) left top no-repeat");
