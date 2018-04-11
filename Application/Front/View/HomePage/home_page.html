@@ -39,10 +39,10 @@
 </script>
 <script src="__JS__/indexTuo.js"></script>
 <!--banner-->
-	<div class="banner">
+	<div class="bannersy">
 		<div class="bannerdiv">
 			<div class="serchimg">
-				<div class="tiaofun"  onclick="ddxs()">
+				<div class="tiaofun"  onclick="ddxs('320')">
 					<center><font class="tbddfont"><a class="dfontd">订单查询</a></font></center>
 				</div>
 			</div>
@@ -62,12 +62,16 @@
 								<input type="text" placeholder="请在此输入订单号" class="cx1" id="keyword" ><!-- onkeyup="sel(this);" --><button onclick="tiaoFun();" type="button"></button>
 								<div id="searchBoxs"></div>
 							</div>
+							<div class="phone serchsj" id="tiao2">
+								<input type="text" placeholder="请在此输入订单号" class="cx2" id="keyword1" ><!-- onkeyup="sel(this);" --><button onclick="tiaoFun1();" type="button"></button>
+								<div id="searchBoxs"></div>
+							</div>
 						</td>
 					</tr>
 					<tr class="searchtd">
 						<td>
 							<div class="xddiv">
-								<div class="xdchild"  onclick="tiaoFun();">
+								<div class="xdchild"  onclick="tiaoFun1();">
 									<center><font class="xddfont"><a>订单查询</a></font></center>
 								</div>
 							</div>
@@ -214,9 +218,13 @@
 				</table>
 			</div>
 		</div>
-		<div class="bannerdiv1">
+		<div class="pc bannerdiv1">
 			<div class="yuan1" onmouseover="yuan1()" ></div>
 			<div class="yuan2" onmouseover="yuan2()" ></div>
+		</div>
+		<div class="phone bannerdiv1">
+			<div class="yuan1" onmouseover="yuansj1()" ></div>
+			<div class="yuan2" onmouseover="yuansj2()" ></div>
 		</div>
 		<div class="pc bannerdiv2">
 			<img src="/Public/Front/images/zhishijiantou.png">
@@ -252,7 +260,7 @@
 			  </div>
 			  <div class="xddiv xddivxg">
 				  <div class="xdchild">
-					  <center><font class="xddfont"><a>详情</a></font></center>
+					  <center><font class="xddfont"><a href="__MODULE__/AboutUs/index/code/AC14920644586W3N">详情</a></font></center>
 				  </div>
 			  </div>
 		  </div>
@@ -266,7 +274,7 @@
 			  </div>
 			  <div class="xddiv xddivxg">
 				  <div class="xdchild">
-					  <center><font class="xddfont"><a>更多</a></font></center>
+					  <center><font class="xddfont"><a href="__MODULE__/AboutUs/index/code/AC14920644902AGS">更多</a></font></center>
 				  </div>
 			  </div>
 		  </div>
@@ -289,43 +297,43 @@
 						<td class="xdtd1">
 							<div class="td1div">
 								<img class="pc" src="/Public/Front/images/neirongtu.png">
-								<img class="phone" src="/Public/Front/images/neirongtusj.png">
+								<img class="phone nrsj" src="/Public/Front/images/neirongtusj.png">
 							</div>
 							<div class="xddiv1">
-								<font>"妥妥运车"就是这么得天独厚</font>
+								<font>{$artList.0.title}</font>
 							</div>
 							<div class="xddiv2">
-								<font>2018-01-26 14:03:04</font>
+								<font>{$artList.0.article_time}</font>
 							</div>
 							<div class="xddiv3">
-								<font>妥妥运车业务的进展速度很快。“妥妥运车”是</font>
+								<font>{$artList.0.article_desc}</font>
 							</div>
 							<div class="xddiv4">
 								<div class="more">
 									<div class="morechild">
-										<center><font class="morefont"><a>MORE</a></font></center>
+										<center><font class="morefont"><a href="__MODULE__/News/detail/code/{$artList.0.article_code}">MORE</a></font></center>
 									</div>
 								</div>
 							</div>
 						</td>
-						<td class="xdtd1">
+						<td class="xdtd1 xdleft">
 							<div class="td1div">
 								<img class="pc" src="/Public/Front/images/neirongtu1.png">
-								<img class="phone" src="/Public/Front/images/neirongtusj1.png">
+								<img class="phone nrsj" src="/Public/Front/images/neirongtusj1.png">
 							</div>
 							<div class="xddiv1">
-								<font>"妥妥运车"就是这么得天独厚</font>
+								<font>{$artList.1.title}</font>
 							</div>
 							<div class="xddiv2">
-								<font>2018-01-26 14:03:04</font>
+								<font>{$artList.1.article_time}</font>
 							</div>
 							<div class="xddiv3">
-								<font>妥妥运车业务的进展速度很快。“妥妥运车”是</font>
+								<font>{$artList.1.article_desc}</font>
 							</div>
 							<div class="xddiv4">
 								<div class="more">
 									<div class="morechild">
-										<center><font class="morefont"><a>MORE</a></font></center>
+										<center><font class="morefont"><a href="__MODULE__/News/detail/code/{$artList.1.article_code}">MORE</a></font></center>
 									</div>
 								</div>
 							</div>
@@ -343,9 +351,9 @@
 					</foreach>
 				</ul>
 				<div style="margin-top: 50px;">
-					<div class="more">
+					<div class="more moreques">
 						<div class="morechild">
-							<center><font class="morefont"><a>MORE</a></font></center>
+							<center><font class="morefont"><a href="__MODULE__/Footer/detail/code/AC14920671855R3B">MORE</a></font></center>
 						</div>
 					</div>
 				</div>
@@ -378,13 +386,13 @@
 	var navtime = 0;
 	var type = 2;
 	function yuan1(){
-        $(".yuan1").attr("style","background: #ff8000; border: 1px solid #ffffff;");
-        $(".yuan2").attr("style","background: #ffffff;border: 1px solid #ff8000;");
-        $(".bannerimg").attr("src","/Public/Front/images/BANNER.png");
-        $(".bannerdiv").attr("style","left:50%");
-        $(".bannerdiv2, .bannerdiv3").hide();
-        navtime = 0;
-        type = 2;
+		$(".yuan1").attr("style","background: #ff8000; border: 1px solid #ffffff;");
+		$(".yuan2").attr("style","background: #ffffff;border: 1px solid #ff8000;");
+		$(".bannerimg").attr("src","/Public/Front/images/BANNER.png");
+		$(".bannerdiv").attr("style","left:50%");
+		$(".bannerdiv2, .bannerdiv3").hide();
+		navtime = 0;
+		type = 2;
 	}
 	function yuan2(){
 		$(".yuan1").attr("style","background: #ffffff;border: 1px solid #ff8000;");
@@ -392,29 +400,54 @@
 		$(".bannerimg").attr("src","/Public/Front/images/banner1.png");
 		$(".bannerdiv").attr("style","margin-left:-35%;");
 		$(".bannerdiv2, .bannerdiv3").show();
-        navtime = 0;
-        type = 1;
+		navtime = 0;
+		type = 1;
 	}
 	function timejia(){
-	    navtime++;
+		navtime++;
 	}
 	setInterval(function(){
-        timejia();
-        if(navtime == 5){
-            //window['yuan'+type]();
+		timejia();
+		if(navtime == 5){
+			//window['yuan'+type]();
 		}
 	},3000);
+
+	function yuansj1(){
+		$(".yuan1").attr("style","background: #ff8000; border: 1px solid #ffffff;");
+		$(".yuan2").attr("style","background: #ffffff;border: 1px solid #ff8000;");
+		$(".bannerimg").attr("src","/Public/Front/images/bannersj.png");
+		window.navtimesj = 0;
+		window.typesj = 2;
+	}
+	function yuansj2(){
+		$(".yuan1").attr("style","background: #ffffff;border: 1px solid #ff8000;");
+		$(".yuan2").attr("style","background: #ff8000; border: 1px solid #ffffff;");
+		$(".bannerimg").attr("src","/Public/Front/images/BANNER.png");
+		window.navtimesj = 0;
+		window.typesj = 1;
+	}
+	function timejiasj(){
+		window.navtimesj++;
+	}
+	setInterval(function(){
+		timejiasj();
+		if(window.navtimesj == 2){
+			window['yuansj'+typesj]();
+		}
+	},3000);
+
 	function ddxs(){
-		$(".xiadan").attr("style","background:url(/Public/Front/images/xiadanf.png)");
-		$(".serchimg").attr("style","background:url(/Public/Front/images/dingdanchaxunb.png)");
+		$(".xiadan").attr("style","background:url(/Public/Front/images/xiadanf.png) left top no-repeat");
+		$(".serchimg").attr("style","background:url(/Public/Front/images/dingdanchaxunb.png) right top no-repeat");
 	    $("#searchtable").show();
 	    $("#xdtable").hide();
 	    $(".dfontd").attr("style","color:#ff8000");
 	    $(".xfontd").attr("style","color:#FFFFFF");
 	}
     function xdxs(){
-        $(".xiadan").attr("style","background:url(/Public/Front/images/xiadanb.png)");
-        $(".serchimg").attr("style","background:url(/Public/Front/images/dingdanchaxun.png)");
+        $(".xiadan").attr("style","background:url(/Public/Front/images/xiadanb.png) left top no-repeat");
+        $(".serchimg").attr("style","background:url(/Public/Front/images/dingdanchaxun.png) right top no-repeat");
         $("#searchtable").hide();
         $("#xdtable").show();
         $(".dfontd").attr("style","color:#FFFFFF")
@@ -428,6 +461,14 @@
 		}
 		window.location.href="__MODULE__/Ordersel/orderselView/status/2/keyword/"+keyword;
 	}
+    function tiaoFun1(){
+        var keyword = $("#keyword1").val();
+        if(keyword==""){
+            layer.msg("请输入订单号");
+            return false;
+        }
+        window.location.href="__MODULE__/Ordersel/orderselView/status/2/keyword/"+keyword;
+    }
 	$('.aske1 ul li').click(function(){
 		$(this).addClass('on').siblings().removeClass('on');
 		$('.tab-cont1 .tab-pay1').eq($(this).index()).fadeIn(300).siblings().hide();

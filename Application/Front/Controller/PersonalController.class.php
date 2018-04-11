@@ -4,6 +4,14 @@ namespace Front\Controller;
 class PersonalController extends BaseController { 
     //个人信息  页面展示
     public function personalInfo(){
+        //取session判断其是否登录
+        $session_User = jiema(session('userData'))['id'];
+        if($session_User<=0){
+            $this-> assign('Session_From_Token',$token);
+            //进入页面
+            $this->display("Login:mobile_login");
+            die;
+        }
 		$user=M("user");
 		$linkMan=M("linkman");
 		$userData=jiema(I("session.userData"));

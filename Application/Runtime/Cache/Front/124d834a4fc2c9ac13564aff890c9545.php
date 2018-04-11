@@ -58,7 +58,6 @@
 
   <div class="fss">
 	<?php if($UserInfo["login"] == 0): ?><div class="header_top2">
-		<span style="color: #000000;">Hi 欢迎来到妥妥运车 </span>
 		<span class="login">
 			<a  class="deng1" href="/Front/Login/pclogin/">请登录</a>&nbsp;&nbsp;|&nbsp;
 			<a  class="deng2" href="/Front/Register/index/">请注册</a>
@@ -180,12 +179,18 @@
 <!--logo and nav-->
 
 <!--content-->
-<div class="dengm">
+<div class="banner">
+	<img src="/Public/Front/images/fbanner.png" style="width: 100%">
+</div>
+<div class="part1">
+	<img class="pc" src="/Public/Front/images/HEARTONFIRE2.png"  style="width: 100%">
+	<img class="phone" src="/Public/Front/images/qiche.png"  style="width: 100%">
+	<div class="fwfont fwfontx">
+		<font><strong>个人信息</strong></font>
+		<h3>Personal information</h3>
+		<img src="/Public/Front/images/Rectangle.png">
+	</div>
  <div class="deng0">
-   <div class="deng1">
-    <h2>个人信息</h2>
-
-   </div>
    <div class="deng2" style="padding:0px;">
 
 

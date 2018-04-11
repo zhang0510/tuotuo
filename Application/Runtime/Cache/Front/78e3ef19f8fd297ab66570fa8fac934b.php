@@ -53,27 +53,29 @@
 
 <body>
 
-<div class="header_top">
+<div class="pc header_top">
   <div class="header_top0 container">
-  <div class="header_top2">
+
   <div class="fss">
-	<?php if($UserInfo["login"] == 0): ?><span style="color: #000000;">Hi 欢迎来到妥妥运车 </span>
+	<?php if($UserInfo["login"] == 0): ?><div class="header_top2">
 		<span class="login">
 			<a  class="deng1" href="/Front/Login/pclogin/">请登录</a>&nbsp;&nbsp;|&nbsp;
 			<a  class="deng2" href="/Front/Register/index/">请注册</a>
 		</span>
+		</div>
 	<?php else: ?>
-		<span>Hi&nbsp;<?php echo ($UserInfo['userInfo']['user_name']==""?$UserInfo['userInfo']['tel']:$UserInfo['userInfo']['user_name']); ?>&nbsp;</span>
-		<h3>
-		<a  class="deng3" href="javascript:;">个人中心</a>
-		<dl>
-			<dt><a href="/Front/Personal/personalInfo">个人资料</a></dt>
-			<dt><a href="/Front/MyOrder/index">我的订单</a></dt>
-			<dt><a href="/Front/MyCoupon/index">我的优惠券</a></dt>
-			
-		</dl>
-		</h3>
-		<a class="deng4" href="#" onclick="loginout();">退出</a>
+		<div class="header_top1">
+			<span>Hi&nbsp;123123<!--<?php echo ($UserInfo['userInfo']['user_name']==""?$UserInfo['userInfo']['tel']:$UserInfo['userInfo']['user_name']); ?>-->&nbsp;</span>
+			<h3>
+			<a  class="deng3" href="javascript:;">个人中心</a>
+			<dl>
+				<dt><a href="/Front/Personal/personalInfo">个人资料</a></dt>
+				<dt><a href="/Front/MyOrder/index">我的订单</a></dt>
+				<dt><a href="/Front/MyCoupon/index">我的优惠券</a></dt>
+			</dl>
+			</h3>
+			<a class="deng4" href="#" onclick="loginout();">退出</a>
+		</div>
 		<script>
 			function loginout(){
 				$.post('/Front/Login/logout/',function(data){
@@ -106,14 +108,22 @@
 <!--logo and nav-->
 <nav class="navbar navbar-default">
 	<div id="sasa" class="container">
-		<div class="head1"><a class="navbar-brand0" href="/"><img src="/Public/Front/images/logo.png"></a></div>
-
-		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		</button>
+		<div class="head1">
+			<a class="navbar-brand0" href="/"><img class="logoimg" src="/Public/Front/images/logo.png"></a>
+		</div>
+		<a href="/Front/Personal/personalInfo">
+		<img class="phone renimg" src="/Public/Front/images/ren.png">
+		</a>
+		<a href="javascript:volid(0);" data-toggle="collapse" data-target="#sousuok" aria-expanded="false" aria-controls="sousuok">
+		<img class="phone sousuoimg" src="/Public/Front/images/sousuo.png">
+		</a>
+		<a href="javascript:volid(0);" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			<img class="phone dhimg" src="/Public/Front/images/sjdh.png" style="width: 6%">
+		</a>
+		<div id="sousuok" class="phone du3d">
+			<input type="text" placeholder="请在此输入订单号" class="cx1" id="keyword" ><!-- onkeyup="sel(this);" --><button onclick="tiaoFun();" type="button"></button>
+			<div id="searchBoxs"></div>
+		</div>
 		<div id="navbar" class="collapse navbar-collapse">
 			<div class="baotio">
 				<ul class="nav navbar-nav">
@@ -321,7 +331,7 @@
 						</dl>
 					</div>
 				</div>
-				<div class="col-sm-6 col-md-2 jkl1" style="width: 27%;">
+				<div class="col-sm-6 col-md-2 jkl1 jkl1b">
 					<div class="dnn1">
 						<h2><a href="javascript:;">关于妥妥</a></h2>
 						<dl>
@@ -332,13 +342,14 @@
 						</dl>
 					</div>
 				</div>
-				<div class="col-sm-6 col-md-2 jkl1" style="width:1px;padding-top: 85px;margin-left: 20px;">
+				<div class="col-sm-6 col-md-2 jkl1 jkl1c">
 					<img src="/Public/Front/images/shx.png">
 				</div>
 				<div class="col-sm-6 col-md-2 jkl1 jkl1a">
 
 					<div class="dnn1  ffdsf">
-						关注我们<br><br>
+						<span class="pc">关注我们<br><br></span>
+						<h2 class="phone">关注我们</h2>
 						<div class="hoof2">
 							<div class="bdsharebuttonbox">
 								<img style="width:158px;height:158px;" src="/Public/Front/images/wskk1.jpg">

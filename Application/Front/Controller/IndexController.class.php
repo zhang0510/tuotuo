@@ -27,22 +27,20 @@ class IndexController extends BaseObjController {
 		$art=M("article");
 		$map1['article_pid']="XW";
 		$map1['article_img'] = array('neq','');
-		$artList=$art->where($map1)->order("article_time desc")->limit(1)->select();
-		$map3['article_pid']="XW";
-		$map3['article_id'] = array('neq',$artList[0]['article_id']);
-		$artList2=$art->where($map3)->order("article_time desc")->limit(3)->select();
+		$artList=$art->field('article_id,article_code,title,article_img,article_time,article_desc')->where($map1)->order("article_time desc")->limit(2)->select();
+		//$map3['article_pid']="XW";
+		//$map3['article_id'] = array('not in',array($artList[0]['article_id'],$artList[1]['article_id']));
+		//$artList2=$art->where($map3)->order("article_time desc")->limit(3)->select();
 		for($w=0;$w<count($artList);$w++){
-			$artList[$w]['article_desc']=mbstr(($artList[$w]['article_desc']),40);
+			$artList[$w]['article_desc']=mbstr(($artList[$w]['article_desc']),25);
 			$artList[$w]['titles']=mbstr(($artList[$w]['title']),20);
-			$artList[$w]['time']=strtotime($artList[$w]['article_time']);
-            $artList[$w]['content'] = mb_substr( strip_tags($artList[$w]['content']),0, 150,'utf-8' );
 		}
 		/* 常见问题 */
 		$map5['article_pid']="CJ";
-		$cj=$art->where($map5)->order("article_time desc")->limit(10)->select();
+		$cj=$art->field('article_id,article_code,title')->where($map5)->order("article_time desc")->limit(10)->select();
 		/* 妥妥服务 */
-		$map6['article_pid']="TTFW";
-		$ttfws=$art->where($map6)->order("article_id asc")->limit(6)->select();
+		//$map6['article_pid']="TTFW";
+		//$ttfws=$art->where($map6)->order("article_id asc")->limit(6)->select();
 	    /* 	友情链接 */
 		$link=M("link");
 		$map2['fl_status']="Y";
@@ -51,14 +49,12 @@ class IndexController extends BaseObjController {
 		$aiObj = M("adv_img");
         $map['adv_code'] = array('eq',"A");
         $banner = $aiObj->where($map)->select();
-        //return $ret;
-		//var_dump($banner);
-		//exit;
+
 		$this->assign('cj',$cj);
-		$this->assign("ttfws",$ttfws);
+		//$this->assign("ttfws",$ttfws);
 		$this->assign("linkList",$linkList);
 		$this->assign("artList",$artList);
-		$this->assign("artList2",$artList2);
+		//$this->assign("artList2",$artList2);
         $this->assign("pro",$pro);
         $this->assign("brand",$brand);
         $this->assign("banner",$banner);

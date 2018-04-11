@@ -43,7 +43,7 @@
 (function() {
   var hm = document.createElement("script");
   hm.src = "https://hm.baidu.com/hm.js?fadb8c3f2b777cb42752d48990106a58";
-  var s = document.getElementsByTagName("script")[0]; 
+  var s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(hm, s);
 })(); */
 </script>
@@ -53,25 +53,29 @@
 
 <body>
 
-<div class="header_top">
+<div class="pc header_top">
   <div class="header_top0 container">
-  <div class="header_top1">
+
   <div class="fss">
-	<?php if($UserInfo["login"] == 0): ?><span>Hi 欢迎来到妥妥运车 </span>
-		<a  class="deng1" href="/Front/Login/pclogin/">请登录</a>
-		<a  class="deng2" href="/Front/Register/index/">请注册</a>
+	<?php if($UserInfo["login"] == 0): ?><div class="header_top2">
+		<span class="login">
+			<a  class="deng1" href="/Front/Login/pclogin/">请登录</a>&nbsp;&nbsp;|&nbsp;
+			<a  class="deng2" href="/Front/Register/index/">请注册</a>
+		</span>
+		</div>
 	<?php else: ?>
-		<span>Hi&nbsp;<?php echo ($UserInfo['userInfo']['user_name']==""?$UserInfo['userInfo']['tel']:$UserInfo['userInfo']['user_name']); ?>&nbsp;</span>
-		<h3>
-		<a  class="deng3" href="javascript:;">个人中心</a>
-		<dl>
-			<dt><a href="/Front/Personal/personalInfo">个人资料</a></dt>
-			<dt><a href="/Front/MyOrder/index">我的订单</a></dt>
-			<dt><a href="/Front/MyCoupon/index">我的优惠券</a></dt>
-			
-		</dl>
-		</h3>
-		<a class="deng4" href="#" onclick="loginout();">退出</a>
+		<div class="header_top1">
+			<span>Hi&nbsp;123123<!--<?php echo ($UserInfo['userInfo']['user_name']==""?$UserInfo['userInfo']['tel']:$UserInfo['userInfo']['user_name']); ?>-->&nbsp;</span>
+			<h3>
+			<a  class="deng3" href="javascript:;">个人中心</a>
+			<dl>
+				<dt><a href="/Front/Personal/personalInfo">个人资料</a></dt>
+				<dt><a href="/Front/MyOrder/index">我的订单</a></dt>
+				<dt><a href="/Front/MyCoupon/index">我的优惠券</a></dt>
+			</dl>
+			</h3>
+			<a class="deng4" href="#" onclick="loginout();">退出</a>
+		</div>
 		<script>
 			function loginout(){
 				$.post('/Front/Login/logout/',function(data){
@@ -79,18 +83,17 @@
 				})
 			}
 		</script><?php endif; ?>
-	<div class="phone head5">400-877-1107</div>
 	</div>
   </div>
-  <div class="header_top2">
+  <!--<div class="header_top2">
 	<p>
 		<a  class="te11" ><em>&nbsp;</em><img src="/Public/Front/images/timg.png"></a>
 		<a  class="te12" ><em>&nbsp;</em><img src="/Public/Front/images/wskk1.png"></a>
-		<!-- <a  class="te13" href="">&nbsp;</a> -->
+		&lt;!&ndash; <a  class="te13" href="">&nbsp;</a> &ndash;&gt;
 		<span>400-877-1107</span>
 	</p>
 
-  </div>
+  </div>-->
   </div>
 </div>
 <script>
@@ -103,71 +106,76 @@
 	});
 </script>
 <!--logo and nav-->
-	<nav class="navbar navbar-default">
-      <div id="sasa" class="container">
-	  <div class="head1"><a class="navbar-brand0" href="/"><img src="/Public/Front/images/logo.png"></a></div>
-	  
-   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        <div id="navbar" class="collapse navbar-collapse">
+<nav class="navbar navbar-default">
+	<div id="sasa" class="container">
+		<div class="head1">
+			<a class="navbar-brand0" href="/"><img class="logoimg" src="/Public/Front/images/logo.png"></a>
+		</div>
+		<a href="/Front/Personal/personalInfo">
+		<img class="phone renimg" src="/Public/Front/images/ren.png">
+		</a>
+		<a href="javascript:volid(0);" data-toggle="collapse" data-target="#sousuok" aria-expanded="false" aria-controls="sousuok">
+		<img class="phone sousuoimg" src="/Public/Front/images/sousuo.png">
+		</a>
+		<a href="javascript:volid(0);" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			<img class="phone dhimg" src="/Public/Front/images/sjdh.png" style="width: 6%">
+		</a>
+		<div id="sousuok" class="phone du3d">
+			<input type="text" placeholder="请在此输入订单号" class="cx1" id="keyword" ><!-- onkeyup="sel(this);" --><button onclick="tiaoFun();" type="button"></button>
+			<div id="searchBoxs"></div>
+		</div>
+		<div id="navbar" class="collapse navbar-collapse">
+			<div class="baotio">
+				<ul class="nav navbar-nav">
+					<li  <?php if(CONTROLLER_NAME == 'Index'): ?>class="active"<?php endif; ?>>
+					<h2><a href="/">首页</a></h2>
+					</li>
 
-		 <div class="baotio">
+					<li <?php if(CONTROLLER_NAME == 'ProfessionalServices'): ?>class="active"<?php endif; ?>><h2><a  href="javascript:;">妥妥服务</a></h2>
+					<dl>
+						<div class="fgrr"></div>
+						<?php if(is_array($ttfw)): foreach($ttfw as $key=>$vo): ?><dd><a href="/Front/ProfessionalServices/sos/code/<?php echo ($vo["article_code"]); ?>"><?php echo ($vo["title"]); ?></a></dd><?php endforeach; endif; ?>
+						<!-- <dd><a href="/Front/Worklwt/lineDis">长途托运</a></dd> -->
+					</dl>
+					</li>
+					</li>
+					<!-- <li id="tt1"><h2><a href="javascript:;">托车优惠</a></h2>
+                         <dl>
+                          <div class="fgrr"></div>
 
-        <ul class="nav navbar-nav">
-            <li  <?php if(CONTROLLER_NAME == ''): ?>class="active"<?php endif; ?>>
-			<h2><a href="/">首页</a></h2>
+                          <dd><a href="/Front/Worklwt/lineDisList">优惠线路</a></dd>
+                          <dd><a href="/Front/GroupBuy/gotoGroupBuy">团购线路</a></dd>
 
-			</li>
+                         </dl>
+                    </li> -->
+					</li>
+					<li <?php if(CONTROLLER_NAME == 'SecurityGuarantee'): ?>class="active"<?php endif; ?>><h2><a  href="javascript:;">安全保障</a></h2>
+					<dl>
+						<div class="fgrr"></div>
+						<?php if(is_array($aq)): foreach($aq as $key=>$vo): ?><dd><a href="/Front/SecurityGuarantee/index/code/<?php echo ($vo["article_code"]); ?>"><?php echo ($vo["title"]); ?></a></dd><?php endforeach; endif; ?>
 
-		    <li <?php if(CONTROLLER_NAME == 'ProfessionalServices'): ?>class="active"<?php endif; ?>><h2><a  href="javascript:;">妥妥服务</a></h2>
-					         <dl>
-				  <div class="fgrr"></div>
-				  <?php if(is_array($ttfw)): foreach($ttfw as $key=>$vo): ?><dd><a href="/Front/ProfessionalServices/sos/code/<?php echo ($vo["article_code"]); ?>"><?php echo ($vo["title"]); ?></a></dd><?php endforeach; endif; ?>
-				  <!-- <dd><a href="/Front/Worklwt/lineDis">长途托运</a></dd> -->
-				 </dl>
-			</li>
-			</li>
-		    <!-- <li id="tt1"><h2><a href="javascript:;">托车优惠</a></h2>
-		         <dl>
-				  <div class="fgrr"></div>
+					</dl>
+					</li>
+					</li>
+					<li  <?php if(CONTROLLER_NAME == 'AboutUs'): ?>class="active"<?php endif; ?>><h2><a  href="javascript:;">关于妥妥</a></h2>
+					<dl>
+						<div class="fgrr"></div>
+						<?php if(is_array($dh)): foreach($dh as $key=>$vo): ?><dd><a href="/Front/AboutUs/index/code/<?php echo ($vo["article_code"]); ?>"><?php echo ($vo["title"]); ?></a></dd><?php endforeach; endif; ?>
 
-				  <dd><a href="/Front/Worklwt/lineDisList">优惠线路</a></dd>
-				  <dd><a href="/Front/GroupBuy/gotoGroupBuy">团购线路</a></dd>
+						<dd><a href="/Front/News/newsList">妥妥新闻</a></dd>
+					</dl>
+					</li>
+					<li><h2><a href="/Front/Ordersel/orderselView">运单查询</a></h2>
 
-				 </dl>
-			</li> -->
-			</li>
-		    <li <?php if(CONTROLLER_NAME == 'SecurityGuarantee'): ?>class="active"<?php endif; ?>><h2><a  href="javascript:;">安全保障</a></h2>
-				<dl>
-				<div class="fgrr"></div>
-				  <?php if(is_array($aq)): foreach($aq as $key=>$vo): ?><dd><a href="/Front/SecurityGuarantee/index/code/<?php echo ($vo["article_code"]); ?>"><?php echo ($vo["title"]); ?></a></dd><?php endforeach; endif; ?>
+					</li>
 
-				 </dl>
-			</li>
-			</li>
-		    <li  <?php if(CONTROLLER_NAME == 'AboutUs'): ?>class="active"<?php endif; ?>><h2><a  href="javascript:;">关于妥妥</a></h2>
-				 <dl>
-					<div class="fgrr"></div>
-					<?php if(is_array($dh)): foreach($dh as $key=>$vo): ?><dd><a href="/Front/AboutUs/index/code/<?php echo ($vo["article_code"]); ?>"><?php echo ($vo["title"]); ?></a></dd><?php endforeach; endif; ?>
-				    
-				    <dd><a href="/Front/News/newsList">妥妥新闻</a></dd>
-				 </dl>
-			</li>
-			<li><h2><a href="/Front/Ordersel/orderselView">运单查询</a></h2>
+				</ul>
 
-			</li>
+			</div>
+		</div>
 
-	    </ul>
-
-		 </div>
-        </div>
-
-      </div>
-    </nav>
+	</div>
+</nav>
 <!--logo and nav-->
 
 <!--logo and nav-->
@@ -176,10 +184,19 @@
 
 
 <!--content-->
-<div class="dengm">
+<div class="banner">
+	<img src="/Public/Front/images/fbanner.png" style="width: 100%">
+</div>
+<div class="part1">
+	<img class="pc" src="/Public/Front/images/HEARTONFIRE2.png"  style="width: 100%">
+	<img class="phone" src="/Public/Front/images/qiche.png"  style="width: 100%">
+	<div class="fwfont fwfontx">
+		<font><strong>常用联系人</strong></font>
+		<h3>Common Contacts</h3>
+		<img src="/Public/Front/images/Rectangle.png">
+	</div>
  <div class="deng0">
    <div class="tan11">
-    <h2>常用联系人</h2>
    <div class="clist" style="overflow:auto;height:300px;">
       <?php if(is_array($linkList)): $i = 0; $__LIST__ = $linkList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><div class="clist1">
 			<b></b><input type="checkbox" name="bb[]" value="<?php echo ($v["link_code"]); ?>" class="del" ><span class="bm1">姓名:<?php echo ($v["link_name"]); ?></span><span class="bm2">手机号:<?php echo ($v["link_tel"]); ?></span><span class="bm3">身份证号:<?php echo ($v["link_num"]); ?></span>
@@ -239,98 +256,100 @@
 <!--content-->
 <!--footer-->
 <!--footer-->
-   	<div class="footer-box">
+<div class="footer-box">
 	<div class="footer-box1">
-	<div class="container">
-       <div class="dnn0">
-			 <div class="col-sm-6 col-md-2 jkl1">
-            	 	<div class="dnn1">
-					<h2><a href="javascript:;">妥妥运车</a></h2>
-                    <dl>
-				<?php if(is_array($tuoList)): foreach($tuoList as $k=>$vo): if($vo["title"] == '我要运车'): ?><dd><a href="/Front/Order/normal"><?php echo ($vo["title"]); ?></a></dd>
-					<?php else: ?>
-						<dd><a href="/Front/Footer/detail/code/<?php echo ($vo["article_code"]); ?>"><?php echo ($vo["title"]); ?></a></dd><?php endif; endforeach; endif; ?>
-					 <!--<dd><a href="">企业运车</a></dd>
-					 <dd><a href="">时效查询</a></dd>
-					 <dd><a href="">服务网点</a></dd>-->
+		<div class="container">
+			<div class="dnn0">
+				<div class="col-sm-6 col-md-2 jkl1">
+					<div class="dnn1">
+						<h2><a href="javascript:;">妥妥运车</a></h2>
+						<dl>
+							<?php if(is_array($tuoList)): foreach($tuoList as $k=>$vo): if($vo["title"] == '我要运车'): ?><dd><span><img src="/Public/Front/images/dddd.png">&nbsp;&nbsp;</span><a href="/Front/Order/normal"><?php echo ($vo["title"]); ?></a></dd>
+									<?php else: ?>
+									<dd><span><img src="/Public/Front/images/dddd.png">&nbsp;&nbsp;</span><a href="/Front/Footer/detail/code/<?php echo ($vo["article_code"]); ?>"><?php echo ($vo["title"]); ?></a></dd><?php endif; endforeach; endif; ?>
+							<!--<dd><a href="">企业运车</a></dd>
+                            <dd><a href="">时效查询</a></dd>
+                            <dd><a href="">服务网点</a></dd>-->
 
-					</dl>
-                    </div>
-            </div>
-			<!-- <div class="col-sm-6 col-md-2 jkl1">
-            	 	<div class="dnn1">
-					<h2><a href="javascript:;">服务产品</a></h2>
-                    <dl>
-				<?php if(is_array($serviceList)): foreach($serviceList as $k=>$vo): ?><dd><a href="/Front/Footer/detail/code/<?php echo ($vo["article_code"]); ?>"><?php echo ($vo["title"]); ?></a></dd><?php endforeach; endif; ?>
+						</dl>
+					</div>
+				</div>
+				<!-- <div class="col-sm-6 col-md-2 jkl1">
+                         <div class="dnn1">
+                        <h2><a href="javascript:;">服务产品</a></h2>
+                        <dl>
+                    <?php if(is_array($serviceList)): foreach($serviceList as $k=>$vo): ?><dd><a href="/Front/Footer/detail/code/<?php echo ($vo["article_code"]); ?>"><?php echo ($vo["title"]); ?></a></dd><?php endforeach; endif; ?>
 
-					</dl>
-                    </div>
-            </div>-->
-			 <div class="col-sm-6 col-md-2 jkl1">
-            	 	<div class="dnn1">
-					<h2><a href="javascript:;">帮助中心</a></h2>
-                    <dl>
-				<?php if(is_array($helpList)): foreach($helpList as $k=>$vo): ?><dd><a href="/Front/Footer/detail/code/<?php echo ($vo["article_code"]); ?>"><?php echo ($vo["title"]); ?></a></dd><?php endforeach; endif; ?>
-					</dl>
-                    </div>
-            </div>
+                        </dl>
+                        </div>
+                </div>-->
+				<div class="col-sm-6 col-md-2 jkl1">
+					<div class="dnn1">
+						<h2><a href="javascript:;">帮助中心</a></h2>
+						<dl>
+							<?php if(is_array($helpList)): foreach($helpList as $k=>$vo): ?><dd><span><img src="/Public/Front/images/dddd.png">&nbsp;&nbsp;</span><a href="/Front/Footer/detail/code/<?php echo ($vo["article_code"]); ?>"><?php echo ($vo["title"]); ?></a></dd><?php endforeach; endif; ?>
+						</dl>
+					</div>
+				</div>
 
-			 <div class="col-sm-6 col-md-2 jkl1">
-            	 	<div class="dnn1">
-					<h2><a href="javascript:;">支付方式</a></h2>
-                    <dl>
-				<?php if(is_array($payList)): foreach($payList as $k=>$vo): ?><dd><a href="/Front/Footer/detail/code/<?php echo ($vo["article_code"]); ?>"><?php echo ($vo["title"]); ?></a></dd><?php endforeach; endif; ?>
-					</dl>
-                    </div>
-            </div>
-			 <div class="col-sm-6 col-md-2 jkl1">
-            	 	<div class="dnn1">
-					<h2><a href="javascript:;">关于妥妥</a></h2>
-                    <dl>
-					<?php if(is_array($aboutList)): foreach($aboutList as $k=>$vo): ?><dd><a href="/Front/Footer/detail/code/<?php echo ($vo["article_code"]); ?>"><?php echo ($vo["title"]); ?></a></dd><?php endforeach; endif; ?>
+				<div class="col-sm-6 col-md-2 jkl1">
+					<div class="dnn1">
+						<h2><a href="javascript:;">支付方式</a></h2>
+						<dl>
+							<?php if(is_array($payList)): foreach($payList as $k=>$vo): ?><dd><span><img src="/Public/Front/images/dddd.png">&nbsp;&nbsp;</span><a href="/Front/Footer/detail/code/<?php echo ($vo["article_code"]); ?>"><?php echo ($vo["title"]); ?></a></dd><?php endforeach; endif; ?>
+						</dl>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-2 jkl1 jkl1b">
+					<div class="dnn1">
+						<h2><a href="javascript:;">关于妥妥</a></h2>
+						<dl>
+							<dd>妥妥运车，运车妥妥，微笑服务，专注服务。</dd>
+							<dd><span><img src="/Public/Front/images/jtphoto.png">&nbsp;&nbsp;</span>机场东路翼之城4号楼</dd>
+							<dd><span><img src="/Public/Front/images/xfphoto.png">&nbsp;&nbsp;</span>postmaster@tuotuoyunche.com</dd>
+							<dd><span><img src="/Public/Front/images/tell.png">&nbsp;&nbsp;</span>400-877-1107</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-2 jkl1 jkl1c">
+					<img src="/Public/Front/images/shx.png">
+				</div>
+				<div class="col-sm-6 col-md-2 jkl1 jkl1a">
 
-					</dl>
-                    </div>
-            </div>
-	 <div class="col-sm-6 col-md-2 jkl1 jkl1a">
-            	 	<div class="dnn1  ffdsf">
-		           <img src="/Public/Front/images/wskk1.png">
-		           <div class="hoof2">
- <div class="bdsharebuttonbox"><a title="分享到新浪微博" href="#" class="bds_tsina te11" data-cmd="tsina"></a>
-  <a title="分享到QQ好友" href="#" class="bds_sqq te12" data-cmd="sqq"></a>
-  <a title="分享到微信" href="#" class="bds_weixin te13" data-cmd="weixin"></a>
-  </div>
+					<div class="dnn1  ffdsf">
+						<span class="pc">关注我们<br><br></span>
+						<h2 class="phone">关注我们</h2>
+						<div class="hoof2">
+							<div class="bdsharebuttonbox">
+								<img style="width:158px;height:158px;" src="/Public/Front/images/wskk1.jpg">
+								<div class="hoof2">
+									<div class="bdsharebuttonbox"><a title="分享到新浪微博" href="#" class="bds_tsina te11" data-cmd="tsina"></a>
+										<a title="分享到QQ好友" href="#" class="bds_sqq te12" data-cmd="sqq"></a>
+										<a title="分享到微信" href="#" class="bds_weixin te13" data-cmd="weixin"></a>
+									</div>
+								</div>
+							</div>
 
 
-  </div>
+						</div>
 
-                    </div>
-            </div>
-         </div>
-
-            </div>
-			<div class="fooh1">
-			  <div class="fooh2 container">
-			  <div class="fooh21">
-			   <p><span>©2016 安达承运物流 京ICP备16022345号-1 地址：北京市顺义区山子坟北京安达承运物流有限公司</span></p>
-			   </div>
-
-			   </div>
+					</div>
+				</div>
 			</div>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-        </div>
+
+		</div>
+		<div class="fooh1">
+			<div class="fooh2 container">
+				<div class="fooh21">
+					<p><span>©2016 安达承运物流 京ICP备16022345号-1</span></p>
+				</div>
+
+			</div>
+		</div>
+	</div>
 
 
-    </div>
-	
+</div>
 <div class="phone xin1">
 	<ul>
 		<li style="width:50%;"><a href="tel:4008771107"><h2>电话咨询</h2></a></li>
@@ -338,12 +357,12 @@
 		<li class="xin4" style="width:50%;"><h2>在线留言</h2></li>
 	</ul>
 </div>
-<div class="phone xin2"> 
+<div class="phone xin2">
 	<div class="xin3">
 		<div class="xin6">
 			<a><img src="/Public/Front/images/xin6.png"/></a>
 		</div>
-	
+
 		<h3>在线留言</h3>
 		<dl>
 			<h2>您的电话：</h2>
@@ -353,19 +372,22 @@
 			<h2>您的需求：</h2>
 			<textarea id="cont" name="" placeholder="需求信息"></textarea>
 		</dl>
-		
+
 		<button type="submit" id="zixun">确定</button>
-		
+
 	</div>
 </div>
-<!-- 留言框 --> 
+<!-- <div class="xin5">
+	<h2>感谢您的信任，请保持工作日电话畅通。</h2>
+</div> -->
+<!-- 留言框 -->
 <script>
 	$(".xin4").click(function(){
 		$(".xin2").show();
 	});
 	/* $(".xin3 button").click(function(){
-		layer.msg('感谢您的信任，请保持工作日电话畅通。');
-	}); */
+	 layer.msg('感谢您的信任，请保持工作日电话畅通。');
+	 }); */
 	$(".xin6").click(function(){
 		$(".xin2").hide();
 	});
@@ -394,86 +416,84 @@
 				layer.msg('咨询失败，我们正在处理！');
 			}
 		})
-		
+
 	})
-</script> 
-  <script>
-  $(".qqr01 ul li").click(function(){
-	  $(this).addClass("on").siblings().removeClass('on');
-	  var tt=$(this).index();
-	  $(".part13  .part3b").eq(tt).show().siblings().hide();
+</script>
+<script>
+	$(".qqr01 ul li").click(function(){
+		$(this).addClass("on").siblings().removeClass('on');
+		var tt=$(this).index();
+		$(".part13  .part3b").eq(tt).show().siblings().hide();
 
 
-	  });
-
-	    $(".part12 ul li").click(function(){
-	  $(this).addClass("on").siblings().removeClass('on');
-	  var tt=$(this).index();
-	  $(".part13  .part3b").eq(tt).show().siblings().hide();
+	});
 
 
-	  });
-
-	      $(".part12 ul li").hover(function(){
-	  $(this).addClass("on").siblings().removeClass('on');
-	  var tt=$(this).index();
-	  $(".part13  .part3b").eq(tt).show().siblings().hide();
 
 
-	  });
+	$(".inko").click(function(){
+		$(this).siblings(".selected").show();
+		//$(this).siblings(".selected0").show();
 
- 	    $(".inko").click(function(){
-	  $(this).siblings(".selected").show();
-	  $(this).siblings(".selected0").show();
+	});
+	$(".xiandan").click(function(){
+		$(".korder0").animate({width:"100%"});
 
-	  }); 
-	      $(".xiandan").click(function(){
-$(".korder0").animate({width:"100%"});
+	});
+	$(".close2").click(function(){
+		$(".korder0").animate({width:"0%"});
 
-	  });
-	      $(".close2").click(function(){
-	    	  $(".korder0").animate({width:"0%"});
-
-	    	  });
+	});
 
 
-	    $(".mess1 p").click(function(){
-	  $(this).parent().parent().hide();
 
-	  });
-	    $('.xiandan').hide();
-	    $(function(){
-	    	$(window).scroll(function() {
-	    		if($(window).scrollTop() >= 400){
-	    			$('.xiandan').fadeIn(300);
-	    		}else{
-	    			$('.xiandan').fadeOut(300);
-	    		}
-	    	});
 
-	    });
+	$(".selected li").click(function(){
+		$(this).parent().parent().hide();
+		var oop= $(this).html();
+		$(this).parent().parent().siblings('.inko').val(oop);
 
-	/*     function ceshi3(obj){
-	    	$(obj).siblings(".selected0").show();
-	    } */
+	});
+
+
+	$(".mess1 p").click(function(){
+		$(this).parent().parent().hide();
+
+	});
+	$('.xiandan').hide();
+	$(function(){
+		$(window).scroll(function() {
+			if($(window).scrollTop() >= 400){
+				$('.xiandan').fadeIn(300);
+			}else{
+				$('.xiandan').fadeOut(300);
+			}
+		});
+
+	});
+
+	function ceshi3(obj){
+		$(obj).siblings(".selected0").show();
+	}
 
 
 
 
 
-  </script>
+</script>
 
 
 <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
+
 <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?fadb8c3f2b777cb42752d48990106a58";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "https://hm.baidu.com/hm.js?fadb8c3f2b777cb42752d48990106a58";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hm, s);
+	})();
 </script>
 
 
