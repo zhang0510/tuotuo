@@ -94,7 +94,7 @@ color:#Ea5512 !important;
 
 	.navbar-nav{float:right;width:auto;}
 
-	.navbar-nav > li dl{position:absolute;top:63px;left:0px;width:100px;z-index:2000;text-align:center;display:none;}
+	.navbar-nav > li dl{position:absolute;top:63px;left:0px;width:100px;z-index:4000;text-align:center;display:none;}
 	.navbar-nav > li dl dd{background:url(../images/bgg1.png) repeat;padding:0px 2px;}
 	.navbar-nav > li dl dd a{display:block;height:30px;line-height:30px;border-bottom:1px solid #e0e0e0;font-size:12px;color:#333;}
 	.navbar-nav > li dl dd a:hover{background:#ff8000;color:#fff;}
@@ -1461,7 +1461,7 @@ select {
     .bannerdiv{width: 240px;height: 225px;background: url(/Public/Front/images/di.png); position:absolute;left:50%;margin-top: 56px;margin-left: -120px;}
     .bannerdiv1{width: 58px;height: 20px;position:absolute;left:50%;margin-top: 285px;margin-left: -29px;}
     .bannerdiv2{width: 80px;height: 20px;position:absolute;left:50%;margin-top: 148px;margin-left: 50px;display: none;}
-    .bannerdiv3{width: 150px;height: 20px;position:absolute;left:50%;margin-top: 97px;margin-left: 175px;display: none;}
+    .bannerdiv3{width: 150px;height: 20px;position:absolute;left:50%;margin-top: 66px;margin-left: 175px;display: none;}
     .bannerimg{height:350px;width:100%}
     .yuan1{  width: 15px;  height:15px;margin-right: 23px;background: #ff8000;  border-radius: 50%;  border: 1px solid #ffffff;display: inline-block;box-sizing: border-box;}
     .yuan2{  width: 15px;  height:15px; background: #ffffff; border-radius: 50%;  border: 1px solid #ff8000;display: inline-block;box-sizing: border-box;}

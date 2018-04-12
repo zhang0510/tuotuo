@@ -117,7 +117,7 @@ color:#ff800 !important;}
 .head22{float:right;width:90px;height:90px;line-height:90px;text-align:center;}
 .head22 a{display:block;font-size:22px;color:#fff;background:#092B75;}
 #sasa {background:#fff;min-height:90px;}
-.navbar-nav{z-index:3000;}
+.navbar-nav{z-index:4000;}
 
 .navbar-nav   li:hover h2 a,.navbar-nav   li.active h2 a{color:#30AC63;}
 .fgrr{background:url(../images/nav7.png) no-repeat 30px 0px;height:10px;border-bottom:4px solid #ff8000;}
@@ -226,7 +226,7 @@ select {
 .navbar-toggle{float:left;margin:-45px 0px 0px;}
 #sasa{width:100%;}
 .jkl1{}
-#navbar{position:fixed;top:107px;left:0px;z-index:2000;background:#fff;}
+#navbar{position:fixed;top:107px;left:0px;z-index:4000;background:#fff;}
 .baotio{}
 .part52b ul li a:hover{color:#30AC63;}
 .header_top1 a:hover{color:#f90;}
@@ -666,7 +666,7 @@ select {
 .order_d2{width:100%;margin:0 auto;}
 
 .du3c{text-align:center;}
-.du3d{display:none;position: fixed; top: 80px; left: 10px; z-index: 2000; background: #fff;border:2px solid #ea5512;border-radius:5px;line-height:67px;height:67px;margin:30px auto;width:90%}
+.du3d{display:none;position: fixed; top: 80px; left: 10px; z-index: 4000; background: #fff;border:2px solid #ea5512;border-radius:5px;line-height:67px;height:67px;margin:30px auto;width:90%}
 .cx1{width: 78%;display:block;float:left;height:62px;border:0px;text-indent:20px;font-size:21px;color:#B4B4B4;}
 .du3d  button{width:76px;background:#ea5512 url(../images/ser1.png) no-repeat center center;height:63px;display:block;border:0px;float:right;}
 

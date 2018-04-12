@@ -1,4 +1,4 @@
-/* SuperSlide1.2 --  Copyright ©2012 大话主席 
+/* SuperSlide1.2 --  Copyright ©2012 大话主席
  */
 (function($){
 	$.fn.slide=function(options){
@@ -33,7 +33,7 @@
 			var selfW=0;
 			var selfH=0;
 			var autoPlay = opts.autoPlay;
-			var inter=null;//setInterval名称 
+			var inter=null;//setInterval名称
 			var oldIndex = index;
 
 			if(conBoxSize<opts.vis) return; //当内容个数少于可视个数，不执行效果。
@@ -42,8 +42,8 @@
 			if( navObjSize==0 )navObjSize=conBoxSize;
 			if( opts.autoPage ){
 				var tempS = conBoxSize-opts.vis;
-				navObjSize=1+parseInt(tempS%opts.scroll!=0?(tempS/opts.scroll+1):(tempS/opts.scroll)); 
-				navObj.html(""); 
+				navObjSize=1+parseInt(tempS%opts.scroll!=0?(tempS/opts.scroll+1):(tempS/opts.scroll));
+				navObj.html("");
 				for( var i=0; i<navObjSize; i++ ){ navObj.append("<li>"+(i+1)+"</li>") }
 				var navObj = $("li", navObj);//重置导航子元素对象
 			}
@@ -59,11 +59,11 @@
 				case "left": conBox.wrap('<div class="tempWrap" style="overflow:hidden; position:relative; width:'+opts.vis*slideW+'px"></div>').css( { "width":conBoxSize*slideW,"position":"relative","overflow":"hidden","padding":"0","margin":"0"}).children().css( {"float":"left","width":selfW} ); break;
 				case "leftLoop":
 				case "leftMarquee":
-					conBox.children().clone().appendTo(conBox).clone().prependTo(conBox); 
+					conBox.children().clone().appendTo(conBox).clone().prependTo(conBox);
 					conBox.wrap('<div class="tempWrap" style="overflow:hidden; position:relative; width:'+opts.vis*slideW+'px"></div>').css( { "width":conBoxSize*slideW*3,"position":"relative","overflow":"hidden","padding":"0","margin":"0","left":-conBoxSize*slideW}).children().css( {"float":"left","width":selfW}  ); break;
 				case "topLoop":
 				case "topMarquee":
-					conBox.children().clone().appendTo(conBox).clone().prependTo(conBox); 
+					conBox.children().clone().appendTo(conBox).clone().prependTo(conBox);
 					conBox.wrap('<div class="tempWrap" style="overflow:hidden; position:relative; height:'+opts.vis*slideH+'px"></div>').css( { "height":conBoxSize*slideH*3,"position":"relative","padding":"0","margin":"0","top":-conBoxSize*slideH}).children().css( {"height":selfH} ); break;
 			}
 
@@ -74,7 +74,7 @@
 					case "fade": case "top": case "left": if ( index >= navObjSize) { index = 0; } else if( index < 0) { index = navObjSize-1; } break;
 					case "leftMarquee":case "topMarquee": if ( index>= 2) { index=1; } else if( index<0) { index = 0; } break;
 					case "leftLoop": case "topLoop":
-						var tempNum = index - oldIndex; 
+						var tempNum = index - oldIndex;
 						if( navObjSize>2 && tempNum==-(navObjSize-1) ) tempNum=1;
 						if( navObjSize>2 && tempNum==(navObjSize-1) ) tempNum=-1;
 						var scrollNum = Math.abs( tempNum*opts.scroll );
@@ -115,7 +115,7 @@
 						}break;//topLoop end
 
 					case "leftMarquee":
-						var tempLeft = conBox.css("left").replace("px",""); 
+						var tempLeft = conBox.css("left").replace("px","");
 
 						if(index==0 ){
 								conBox.animate({"left":++tempLeft},0,function(){
@@ -129,7 +129,7 @@
 						}break;// leftMarquee end
 
 						case "topMarquee":
-						var tempTop = conBox.css("top").replace("px",""); 
+						var tempTop = conBox.css("top").replace("px","");
 							if(index==0 ){
 									conBox.animate({"top":++tempTop},0,function(){
 										if( conBox.css("top").replace("px","") >= 0){ for(var i=0;i<conBoxSize;i++){ conBox.children().last().prependTo(conBox); }conBox.css("top",-conBoxSize*slideH);}
@@ -155,7 +155,7 @@
 						index++; inter = setInterval(doPlay, opts.interTime);
 						conBox.hover(function(){if(autoPlay){}},function(){if(autoPlay){clearInterval(inter);inter = setInterval(doPlay, opts.interTime);}});
 					}else{
-						inter=setInterval(function(){index++; doPlay() }, opts.interTime); 
+						inter=setInterval(function(){index++; doPlay() }, opts.interTime);
 						$(this).hover(function(){if(autoPlay){clearInterval(inter);}},function(){if(autoPlay){ inter=setInterval(function(){index++; doPlay() }, opts.interTime); }});
 					}
 			}

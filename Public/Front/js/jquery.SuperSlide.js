@@ -3,14 +3,14 @@
 (function($){
 	$.fn.slide=function(options){
 		$.fn.slide.deflunt={
-		effect : "fade", //效果 || fade：渐显； || top：上滚动；|| left：左滚动；|| topLoop：上循环滚动；|| leftLoop：左循环滚动；|| topMarquee：上无缝循环滚动；|| leftMarquee：左无缝循环滚动；
-		autoPlay:false, //自动运行
-		delayTime : 500, //效果持续时间
+		effect : "leftLoop", //效果 || fade：渐显； || top：上滚动；|| left：左滚动；|| topLoop：上循环滚动；|| leftLoop：左循环滚动；|| topMarquee：上无缝循环滚动；|| leftMarquee：左无缝循环滚动；
+		autoPlay:true, //自动运行
+		delayTime : 1000, //效果持续时间
 		interTime : 6000,//自动运行间隔。当effect为无缝滚动的时候，相当于运行速度。
 		defaultIndex : 0,//默认的当前位置索引。0是第一个
 		titCell:".hd li",//导航元素
 		mainCell:".bd",//内容元素的父层对象
-		trigger: "mouseover",//触发方式 || mouseover：鼠标移过触发；|| click：鼠标点击触发；
+		trigger: "click",//触发方式 || mouseover：鼠标移过触发；|| click：鼠标点击触发；
 		scroll:1,//每次滚动个数。
 		vis:1,//visible，可视范围个数，当内容个数少于可视个数的时候，不执行效果。
 		titOnClassName:"on",//当前位置自动增加的class名称
@@ -35,10 +35,24 @@
 			var autoPlay = opts.autoPlay;
 			var inter=null;//setInterval名称
 			var oldIndex = index;
+			var flag = true;
 
 			if(conBoxSize<opts.vis) return; //当内容个数少于可视个数，不执行效果。
 
-			//处理分页
+            var IsPC=function(){
+                var userAgentInfo = navigator.userAgent;
+                var Agents = ["Android", "iPhone",
+                    "SymbianOS", "Windows Phone"];
+                for (var v = 0; v < Agents.length; v++) {
+                    if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                        flag = false;
+                        break;
+                    }
+                }
+            }
+
+
+            //处理分页
 			if( navObjSize==0 )navObjSize=conBoxSize;
 			if( opts.autoPage ){
 				var tempS = conBoxSize-opts.vis;
@@ -55,20 +69,62 @@
 
 			switch(opts.effect)
 			{
-				case "top": conBox.wrap('<div class="tempWrap" style="overflow:hidden; position:relative; height:'+opts.vis*slideH+'px"></div>').css( { "position":"relative","padding":"0","margin":"0"}).children().css( {"height":selfH} ); break;
-				case "left": conBox.wrap('<div class="tempWrap" style="overflow:hidden; position:relative; width:'+opts.vis*slideW+'px"></div>').css( { "width":conBoxSize*slideW,"position":"relative","overflow":"hidden","padding":"0","margin":"0"}).children().css( {"float":"left","width":selfW} ); break;
+				case "top": conBox.wrap('<div class="tempWrap" style="overflow:hidden;  height:'+opts.vis*slideH+'px"></div>').css( { "padding":"0","margin":"0"}).children().css( {"height":selfH} ); break;
+				case "left": conBox.wrap('<div class="tempWrap" style="overflow:hidden;  width:'+opts.vis*slideW+'px"></div>').css( { "width":conBoxSize*slideW,"overflow":"hidden","padding":"0","margin":"0"}).children().css( {"float":"left","width":selfW} ); break;
 				case "leftLoop":
 				case "leftMarquee":
 					conBox.children().clone().appendTo(conBox).clone().prependTo(conBox);
-					conBox.wrap('<div class="tempWrap" style="overflow:hidden; position:relative; width:'+opts.vis*slideW+'px"></div>').css( { "width":conBoxSize*slideW*3,"position":"relative","overflow":"hidden","padding":"0","margin":"0","left":-conBoxSize*slideW}).children().css( {"float":"left","width":selfW}  ); break;
+					conBox.wrap('<div class="tempWrap" style="overflow:hidden;  width:'+opts.vis*slideW+'px"></div>').css( { "width":conBoxSize*slideW*3,"position":"relative","overflow":"hidden","padding":"0","margin":"0","left":-conBoxSize*slideW}).children().css( {"float":"left","width":selfW}  ); break;
 				case "topLoop":
 				case "topMarquee":
 					conBox.children().clone().appendTo(conBox).clone().prependTo(conBox);
-					conBox.wrap('<div class="tempWrap" style="overflow:hidden; position:relative; height:'+opts.vis*slideH+'px"></div>').css( { "height":conBoxSize*slideH*3,"position":"relative","padding":"0","margin":"0","top":-conBoxSize*slideH}).children().css( {"height":selfH} ); break;
+					conBox.wrap('<div class="tempWrap" style="overflow:hidden; height:'+opts.vis*slideH+'px"></div>').css( { "height":conBoxSize*slideH*3,"padding":"0","margin":"0","top":-conBoxSize*slideH}).children().css( {"height":selfH} ); break;
+			}
+
+			var yuan1=function(){
+				$(".yuan1").attr("style","background: #ff8000; border: 1px solid #ffffff;");
+				$(".yuan2").attr("style","background: #ffffff;border: 1px solid #ff8000;");
+				$(".bannerdiv").animate({'left':'50%' });
+				$(".bannerdiv2").animate({'left':'40%'});
+				$(".bannerdiv3").animate({'left':'20%' });
+				//setTimeout(xiaoshi(),30000000);
+			}
+			var yuan2=function(){
+                $(".yuan1").attr("style","background: #ffffff;border: 1px solid #ff8000;");
+                $(".yuan2").attr("style","background: #ff8000; border: 1px solid #ffffff;");
+                $(".bannerdiv").animate({'left':'30%' });
+                $(".bannerdiv2").animate({'left':'50%' });
+                $(".bannerdiv3").animate({'left':'50%' });
+                $(".bannerdiv2, .bannerdiv3").show();
+                //setTimeout(huadong(),300);
+			}
+            var yuan1sj=function(){
+                $(".yuan1").attr("style","background: #ff8000; border: 1px solid #ffffff;");
+                $(".yuan2").attr("style","background: #ffffff;border: 1px solid #ff8000;");
+            }
+            var yuan2sj=function(){
+                $(".yuan1").attr("style","background: #ffffff;border: 1px solid #ff8000;");
+                $(".yuan2").attr("style","background: #ff8000; border: 1px solid #ffffff;");
+            }
+			var xiaoshi=function(){
+                $(".bannerdiv2, .bannerdiv3").hide()
+            }
+			var huadong=function(){
+
+                setTimeout(huadong1(),300);
+
+            }
+            var huadong1=function(){
+
 			}
 
 			//效果函数
 			var doPlay=function(){
+				if(index == 2 || index==0 ){
+                    flag==true?yuan1():yuan1sj();
+				}else{
+                    flag==true?yuan2():yuan2sj();
+				}
 				switch(opts.effect)
 				{
 					case "fade": case "top": case "left": if ( index >= navObjSize) { index = 0; } else if( index < 0) { index = navObjSize-1; } break;
@@ -98,6 +154,7 @@
 								for(var i=0;i<scrollNum;i++){ conBox.children().first().appendTo(conBox); }
 								conBox.css("left",-conBoxSize*slideW);
 							});
+
 						}break;// leftLoop end
 
 					case "topLoop":
@@ -147,6 +204,7 @@
 					oldIndex=index;
 			};
 			//初始化执行
+			IsPC();
 			doPlay();
 
 			//自动播放
@@ -156,7 +214,19 @@
 						conBox.hover(function(){if(autoPlay){}},function(){if(autoPlay){clearInterval(inter);inter = setInterval(doPlay, opts.interTime);}});
 					}else{
 						inter=setInterval(function(){index++; doPlay() }, opts.interTime);
-						$(this).hover(function(){if(autoPlay){clearInterval(inter);}},function(){if(autoPlay){ inter=setInterval(function(){index++; doPlay() }, opts.interTime); }});
+						$(this).hover(function(){
+							if(autoPlay){
+								clearInterval(inter);
+							}
+						},function(){
+							if(autoPlay){
+								inter=setInterval(
+									function(){
+										index++;
+										doPlay()
+									}, opts.interTime);
+							}
+						});
 					}
 			}
 
