@@ -409,7 +409,7 @@
 		}else{
 			setInterval(function(){
 				timejia();
-				if(navtime == 2){
+				if(navtime == 5){
 					window['yuan'+type]();
 				}
 			},3000);
@@ -449,7 +449,7 @@
 	function yuansj2(){
 		$(".yuan1").attr("style","background: #ffffff;border: 1px solid #ff8000;");
 		$(".yuan2").attr("style","background: #ff8000; border: 1px solid #ffffff;");
-		$(".bannerimg").attr("src","/Public/Front/images/BANNER.png");
+		$(".bannerimg").attr("src","/Public/Front/images/banner1.png");
 		window.navtimesj = 0;
 		window.typesj = 1;
 	}
@@ -474,14 +474,6 @@
         $(".dfontd").attr("style","color:#FFFFFF")
         $(".xfontd").attr("style","color:#ff8000")
     }
-	function tiaoFun(){
-		var keyword = $("#keyword").val();
-		if(keyword==""){
-			layer.msg("请输入订单号");
-			return false;
-		}
-		window.location.href="__MODULE__/Ordersel/orderselView/status/2/keyword/"+keyword;
-	}
     function tiaoFun1(){
         var keyword = $("#keyword1").val();
         if(keyword==""){

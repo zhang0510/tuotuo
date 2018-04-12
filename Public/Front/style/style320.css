@@ -1502,7 +1502,14 @@ body{position:relative;}
     .serchsj{background: #fff;border:2px solid #ff8000;border-radius:5px;line-height:67px;height:57px;margin:30px auto;width:100%}
     .serchsj  button{width:76px;background:#ff8000 url(../images/ser1.png) no-repeat center center;height:53px;display:block;border:0px;float:right;}
     .cx2{width: 249px;display:block;float:left;height:53px;border:0px;text-indent:20px;font-size:20px;color:#B4B4B4;}
-    .new3b1{height: 475px;width: 669px;margin: 50px auto 0px;}
-    .new3b1 p{float:left;writing-mode: tb-rl;margin-left: 60px;line-height: 22px }
+    .new3b1{height: 500px;width: 90%;margin: 50px auto 0px;}
+    .new3b1 p{float:left;writing-mode: tb-rl;margin-left: 50px;line-height: 22px }
+
+    .gerendj dl{position:absolute;top:107px;right:10px;z-index:4000;background:#fefefe;padding:10px;width:150px;display:none;}
+    .gerendj:hover dl{display:block;}
+    .gerendj dl dt {line-height:45px;color:#f90;font-size:18px;font-weight:400;}
+    .gerendj dl dt a{display:block;text-indent:15px;font-size:18px;color:#666;border-bottom:1px dotted #ccc;line-height:45px;margin:0px;}
+    .gerendj dl dt a:hover{background:#ff8000;color:#fff;}
+
 
 }

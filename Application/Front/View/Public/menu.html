@@ -4,9 +4,21 @@
 		<div class="head1">
 			<a class="navbar-brand0" href="/"><img class="logoimg" src="__FRONT__/images/logo.png"></a>
 		</div>
-		<a href="__MODULE__/Personal/personalInfo">
-		<img class="phone renimg" src="__FRONT__/images/ren.png">
-		</a>
+		<if condition="$UserInfo.login eq 0">
+			<a class="phone " href="__MODULE__/Login/pclogin/">
+				<img class="renimg" src="__FRONT__/images/ren.png">
+			</a>
+		<else/>
+			<span class="phone gerendj" href="javascript:volid(0);">
+				<img class="renimg" src="__FRONT__/images/ren.png">
+				<dl>
+					<dt><a href="__MODULE__/Personal/personalInfo">个人资料</a></dt>
+					<dt><a href="__MODULE__/MyOrder/index">我的订单</a></dt>
+					<dt><a href="__MODULE__/MyCoupon/index">我的优惠券</a></dt>
+					<dt><a href="javascript:volid(0);" onclick="loginout();">退出</a></dt>
+				</dl>
+			</span>
+		</if>
 		<a href="javascript:volid(0);" data-toggle="collapse" data-target="#sousuok" aria-expanded="false" aria-controls="sousuok">
 		<img class="phone sousuoimg" src="__FRONT__/images/sousuo.png">
 		</a>

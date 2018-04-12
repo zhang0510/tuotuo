@@ -70,6 +70,13 @@
     text-align: center;
     width: 100%;
 }
+
+.gerendj dl{position:absolute;top:125px;right:10px;z-index:4000;background:#fefefe;padding:10px;width:150px;display:none;}
+.gerendj:hover dl{display:block;}
+.gerendj dl dt {line-height:45px;color:#f90;font-size:18px;font-weight:400;}
+.gerendj dl dt a{display:block;text-indent:15px;font-size:18px;color:#666;border-bottom:1px dotted #ccc;line-height:45px;margin:0px;}
+.gerendj dl dt a:hover{background:#ff8000;color:#fff;}
+
 .header_top2 p a.te11 img{position:absolute;top:37px;right:0px;z-index:2000;display:none;}
 .header_top2 p a.te12 img{position:absolute;top:37px;right:0px;z-index:2000;display:none;}
 .header_top2 p a.te11  em,.header_top2 p a.te12  em{display:block;width:30px;height:37px;}
@@ -1539,6 +1546,6 @@ body{position:relative;}
     .serchsj{background: #fff;border:2px solid #ff8000;border-radius:5px;line-height:67px;height:67px;margin:30px auto;width:100%}
     .serchsj  button{width:76px;background:#ff8000 url(../images/ser1.png) no-repeat center center;height:63px;display:block;border:0px;float:right;}
     .cx2{width: 280px;display:block;float:left;height:62px;border:0px;text-indent:20px;font-size:21px;color:#B4B4B4;}
-    .new3b1{height: 475px;width: 669px;margin: 50px auto 0px;}
-    .new3b1 p{float:left;writing-mode: tb-rl;margin-left: 70px;}
+    .new3b1{height: 500px;width: 90%;margin: 50px auto 0px;}
+    .new3b1 p{float:left;writing-mode: tb-rl;margin-left: 65px;}
 }

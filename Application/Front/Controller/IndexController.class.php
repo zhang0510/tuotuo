@@ -34,6 +34,7 @@ class IndexController extends BaseObjController {
 		for($w=0;$w<count($artList);$w++){
 			$artList[$w]['article_desc']=mbstr(($artList[$w]['article_desc']),25);
 			$artList[$w]['titles']=mbstr(($artList[$w]['title']),20);
+			$artList[$w]['article_time']=date('Y-m-d H:i',strtotime($artList[$w]['article_time']));
 		}
 		/* 常见问题 */
 		$map5['article_pid']="CJ";

@@ -230,7 +230,14 @@ $(".korder0").animate({width:"100%"});
 	    }
 
 
-
+  function tiaoFun(){
+      var keyword = $("#keyword").val();
+      if(keyword==""){
+          layer.msg("请输入订单号");
+          return false;
+      }
+      window.location.href="__MODULE__/Ordersel/orderselView/status/2/keyword/"+keyword;
+  }
 
 
   </script>
@@ -242,10 +249,10 @@ $(".korder0").animate({width:"100%"});
 <script>
 var _hmt = _hmt || [];
 (function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?fadb8c3f2b777cb42752d48990106a58";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?762ac8f96cfe5d83292d4e118e460e76";
+	var s = document.getElementsByTagName("script")[0];
+	s.parentNode.insertBefore(hm, s);
 })();
 </script>
 
