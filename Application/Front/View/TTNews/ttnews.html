@@ -2,15 +2,31 @@
 <include file='public:top'/>
 <include file='public:menu'/>
 <!--content-->
-  <div class="banner0">
-<img src="__FRONT__/images/banner6.jpg">
-  </div>
+<div class="pc dhdiv">
+	<ul>
+		<li class="dhfili">妥妥服务<img src="/Public/Front/images/jtphoto.png"></li>
+		<foreach name="dh" item="vo">
+			<li <eq name="ret.title" value="$vo.title">class="dhactive"</eq> ><a href="__MODULE__/AboutUs/index/code/{$vo.article_code}">
+			{$vo.title}
+		</a></li>
+		</foreach>
+		<li <eq name="ret.title" value="$title">class="dhactive"</eq> ><a href="__MODULE__/News/newsList">妥妥新闻</a></li>
+	</ul>
+</div>
+<div class="banner">
+	<img src="/Public/Front/images/fbanner.png" style="width: 100%">
+</div>
+<div class="part1" style="width: 100%">
+	<img class="pc" src="/Public/Front/images/HEARTONFIRE2.png"  style="width: 100%">
+	<img class="phone" src="/Public/Front/images/qiche.png"  style="width: 100%">
+	<div class="fwfont fwfontx">
+		<font><strong>妥妥新闻</strong></font>
+		<h3> Tuouo news</h3>
+		<img src="__FRONT__/images/Rectangle.png">
+	</div>
+</div>
 <div class="new_main">
 <div class="new_body container">
-  <div class="new1">
-    <h2>妥妥新闻</h2>
-    <p>News</p>
-  </div>
   <div class="new2">
   <foreach name="artList" item="vo" key="k">
 	   <div class="col-sm-6 col-md-4 nem1">

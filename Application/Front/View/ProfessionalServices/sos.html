@@ -3,7 +3,17 @@
 <include file='public:menu'/>
 <include file='public:up'/>
 <!--content-->
-<div style="width: 40%;margin: auto;padding-bottom: 100px">
+<div class="pc dhdiv">
+    <ul>
+        <li class="dhfili">妥妥服务<img src="/Public/Front/images/jtphoto.png"></li>
+        <foreach name="ttfw" item="vo">
+            <li <eq name="ret.title" value="$vo.title">class="dhactive"</eq> ><a href="__MODULE__/ProfessionalServices/sos/code/{$vo.article_code}">
+            {$vo.title}
+            </a></li>
+        </foreach>
+    </ul>
+</div>
+<div class="ttfw">
    <!-- <div style="margin-top: -25px">
         <center><strong><font style="font-size: 22px;">{$ret.title}</font></strong></center>
     </div>-->
@@ -18,5 +28,3 @@
 </if>
 <!--content-->
 <include file='public:foot'/>
-
-

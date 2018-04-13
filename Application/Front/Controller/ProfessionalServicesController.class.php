@@ -10,7 +10,6 @@ class ProfessionalServicesController extends BaseController {
         $this->display("ProfessionalServices:liucheng");
     } */
     public function sos(){
-        
         $ret = M("article") ->where(array('article_code'=>I("code")))->find();
         $this->assign("ret",$ret);
         $this->display("ProfessionalServices:sos");

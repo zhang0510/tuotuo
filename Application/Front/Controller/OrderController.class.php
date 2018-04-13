@@ -120,6 +120,7 @@ class OrderController extends BaseObjController{
             $this->assign("name2",explode("-",$order['qerezname'])[1]);
             $this -> assign('user',$userInfo);
             $this->assign("order",$order);
+            $this->assign("ret",array('title'=>'我要运车'));
             $this -> display('Order:normal_step_three');
         }
         

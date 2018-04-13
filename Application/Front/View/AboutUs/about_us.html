@@ -2,6 +2,17 @@
 <include file='public:top'/>
 <include file='public:menu'/>
 <include file='public:up'/>
+<div class="pc dhdiv">
+  <ul>
+    <li class="dhfili">妥妥服务<img src="/Public/Front/images/jtphoto.png"></li>
+    <foreach name="dh" item="vo">
+      <li <eq name="ret.title" value="$vo.title">class="dhactive"</eq> ><a href="__MODULE__/AboutUs/index/code/{$vo.article_code}">
+      {$vo.title}
+    </a></li>
+    </foreach>
+    <li <eq name="ret.title" value="$title">class="dhactive"</eq> ><a href="__MODULE__/News/newsList">妥妥新闻</a></li>
+  </ul>
+</div>
 <!--content-->
   {$ret.content}
 <!--content-->
