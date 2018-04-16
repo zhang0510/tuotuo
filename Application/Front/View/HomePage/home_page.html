@@ -71,11 +71,13 @@
 						</tr>
 						<tr class="searchtd">
 							<td>
+								<a>
 								<div class="xddiv">
 									<div class="xdchild"  onclick="tiaoFun1();">
-										<center><font class="xddfont"><a>订单查询</a></font></center>
+										<center><font class="xddfont">订单查询</font></center>
 									</div>
 								</div>
+								</a>
 							</td>
 						</tr>
 					</table>
@@ -141,7 +143,7 @@
 								<div class="tab-pay1 top_search2">
 									<dl class="dlbottom">
 										<dd>
-											<input type="text" placeholder="" class="txt1a inko" readonly="readonly" name="qsrcz" id="qsrcz" value="{$jumpz['order']['start']}" onclick="ceshi3(this);">
+											<input type="text" placeholder="" class="txt1a inko" name="qsrcz" id="qsrcz" value="{$jumpz['order']['start']}" onblur="guanbi1()" onfocus="ceshi3(this);">
 											<span class="xxsj"></span>
 											<div class="selected0" id="q4">
 												<div class="province star_province" id="qspz">
@@ -158,12 +160,17 @@
 								</div>
 							</td>
 						</tr>
+							<script>
+								function guanbi1(){
+								    alert(123)
+								}
+							</script>
 						<tr class="jiange"></tr>
 						<tr>
 							<td><div class="buttonblack1"><font>目的地:</font></div></td>
 							<td><!-- 目的地 -->
 								<div class="tab-pay1 top_search2">
-									<dl class="dlbottom"><dd><input type="text" placeholder="" class="txt1a inko" readonly="readonly" name="qercz" id="qercz" value="{$jumpz['order']['end']}" onclick="ceshi(this);">
+									<dl class="dlbottom"><dd><input type="text" placeholder="" class="txt1a inko" name="qercz" id="qercz" value="{$jumpz['order']['end']}" onfocus="ceshi(this);">
 										<span class="xxsj"></span>
 										<div class="selected0" id="q5">
 											<div class="province star_province" id="qepz">
@@ -182,7 +189,7 @@
 							<td><div class="buttonblack1"><font>品牌车系:</font></div></td>
 							<td><!-- 车品牌 -->
 								<div class="tab-pay1 top_search2">
-									<dl class="dlbottom"><dd><input type="text" placeholder="" class="txt1a inko" id="qbtz" name="carInfoz" value="{$jumpz['order']['carInfo']}" onkeyup="serchCar(this);" onclick="ceshi3(this);">
+									<dl class="dlbottom"><dd><input type="text" placeholder="" class="txt1a inko" id="qbtz" name="carInfoz" value="{$jumpz['order']['carInfo']}" onkeyup="serchCar(this);" onfocus="ceshi3(this);">
 										<span class="xxsj"></span>
 										<div class="selected0" id="q6">
 											<div class="province star_province" id="qbrz">
@@ -208,11 +215,13 @@
 						</tr>
 						<tr style="height:50px;">
 							<td colspan="2">
+								<a>
 								<div class="xddiv">
 									<div class="xdchild"  onclick="goOrder();">
-										<center><font class="xddfont"><a>立即下单</a></font></center>
+										<center><font class="xddfont">立即下单</font></center>
 									</div>
 								</div>
+								</a>
 							</td>
 						</tr>
 						</form>
@@ -270,11 +279,13 @@
 				  <font>妥妥运车&nbsp;<strong><span class="jsbzfont">公司介绍</span></strong></font>
 				  <h3>Company introduction</h3>
 			  </div>
+			  <a href="__MODULE__/AboutUs/index/code/AC14920644586W3N">
 			  <div class="xddiv xddivxg">
 				  <div class="xdchild">
-					  <center><font class="xddfont"><a href="__MODULE__/AboutUs/index/code/AC14920644586W3N">详情</a></font></center>
+					  <center><font class="xddfont">详情</font></center>
 				  </div>
 			  </div>
+			  </a>
 		  </div>
 	  </div>
 	  <div class="part8right">
@@ -284,11 +295,13 @@
 				  <font>妥妥运车&nbsp;<strong><span class="jsbzfont">服务保障</span></strong></font>
 				  <h3>Service guarantee</h3>
 			  </div>
+			  <a href="__MODULE__/AboutUs/index/code/AC14920644902AGS">
 			  <div class="xddiv xddivxg">
 				  <div class="xdchild">
-					  <center><font class="xddfont"><a href="__MODULE__/AboutUs/index/code/AC14920644902AGS">更多</a></font></center>
+					  <center><font class="xddfont">更多</font></center>
 				  </div>
 			  </div>
+			  </a>
 		  </div>
 	  </div>
 </div>
@@ -322,9 +335,11 @@
 							</div>
 							<div class="xddiv4">
 								<div class="more">
-									<div class="morechild">
-										<center><font class="morefont"><a href="__MODULE__/News/detail/code/{$artList.0.article_code}">MORE</a></font></center>
-									</div>
+									<a href="__MODULE__/News/detail/code/{$artList.0.article_code}">
+										<div class="morechild">
+											<center><font class="morefont">MORE</font></center>
+										</div>
+									</a>
 								</div>
 							</div>
 						</td>
@@ -344,9 +359,11 @@
 							</div>
 							<div class="xddiv4">
 								<div class="more">
-									<div class="morechild">
-										<center><font class="morefont"><a href="__MODULE__/News/detail/code/{$artList.1.article_code}">MORE</a></font></center>
-									</div>
+									<a href="__MODULE__/News/detail/code/{$artList.1.article_code}">
+										<div class="morechild">
+											<center><font class="morefont">MORE</font></center>
+										</div>
+									</a>
 								</div>
 							</div>
 						</td>
@@ -364,9 +381,11 @@
 				</ul>
 				<div style="margin-top: 50px;">
 					<div class="more moreques">
-						<div class="morechild">
-							<center><font class="morefont"><a href="__MODULE__/Footer/detail/code/AC14920671855R3B">MORE</a></font></center>
-						</div>
+						<a href="__MODULE__/Footer/detail/code/AC14920671855R3B">
+							<div class="morechild">
+								<center><font class="morefont">MORE</font></center>
+							</div>
+						</a>
 					</div>
 				</div>
 			</div>
