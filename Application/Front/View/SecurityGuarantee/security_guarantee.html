@@ -2,6 +2,16 @@
 <include file='public:top'/>
 <include file='public:menu'/>
 <include file='public:up'/>
+<div class="pc dhdiv">
+  <ul>
+    <li class="dhfili">安全保障<img src="/Public/Front/images/fcphoto.png"></li>
+    <foreach name="aq" item="vo">
+      <li <eq name="ret.title" value="$vo.title">class="dhactive"</eq> ><a href="__MODULE__/SecurityGuarantee/index/code/{$vo.article_code}">
+      {$vo.title}
+    </a></li>
+    </foreach>
+  </ul>
+</div>
 <!--content-->
   {$ret.content}
 <!--content-->

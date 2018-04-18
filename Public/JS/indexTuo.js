@@ -54,8 +54,8 @@
 			}
 			if(sign=='S'){
 				$("#qspz").hide();
-				$("#qsrez").val('');
-				$("#qsrcz").val('');
+				//$("#qsrez").val('');
+				//$("#qsrcz").val('');
 				$("#sproz").val('');
 				$("#maoliz").val(0);
 				$("#tpricez").val(0);
@@ -254,41 +254,38 @@
 	 * string carid 车型id
 	 */
 	function getLine(str,end,carid){
-		if(carid !="" && carid !=null){
 			$.post("/Front/Index/getLine",{str:str,end:end,carid:carid},function(data){
-				console.log(data);
-				if(data.flag){
-					
-					$("#putong2").html('<dt>&nbsp;</dt><dd><bold class="ptd1"></bold> 费用：￥<bold id="zongz1">0</bold>元</dd>');
-					//$("#putong2").show();
-					//$(".ptd1").html(data.ends);
-					$("#zongz1").html(data.totel);
-					$("#lineprice").val(data.line);
-					$("#product_type").val(data.product_type);
-					$("#totalz").val(data.totel);
-					$("#tiz").val(data.ti);
-					$("#songz").val(data.song);
-					$("#maoliz").val(data.mao);
-					$("#flag").val("Y");
-					$("#qsrezname").val(data.str_add);
-					$("#qerezname").val(data.end_add);
-					//$("#zongz2").html(0);
-					$("#totelz").html(data.totel);
-					totelFun();
-				}else{
-					$("#putong2").html(data.msg);
-					//$("#msg").val(data.msg);
-					$("#flag").val("N");
-					$("#heji").html(0);
-					$("#totelz").html(0);
-					$("#product_type").val(data.product_type);
-					$("#qsrezname").val(data.str_add);
-					$("#qerezname").val(data.end_add);
-					$("#zongz1").html(0);
-				}
-				
+			console.log(data);
+			if(data.flag){
+				$("#putong2").html('<dt>&nbsp;</dt><dd><bold class="ptd1"></bold> 费用：￥<bold id="zongz1">0</bold>元</dd>');
+				//$("#putong2").show();
+				//$(".ptd1").html(data.ends);
+				$("#zongz1").html(data.totel);
+				$("#lineprice").val(data.line);
+				$("#product_type").val(data.product_type);
+				$("#totalz").val(data.totel);
+				$("#tiz").val(data.ti);
+				$("#songz").val(data.song);
+				$("#maoliz").val(data.mao);
+				$("#flag").val("Y");
+				$("#qsrezname").val(data.str_add);
+				$("#qerezname").val(data.end_add);
+				//$("#zongz2").html(0);
+				$("#totelz").html(data.totel);
+				totelFun();
+			}else{
+				$("#putong2").html(data.msg);
+				//$("#msg").val(data.msg);
+				$("#flag").val("N");
+				$("#heji").html(0);
+				$("#totelz").html(0);
+				$("#product_type").val(data.product_type);
+				$("#qsrezname").val(data.str_add);
+				$("#qerezname").val(data.end_add);
+				$("#zongz1").html(0);
+			}
+
 			},'json');
-		}
 		
 	}
 

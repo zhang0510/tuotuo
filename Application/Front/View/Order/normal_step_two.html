@@ -1,53 +1,12 @@
 <include file='public:header'/>
-<div class="header_top">
-  <div class="header_top0 container">
-  <div class="header_top1">
-  <div class="fss">
-	<if condition="$user.id eq ''">
-		<span>Hi 欢迎来到妥妥运车 </span>
-		<a  class="deng1" href="__MODULE__/Login/pclogin/">请登录</a>
-		<a  class="deng2" href="__MODULE__/Register/index/">请注册</a>
-	<else/>
-		<span>Hi&nbsp;{$user['user_name']==null?$user['tel']:$user['user_name']}&nbsp;</span>
-		<h3>
-		<a  class="deng3" href="__MODULE__/Personal/personalInfo">个人中心</a>
-		<dl>
-			<dt><a href="__MODULE__/Personal/personalInfo">个人资料</a></dt>
-			<dt><a href="__MODULE__/MyOrder/index">我的订单</a></dt>
-			<dt><a href="__MODULE__/MyCoupon/index">我的优惠券</a></dt>
-		</dl>
-		</h3>
-		<a class="deng4" href="#" onclick="loginout();">退出</a>
-		<script>
-			function loginout(){
-				$.post('__MODULE__/Login/logout/',function(data){
-						window.location.reload();
-				})
-			}
-		</script>
-	</if>
-	</div>
-  </div>
-  <div class="header_top2">
-	<p>
-		<a  class="te11" href="">&nbsp;<img src="__FRONT__/images/timg.png"></a>
-		<a  class="te12" href="">&nbsp;<img src="__FRONT__/images/timg1.png"></a>
-		<!-- <a  class="te13" href="">&nbsp;</a> -->
-		<span>400-877-1107</span>
-	</p>
-
-  </div>
-  </div>
-</div>
+<include file='public:top'/>
 <include file='public:menu'/>
+<!--banner-->
+<include file='public:up'/>
 <script src="__JS__/indexTuo.js"></script>
 <!--content-->
 <div class="dengm">
  <div class="deng0  container">
-   <div class="deng1">
-    <h2>我要发车</h2>
-   </div>
-   <div class="deng5"><div class="kuai2"></div></div>
    <form method="post" action="__MODULE__/Order/normalOrderT" id="quickz">
    <div class="deng2" style="padding:0px;">
      <div class="deng2b">
@@ -56,31 +15,35 @@
 		<dl>
 			<dt>出发地：</dt>
 			<dd>
-				<input type="text" class="txt1a inko" readonly="readonly" name="qsrcz" id="qsrcz" value="{$order.qsrezname}" >
+				<input type="text" class="txt1a inko" readonly="readonly" name="qsrcz" id="qsrcz" value="{$order.qsrezname}"  onclick="ceshi3(this);">
 				<span class="xxsj"></span>
 				<div class="selected" id="q4">
 					<div class="province star_province" id="qspz">
-						<foreach name="pro" item="vo">
-						<li data-id="1" onclick="getCityz('{$vo.area_id}','S','{$vo.area_name}')">{$vo.area_name}</li>
-						</foreach>
+						<ul>
+							<foreach name="pro" item="vo">
+							<li data-id="1" onclick="getCityz('{$vo.area_id}','S','{$vo.area_name}')">{$vo.area_name}</li>
+							</foreach>
+						</ul>
 					</div>
-					<div class="city star_city" data-id="" " id="qscz"></div>
-					<div class="county star_county" data-id=""  id="qsbz"></div>
+					<div class="city star_city" id="qscz" style="display:none"></div>
+					<div class="county star_county" id="qsbz" style="display:none"></div>
 				</div> 
 			</dd>
 		</dl>
 		<dl>
 			<dt>目的地：</dt>
 			<dd>
-				<input type="text" class="txt1a inko" readonly="readonly" name="qercz" id="qercz" value="{$order.qerezname}" onclick="ceshi(this);">
+				<input type="text" class="txt1a inko" readonly="readonly" name="qercz" id="qercz" value="{$order.qerezname}" onclick="ceshi3(this);">
 				<span class="xxsj"></span>
 				<div class="selected" id="q5">
 					<div class="province star_province" id="qepz">
-					<foreach name="pro" item="vo">
-					<li data-id="1"  onclick="getCityz('{$vo.area_id}','E','{$vo.area_name}')">{$vo.area_name}</li>
-					</foreach>
+						<ul>
+							<foreach name="pro" item="vo">
+							<li data-id="1"  onclick="getCityz('{$vo.area_id}','E','{$vo.area_name}')">{$vo.area_name}</li>
+							</foreach>
+						</ul>
 					</div>
-					<div class="city star_city" data-id="" id="qecz" style="display:none"></div>
+					<div class="city star_city" id="qecz" style="display:none"></div>
 				</div> 
 			</dd>
 		</dl>
@@ -91,9 +54,11 @@
 				<span class="xxsj"></span>
 				<div class="selected" id="q6">
 					<div class="province star_province" id="qbrz">
-					<foreach name="brand" item="vo">
-					<li data-id="1"  onclick="getTypez('{$vo.cxjj_id}','{$vo.cxjj_brand}')">{$vo.cxjj_brand}</li>
-					</foreach>
+						<ul>
+							<foreach name="brand" item="vo">
+							<li data-id="1"  onclick="getTypez('{$vo.cxjj_id}','{$vo.cxjj_brand}')">{$vo.cxjj_brand}</li>
+							</foreach>
+						</ul>
 					</div>
 					<div class="city star_city" data-id="" style="display:none" id="qtz"></div>
 				</div> 

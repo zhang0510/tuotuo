@@ -37,7 +37,7 @@ class OrderController extends BaseObjController{
     public function normal(){
         $cobj = D('Index');
         //拼装数组
-        $order['flag'] = I("flag")==""?session('neworder')['flag']:I("flag");
+        $order['flag'] = I("flag")==""?'Y':I("flag");
         if($order['flag'] == 'Y'){
             $order['qsrez'] = I("qsrez");
             $order['qerez'] = I("qerez");
@@ -77,6 +77,7 @@ class OrderController extends BaseObjController{
             $this->assign("brand",get_brand());
             $this -> assign('order',$order);
             $this -> assign('user',$userInfo);
+            $this -> assign('ret',array('title'=>'我要运车','key_words'=>'Want transport'));
             $this -> display('Order:normal_step_two');
         }else{
             $order['qsrez'] = I("qsrez");
@@ -120,7 +121,7 @@ class OrderController extends BaseObjController{
             $this->assign("name2",explode("-",$order['qerezname'])[1]);
             $this -> assign('user',$userInfo);
             $this->assign("order",$order);
-            $this->assign("ret",array('title'=>'我要运车'));
+            $this -> assign('ret',array('title'=>'我要运车','key_words'=>'Want transport'));
             $this -> display('Order:normal_step_three');
         }
         
@@ -166,6 +167,7 @@ class OrderController extends BaseObjController{
         $this->assign("name2",explode("-",$order['qerezname'])[1]);
         $this -> assign('user',$userInfo);
         $this->assign("order",$order);
+        $this -> assign('ret',array('title'=>'我要运车','key_words'=>'Want transport'));
         $this -> display('Order:normal_step_three');
     }
     /**
@@ -207,6 +209,7 @@ class OrderController extends BaseObjController{
             //$this->assign("citys",$order['qerezname']);
             $this->assign("block",D("worktwo")->getBlock(explode(",",$order['qerez'])[1]));
             $this -> assign('user',$userInfo);
+            $this -> assign('ret',array('title'=>'附加服务','key_words'=>'Additional services'));
             $this -> display('Order:normal_step_fu');
         }else{
             $userInfo = json_decode(des_decrypt_php(session('userData')),true);
@@ -335,6 +338,7 @@ class OrderController extends BaseObjController{
         $this -> assign("price",$prie);
         $this -> assign('user',$userInfo);
         $this -> assign('token',$token);
+        $this -> assign('ret',array('title'=>'详细地址','key_words'=>'Detailed address'));
         $this -> display('Order:quick_step_four');
     }
     /**
@@ -400,6 +404,7 @@ class OrderController extends BaseObjController{
         $userInfo = json_decode(des_decrypt_php(session('userData')),true);
         $this->assign("info",D("Worktwo")->getOrderInfo($code));
         $this -> assign('user',$userInfo);
+        $this -> assign('ret',array('title'=>'我的订单','key_words'=>'My order'));
         $this->display("Order:su_order");
     }
     public function paynow(){

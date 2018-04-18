@@ -14,6 +14,7 @@ class MyOrderController extends BaseController {
             $this -> assign('show',$myList['show']);
             $this -> assign('oList',$myList['list']);
             $this -> assign('num',$myList['number']);
+            $this -> assign('ret',array('title'=>'订单列表','key_words'=>'Order list'));
             //进入页面
             $this->display("MyOrder:my_order");
         }else{
@@ -37,7 +38,8 @@ class MyOrderController extends BaseController {
     		$this->assign("sname",explode(",",$myVo['order_info_sclxr']));
     		$this -> assign('info',$myVo);
     		//进入页面
-    		$this->display("MyOrder:my_order_info");
+            $this -> assign('ret',array('title'=>'订单详情','key_words'=>'Order details'));
+            $this->display("MyOrder:my_order_info");
     	}else{
     		//进入页面
     		$this->display("Login:pc_login");

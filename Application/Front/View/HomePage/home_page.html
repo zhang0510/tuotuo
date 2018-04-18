@@ -33,7 +33,11 @@
 			//$(".selected0").hide();
 			return false;
 		}else{
-			$(obj).siblings(".selected0").show();
+            if($(".selected0").attr('style') == 'display: block;'){
+                $(obj).siblings(".selected0").hide();
+            }else{
+                $(obj).siblings(".selected0").show();
+            }
 		}
 	}
 </script>
@@ -83,7 +87,7 @@
 					</table>
 					<table id="xdtable">
 						<form method="post" action="__MODULE__/Order/normal" id="quickz">
-							<div style="display: none">
+							<div style="display: bolok">
 								<!-- 开始地 -->
 								<input type="hidden" name="qsrez" id="qsrez" value="" />
 								<!-- 目的地 -->
@@ -93,11 +97,11 @@
 								<!-- 目的地中文名称 -->
 								<input type="hidden" name="qerezname" id="qerezname" value="" />
 								<!-- 车品牌 -->
-								<input type="hidden" name="qsctez" id="qsctez" value="" />
+								<input type="hidden" name="qsctez" id="qsctez" value="阿斯顿马丁" />
 								<!-- 车型号 -->
-								<input type="hidden" name="qsctcz" id="qsctcz" value="" />
+								<input type="hidden" name="qsctcz" id="qsctcz" value="V12 Vantage" />
 								<!-- 车id -->
-								<input type="hidden" name="carids" id="carids" value="" />
+								<input type="hidden" name="carids" id="carids" value="202" />
 								<!-- 运费 -->
 								<input type="hidden" name="lineprice" id="lineprice" value="0" />
 								<!-- 类型 -->
@@ -143,14 +147,17 @@
 								<div class="tab-pay1 top_search2">
 									<dl class="dlbottom">
 										<dd>
-											<input type="text" placeholder="" class="txt1a inko" name="qsrcz" id="qsrcz" value="{$jumpz['order']['start']}" onblur="guanbi1()" onfocus="ceshi3(this);">
+											<input type="text" placeholder="" class="txt1a inko" name="qsrcz" id="qsrcz" value="{$jumpz['order']['start']}">
+											<span class="txtspan1" onclick="ceshi3(this);"><img src="/Public/Front/images/ww5.png"></span>
 											<span class="xxsj"></span>
 											<div class="selected0" id="q4">
 												<div class="province star_province" id="qspz">
-													<!-- <li data-id="14">请选择</li> -->
-													<foreach name="pro" item="vo">
-														<li data-id="1"  onclick="getCityz('{$vo.area_id}','S','{$vo.area_name}')">{$vo.area_name}</li>
-													</foreach>
+													<ul>
+														<!-- <li data-id="14">请选择</li> -->
+														<foreach name="pro" item="vo">
+															<li data-id="1"  onclick="getCityz('{$vo.area_id}','S','{$vo.area_name}')">{$vo.area_name}</li>
+														</foreach>
+													</ul>
 												</div>
 												<div class="city star_city" data-id="" style="display:none" id="qscz"></div>
 												<div class="county star_county" data-id="" style="display:none" id="qsbz"></div>
@@ -160,17 +167,13 @@
 								</div>
 							</td>
 						</tr>
-							<script>
-								function guanbi1(){
-								    alert(123)
-								}
-							</script>
 						<tr class="jiange"></tr>
 						<tr>
 							<td><div class="buttonblack1"><font>目的地:</font></div></td>
 							<td><!-- 目的地 -->
 								<div class="tab-pay1 top_search2">
 									<dl class="dlbottom"><dd><input type="text" placeholder="" class="txt1a inko" name="qercz" id="qercz" value="{$jumpz['order']['end']}" onfocus="ceshi(this);">
+										<span class="txtspan1" onclick="ceshi3(this);"><img src="/Public/Front/images/ww5.png"></span>
 										<span class="xxsj"></span>
 										<div class="selected0" id="q5">
 											<div class="province star_province" id="qepz">
@@ -185,11 +188,13 @@
 							</td>
 						</tr>
 						<tr class="jiange"></tr>
-						<tr>
+						<tr style="display: none">
 							<td><div class="buttonblack1"><font>品牌车系:</font></div></td>
 							<td><!-- 车品牌 -->
 								<div class="tab-pay1 top_search2">
-									<dl class="dlbottom"><dd><input type="text" placeholder="" class="txt1a inko" id="qbtz" name="carInfoz" value="{$jumpz['order']['carInfo']}" onkeyup="serchCar(this);" onfocus="ceshi3(this);">
+									<dl class="dlbottom"><dd>
+										<input type="text" placeholder="" class="txt1a inko" id="qbtz" name="carInfoz" value="{$jumpz['order']['carInfo']}" onkeyup="serchCar(this);">
+										<span class="txtspan1" onclick="ceshi3(this);"><img src="/Public/Front/images/ww5.png"></span>
 										<span class="xxsj"></span>
 										<div class="selected0" id="q6">
 											<div class="province star_province" id="qbrz">

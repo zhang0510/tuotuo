@@ -225,9 +225,14 @@ $(".korder0").animate({width:"100%"});
 
 	    });
 
-	    function ceshi3(obj){
-	    	$(obj).siblings(".selected0").show();
-	    }
+	  function ceshi3(obj){
+		  type = $(obj).siblings(".selected0").attr('style');
+		  if(type == 'display: block;'){
+			  $(obj).siblings(".selected0").hide();
+		  }else{
+			  $(obj).siblings(".selected0").show();
+		  }
+	  }
 
 
   function tiaoFun(){

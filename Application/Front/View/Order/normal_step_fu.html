@@ -1,54 +1,13 @@
 <include file='public:header'/>
-<div class="header_top">
-  <div class="header_top0 container">
-  <div class="header_top1">
-  <div class="fss">
-	<if condition="$user.id eq ''">
-		<span>Hi 欢迎来到妥妥运车 </span>
-		<a  class="deng1" href="__MODULE__/Login/pclogin/">请登录</a>
-		<a  class="deng2" href="__MODULE__/Register/index/">请注册</a>
-	<else/>
-		<span>Hi&nbsp;{$user['user_name']==null?$user['tel']:$user['user_name']}&nbsp;</span>
-		<h3>
-		<a  class="deng3" href="__MODULE__/Personal/personalInfo">个人中心</a>
-		<dl>
-			<dt><a href="__MODULE__/Personal/personalInfo">个人资料</a></dt>
-			<dt><a href="__MODULE__/MyOrder/index">我的订单</a></dt>
-			<dt><a href="__MODULE__/MyCoupon/index">我的优惠券</a></dt>
-		</dl>
-		</h3>
-		<a class="deng4" href="#" onclick="loginout();">退出</a>
-		<script>
-			function loginout(){
-				$.post('__MODULE__/Login/logout/',function(data){
-						window.location.reload();
-				})
-			}
-		</script>
-	</if>
-	</div>
-  </div>
-  <div class="header_top2">
-	<p>
-		<a  class="te11" href="">&nbsp;<img src="__FRONT__/images/timg.png"></a>
-		<a  class="te12" href="">&nbsp;<img src="__FRONT__/images/timg1.png"></a>
-		<!-- <a  class="te13" href="">&nbsp;</a> -->
-		<span>400-877-1107</span>
-	</p>
-
-  </div>
-  </div>
-</div>
+<include file='public:top'/>
 <include file='public:menu'/>
+<!--banner-->
+<include file='public:up'/>
 <script src="__JS__/indexTuo.js"></script>
 <!--content-->
 <div class="dengm2">
  <div class="deng0 container">
-   <div class="deng1">
-    <h2>附加服务</h2>
-   </div>
-        <div class="deng5"><div class="kuai2"></div></div>
-        <input type="hidden" id="end_names" value="{$name2}">
+   <input type="hidden" id="end_names" value="{$name2}">
    <form method="post" action="__MODULE__/Order/normalOrderTh" id="quickz">
    <div class="deng2e">
       <div class="ee1"><h2>{$name1}<img src="__FRONT__/images/ee1.png">{$name2}</h2></div>
@@ -64,7 +23,7 @@
 			<div class="deng2b1">
 				<dl class="frake2">
 					<dt>地址：</dt>
-					<dd><input type="text" placeholder="区域" id="citys" class="txt1a inko">&nbsp;&nbsp;&nbsp;<b>费用：<ca id="wegwe">0</ca>元</b>
+					<dd><input type="text" placeholder="区域" id="citys" class="txt1a inko"><br><b>费用：<ca id="wegwe">0</ca>元</b>
 		   			<span class="xxsj"></span>
 		  			<div class="selected" style="display: none;">
 						<div class="province star_province">
@@ -76,7 +35,7 @@
 						<div class="county star_county" data-id=""></div>
 					</div> </dd>
 				</dl>
-				<dl>
+				<dl style="margin-top: 44px;">
 				<dt>详细地址：</dt>
 				<dd>
 					<!-- <input type="text" id="order_info_end_address" name="order_info_end_address" class="txt1" value="{$saddress}"> -->
