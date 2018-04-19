@@ -5,6 +5,16 @@
 <include file='public:up'/>
 <script src="__JS__/indexTuo.js"></script>
 <!--content-->
+<div class="pc dhdiv">
+	<ul>
+		<li class="dhfili">妥妥服务<img src="/Public/Front/images/fcphoto.png"></li>
+		<foreach name="ttfw" item="vo">
+			<li <eq name="ret.title" value="$vo.title">class="dhactive"</eq> ><a href="__MODULE__/ProfessionalServices/sos/code/{$vo.article_code}">
+			{$vo.title}
+		</a></li>
+		</foreach>
+	</ul>
+</div>
 <div class="dengm">
  <div class="deng0  container">
    <form method="post" action="__MODULE__/Order/normalOrderT" id="quickz">
