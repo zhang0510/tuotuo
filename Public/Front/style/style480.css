@@ -232,7 +232,7 @@ select {
 .navbar-toggle{float:left;margin:-45px 0px 0px;}
 #sasa{width:100%;}
 .jkl1{}
-#navbar{position:fixed;top:137px;left:0px;z-index:2000;background:#fff;}
+#navbar{position:absolute;top:137px;left:0px;z-index:2000;background:#fff;}
 .baotio{}
 .header_top1 a:hover{color:#f90;}
 .dengm{background:url(../images/qq.jpg) no-repeat center center /cover;overflow:hidden;}
@@ -675,7 +675,7 @@ select {
 .order_d2{width:100%;margin:0 auto;}
 
 .du3c{text-align:center;}
-.du3d{display:none;position: fixed; top: 107px; left: 0px; z-index: 4000; background: #fff;border:2px solid #ff8000;border-radius:5px;line-height:67px;height:67px;margin:30px auto;width:100%}
+.du3d{display:none;position: absolute; top: 107px; left: 0px; z-index: 4000; background: #fff;border:2px solid #ff8000;border-radius:5px;line-height:67px;height:67px;margin:30px auto;width:100%}
 .cx1{width: 400px;display:block;float:left;height:62px;border:0px;text-indent:20px;font-size:21px;color:#B4B4B4;}
 .du3d  button{width:76px;background:#ea5512 url(../images/ser1.png) no-repeat center center;height:63px;display:block;border:0px;float:right;}
 .ee32a dd{position:relative;}
