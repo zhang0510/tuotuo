@@ -1526,7 +1526,7 @@ function del(t,obj){
 var up = $('#upload1').Huploadify({
 	auto:true,
 	fileTypeExts:'*.jpg;*.gif;*.png;*.jpeg',
-	multi:false,
+	multi:true,
 	fileSizeLimit:102400,
 	showUploadedPercent:false,
 	showUploadedSize:false,
@@ -1561,7 +1561,7 @@ var up = $('#upload1').Huploadify({
 				   success: function(data){
 					   if(data!=''){
 					        var star='<div class="chek1"><img src="'+url+'"><a class="del" onclick="del('+data+',this)"><img src="__BACK__/images/timg.png"></a><input name="img[]" value="__BACK__/images/che1.png" type="hidden"></div>';
-					        $("#addImg").before(star);
+					        $(".chek0").before(star);
 					   }
 				   }
 			   });
