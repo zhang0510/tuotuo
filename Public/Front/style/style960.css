@@ -1389,7 +1389,7 @@
     .moneydiv2{padding-top: 37px;}
     .moneyfont{font-size: 18px;}
     .dlbottom{margin-bottom:0px;}
-    .xddiv{width:100px;height:32px;margin-left:75px;background: url(../images/xdbutton960.png);margin-top: 5px;border-radius: 5px;}
+    .xddiv{width:100px;height:32px;margin-left:75px;background: #ffffff;margin-top: 5px;border-radius: 5px;}
     .xdchild{padding-top: 6px;}
     .xdfont{font-size: 24px;}
     .imgtd{width:57%}
@@ -1401,7 +1401,7 @@
     .buttonblack2 font{font-size: 12px;color: #FFFFFF;}
     .buttonblack1 font{font-size: 14px;}
     .fwtd table{margin-left: -37%;}
-    .xddfont{font-size: 16px;color:#FFFFFF}
+    .xddfont{font-size: 16px;color:#ff8000}
     .heighttd{height:12px}
     .part8{padding-top: 6%;overflow: auto;}
     .fwfont h3,.ttfont h3{margin-top: 10px;}
@@ -1427,9 +1427,9 @@
     .fwbzfont{width: 212px;position: relative;bottom:159px;}
     .jsbzfont{font-size: 16px;color:#ff8000;}
     .gslc{padding-bottom: 0px;}
-    .more{width:120px;height:45px;margin-left:62px;background: url(../images/gengduoanqiu.png);margin-top: 23px;border-radius:8px;}
+    .more{width:120px;height:45px;margin-left:62px;background: #ffffff;margin-top: 23px;border-radius:8px;}
     .morechild{padding-top: 10px;}
-    .morefont{font-size: 18px;color:#FFFFFF;}
+    .morefont{font-size: 18px;color:#ff8000;}
     .xwtable{margin: 16px 20px;}
     .xdtd1{padding-right: 35px}
     .xddiv1{margin-top: 15px;}
@@ -1459,6 +1459,11 @@
     .dhactive{background: #ff8000;}
     .dhactive a{color:#FFFFFF}
     .b1imgdiv{text-align: center;margin-top: -96px;margin-bottom: 50px;}
+
+    .xddivxg:hover{background:#ff8000}
+    .xddivxg:hover .xddfont{color:#ffffff}
+    .more:hover{background:#ff8000}
+    .more:hover .morefont{color:#ffffff}
 }
 
 

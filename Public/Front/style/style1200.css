@@ -1399,7 +1399,7 @@ select {
     .moneyfont{font-size: 28px;}
     .dlbottom{margin-bottom:0px;}
     .buttonblack2 font{font-size: 14px;}
-    .xddiv{width:168px;height:52px;margin-left:115px;background: url(../images/xdbutton.png);margin-top: 23px;border-radius: 5px}
+    .xddiv{width:168px;height:52px;margin-left:115px;background: #FFFFFF;margin-top: 23px;border-radius: 5px}
     .xdchild{padding-top: 10px;}
     .xdfont{font-size: 24px;}
     .xdfont a{color:#FFFFFF}
@@ -1407,7 +1407,7 @@ select {
     .xdfont{font-size: 14px;}
     .blacktd{width:19%}
     .heighttd{height:24px}
-    .xddfont{font-size: 22px;color:#FFFFFF}
+    .xddfont{font-size: 22px;color:#ff8000}
     .heighttd{height:12px}
     .part8{padding-top: 6%;overflow: auto;}
     .searchtd{height:150px;}
@@ -1434,9 +1434,9 @@ select {
     .fwbzfont{width: 300px;position: relative;bottom:273px;}
     .jsbzfont{font-size: 24px;color:#ff8000;}
     .gslc{padding-bottom: 0px;}
-    .more{width:120px;height:45px;margin-left:85px;background: url(../images/gengduoanqiu.png);margin-top: 23px;border-radius:5px}
+    .more{width:120px;height:45px;margin-left:85px;background:#ffffff;margin-top: 23px;border-radius:5px}
     .morechild{padding-top: 10px;}
-    .morefont{font-size: 20px;color:#FFFFFF}
+    .morefont{font-size: 20px;color:#ff8000}
     .xwtable{margin: 16px 34px;}
     .xdtd1{padding-right: 67px}
     .xddiv1{margin-top: 15px}
@@ -1463,6 +1463,11 @@ select {
     .dhdiv ul li a:hover{color: #ea5512;}
     .dhdiv ul li.dhactive a:hover{color: #ffffff;}
     .inko:focus selected0{display: none}
+
+    .xddivxg:hover{background:#ff8000}
+    .xddivxg:hover .xddfont{color:#ffffff}
+    .more:hover{background:#ff8000}
+    .more:hover .morefont{color:#ffffff}
 
 }
 

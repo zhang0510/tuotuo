@@ -213,7 +213,7 @@
 		var maoli = $("#maoliz").val();
 		var lineprice = $("#lineprice").val();
 		if(qstart == '' || qend==""){
-			layer.msg('请选择搜索信息');
+			layer.msg('请选择出发地与目的地');
 			return false;
 		}
 		/*if($("#flag").val()=='N'){
@@ -286,7 +286,8 @@
 			}
 
 			},'json');
-		
+        $("#xdtable .xddiv").attr('style',"background:#ff8000;");
+        $("#xdtable .xddfont").attr('style',"color:#ffffff;");
 	}
 
 	//费用计算公共方法

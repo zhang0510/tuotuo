@@ -64,7 +64,7 @@
 									<p>请输入订单号查询当前订单状况，如果当前订单不存在，请联系客服人员。</p>
 								</div>
 								<div class="du3d" id="tiao1">
-									<input type="text" placeholder="请在此输入订单号" class="cx1" id="keyword" ><!-- onkeyup="sel(this);" --><button onclick="tiaoFun();" type="button"></button>
+									<input type="text" placeholder="请在此输入订单号" class="cx1" id="keyword" onchange="bians()" ><!-- onkeyup="sel(this);" --><button onclick="tiaoFun();" type="button"></button>
 									<div id="searchBoxs"></div>
 								</div>
 								<div class="phone serchsj" id="tiao2">
@@ -85,6 +85,12 @@
 							</td>
 						</tr>
 					</table>
+					<script>
+						function bians(){
+                            $(".searchtd .xddiv").attr('style',"background:#ff8000;");
+                            $(".searchtd .xddfont").attr('style',"color:#ffffff;");
+						}
+					</script>
 					<table id="xdtable">
 						<form method="post" action="__MODULE__/Order/normal" id="quickz">
 							<div style="display: bolok">

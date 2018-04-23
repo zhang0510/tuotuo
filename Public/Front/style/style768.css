@@ -1432,7 +1432,7 @@ select {
     .moneydiv2{padding-top: 37px;}
     .moneyfont{font-size: 14px;}
     .dlbottom{margin-bottom:0px;}
-    .xddiv{width:100px;height:32px;margin-left:25%;background: url(../images/xdbutton960.png);border-radius: 5px;}
+    .xddiv{width:100px;height:32px;margin-left:25%;background: #ffffff;border-radius: 5px;}
     .xdchild{padding-top: 6px;}
     .xdfont{font-size: 24px;}
     .imgtd{width:57%}
@@ -1444,7 +1444,7 @@ select {
     .buttonblack2 font{font-size: 12px;}
     .buttonblack1 font{font-size: 12px;}
     .fwtd table{margin-left: -40%;}
-    .xddfont{font-size: 14px;color:#FFFFFF;}
+    .xddfont{font-size: 14px;color:#ff8000;}
     .part8{padding-top: 6%;}
     .fwfont h3,.ttfont h3{margin-top: 10px;}
     .searchtd{height:40px;}
@@ -1478,9 +1478,9 @@ select {
     .fwbzfont{width: 212px;position: relative;bottom:125px;}
     .jsbzfont{font-size: 16px;color:#ff8000;}
     .gslc{padding-bottom: 0px;}
-    .more{width:85px;height:33px;margin-left:38px;background: url(../images/gengduoanqiu.png);margin-top: 23px;border-radius: 5px}
+    .more{width:85px;height:33px;margin-left:38px;background:#ffffff;margin-top: 23px;border-radius: 5px}
     .morechild{padding-top: 8px;}
-    .morefont{font-size: 14px;color:#FFFFFF}
+    .morefont{font-size: 14px;color:#ff8000}
     .xwtable{margin: 5px 2px;}
     .xdtd1{padding-right: 20px}
     .xddiv1{margin-top: 15px}
@@ -1510,4 +1510,9 @@ select {
     .b1imgdiv{text-align: center;margin-top: -96px;margin-bottom: 50px;}
     .dhdiv ul li a:hover{color: #ea5512;}
     .dhdiv ul li.dhactive a:hover{color: #ffffff;}
+
+    .xddivxg:hover{background:#ff8000}
+    .xddivxg:hover .xddfont{color:#ffffff}
+    .more:hover{background:#ff8000}
+    .more:hover .morefont{color:#ffffff}
 }
