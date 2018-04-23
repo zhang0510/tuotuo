@@ -2,15 +2,15 @@
 <nav class="navbar navbar-default">
 	<div id="sasa" class="container">
 		<div class="head1">
-			<a class="navbar-brand0" href="/"><img class="logoimg" src="__FRONT__/images/logo.png"></a>
+			<a class="navbar-brand0" href="/"><img class="logoimg" src="__FRONT__/images/logo.png" alt="logo"></a>
 		</div>
 		<if condition="$UserInfo.login eq 0">
 			<a class="phone " href="__MODULE__/Login/pclogin/">
-				<img class="renimg" src="__FRONT__/images/ren.png">
+				<img class="renimg" src="__FRONT__/images/ren.png" alt="图标">
 			</a>
 		<else/>
 			<span class="phone gerendj" href="javascript:volid(0);">
-				<img class="renimg" src="__FRONT__/images/ren.png">
+				<img class="renimg" src="__FRONT__/images/ren.png" alt="图标">
 				<dl>
 					<dt><a href="__MODULE__/Personal/personalInfo">个人资料</a></dt>
 					<dt><a href="__MODULE__/MyOrder/index">我的订单</a></dt>
@@ -20,10 +20,10 @@
 			</span>
 		</if>
 		<a href="javascript:volid(0);" data-toggle="collapse" data-target="#sousuok" aria-expanded="false" aria-controls="sousuok">
-		<img class="phone sousuoimg" src="__FRONT__/images/sousuo.png">
+		<img class="phone sousuoimg" src="__FRONT__/images/sousuo.png" alt="放大镜">
 		</a>
 		<a href="javascript:volid(0);" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-			<img class="phone dhimg" src="__FRONT__/images/sjdh.png" style="width: 6%">
+			<img class="phone dhimg" src="__FRONT__/images/sjdh.png" style="width: 6%" alt="图标">
 		</a>
 		<div id="sousuok" class="phone du3d">
 			<input type="text" placeholder="请在此输入订单号" class="cx1" id="keyword" ><!-- onkeyup="sel(this);" --><button onclick="tiaoFun();" type="button"></button>
