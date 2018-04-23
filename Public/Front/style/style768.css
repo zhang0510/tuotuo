@@ -1432,7 +1432,7 @@ select {
     .moneydiv2{padding-top: 37px;}
     .moneyfont{font-size: 14px;}
     .dlbottom{margin-bottom:0px;}
-    .xddiv{width:100px;height:32px;margin-left:25%;background: #ffffff;border-radius: 5px;}
+    .xddiv{width:100px;height:32px;margin-left:25%;background: #ffffff;border-radius: 5px;border: 1px solid #ff8000;}
     .xdchild{padding-top: 6px;}
     .xdfont{font-size: 24px;}
     .imgtd{width:57%}
@@ -1478,7 +1478,7 @@ select {
     .fwbzfont{width: 212px;position: relative;bottom:125px;}
     .jsbzfont{font-size: 16px;color:#ff8000;}
     .gslc{padding-bottom: 0px;}
-    .more{width:85px;height:33px;margin-left:38px;background:#ffffff;margin-top: 23px;border-radius: 5px}
+    .more{width:85px;height:33px;margin-left:38px;background:#ffffff;margin-top: 23px;border-radius: 5px;border: 1px solid #ff8000;}
     .morechild{padding-top: 8px;}
     .morefont{font-size: 14px;color:#ff8000}
     .xwtable{margin: 5px 2px;}

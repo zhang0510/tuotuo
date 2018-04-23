@@ -1389,7 +1389,7 @@
     .moneydiv2{padding-top: 37px;}
     .moneyfont{font-size: 18px;}
     .dlbottom{margin-bottom:0px;}
-    .xddiv{width:100px;height:32px;margin-left:75px;background: #ffffff;margin-top: 5px;border-radius: 5px;}
+    .xddiv{width:100px;height:32px;margin-left:75px;background: #ffffff;margin-top: 5px;border-radius: 5px;border: 1px solid #ff8000;}
     .xdchild{padding-top: 6px;}
     .xdfont{font-size: 24px;}
     .imgtd{width:57%}
@@ -1427,8 +1427,8 @@
     .fwbzfont{width: 212px;position: relative;bottom:159px;}
     .jsbzfont{font-size: 16px;color:#ff8000;}
     .gslc{padding-bottom: 0px;}
-    .more{width:120px;height:45px;margin-left:62px;background: #ffffff;margin-top: 23px;border-radius:8px;}
-    .morechild{padding-top: 10px;}
+    .more{width:120px;height:45px;margin-left:62px;background: #ffffff;margin-top: 23px;border-radius:8px;border: 1px solid #ff8000;}
+    .morechild{padding-top: 8px;}
     .morefont{font-size: 18px;color:#ff8000;}
     .xwtable{margin: 16px 20px;}
     .xdtd1{padding-right: 35px}
