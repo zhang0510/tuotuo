@@ -254,7 +254,7 @@
 			<div class="bd">
 				<ul>
 					<li>
-						<img class="pc bannerimg" src="/Public/Front/images/BANNER.png" alt="运车">
+						<img class="pc bannerimg thbanner" src="/Public/Front/images/BANNER_min.png" alt="运车">
 						<img class="phone bannerimg" src="/Public/Front/images/bannersj.png" alt="运车">
 					</li>
 				</ul>
@@ -284,7 +284,7 @@
 </div>
 <div class="part8">
 	  <div class="part8left">
-		  <img style="width:100%" src="/Public/Front/images/gongsijieshao.png" alt="背景图">
+		  <img style="width:100%" src="/Public/Front/images/gongsijieshao_min.png" alt="背景图">
 		  <div class="gsjsfont">
 			  <div class="fwfont gslc">
 				  <font>妥妥运车&nbsp;<strong><span class="jsbzfont">公司介绍</span></strong></font>
@@ -300,7 +300,7 @@
 		  </div>
 	  </div>
 	  <div class="part8right">
-		  <img style="width:100%" src="/Public/Front/images/fuwubaozhang.png" alt="背景图">
+		  <img style="width:100%" src="/Public/Front/images/fuwubaozhang_min.png" alt="背景图">
 		  <div class="fwbzfont">
 			  <div class="fwfont gslc">
 				  <font>妥妥运车&nbsp;<strong><span class="jsbzfont">服务保障</span></strong></font>
@@ -420,6 +420,10 @@
    </ul>
 </div>
 <script>
+    setTimeout(function(){
+        $(".part8left img").attr('src',"/Public/Front/images/gongsijieshao.png");
+        $(".part8right img").attr('src',"/Public/Front/images/fuwubaozhang.png");
+	}, 5000);
 	function yuansj1(){
 		$(".yuan1").attr("style","background: #ff8000; border: 1px solid #ffffff;");
 		$(".yuan2").attr("style","background: #ffffff;border: 1px solid #ff8000;");

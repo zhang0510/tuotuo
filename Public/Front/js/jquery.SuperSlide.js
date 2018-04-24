@@ -82,6 +82,7 @@
 			}
 
 			var yuan1=function(){
+                $(".thbanner").attr("src","/Public/Front/images/BANNER.png");
 				$(".yuan1").attr("style","background: #ff8000; border: 1px solid #ffffff;");
 				$(".yuan2").attr("style","background: #ffffff;border: 1px solid #ff8000;");
 				$(".bannerdiv").animate({'left':'50%' });
