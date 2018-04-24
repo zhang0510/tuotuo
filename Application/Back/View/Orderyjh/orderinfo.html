@@ -296,7 +296,7 @@
 		<div class="chek0">
 		<foreach name="verifyImg" item="va">
 		 <div class="chek1">
-		 <a target="_blank" href="{$va['verify_img_upload']}"><img style="width: 200px; height: 200px;" src="{$va['verify_img_upload']}"/><a class="del" onclick="del({$va['verify_img_id']},this)"><img src="__BACK__/images/timg.png"></a>
+		 <a target="_blank" href="{$va['verify_img_upload']}"><img style="width: 120px; height: 120px;" src="{$va['verify_img_upload']}"/><a class="del" onclick="del({$va['verify_img_id']},this)"><img src="__BACK__/images/timg.png"></a>
 		 <input type="hidden" name="img[]" value="{$va['verify_img_upload']}">
 		 </a>
 		 </div>
@@ -1561,7 +1561,7 @@ var up = $('#upload1').Huploadify({
 				   dataType:'json',
 				   success: function(data){
 					   if(data!=''){
-					        var star='<div class="chek1"><a target="_blank" href="'+url+'"><img  style="width: 200px; height: 200px;" src="'+url+'"><a class="del" onclick="del('+data+',this)"><img src="__BACK__/images/timg.png"></a><input name="img[]" value="__BACK__/images/che1.png" type="hidden"></a></div>';
+					        var star='<div class="chek1"><a target="_blank" href="'+url+'"><img  style="width: 120px; height: 120px;" src="'+url+'"><a class="del" onclick="del('+data+',this)"><img src="__BACK__/images/timg.png"></a><input name="img[]" value="__BACK__/images/che1.png" type="hidden"></a></div>';
 					        $(".chek0").append(star);
 					   }
 				   }

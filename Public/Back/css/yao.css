@@ -150,7 +150,7 @@
 .sa1{display:inline-block;}
 .sa2{display:none;}
 .see1,.see2,.see3,.see4{cursor:pointer;}
-.chek1{position:relative;float:left;margin:0px 10px 10px 0px;width:200px;height:200px;}
+.chek1{position:relative;float:left;margin:0px 10px 10px 0px;width:120px;height:120px;}
 .chek1 .del{position:absolute;right:10px;top:10px;cursor:pointer;}
 .chek0{overflow:hidden;}
 .chek2{float:left;text-align:center;border:1px solid #eee;background:#fff;width:140px;height:140px;cursor:pointer;}
