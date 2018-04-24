@@ -6,7 +6,7 @@
 		effect : "leftLoop", //效果 || fade：渐显； || top：上滚动；|| left：左滚动；|| topLoop：上循环滚动；|| leftLoop：左循环滚动；|| topMarquee：上无缝循环滚动；|| leftMarquee：左无缝循环滚动；
 		autoPlay:true, //自动运行
 		delayTime : 1000, //效果持续时间
-		interTime : 6000,//自动运行间隔。当effect为无缝滚动的时候，相当于运行速度。
+		interTime : 8000,//自动运行间隔。当effect为无缝滚动的时候，相当于运行速度。
 		defaultIndex : 0,//默认的当前位置索引。0是第一个
 		titCell:".hd li",//导航元素
 		mainCell:".bd",//内容元素的父层对象
@@ -82,7 +82,6 @@
 			}
 
 			var yuan1=function(){
-                $(".thbanner").attr("src","/Public/Front/images/BANNER.png");
 				$(".yuan1").attr("style","background: #ff8000; border: 1px solid #ffffff;");
 				$(".yuan2").attr("style","background: #ffffff;border: 1px solid #ff8000;");
 				$(".bannerdiv").animate({'left':'50%' });
@@ -91,6 +90,7 @@
 				//setTimeout(xiaoshi(),30000000);
 			}
 			var yuan2=function(){
+                $(".thbanner").attr("src","/Public/Front/images/BANNER.png");
                 $(".yuan1").attr("style","background: #ffffff;border: 1px solid #ff8000;");
                 $(".yuan2").attr("style","background: #ff8000; border: 1px solid #ffffff;");
                 $(".bannerdiv").animate({'left':'30%' });
@@ -121,7 +121,10 @@
 
 			//效果函数
 			var doPlay=function(){
-				if(index == 2 || index==0 ){
+				if(index == 2){
+                    $(".thbanner1").attr("src","/Public/Front/images/banner1.png");
+                    flag==true?yuan1():yuan1sj();
+				}else if(index==0){
                     flag==true?yuan1():yuan1sj();
 				}else{
                     flag==true?yuan2():yuan2sj();
