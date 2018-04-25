@@ -204,18 +204,14 @@ $(".korder0").animate({width:"100%"});
 			  $(obj).siblings(".selected0").show();
 		  }
 	  }
-
-
-  function tiaoFun(){
-      var keyword = $("#keyword").val();
+  function tiaoFun(str){
+      var keyword = $("#"+str).val();
       if(keyword==""){
           layer.msg("请输入订单号");
           return false;
       }
       window.location.href="__MODULE__/Ordersel/orderselView/status/2/keyword/"+keyword;
   }
-
-
   </script>
 
 

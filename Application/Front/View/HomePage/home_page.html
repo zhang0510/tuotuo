@@ -64,11 +64,11 @@
 									<p>请输入订单号查询当前订单状况，如果当前订单不存在，请联系客服人员。</p>
 								</div>
 								<div class="du3d" id="tiao1">
-									<input type="text" placeholder="请在此输入订单号" class="cx1" id="keyword" onchange="bians()" ><!-- onkeyup="sel(this);" --><button onclick="tiaoFun();" type="button"></button>
+									<input type="text" placeholder="请在此输入订单号" class="cx1" id="keyword" onchange="bians()" ><!-- onkeyup="sel(this);" --><button onclick="tiaoFun('keyword');" type="button"></button>
 									<div id="searchBoxs"></div>
 								</div>
 								<div class="phone serchsj" id="tiao2">
-									<input type="text" placeholder="请在此输入订单号" class="cx2" id="keyword1" ><!-- onkeyup="sel(this);" --><button onclick="tiaoFun1();" type="button"></button>
+									<input type="text" placeholder="请在此输入订单号" class="cx2" id="keyword1" ><!-- onkeyup="sel(this);" --><button onclick="tiaoFun('keyword1');" type="button"></button>
 									<div id="searchBoxs"></div>
 								</div>
 							</td>
@@ -77,7 +77,10 @@
 							<td>
 								<a>
 								<div class="xddiv">
-									<div class="xdchild"  onclick="tiaoFun1();">
+									<div class="pc xdchild"  onclick="tiaoFun('keyword');">
+										<center><font class="xddfont">订单查询</font></center>
+									</div>
+									<div class="phone xdchild"  onclick="tiaoFun('keyword1');">
 										<center><font class="xddfont">订单查询</font></center>
 									</div>
 								</div>
@@ -451,14 +454,6 @@
         $("#xdtable").show();
         $(".dfontd").attr("style","color:#FFFFFF")
         $(".xfontd").attr("style","color:#ff8000")
-    }
-    function tiaoFun1(){
-        var keyword = $("#keyword1").val();
-        if(keyword==""){
-            layer.msg("请输入订单号");
-            return false;
-        }
-        window.location.href="__MODULE__/Ordersel/orderselView/status/2/keyword/"+keyword;
     }
 	$('.aske1 ul li').click(function(){
 		$(this).addClass('on').siblings().removeClass('on');
