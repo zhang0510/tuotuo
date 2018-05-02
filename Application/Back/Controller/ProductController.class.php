@@ -427,7 +427,10 @@ class ProductController extends BaseController{
 		}else if($provinceaa!='f'&&$citya != 'f' && $county!="f"){
 		    $star = $provinceaa.','.$citya.','.$county;
 		    $info = $starmodel->getPages($star);
-		}
+		}else if($provinceaa!='f'&&$citya != 'f' && $county=="f"){
+            $star = $provinceaa.','.$citya;
+            $info = $starmodel->getPages($star,1);
+        }
 		//$info = $starmodel->getPage($star);
 		foreach ($info['list'] as &$v){
 			//拆分逗号拼接的地区
@@ -1941,7 +1944,7 @@ class ProductController extends BaseController{
 	    if($e_city !='f'){
 	        $where['line_end'] = $e_whe;
 	    }else if($e_pro !='f'){
-	        $where['line_end'] = array('like' ,'%'.$pro.'%');
+	        $where['line_end'] = array('like' ,'%'.$e_pro.'%');
 	    }
 	    
 	    if($pro =='f' && $e_pro =='f'){
