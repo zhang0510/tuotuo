@@ -198,6 +198,7 @@
 														</volist>
 												</select> -->
 												 <input type="hidden" value="{$arry.pid}" id="pro"/>
+													<input type="text" placeholder="客服" id="admin_name" value="{$admin_name}" style="width: 125px;height: 36px;" />
 													<input type="text" id="order" value="{$order}" name="order" placeholder="请输入订单/车牌/手机号"  class="i_n text2">
 													<button class="btn btn-default5" id="btn" type="button">搜索</button>
 												</div>
@@ -325,8 +326,6 @@
 													<if condition ="$order_status eq 'DIE' or $order_status eq 'NUN'">
 													<td>操作</td>
 													</if>
-													
-													
 												</tr>
 												<volist name="list" id="vo">
 													<tr class="tr2">
@@ -426,6 +425,7 @@
         var startime = $('#startime').val();
         var endtime = $('#endtime').val();
         var provincea=$('#pro').val();
+        var admin_name=$('#admin_name').val();
         if(provincea ==''){
         	provincea ='f';
         }
@@ -436,13 +436,13 @@
        		endtime = 0;
        	}
         if (getos&&order) {
-        	window.location.href="__MODULE__/Orderyjh/orderList/order_status/"+getos+"/star/"+startime+"/end/"+endtime+"/order/"+order+"/provincea/"+provincea;
+        	window.location.href="__MODULE__/Orderyjh/orderList/order_status/"+getos+"/star/"+startime+"/end/"+endtime+"/order/"+order+"/provincea/"+provincea+"/admin_name/"+admin_name;
         } else if(order){
-        	window.location.href="__MODULE__/Orderyjh/orderList/star/"+startime+"/end/"+endtime+"/order/"+order+"/provincea/"+provincea;
+        	window.location.href="__MODULE__/Orderyjh/orderList/star/"+startime+"/end/"+endtime+"/order/"+order+"/provincea/"+provincea+"/admin_name/"+admin_name;
         }else if(getos){
-        	window.location.href="__MODULE__/Orderyjh/orderList/order_status/"+getos+"/star/"+startime+"/end/"+endtime+"/provincea/"+provincea;
+        	window.location.href="__MODULE__/Orderyjh/orderList/order_status/"+getos+"/star/"+startime+"/end/"+endtime+"/provincea/"+provincea+"/admin_name/"+admin_name;
         }else{
-        	window.location.href="__MODULE__/Orderyjh/orderList/star/"+startime+"/end/"+endtime+"/provincea/"+provincea;
+        	window.location.href="__MODULE__/Orderyjh/orderList/star/"+startime+"/end/"+endtime+"/provincea/"+provincea+"/admin_name/"+admin_name;
         }        
     });
     //删除

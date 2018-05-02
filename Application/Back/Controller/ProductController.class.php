@@ -336,7 +336,7 @@ class ProductController extends BaseController{
 		$this->assign('pval1',$pval1);
 		$this->assign('cval1',$cval1);
 		$this->assign('coval',$coval['area_name']);
-		$this -> assign('sec','bulk');
+		$this->assign('sec','bulk');
 		$this->display('Product:bulk');
 	}
 	

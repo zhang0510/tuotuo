@@ -7,8 +7,9 @@ class OrderyjhController extends BaseController{
         $jg = "";
         $star = I('star');
         $end = I('end');
+        $service = I('service');
         $order_status = I('get.order_status');
-        $provincea=I('provincea');
+        $admin_name=I('admin_name');
         print_log("订单---条件---查询:".$order_status);
         $order = I('get.order');
         $model = D('Area');
@@ -67,6 +68,9 @@ class OrderyjhController extends BaseController{
             $where['order_status'] =array("neq",'DIE');
         }
         if ($star!=0 && $end!=0){$where['order_time'] = array('between',array($star,$end));}
+        if($admin_name){
+            $where['admin_name'] = array('like',"%$admin_name%");
+        }
         $where[] = "1=1";
         print_log("订单条件查询:".json_encode($where));
         $info = $omodel->getInfo($where);
@@ -130,9 +134,11 @@ class OrderyjhController extends BaseController{
             $this->assign('page',$info['page']);
         }
         $provincea = $model->getArea(1);
+
         $this->assign("provincea",$provincea);
         $this->assign('list',$info['list']);
         $this->assign('order',$order);
+        $this->assign('admin_name',$admin_name);
         //$this->assign('pay',$pay);
         $this->assign('num',$num);
         $this->assign('order_status',$order_status);

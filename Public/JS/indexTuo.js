@@ -294,27 +294,21 @@
 	function totelFun(){
 		var yunPirce = parseInt($("#totelz").html());
 		var baoPirce = parseInt($("#baoprice").html());
-		
 		var yuns = parseInt($("#yuns").html());
 		var bao = parseInt($("#bao").html());
-		var xiprice = parseInt($("#xiprice").html());
+		//var xiprice = parseInt($("#xiprice").html());
 		var smsprice = parseInt($("#smsprice").html());
-		var youhui = parseInt($('#youhui').html());
+		//var youhui = parseInt($('#youhui').html());
 		if(!isNaN(yunPirce) && !isNaN(baoPirce)){
 			//计算第二步
 			var totel = yunPirce+baoPirce;
 			$("#totalz").val(totel);
 			$("#heji").html(totel);
-		}else if(!isNaN(yuns) && !isNaN(bao) && !isNaN(xiprice) && !isNaN(smsprice) && !isNaN(youhui)){
+		}else if(!isNaN(yuns) && !isNaN(bao) &&  !isNaN(smsprice)){
 			//计算第三步
-			if(youhui!=0){
-				var totel = yuns+bao+xiprice+smsprice-youhui;
-			}else{
-				var totel = yuns+bao+xiprice+smsprice;
-			}
-			var totels = yuns+bao+xiprice+smsprice;
+			var totel = yuns+bao+smsprice;
+			var totels = yuns+bao+smsprice;
 			$("#heji").html(totel);
-			$("#rthrtwe").html(totels);
 			$('#totalz').val(totels);
 		}
 		

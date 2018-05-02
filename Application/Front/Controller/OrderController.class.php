@@ -161,6 +161,13 @@ class OrderController extends BaseObjController{
         $linkMan=M("linkman");
         $map['user_code']=$userInfo['user_code'];
         $linkList=$linkMan->where($map)->select();
+        if($order['product_type'] == 'B'){
+            $yun = $order['lineprice']+$order['tiz']+$order['songz']+$order['maoliz'];
+        }else{
+            $yun = $order['lineprice']+$order['tiz']+$order['maoliz'];
+        }
+        $this->assign('yun',$yun);
+        $this->assign("block",D("worktwo")->getBlock(explode(",",$order['qerez'])[1]));
         $this->assign("linkList",$linkList);
         $this->assign("names",explode("-",$order['qsrezname']));
         $this->assign("name1",explode("-",$order['qsrezname'])[1]);
@@ -201,16 +208,8 @@ class OrderController extends BaseObjController{
             }else{
                 $yun = $order['lineprice']+$order['tiz']+$order['maoliz'];
             }
-            $this->assign("saddress",$saddress);
-            $this->assign("order",$order);
-            $this->assign("yun",$yun);
-            $this->assign("name1",explode("-",$order['qsrezname'])[1]);
-            $this->assign("name2",explode("-",$order['qerezname'])[1]);
-            //$this->assign("citys",$order['qerezname']);
-            $this->assign("block",D("worktwo")->getBlock(explode(",",$order['qerez'])[1]));
-            $this -> assign('user',$userInfo);
-            $this -> assign('ret',array('title'=>'附加服务','key_words'=>'Additional services'));
-            $this -> display('Order:normal_step_fu');
+            $this->assign('yun',$yun);
+           $this->normalOrderTh();
         }else{
             $userInfo = json_decode(des_decrypt_php(session('userData')),true);
             $order = session('order');

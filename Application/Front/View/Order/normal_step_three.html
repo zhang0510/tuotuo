@@ -3,6 +3,7 @@
 <include file='public:menu'/>
 <!--banner-->
 <include file='public:up'/>
+<script src="__JS__/indexTuo.js"></script>
 <!--banner-->
 <div class="pc dhdiv">
 	<ul>
@@ -19,6 +20,7 @@
    <div class="deng2e0">
    	  <if condition="$order.flag eq 'Y'"><div class="ee1"><h2>订单费用：{$order.totalz}元</h2></div></if>
       <div class="ee1"><h2>{$name1} <img src="__FRONT__/images/ee1.png">{$name2}</h2></div>
+	   <input type="hidden" id="end_names" value="{$name2}">
 	   <form action="__MODULE__/Order/normalOrderFu" method="post" id="quickz">
 	   <input type="hidden" id="flag" name="flag" value="{$order.flag}">
 	   <div class="rr3">
@@ -56,6 +58,57 @@
 			  <dl style="display:none;"><dt>详细地址 &nbsp;</dt><dd><input type="text" class="rry1" value="-" placeholder="" name="saddress" id="saddress"></dd></dl>
 			  </div>
 		  </div>
+			<div class="rr41 frake1">
+				<h2 class="rra23">附加服务</h2>
+				<h2 class="rra2 ee32"><div class="ee32a"><ul style="margin-left: 73px;"><li onclick="smsFun(this);">送车上门</li><li style="display: none;" id="sefwrg" onclick="xiFun(this);"><span class="hhfg1">洗车50元</span> <span  class="hhfg2">*选择送车上门后才能选此项</span></li></ul></div></h2>
+				<div class="rr41a">
+					<div class="rr41a frake1" id="awgfw" style="display: none;">
+
+							<dl class="frake2">
+								<dt>地址：</dt>
+								<dd><input type="text" placeholder="区域" id="citys" class="txt1a inko"><br><b style="font-size: 18px">费用：<ca id="wegwe">0</ca>元</b>
+									<span class="xxsj"></span>
+									<div class="selected" style="display: none;">
+										<div class="province star_province">
+											<foreach name="block" item="vo">
+												<li data-id="1" onclick="getBlock('{$vo.area_id}','{$vo.area_name}');">{$vo.area_name}</li>
+											</foreach>
+										</div>
+										<div class="city star_city" data-id=""></div>
+										<div class="county star_county" data-id=""></div>
+									</div> </dd>
+							</dl>
+							<dl style="margin-top: 44px;">
+								<dt>详细地址：</dt>
+								<dd>
+									<!-- <input type="text" id="order_info_end_address" name="order_info_end_address" class="txt1" value="{$saddress}"> -->
+									<div class="cscs1">
+										<span id="sgrgw"></span><input type="text" class="rry1" placeholder="请输入详细地址" id="order_info_end_address" value="{$saddress}" name="order_info_end_address">
+									</div>
+								</dd>
+							</dl>
+						</div>
+
+				</div>
+				<input type="hidden" id="order_info_smsc" name="order_info_smsc" value="N">
+				<input type="hidden" id="car_washing" name="car_washing" value="0">
+				<input type="hidden" id="city_qus" name="city_qus" value="">
+				<input type="hidden" id="order_smsc_car" name="order_smsc_car" value="">
+				<input type="hidden" id="totalz" name="totalz" value="{$order.totalz}">
+				<input type="hidden" id="qerez" value="{$order.qerez}">
+				<div class="ee6 ee67" style="margin-left: 165px;">
+					<div class="ee61">
+						<dl>
+							<dd>
+								<p>运费<b id="yuns">{$yun}</b>元 &nbsp; 保险费<b id="bao">{$order.order_info_bxd}</b>元 &nbsp; 上门费<b id="smsprice">0</b>元<b style="display: none" id="xiprice">0</b></p>
+							</dd>
+						</dl>
+					</div>
+					<div class="ee62">
+						<p><span class="fg1">本次服务需支付总金额：</span><span class="fg2">￥<b id="heji">{$order.totalz}</b>元</span></p>
+					</div>
+				</div>
+			</div>
 		</div>
 	   </form>
 
@@ -219,6 +272,99 @@
 		$("#bg").hide();
 		$("#tan1").hide();
 	})
+    function queFun(){
+        var order_info_smsc = $("#order_info_smsc").val();
+        var city_qus = $("#city_qus").val();
+        var order_info_end_address = $("#order_info_end_address").val();
+        if(order_info_smsc == "Y"){
+            if(city_qus == ''){
+                layer.msg("请选择送车区域");
+                return false;
+            }
+            if(order_info_end_address == ''){
+                layer.msg("请输入详细地址");
+                return false;
+            }
+        }
+        $("#quickz").submit();
+    }
+    function favFun(obj){
+        var code = $(obj).val();
+        if(code!=""){
+            $.post("__MODULE__/Order/getFavPrice",{code:code},function(data){
+                if(data.flag){
+                    $("#youhui").html(data.price);
+                    totelFun();
+                }else{
+                    $("#youhui").html(0);
+                    totelFun();
+                }
+            },'json');
+        }else{
+            $("#youhui").html(0);
+            totelFun();
+        }
+
+    }
+    function smsFun(obj){
+        if($(obj).attr("class")=="on"){
+            $(obj).removeClass("on");
+            $("#order_info_smsc").val('N');
+            $("#awgfw").hide();
+            $("#sefwrg").removeClass("on");
+            $("#car_washing").val(0);
+            $("#xiprice").html(0);
+        }else{
+            $(obj).addClass("on");
+            $("#order_info_smsc").val('Y');
+            $("#awgfw").show();
+        }
+        block();
+    }
+    function xiFun(obj){
+        if($("#order_info_smsc").val() == 'Y'){
+            if($(obj).attr("class")=="on"){
+                $(obj).removeClass("on");
+                $("#car_washing").val(0);
+                $("#xiprice").html(0);
+            }else{
+                $(obj).addClass("on");
+                $("#car_washing").val(50);
+                $("#xiprice").html(50);
+            }
+            totelFun();
+        }else{
+            layer.msg("请选择上门送车");
+            return false;
+        }
+
+    }
+    function block(){
+        var id = $("#city_qus").val();
+        var city_jie_sheng = $("#qerez").val();
+        var mark = $('#order_info_smsc').val();
+        $.post("__MODULE__/Order/smscFun",{id:id,type:mark,str:city_jie_sheng},function(data){
+            if(data.flag){
+                $("#smsprice").html(data.prices);
+                $("#order_smsc_car").val(data.prices);
+                $('#wegwe').html(data.prices);
+                totelFun();
+            }else{
+                $("#smsprice").html(0);
+                $("#order_smsc_car").val(0);
+                $('#wegwe').html(0);
+                totelFun();
+            }
+        },'json');
+    }
+    function getBlock(id,name){
+        var ss = $("#end_names").val();
+        $("#city_qus").val(id);
+        $("#sgrgw").html(ss+name);
+        $('#citys').val(name);
+        $('.selected0,.selected').hide();
+        block();
+    }
 </script>
 
 <!--content-->
