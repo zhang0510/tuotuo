@@ -1948,10 +1948,11 @@ class ProductController extends BaseController{
 	    }
 	    
 	    if($pro =='f' && $e_pro =='f'){
-	        $ret = M("line")->select();
+	        $ret = M("line")->order("line_end asc")->select();
 	    }else{
-	        $ret = M("line")->where($where)->select();
+	        $ret = M("line")->where($where)->order("line_end asc")->select();
 	    }
+
 	    $area= M("area");
 	    foreach ($ret as &$va){
 	        $star=$va['line_star'];
