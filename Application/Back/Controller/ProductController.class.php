@@ -1329,9 +1329,9 @@ class ProductController extends BaseController{
 	        $where['san_end'] = array('like' ,'%'.$pro1.'%');
 	    }
 	    if($pro1 !='f' || $pro !='f'){
-	        $ret = M("line_san")->where($where)->select();
+	        $ret = M("line_san")->where($where)->order('san_star asc,san_end asc')->select();
 	    }else{
-	        $ret = M("line_san")->select();
+	        $ret = M("line_san")->order('san_star asc,san_end asc')->select();
 	    }
 	   
 	    $data['xlsName']  = "集散地--导出".date("Y-m-d H:i:s",time());
@@ -1948,9 +1948,9 @@ class ProductController extends BaseController{
 	    }
 	    
 	    if($pro =='f' && $e_pro =='f'){
-	        $ret = M("line")->order("line_end asc")->select();
+	        $ret = M("line")->order("'line_star asc,line_end asc'")->select();
 	    }else{
-	        $ret = M("line")->where($where)->order("line_end asc")->select();
+	        $ret = M("line")->where($where)->order('line_star asc,line_end asc')->select();
 	    }
 
 	    $area= M("area");

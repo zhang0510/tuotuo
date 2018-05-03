@@ -51,7 +51,7 @@ class LineSanModel extends BaseModel{
 	    $num = $this->where($map)->count();
 	    $page = set_page($num,10);
 	    $info['page'] = $page -> Backpage();
-	    $info['list'] = $this->where($map)->limit($page->limit)->select();
+	    $info['list'] = $this->where($map)->order('san_star asc,san_end asc')->limit($page->limit)->select();
 	    return $info;
 	}
 	/*

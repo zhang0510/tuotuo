@@ -9,6 +9,7 @@ class OrderyjhController extends BaseController{
         $end = I('end');
         $service = I('service');
         $order_status = I('get.order_status');
+        $provincea=I('provincea');
         $admin_name=I('admin_name');
         print_log("订单---条件---查询:".$order_status);
         $order = I('get.order');
