@@ -1888,7 +1888,7 @@ class ProductController extends BaseController{
     				$description_ = $currentSheet->getCell('D'.$currentRow)->getValue();
     				$arrs2 = explode(",", $description_);
     				$map_3['area_name'] = array('eq',$arrs2[0]);
-    				$reb = $areaObj->where($map_2)->find();
+    				$reb = $areaObj->where($map_3)->find();
     				$map_4['area_name'] = array('eq',$arrs2[1]);
     				$reb1 = $areaObj->where($map_4)->find();
     				$v['line_end']=$reb['area_id'].",".$reb1['area_id'];
