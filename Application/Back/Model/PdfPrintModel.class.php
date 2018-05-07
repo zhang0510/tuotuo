@@ -137,7 +137,13 @@ class PdfPrintModel extends BaseModel{
 
         //获取起始地参数
         $star = $this->trim_Str($orderInfo['order_info_star'],"arr_info");
-        if ($star[0]!=""){
+        if ($star[1]!=""){
+            //查询起始地名称
+            $map['area_id'] = array('eq',$star[1]);
+            $startList= $area_M -> where($map)->field('area_name')->find();
+            //存储起始地
+            $result['star']=implode($startList);
+        }elseif ($star[0]!=""){
             //查询起始地名称
             $map['area_id'] = array('eq',$star[0]);
             $startList= $area_M -> where($map)->field('area_name')->find();
@@ -149,7 +155,13 @@ class PdfPrintModel extends BaseModel{
         
         //获取结束地参数
         $end = $this->trim_Str($orderInfo['order_info_end'],"arr_info");
-        if ($end[0]!=""){
+        if ($end[1]!=""){
+            //查询起始地名称
+            $map['area_id'] = array('eq',$end[1]);
+            $endList= $area_M -> where($map)->field('area_name')->find();
+            //存储结束地
+            $result['end']=implode($endList);
+        }elseif ($end[0]!=""){
             //查询起始地名称
             $map['area_id'] = array('eq',$end[0]);
             $endList= $area_M -> where($map)->field('area_name')->find();
