@@ -1209,6 +1209,7 @@ class ProductController extends BaseController{
 	 */
 	function daoru_bulk(){
 	    $area = M("line_san");
+        $model = D('LineSan');
 	    //$areaObj = M("area");
 	    import("Org.Util.PHPExcel");
 	    if (! empty ( $_FILES['csvFile']['name'])){
@@ -1259,7 +1260,7 @@ class ProductController extends BaseController{
 	                $v['san_id'] =  $cid!="" && $cid!=null && is_object($cid) ? $cid->__toString():$cid;
 	    
 	                $type_pid_ = $currentSheet->getCell('B'.$currentRow)->getValue();
-	                $v["san_code"]= $type_pid_!="" && $type_pid_!=null && is_object($type_pid_) ? $type_pid_->__toString():$type_pid_;
+	                $v["san_code"]= $type_pid_!="" && $type_pid_!=null && is_object($type_pid_) ? $type_pid_->__toString():create_random_code(7);
 	    
 	                 
 	                $type_id_ = $currentSheet->getCell('C'.$currentRow)->getValue();
@@ -1297,7 +1298,10 @@ class ProductController extends BaseController{
 	                    $map_['san_id'] = array("eq",$vo['san_id']);
 	                    $area ->where($map_)->save($v);
 	                }else{
-	                    $area->add($v);
+                        $res = $model->verify($v['san_star'],$v['san_end']);
+                        if(!$res){
+                            $area->add($v);
+                        }
 	                }
 	            }
 	            @unlink ($savePath.$file_name);
