@@ -1880,7 +1880,7 @@ class ProductController extends BaseController{
     				$v['line_id'] =  $cid!="" && $cid!=null && is_object($cid) ? $cid->__toString():$cid;
     				
     				$type_pid_ = $currentSheet->getCell('B'.$currentRow)->getValue();
-    				$v["line_code"]= $type_pid_!="" && $type_pid_!=null && is_object($type_pid_) ? $type_pid_->__toString():$type_pid_;
+    				$v["line_code"]= $type_pid_!="" && $type_pid_!=null && is_object($type_pid_) ? $type_pid_->__toString():create_random_code(7);
                     
     				$type_id_ = $currentSheet->getCell('C'.$currentRow)->getValue();
     				$arrs1 = explode(",", $type_id_);
@@ -1914,7 +1914,11 @@ class ProductController extends BaseController{
     				$vo=null;
     				if($map!=null){
     					$vo = $area->where($map)->find();
-    				}
+    				}else{
+    				    $onemap['line_star'] = array('eq',$v['line_star']);
+    				    $onemap['line_end'] = array('eq',$v['line_end']);
+                        $vo = $area->where($onemap)->find();
+                    }
     				if($vo!=null&&count($vo)>0){
     					$map_['line_id'] = array("eq",$vo['line_id']);
     					$area ->where($map_)->save($v);
