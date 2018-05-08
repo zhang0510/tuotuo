@@ -1918,6 +1918,10 @@ class ProductController extends BaseController{
     				    $onemap['line_star'] = array('eq',$v['line_star']);
     				    $onemap['line_end'] = array('eq',$v['line_end']);
                         $vo = $area->where($onemap)->find();
+                        if($vo!=null&&count($vo)>0){
+                            $v['line_id'] = $vo['line_id'];
+                            $v['line_code'] = $vo['line_code'];
+                        }
                     }
     				if($vo!=null&&count($vo)>0){
     					$map_['line_id'] = array("eq",$vo['line_id']);
