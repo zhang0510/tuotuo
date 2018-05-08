@@ -971,6 +971,7 @@ class ProductController extends BaseController{
 		        //'line_price_ban'=>  $zpriceban,
 				//'line_name'	=>	$line_name,
 				//'line_img'	=>	$line_img,
+                'line_time' => date("Y-m-d H:i:s"),
 		);
 		if ($line_code){
 			if ($model->where(array('line_code'=>$line_code))->save($data)){
@@ -1899,6 +1900,8 @@ class ProductController extends BaseController{
     				
     				$quality_ = ($currentSheet->getCell('E'.$currentRow)->getValue())*100;
     				$v['line_price']= $quality_!="" && $quality_!=null && is_object($quality_) ? $quality_->__toString():$quality_;
+
+                    $v['line_time']= date("Y-m-d H:i:s");
     				
     				//$v['area_add_time'] = $datatime;
     				$map = null;

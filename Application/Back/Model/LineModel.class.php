@@ -16,7 +16,7 @@ class LineModel extends BaseModel{
 	    $num = $this->where($wherea)->count();
 	    $page = set_page($num,10);
 	    $info['page'] = $page -> Backpage();
-	    $info['list'] = $this->where($wherea)->order('line_star asc,line_end asc')->limit($page->limit)->select();
+	    $info['list'] = $this->where($wherea)->order('line_time desc')->limit($page->limit)->select();
 	    return $info;
 	}
 	/*
