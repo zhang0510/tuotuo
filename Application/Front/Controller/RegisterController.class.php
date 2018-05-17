@@ -6,7 +6,9 @@ class RegisterController extends BaseController {
     public function index(){
         //生成表单Token
         $token = rand_token();
+        $source = I("get.source");
         $this -> assign('Session_From_Token',$token);
+        $this -> assign('source',$source);
         //进入页面
     	$this->display("Register:register");
     }
@@ -66,7 +68,7 @@ class RegisterController extends BaseController {
                 $this -> ajaxReturn($result);
             }else{
                 //验证码
-                function check_verify($code, $id = ""){
+               function check_verify($code, $id = ""){
                     $verify = new \Think\Verify();
                     return $verify->check($code, $id);
                 }
@@ -95,13 +97,23 @@ class RegisterController extends BaseController {
                     $result['info'] = "两次输入密码不同！";
                     $this -> ajaxReturn($result);
                 }
+
+                //判断用户来源
+                $source  =   I("post.source");
+                $sourceModel = M("user_source");
+                $sourceArr = $sourceModel->find("user_source = '".$source."'");
+                if(!empty($sourceArr)){
+                    $userData['user_source'] = $sourceArr['source_id'];
+                }else{
+                    $userData['user_source'] = '';
+                }
                 
                 //初始化
                 $rObj = D("Register");
                 
                 //查询手机号是否注册
                 $tel_result = $rObj -> selectTel($userData['tel']);
-                
+
                 //判断手机号是否注册
                 if($tel_result>0){
                     //已注册
@@ -118,6 +130,18 @@ class RegisterController extends BaseController {
                         $type="find";
                         //查询用户信息
                         $tel_Result = $lObj -> mobile_Select_User($userData['tel'],$type);
+
+                        //添加优惠券
+                        $obj = D('Favorable');
+                        $obj -> addFav(array(
+                                                'fav_startime' => '',
+                                                'fav_endtime' => '',
+                                                'user_code' => $tel_Result['tel'],
+                                                'fav_left' => '1',
+                                                'user_name' => $tel_Result['user_name'],
+                                                'fav_price' => '100',
+                                            ));
+
                         //用户信息写入session
                         $_SESSION ['userData'] = des_encrypt_php(json_encode($tel_Result));
                         $result['type'] = 1;

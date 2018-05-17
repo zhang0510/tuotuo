@@ -9,22 +9,31 @@ class MyCouponController extends BaseController {
         if($session_User['id']>0){
             //接收参数//查询
             $myArray['user_code'] = $session_User['tel'];
+            $myArray['fav_flag'] = 'Y';
             $mObj = D("MyCoupon");
             $myList = $mObj -> mycoupon_list($myArray);
             $time = time();
             
             for($i=0;$i<count($myList['list']);$i++){
-                if(strtotime($myList['list'][$i]['fav_startime']) <= $time && strtotime($myList['list'][$i]['fav_endtime']) >$time){
+                if(strtotime($myList['list'][$i]['fav_startime']) == '' && strtotime($myList['list'][$i]['fav_endtime']) ==''){
+                    $myList['list'][$i]['msg'] = "未用";
+                }elseif(strtotime($myList['list'][$i]['fav_startime']) <= $time && strtotime($myList['list'][$i]['fav_endtime']) >$time){
                     if($myList['list'][$i]['fav_status'] == 'Y'){
                         $myList['list'][$i]['msg'] = "已用";
                     }else{
                         $myList['list'][$i]['msg'] = "未用";
                     }
                 }else{
-                    $myList['list'][$i]['msg'] = "已作废";
+                    $myList['list'][$i]['msg'] = "失效";
                 }
-                $myList['list'][$i]['fav_startime'] = str_replace("-",".",substr($myList['list'][$i]['fav_startime'],0,10));
-                $myList['list'][$i]['fav_endtime'] = str_replace("-",".",substr($myList['list'][$i]['fav_endtime'],0,10));
+                if(strtotime($myList['list'][$i]['fav_startime']) == '' && strtotime($myList['list'][$i]['fav_endtime']) ==''){
+                    $myList['list'][$i]['fav_startime'] = '';
+                    $myList['list'][$i]['fav_endtime'] = "长期有效";
+                }else{
+                    $myList['list'][$i]['fav_startime'] = str_replace("-",".",substr($myList['list'][$i]['fav_startime'],0,10));
+                    $myList['list'][$i]['fav_endtime'] = str_replace("-",".",substr($myList['list'][$i]['fav_endtime'],0,10));
+                }
+
             }
             $this -> assign('show',$myList['show']);
             $this -> assign('cList',$myList['list']);

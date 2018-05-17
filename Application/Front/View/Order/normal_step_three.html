@@ -96,15 +96,16 @@
 				<input type="hidden" id="order_smsc_car" name="order_smsc_car" value="">
 				<input type="hidden" id="totalz" name="totalz" value="{$order.totalz}">
 				<input type="hidden" id="qerez" value="{$order.qerez}">
-				<div class="ee6 ee67" style="margin-left: 165px;">
+				<div class="ee6 ee67" style="margin-left: 50px;">
 					<div class="ee61">
 						<dl>
 							<dd>
 								<p>运费<b id="yuns">{$yun}</b>元 &nbsp; 保险费<b id="bao">{$order.order_info_bxd}</b>元 &nbsp; 上门费<b id="smsprice">0</b>元<b style="display: none" id="xiprice">0</b></p>
+								<p><span >输入优惠码：</span><input type="text" onblur="favFun(this);" id="fav_code" name="fav_code" placeholder="优惠码编号" value=""><span class="ccaca">优惠金额:<b id="youhui">0</b>元</span></p>
 							</dd>
 						</dl>
 					</div>
-					<div class="ee62">
+					<div class="ee62" style="width: 396px;margin: auto;">
 						<p><span class="fg1">本次服务需支付总金额：</span><span class="fg2">￥<b id="heji">{$order.totalz}</b>元</span></p>
 					</div>
 				</div>

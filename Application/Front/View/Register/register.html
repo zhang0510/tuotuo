@@ -47,6 +47,7 @@
 							<input id="SMbtn" name="SMbtn" type="button" value="获取验证码" class="txt6" onclick="SM_Check()" />
 						</dd>
 					</dl>
+					<input type="hidden" id="source" value="{$source}" >
 					<div class="txt8"><label><input type="checkbox" id="UAgreement" name="UAgreement" value="1" checked="checked"> 同意《妥妥运车用户协议》</label>  <a href="javascript:void(0)">点击查看</a></div>
 					<div class="txt4"><input type="button" value="注册" onclick="Login_Check()"></div>
 					<div class="txt7"><a href="__MODULE__/Login/pclogin/">已有账号，去登录</a></div>
@@ -212,6 +213,7 @@ function Login_Check(){
 	var VCode=$('#VCode').val();
 	var SM_VCode=$('#SM_VCode').val();
 	var SMS_VCode=$('#SMS_VCode').val();
+	var source=$('#source').val();
 
 	//验证手机号 check_Mobile
 	if(tel.trim()==""){
@@ -258,16 +260,17 @@ function Login_Check(){
 		return false;
 	}
 	//提交
-	$.post('__MODULE__/Register/register',{'From_Token':From_Token,'tel':tel,'upwd':upwd,'upwd_two':upwd_two,'VCode':VCode,'SM_VCode':SM_VCode,'SMS_VCode':SMS_VCode},function(data){
+	$.post('__MODULE__/Register/register',{'From_Token':From_Token,'tel':tel,'upwd':upwd,'upwd_two':upwd_two,'VCode':VCode,'SM_VCode':SM_VCode,'SMS_VCode':SMS_VCode,'source':source},function(data){
 		if(data.type==0){
 			$.anewAlert(data.info);
 		}else{
-			if(data.loginJump!=""){
-				window.location.href="__MODULE__/"+data.loginJump;
-			}else{
-				window.location.href="__MODULE__/Index/homePage/";
-			}
-		}
+            if(data.loginJump!=""){
+                window.location.href="__MODULE__/"+data.loginJump;
+            }else{
+                window.location.href="__MODULE__/Index/homePage/";
+            }
+
+        }
 	})
 }
 

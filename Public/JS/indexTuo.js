@@ -298,15 +298,19 @@
 		var bao = parseInt($("#bao").html());
 		//var xiprice = parseInt($("#xiprice").html());
 		var smsprice = parseInt($("#smsprice").html());
-		//var youhui = parseInt($('#youhui').html());
+		var youhui = parseInt($('#youhui').html());
 		if(!isNaN(yunPirce) && !isNaN(baoPirce)){
 			//计算第二步
 			var totel = yunPirce+baoPirce;
 			$("#totalz").val(totel);
 			$("#heji").html(totel);
-		}else if(!isNaN(yuns) && !isNaN(bao) &&  !isNaN(smsprice)){
+		}else if(!isNaN(yuns) && !isNaN(bao) &&  !isNaN(smsprice) &&  !isNaN(youhui)){
 			//计算第三步
-			var totel = yuns+bao+smsprice;
+			if(youhui != 0 ){
+                var totel = yuns+bao+smsprice-youhui;
+			}else{
+                var totel = yuns+bao+smsprice;
+			}
 			var totels = yuns+bao+smsprice;
 			$("#heji").html(totel);
 			$('#totalz').val(totels);
