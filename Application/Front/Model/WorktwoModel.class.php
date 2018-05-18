@@ -249,11 +249,6 @@ class WorktwoModel extends BaseModel {
         //查询
         $list = $obj -> where($map) -> find();
         if(empty($list)){
-            $map['fav_startime'] = array('eq','');
-            $map['fav_endtime'] = array('eq','');
-            $list = $obj -> where($map) -> find();
-        }
-        if(empty($list)){
             $map['fav_startime'] = array('eq','0000-00-00 00:00:00');
             $map['fav_endtime'] = array('eq','0000-00-00 00:00:00');
             $list = $obj -> where($map) -> find();

@@ -15,8 +15,12 @@ class MyCouponController extends BaseController {
             $time = time();
             
             for($i=0;$i<count($myList['list']);$i++){
-                if(strtotime($myList['list'][$i]['fav_startime']) == '' && strtotime($myList['list'][$i]['fav_endtime']) ==''){
-                    $myList['list'][$i]['msg'] = "未用";
+                if($myList['list'][$i]['fav_startime'] == '0000-00-00 00:00:00' && $myList['list'][$i]['fav_endtime'] =='0000-00-00 00:00:00'){
+                    if($myList['list'][$i]['fav_status'] == 'Y'){
+                        $myList['list'][$i]['msg'] = "已用";
+                    }else{
+                        $myList['list'][$i]['msg'] = "未用";
+                    }
                 }elseif(strtotime($myList['list'][$i]['fav_startime']) <= $time && strtotime($myList['list'][$i]['fav_endtime']) >$time){
                     if($myList['list'][$i]['fav_status'] == 'Y'){
                         $myList['list'][$i]['msg'] = "已用";
@@ -26,7 +30,7 @@ class MyCouponController extends BaseController {
                 }else{
                     $myList['list'][$i]['msg'] = "失效";
                 }
-                if(strtotime($myList['list'][$i]['fav_startime']) == '' && strtotime($myList['list'][$i]['fav_endtime']) ==''){
+                if($myList['list'][$i]['fav_startime'] == '0000-00-00 00:00:00' && $myList['list'][$i]['fav_endtime'] =='0000-00-00 00:00:00'){
                     $myList['list'][$i]['fav_startime'] = '';
                     $myList['list'][$i]['fav_endtime'] = "长期有效";
                 }else{
