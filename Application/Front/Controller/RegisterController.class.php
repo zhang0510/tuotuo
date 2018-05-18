@@ -99,15 +99,14 @@ class RegisterController extends BaseController {
                 }
 
                 //判断用户来源
-                $source  =   I("post.source");
+                $source  =   I("source");
                 $sourceModel = M("user_source");
-                $sourceArr = $sourceModel->find("user_source = '".$source."'");
+                $sourceArr = $sourceModel->where(array('source_code'=>$source))->find();
                 if(!empty($sourceArr)){
                     $userData['user_source'] = $sourceArr['source_id'];
                 }else{
                     $userData['user_source'] = '';
                 }
-                
                 //初始化
                 $rObj = D("Register");
                 
@@ -130,18 +129,18 @@ class RegisterController extends BaseController {
                         $type="find";
                         //查询用户信息
                         $tel_Result = $lObj -> mobile_Select_User($userData['tel'],$type);
-
-                        //添加优惠券
-                        $obj = D('Favorable');
-                        $obj -> addFav(array(
-                                                'fav_startime' => '',
-                                                'fav_endtime' => '',
-                                                'user_code' => $tel_Result['tel'],
-                                                'fav_left' => '1',
-                                                'user_name' => $tel_Result['user_name'],
-                                                'fav_price' => '100',
-                                            ));
-
+                        if($userData['user_source'] != ''){
+                            //添加优惠券
+                            $obj = D('Back/Favorable');
+                            $obj -> addFav(array(
+                                'fav_startime' => '',
+                                'fav_endtime' => '',
+                                'user_code' => $tel_Result['tel'],
+                                'fav_left' => '1',
+                                'user_name' => $tel_Result['user_name'],
+                                'fav_price' => '100',
+                            ));
+                        }
                         //用户信息写入session
                         $_SESSION ['userData'] = des_encrypt_php(json_encode($tel_Result));
                         $result['type'] = 1;
