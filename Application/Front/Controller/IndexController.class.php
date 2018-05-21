@@ -16,6 +16,8 @@ class IndexController extends BaseObjController {
      * 首页
      */
     function homePage(){
+        $source = I("get.source");
+        session('user_source',$source);
         $jump = session('jump')==""||session('jump')==null?"":session('jump');
         $jumpz = session('jumpz')==""||session('jumpz')==null?"":session('jumpz');
         $this -> assign('jump',$jump['order']);

@@ -6,9 +6,7 @@ class RegisterController extends BaseController {
     public function index(){
         //生成表单Token
         $token = rand_token();
-        $source = I("get.source");
         $this -> assign('Session_From_Token',$token);
-        $this -> assign('source',$source);
         //进入页面
     	$this->display("Register:register");
     }
@@ -99,7 +97,7 @@ class RegisterController extends BaseController {
                 }
 
                 //判断用户来源
-                $source  =   I("source");
+                $source  =  session('user_source');
                 $sourceModel = M("user_source");
                 $sourceArr = $sourceModel->where(array('source_code'=>$source))->find();
                 if(!empty($sourceArr)){
@@ -140,6 +138,7 @@ class RegisterController extends BaseController {
                                 'user_name' => $tel_Result['user_name'],
                                 'fav_price' => '100',
                             ));
+                            session('user_source',null);
                         }
                         //用户信息写入session
                         $_SESSION ['userData'] = des_encrypt_php(json_encode($tel_Result));
