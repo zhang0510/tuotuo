@@ -160,6 +160,9 @@ class OrderAssistantModel extends RelationModel{
 			    $area=$posi_M ->where("order_code ='".$info['order_code']."'")->order("time desc")->field("content")->find();
 			    if($area){
 			        $address=explode("已到达",$area['content'])[1];
+			        if($address == ''){
+                        $address = $area['content'];
+                    }
 			        $info['area']=$address;
 			    }else{
 			        $info['area']='未知';
