@@ -61,7 +61,13 @@ class IndexController extends BaseObjController {
         $this->assign("pro",$pro);
         $this->assign("brand",$brand);
         $this->assign("banner",$banner);
-    	$this->display("HomePage:home_page");
+        $mobile = $this->is_mobile();
+        if($mobile){
+            $this->display("HomePage:home_pagemobile");
+        }else{
+            $this->display("HomePage:home_page");
+        }
+
     }
 
     //手机动态码登录

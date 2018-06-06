@@ -1,0 +1,521 @@
+<include file='public:header'/>
+<include file='public:top'/>
+<include file='public:menu'/>
+<script>
+	/* $(document).ready(function(){
+		var zong = '{$jump.total}';
+		var bao = '{$jump.sprice}';
+		var yun = '{$jump.tprice}';
+		var ewai = '{$jump.eprice}';
+		if(zong!=''){
+			$("#zong").html(zong);
+			$("#quickshop").show();
+		}
+		if(bao!=''){
+			$("#secu").html(bao);
+		}
+		if(yun!=''&&ewai!=''){
+			$("#trans").html(parseInt(ewai)/100 + parseInt(yun));
+		}
+		var zongz = '{$jumpz["order"]["total"]}';
+		if(zongz!=''){
+			$("#zongz").html(zongz);
+		}
+	}) */
+
+	function ceshi(obj){
+		var qsrcz = $("#qsrcz").val();
+		if(qsrcz.trim()==""){
+			layer.msg("请先选择出发地!");
+			//$("#qepz").hide();
+			//$("#q5").hide();
+			//$("#qecz").hide();
+			//$(".selected0").hide();
+			return false;
+		}else{
+            if($(".selected0").attr('style') == 'display: block;'){
+                $(obj).siblings(".selected0").hide();
+            }else{
+                $(obj).siblings(".selected0").show();
+            }
+		}
+	}
+</script>
+<script src="__JS__/indexTuo.js"></script>
+<!--banner-->
+	<div class="bannersy">
+		<div class="slideTxtBox">
+			<span class="hd">
+				<ul class="bannerdiv1">
+					<li class="yuan yuan1" ></li>
+					<li class="yuan yuan2" ></li>
+					<li class="yuan yuan3" ></li>
+					<li class="yuan yuan4" ></li>
+				</ul>
+			</span>
+			<div class="bannerdiv3" style="background:url('/Public/Front/images/dhdi.png') " >
+				<center><div class="dhdiv">热线电话：400-877-1107</div></center>
+			</div>
+			<div class="bd">
+				<ul>
+					<li>
+						<img class="pc bannerimg thbanner" src="/Public/Front/images/BANNER_min.png" alt="运车">
+						<img class="phone bannerimg" src="/Public/Front/images/bannersj.png" alt="运车">
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<img class="pc bannerimg thbanner1" src="/Public/Front/images/banner1_min.png" alt="运车">
+						<img class="phone bannerimg" src="/Public/Front/images/banner1.png" alt="运车">
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<img class="pc bannerimg thbanner" src="/Public/Front/images/BANNER_min.png" alt="运车">
+						<img class="phone bannerimg" src="/Public/Front/images/bannersj.png" alt="运车">
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<img class="pc bannerimg thbanner1" src="/Public/Front/images/banner1_min.png" alt="运车">
+						<img class="phone bannerimg" src="/Public/Front/images/banner1.png" alt="运车">
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">jQuery(".slideTxtBox").slide(); </script>
+	</div>
+<!--content-->
+<div class="part1" style="width: 100%;">
+	<div style="width:100%">
+		<table>
+			<tr>
+				<td class="tddh"><img onclick="xdxs()" class="tdimg" id="tdsj11.png" name="tdsj1.png" style="width:80%" src="/Public/Front/images/tdsj1.png"></td>
+				<td class="tddh"><img onclick="ddxs('320')" class="tdimg" id="tdsj22.png" name="tdsj2.png" style="width:60%" src="/Public/Front/images/tdsj22.png"></td>
+				<td class="tddh"><img onclick="youshi()" class="tdimg" id="tdsj33.png" name="tdsj3.png" style="width:60%" src="/Public/Front/images/tdsj33.png"></td>
+				<td class="tddh"><img class="tdimg" id="tdsj44.png" name="tdsj4.png" style="width:60%" src="/Public/Front/images/tdsj44.png"></td>
+			</tr>
+		</table>
+	</div>
+	<div class="ksfw">
+		<table id="searchtable" class="pc fwtable1">
+			<tr>
+				<td style="width:40%;">
+					<div class="csczz">
+						<p>请输入订单号查询当前订单状况，如果当前订单不存在，请联系客服人员。</p>
+					</div>
+					<div class="du3d" id="tiao1">
+						<input type="text" placeholder="请在此输入订单号" class="cx1" id="keyword" onchange="bians()" ><!-- onkeyup="sel(this);" --><button onclick="tiaoFun('keyword');" type="button"></button>
+						<div id="searchBoxs"></div>
+					</div>
+					<div class="phone serchsj" id="tiao2">
+						<input type="text" placeholder="请在此输入订单号" class="cx2" id="keyword1" ><!-- onkeyup="sel(this);" --><button onclick="tiaoFun('keyword1');" type="button"></button>
+						<div id="searchBoxs"></div>
+					</div>
+				</td>
+			</tr>
+			<tr class="searchtd">
+				<td>
+					<a>
+						<div class="xddiv">
+							<div class="pc xdchild"  onclick="tiaoFun('keyword');">
+								<center><font class="xddfont">订单查询</font></center>
+							</div>
+							<div class="phone xdchild"  onclick="tiaoFun('keyword1');">
+								<center><font class="xddfont">订单查询</font></center>
+							</div>
+						</div>
+					</a>
+				</td>
+			</tr>
+		</table>
+		<script>
+			function bians(){
+				$(".searchtd .xddiv").attr('style',"background:#ff8000;");
+				$(".searchtd .xddfont").attr('style',"color:#ffffff;");
+			}
+		</script>
+		<table id="xdtable">
+			<form method="post" action="__MODULE__/Order/normal" id="quickz">
+				<div style="display: bolok">
+					<!-- 开始地 -->
+					<input type="hidden" name="qsrez" id="qsrez" value="" />
+					<!-- 目的地 -->
+					<input type="hidden" name="qerez" id="qerez" value="" />
+					<!-- 开始地中文名称 -->
+					<input type="hidden" name="qsrezname" id="qsrezname" value="" />
+					<!-- 目的地中文名称 -->
+					<input type="hidden" name="qerezname" id="qerezname" value="" />
+					<!-- 车品牌 -->
+					<input type="hidden" name="qsctez" id="qsctez" value="阿斯顿马丁" />
+					<!-- 车型号 -->
+					<input type="hidden" name="qsctcz" id="qsctcz" value="V12 Vantage" />
+					<!-- 车id -->
+					<input type="hidden" name="carids" id="carids" value="202" />
+					<!-- 运费 -->
+					<input type="hidden" name="lineprice" id="lineprice" value="0" />
+					<!-- 类型 -->
+					<input type="hidden" name="product_type" id="product_type" value="0" />
+					<!-- 总费 -->
+					<input type="hidden" name="totalz" id="totalz" value="0" />
+					<!-- 提车费 -->
+					<input type="hidden" name="tiz" id="tiz" value="0" />
+					<!-- 送车费 -->
+					<input type="hidden" name="songz" id="songz" value="0" />
+					<!-- 集散地起点 -->
+					<input type="hidden" name="sansz" id="sansz" value="" />
+					<!-- 集散地重点 -->
+					<input type="hidden" name="sanez" id="sanez" value="" />
+					<!-- 提车地id -->
+					<input type="hidden" name="tidz" id="tidz" value="" />
+					<!-- 送车地id -->
+					<input type="hidden" name="sidz" id="sidz" value="" />
+					<!-- 毛利 -->
+					<input type="hidden" name="maoliz" id="maoliz" value="0" />
+					<!-- 普通下单钱数第一部分 -->
+					<input type="hidden" name="ptxd1" id="ptxd1" value=0 />
+					<!-- 普通下单钱数第二部分 -->
+					<input type="hidden" name="ptxd2" id="ptxd2" value=0 />
+					<!-- 集散地B地名（汉字） -->
+					<input type="hidden" name="ptjsd" id="ptjsd" value='' />
+					<!-- 数据是否可用 -->
+					<input type="hidden" name="flag" id="flag" value='N' />
+					<input type="hidden" name="msg" id="msg" value='N' />
+				</div>
+				<tr class="jiange"></tr>
+				<tr>
+					<td class="blacktd"><div class="buttonblack1"><font>出发地:</font></div></td>
+					<td style="width:45%"><!-- 开始地 -->
+						<div class="tab-pay1 top_search2">
+							<dl class="dlbottom">
+								<dd>
+									<input type="text" placeholder="" readonly="readonly" class="txt1a inko" name="qsrcz" id="qsrcz" value="{$jumpz['order']['start']}" onclick="ceshi3(this);">
+									<span class="txtspan1" onclick="ceshi3(this);"><img src="/Public/Front/images/ww5.png" alt="按钮"></span>
+									<span class="xxsj"></span>
+									<div class="selected0" id="q4">
+										<div class="province star_province" id="qspz">
+											<ul>
+												<!-- <li data-id="14">请选择</li> -->
+												<foreach name="pro" item="vo">
+													<li data-id="1"  onclick="getCityz('{$vo.area_id}','S','{$vo.area_name}')">{$vo.area_name}</li>
+												</foreach>
+											</ul>
+										</div>
+										<div class="city star_city" data-id="" style="display:none" id="qscz"></div>
+										<div class="county star_county" data-id="" style="display:none" id="qsbz"></div>
+									</div>
+								</dd>
+							</dl>
+						</div>
+					</td>
+				</tr>
+				<tr class="jiange"></tr>
+				<tr>
+					<td><div class="buttonblack1"><font>目的地:</font></div></td>
+					<td><!-- 目的地 -->
+						<div class="tab-pay1 top_search2">
+							<dl class="dlbottom"><dd><input type="text" readonly="readonly" placeholder="" class="txt1a inko" name="qercz" id="qercz" value="{$jumpz['order']['end']}" onclick="ceshi3(this);">
+								<span class="txtspan1" onclick="ceshi3(this);"><img src="/Public/Front/images/ww5.png" alt="按钮"></span>
+								<span class="xxsj"></span>
+								<div class="selected0" id="q5">
+									<div class="province star_province" id="qepz">
+										<foreach name="pro" item="vo">
+											<li data-id="1"  onclick="getCityz('{$vo.area_id}','E','{$vo.area_name}')">{$vo.area_name}</li>
+										</foreach>
+									</div>
+									<div class="city star_city" data-id="" id="qecz" style="display:none"></div>
+									<!-- <div class="county star_county" data-id=""></div> -->
+								</div> </dd></dl>
+						</div>
+					</td>
+				</tr>
+				<tr class="jiange"></tr>
+				<tr style="display: none">
+					<td><div class="buttonblack1"><font>品牌车系:</font></div></td>
+					<td><!-- 车品牌 -->
+						<div class="tab-pay1 top_search2">
+							<dl class="dlbottom"><dd>
+								<input type="text" placeholder="" readonly="readonly" class="txt1a inko" id="qbtz" name="carInfoz" value="{$jumpz['order']['carInfo']}" onkeyup="serchCar(this);">
+								<span class="txtspan1" onclick="ceshi3(this);"><img src="/Public/Front/images/ww5.png" alt="按钮"></span>
+								<span class="xxsj"></span>
+								<div class="selected0" id="q6">
+									<div class="province star_province" id="qbrz">
+										<foreach name="brand" item="vo">
+											<li data-id="1"  onclick="getTypez('{$vo.cxjj_id}','{$vo.cxjj_brand}')">{$vo.cxjj_name}--{$vo.cxjj_brand}</li>
+										</foreach>
+									</div>
+									<div class="city star_city" data-id="" style="display:none" id="qtz"></div>
+									<!-- <div class="county star_county" data-id=""></div> -->
+								</div> </dd></dl>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="heighttd"></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<center>
+							<font class="moneyfont">费用：&nbsp;￥<bold id="zongz1">0</bold>元</font>
+						</center>
+					</td>
+				</tr>
+				<tr style="height:50px;">
+					<td colspan="2">
+						<a>
+							<div class="xddiv">
+								<div class="xdchild"  onclick="goOrder();">
+									<center><font class="xddfont">立即下单</font></center>
+								</div>
+							</div>
+						</a>
+					</td>
+				</tr>
+			</form>
+		</table>
+		<div id="yxtable" style="text-align: center;display: none">
+			<img class="phone" src="/Public/Front/images/liucheng.png" alt="流程" style="width: 63%;margin: auto;">
+		</div>
+	</div>
+</div>
+<!--<div class="part8">
+	  <div class="part8left">
+		  <img style="width:100%" src="/Public/Front/images/gongsijieshao_min.png" alt="背景图">
+		  <div class="gsjsfont">
+			  <div class="fwfont gslc">
+				  <font>妥妥运车&nbsp;<strong><span class="jsbzfont">公司介绍</span></strong></font>
+				  <h3>Company introduction</h3>
+			  </div>
+			  <a href="__MODULE__/AboutUs/index/code/AC14920644586W3N">
+			  <div class="xddiv xddivxg">
+				  <div class="xdchild">
+					  <center><font class="xddfont">详情</font></center>
+				  </div>
+			  </div>
+			  </a>
+		  </div>
+	  </div>
+	  <div class="part8right">
+		  <img style="width:100%" src="/Public/Front/images/fuwubaozhang_min.png" alt="背景图">
+		  <div class="fwbzfont">
+			  <div class="fwfont gslc">
+				  <font>妥妥运车&nbsp;<strong><span class="jsbzfont">服务保障</span></strong></font>
+				  <h3>Service guarantee</h3>
+			  </div>
+			  <a href="__MODULE__/AboutUs/index/code/AC14920644902AGS">
+			  <div class="xddiv xddivxg">
+				  <div class="xdchild">
+					  <center><font class="xddfont">更多</font></center>
+				  </div>
+			  </div>
+			  </a>
+		  </div>
+	  </div>
+</div>-->
+<div class="part8">
+	<div class="fwfont" style="margin-bottom: 38px;margin-top: 14px;">
+		<img style="width:100%" src="/Public/Front/images/lct.png">
+	</div>
+	<div id="lcdiv">
+		<div>
+			<img id="lcimg" style="width:100%;" src="/Public/Front/images/lcdi.png">
+			<div class="lcimgdiv">
+				<img id="lcimg1" style="width:100%;" src="/Public/Front/images/lchd.png">
+			</div>
+		</div>
+
+		<img >
+	</div>
+</div>
+<div class="ttxw">
+	<img class="pc" src="/Public/Front/images/HEARTONFIRE2.png"  style="width: 100%" alt="弧度">
+	<img class="phone" src="/Public/Front/images/qiche.png"  style="width: 100%" alt="小汽车">
+	<div class="fwfont fwfontx">
+		<font><strong>妥妥新闻</strong></font>
+		<h3>Proper news</h3>
+		<img src="__FRONT__/images/Rectangle.png" alt="线条">
+	</div>
+	<div class="container">
+		<div class="iske1">
+			<div class="iske2">
+				<table class="xwtable">
+					<tr>
+						<td class="xdtd1">
+							<div class="td1div">
+								<img class="pc" src="/Public/Front/images/neirongtu.png" alt="展示图">
+								<img class="phone nrsj" src="/Public/Front/images/neirongtusj.png" alt="展示图">
+							</div>
+							<div class="xddiv1">
+								<font>{$artList.0.title}</font>
+							</div>
+							<div class="xddiv2">
+								<font>{$artList.0.article_time}</font>
+							</div>
+							<div class="xddiv3">
+								<font>{$artList.0.article_desc}</font>
+							</div>
+							<div class="xddiv4">
+								<div class="more">
+									<a href="__MODULE__/News/detail/code/{$artList.0.article_code}">
+										<div class="morechild">
+											<center><font class="morefont">MORE</font></center>
+										</div>
+									</a>
+								</div>
+							</div>
+						</td>
+						<td class="xdtd1 xdleft">
+							<div class="td1div">
+								<img class="pc" src="/Public/Front/images/neirongtu1.png" alt="展示图">
+								<img class="phone nrsj" src="/Public/Front/images/neirongtusj1.png" alt="展示图">
+							</div>
+							<div class="xddiv1">
+								<font>{$artList.1.title}</font>
+							</div>
+							<div class="xddiv2">
+								<font>{$artList.1.article_time}</font>
+							</div>
+							<div class="xddiv3">
+								<font>{$artList.1.article_desc}</font>
+							</div>
+							<div class="xddiv4">
+								<div class="more">
+									<a href="__MODULE__/News/detail/code/{$artList.1.article_code}">
+										<div class="morechild">
+											<center><font class="morefont">MORE</font></center>
+										</div>
+									</a>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="iske7">
+				<h2><span>FAQ </span> 常见问题</h2>
+				<ul>
+					<foreach name="cj" item="vo" key="k">
+						<if condition="$k lt 7">
+							<li><a href="__MODULE__/Footer/detail/code/{$vo.article_code}"><p>{$k+1}、{$vo.title}</p></a></li>
+						</if>
+					</foreach>
+				</ul>
+				<div style="margin-top: 50px;">
+					<div class="more moreques">
+						<a href="__MODULE__/Footer/detail/code/AC14920671855R3B">
+							<div class="morechild">
+								<center><font class="morefont">MORE</font></center>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div style="padding-bottom: 64px;" class="part61 container">
+  <div class="fwfont" style="margin-bottom: 56px;">
+	  <center><font><strong>合作伙伴</strong></font>
+	  <h3>Cooperation</h3></center>
+	  <img src="__FRONT__/images/xhx.png" style="margin-top: 10px;width: 100%;" alt="长线条">
+  </div>
+   <ul class="hzul">
+   <foreach name="linkList" item="vo" key="k">
+   <li><a href="{$vo.fl_link}" target="_blank">
+   <img  class="nb1"  src="{$vo.fl_img}" alt="链接图标">
+   <img  class="nb2"  src="{$vo.fl_img1}" alt="链接图标">
+   </a></li>
+  </foreach>
+   </ul>
+</div>
+<script>
+    $('#yxtable').on('mousewheel', function(event) {
+        //mac自然状态向上是-1
+        //window向上滑动时候是1 向下-1
+        console.log(event.deltaX, event.deltaY, event.deltaFactor);
+        var currentPage = parseInt($('.active').attr('data-page'));
+        if (event.deltaY > 0) {
+            var prevpage = currentPage - 1;
+            if (prevpage >=0) {
+                $('.page' + prevpage).addClass('active');
+                $('.page' + currentPage).removeClass('active');
+                $('.wrapper').css({
+                    'transform': 'translate(0,' + (prevpage * -100) + '%)'
+                });
+            }
+        } else {
+            var nextpage = currentPage + 1;
+            if (nextpage < 4) {
+                $('.page' + nextpage).addClass('active');
+                $('.page' + currentPage).removeClass('active');
+                $('.wrapper').css({
+                    'transform': 'translate(0,' + (nextpage * -100) + '%)'
+                });
+            }
+        }
+
+    });
+	function yuansj1(){
+		$(".yuan1").attr("style","background: #ff8000; border: 1px solid #ffffff;");
+		$(".yuan2").attr("style","background: #ffffff;border: 1px solid #ff8000;");
+		window.navtimesj = 0;
+		window.typesj = 2;
+	}
+	function yuansj2(){
+		$(".yuan1").attr("style","background: #ffffff;border: 1px solid #ff8000;");
+		$(".yuan2").attr("style","background: #ff8000; border: 1px solid #ffffff;");
+		window.navtimesj = 0;
+		window.typesj = 1;
+	}
+	function ddxs(){
+		$(".xiadan").attr("style","background:url(/Public/Front/images/xiadanf.png) left top no-repeat");
+		$(".serchimg").attr("style","background:url(/Public/Front/images/dingdanchaxunb.png) right top no-repeat");
+	    $("#searchtable").show();
+	    $("#xdtable").hide();
+	    $(".dfontd").attr("style","color:#ff8000");
+	    $(".xfontd").attr("style","color:#FFFFFF");
+	}
+    function xdxs(){
+        $(".xiadan").attr("style","background:url(/Public/Front/images/xiadanb.png) left top no-repeat");
+        $(".serchimg").attr("style","background:url(/Public/Front/images/dingdanchaxun.png) right top no-repeat");
+        $("#searchtable").hide();
+        $("#xdtable").show();
+        $(".dfontd").attr("style","color:#FFFFFF")
+        $(".xfontd").attr("style","color:#ff8000")
+    }
+	$('.aske1 ul li').click(function(){
+		$(this).addClass('on').siblings().removeClass('on');
+		$('.tab-cont1 .tab-pay1').eq($(this).index()).fadeIn(300).siblings().hide();
+	});
+
+    function ddxs(){
+        $("#searchtable").show();
+        $("#yxtable").hide();
+        $("#xdtable").hide();
+    }
+    function xdxs(){
+        $("#searchtable").hide();
+        $("#yxtable").hide();
+        $("#xdtable").show();
+    }
+    function youshi(){
+        $("#searchtable").hide();
+        $("#yxtable").show();
+        $("#xdtable").hide();
+    }
+    $(".tdimg").click(function() {
+        str = $(".tdimg")
+        str.each(function(){
+            str =  $(this).attr("id");
+            $(this).attr("src","/Public/Front/images/"+str) ;
+            $(this).attr("style","width:60%") ;
+        });;
+        str = $(this).attr("name");
+        $(this).attr("src", "/Public/Front/images/" + str);
+        $(this).attr("style", "width:80%");
+
+    }) ;
+</script>
+<!--content-->
+<include file='public:foot_coy'/>

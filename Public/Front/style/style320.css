@@ -18,7 +18,7 @@
     font-weight: 700;
     padding: 0 10px 0 46px;}
 	/**banner**/
-	.bannersy{margin-bottom: 45px;height:788px;border-bottom: 1px solid #d6d6d6;}
+	.bannersy{margin-bottom: 45px;height:710px;border-bottom: 1px solid #d6d6d6;}
 	.banner_pic{background:url(../images/banner.jpg) no-repeat 55px center;height:610px;}
 	.banner_con{position:absolute;width:100%;height:100%;top:0px;left:0px;display:table;}
 	.banner_con span{display:block;font-size:20px;color:#fff;line-height:1.5;padding:30px 0;}
@@ -852,7 +852,7 @@ select {
 .pae0:hover  h2{color:#30AC63;}
 .part22 ul li:hover .pae0{border-right:4px solid #30AC63;}
 
-.part1{background:#fff;margin-top: -15px;margin-bottom: 60px;}
+.part1{padding-bottom: 50px;background:#fff;margin-top: -15px;overflow: auto;background:url(../images/fwsj.png) no-repeat center center;border-bottom: #e1e1e1 1px solid;}
 .part12 ul{}
 
 .part12 ul li h2{width:100px;height:100px;background:url(../images/pa4.png) no-repeat center center;line-height:100px;text-align:center;color:#2FAD63;font-size:28px;margin:0 auto;}
@@ -1417,7 +1417,7 @@ body{position:relative;}
     .ttxwpng1{width:48%;float:left;padding-left:5%}
     .ttxww{padding: 0 5%;}
     .ttfont{margin-top: 6%;text-align: center;}
-    .fwfont font,.ttfont font{font-size: 22px;}
+    .fwfont font,.ttfont font{font-size: 28px;}
     .fwfont h3,.ttfont h3{margin-top: 10px;}
     .ttxwp{margin-top: 5%;width: 97%;}
     .ttxwp p{font-size: 18px;color: #999;text-indent: 36px;}
@@ -1429,7 +1429,7 @@ body{position:relative;}
 
     .fwfont{text-align:center;}
     .fwfontx{width:100%;margin-bottom: 30px;}
-    .fwtable1{display:none;margin-top: -39px;width:95%;}
+    .fwtable1{display:none;margin: auto;width: 66%;}
     .serchimg{width:212px;height:52px;float: right;background: url(../images/dingdanchaxun320.png);}
     .xiadan{width:212px;height:52px;float: left;background: url(../images/xiadanb320.png);}
     .descrimg1{position: absolute;margin-top: 2.5%;margin-left: 1%;}
@@ -1454,7 +1454,7 @@ body{position:relative;}
     .fwtd table{margin-left: 0%;}
     .xddfont{font-size: 20px;color:#FFFFFF}
     .heighttd{height:12px}
-    .part8{padding:0px 10px 20px;background:url(../images/di1.png);overflow: hidden;}
+    .part8{overflow: hidden;}
     .fwfont h3,.ttfont h3{margin-top: 0px;}
     .searchtd{height:80px;}
     .fwfont h3, .ttfont h3 {font-size: 18px;}
@@ -1467,13 +1467,13 @@ body{position:relative;}
     #inserttable{display:block;width: 408px;margin: auto;}
 
     .bannerdiv{width: 425px;height: 436px;background: url(/Public/Front/images/di320.png); position:absolute;left:50%;margin-top: 290px;margin-left: -212px;border-radius: 23px;box-shadow:0px 0px 15px #777;}
-    .bannerdiv1{z-index: 1;width: 70px;height: 20px;position:absolute;left:50%;margin-top: 200px;margin-left: -35px;}
+    .bannerdiv1{z-index: 1;width: 100px;height: 20px;position:absolute;left:50%;margin-top: 560px;margin-left: -35px;}
     .bannerdiv2{width: 80px;height: 20px;position:absolute;left:50%;margin-top: 148px;margin-left: 50px;display: none;}
-    .bannerdiv3{z-index: 1;width: 132px;height: 132px;position:absolute;left:50%;margin-top: 55px;margin-left: -66px;}
-    .bannerimg{height:249px;width:100%}
-    .yuan1{  width: 20px;  height:20px;margin-right: 23px;background: #ff8000;  border-radius: 50%;  border: 1px solid #ffffff;display: inline-block;box-sizing: border-box;}
-    .yuan2{  width: 20px;  height:20px; background: #ffffff; border-radius: 50%;  border: 1px solid #ff8000;display: inline-block;box-sizing: border-box;}
-    .ksfw{margin: 100px 38px;height: 311px;}
+    .bannerdiv3{z-index: 1;width: 100%;height: 86px;position:absolute;top:815px;margin-top: -86px;}
+    .bannerimg{height:703px;width:100%}
+    .yuan{  width: 20px;  height:20px; background: #ffffff; border-radius: 50%;  border: 1px solid #ff8000;display: inline-block;box-sizing: border-box;}
+    .on{width: 20px;  height:20px;background: #ff8000;border-radius: 50%;border: 1px solid #ffffff;display: inline-block;box-sizing: border-box;}
+    .ksfw{margin-top: 73px;height: 376px;}
     .tbddfont{font-size:22px}
     .tbxdfont{font-size:22px;}
     .dfontd,.dfontd:hover{color:#FFFFFF;}
@@ -1505,7 +1505,7 @@ body{position:relative;}
     .xdleft{padding-left: 12px;}
     .moreques{left: 50%;margin-left: -45px;}
     .serchsj{background: #fff;border:2px solid #ff8000;border-radius:5px;line-height:67px;height:57px;margin:30px auto;width:100%}
-    .serchsj  button{width:76px;background:#ff8000 url(../images/ser1.png) no-repeat center center;height:53px;display:block;border:0px;float:right;}
+    .serchsj  button{width:69px;background:#ff8000 url(../images/ser1.png) no-repeat center center;height:53px;display:block;border:0px;float:right;}
     .cx2{width: 249px;display:block;float:left;height:53px;border:0px;text-indent:20px;font-size:20px;color:#B4B4B4;}
     .new3b1{height: 500px;width: 90%;margin: 50px auto 0px;}
     .new3b1 p{float:left;writing-mode: tb-rl;margin-left: 50px;line-height: 22px }
@@ -1522,5 +1522,31 @@ body{position:relative;}
     .jhh12 p{font-size: 18px;}
     .jhh1{padding: 50px 0px;border-bottom: 1px solid #dfe0e0;}
     .b1imgdiv{text-align: center;margin-top: -120px;margin-bottom: 50px;}
+    .dhdiv{color: #ffffff;font-size: 34px;padding-top: 16px;}
+
+    .tel1{float: left;margin-left: 167px;margin-top: 60px;}
+    .tel1 a{font-family: 微软雅黑;font-size: 18px;color: #ff8000;}
+    .xdcxdiv{background: url(/Public/Front/images/xscx.png);}
+    .xdcxdiv1{height: 550px;width: 1100px;margin: auto;overflow: auto;}
+    .tddh{width:250px;height:100px;text-align:center}
+    #yxtable{width: 100%;position: absolute;}
+    .lcul{overflow: auto}
+    .lcul li{float:left;width:25%}
+    .lcul li img{width:100%;height:250px}
+    .ffdsf span{color:#000000}
+    .foothr{margin:auto;width:600px;border-bottom: #000000 1px solid;margin-bottom: 40px}
+    #footck{margin-bottom: 38px;margin-top: 75px;}
+    #xdtable{width: 322px;margin: auto;}
+    .jiange{height:20px}
+    .lcimgdiv
+    {
+        background-color: #999;
+        width:100%;
+        height:500px;
+        position: fixed;
+        top: 15%;
+        background-color: white;
+        z-index: 10000;
+    }
 
 }

@@ -1,40 +1,38 @@
-<div class="pc header_top">
-  <div class="header_top0 container">
-
-  <div class="fss">
-	<if condition="$UserInfo.login eq 0">
-		<div class="header_top2">
-			<span>400-877-1107</span>
-		<span class="login">
-			<a  class="deng1" href="__MODULE__/Login/pclogin/">请登录</a>&nbsp;&nbsp;|&nbsp;
-			<a  class="deng2" href="__MODULE__/Register/index/">请注册</a>
-		</span>
-		</div>
-	<else/>
-		<div class="header_top1">
-			<span>400-877-1107<!--{$UserInfo['userInfo']['user_name']==""?$UserInfo['userInfo']['tel']:$UserInfo['userInfo']['user_name']}-->&nbsp;</span>
-			<h3>
-			<a  class="deng3" href="javascript:;">个人中心</a>
-			<dl>
-				<dt><a href="__MODULE__/Personal/personalInfo">个人资料</a></dt>
-				<dt><a href="__MODULE__/MyOrder/index">我的订单</a></dt>
-				<dt><a href="__MODULE__/MyCoupon/index">我的优惠券</a></dt>
-			</dl>
-			</h3>
-			<a class="deng4" href="#" onclick="loginout();">退出</a>
-		</div>
-		<script>
-			function loginout(){
-				$.post('__MODULE__/Login/logout/',function(data){
-						window.location.reload();
-				})
-			}
-		</script>
-	</if>
-	</div>
-  </div>
-  </div>
-</div>
+ <div class="pc header_top">
+          <div class="header_top0 container">
+            <div class="fss">
+                <if condition="$UserInfo.login eq 0">
+                    <div class="header_top2">
+                        <span>妥妥运车欢迎您！</span>
+                        <span class="login">
+                            <a  class="deng1" href="__MODULE__/Login/pclogin/">请登录</a>&nbsp;&nbsp;|&nbsp;
+                            <a  class="deng2" href="__MODULE__/Register/index/">请注册</a>
+                        </span>
+                    </div>
+                <else/>
+                    <div class="header_top1">
+                        <span>400-877-1107<!--{$UserInfo['userInfo']['user_name']==""?$UserInfo['userInfo']['tel']:$UserInfo['userInfo']['user_name']}-->&nbsp;</span>
+                        <h3>
+                        <a  class="deng3" href="javascript:;">个人中心</a>
+                        <dl>
+                            <dt><a href="__MODULE__/Personal/personalInfo">个人资料</a></dt>
+                            <dt><a href="__MODULE__/MyOrder/index">我的订单</a></dt>
+                            <dt><a href="__MODULE__/MyCoupon/index">我的优惠券</a></dt>
+                        </dl>
+                        </h3>
+                        <a class="deng4" href="#" onclick="loginout();">退出</a>
+                    </div>
+                    <script>
+                        function loginout(){
+                            $.post('__MODULE__/Login/logout/',function(data){
+                                    window.location.reload();
+                            })
+                        }
+                    </script>
+                </if>
+            </div>
+          </div>
+ </div>
 <script>
 	$('.header_top2 a em').click(function(){
 		$(this).siblings().show();

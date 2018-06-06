@@ -1,0 +1,225 @@
+<!--footer-->
+<img class="pc" src="/Public/Front/images/wskk1.jpg" style="position: fixed;right: 18px;top: 50%;width: 150px;margin-top: 30px;z-index: 3005;">
+<div class="fwfont" id="footck">
+    <center><font style="color:#ff8000"><strong>查看全部</strong></font>
+</div>
+<div class="footer-box1">
+    <div class="container">
+        <div class="dnn0">
+            <div class="col-sm-6 col-md-2 jkl1">
+                <div class="dnn1">
+                    <h2><a href="javascript:;">妥妥运车</a></h2>
+                    <dl>
+                        <foreach name="tuoList" item="vo" key="k">
+                            <if condition="$vo.title eq '我要运车'">
+                                <dd><span><img src="__FRONT__/images/dddd.png">&nbsp;&nbsp;</span><a href="__MODULE__/Order/normal">{$vo.title}</a></dd>
+                                <else />
+                                <dd><span><img src="__FRONT__/images/dddd.png">&nbsp;&nbsp;</span><a href="__MODULE__/Footer/detail/code/{$vo.article_code}">{$vo.title}</a></dd>
+                            </if>
+                        </foreach>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-2 jkl1">
+                <div class="dnn1">
+                    <h2><a href="javascript:;">帮助中心</a></h2>
+                    <dl>
+                        <foreach name="helpList" item="vo" key="k">
+                            <dd><span><img src="__FRONT__/images/dddd.png">&nbsp;&nbsp;</span><a href="__MODULE__/Footer/detail/code/{$vo.article_code}">{$vo.title}</a></dd>
+                        </foreach>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-2 jkl1 jkl1b">
+                <div class="dnn1">
+                    <h2><a href="javascript:;">支付方式</a></h2>
+                    <dl>
+                        <foreach name="payList" item="vo" key="k">
+                            <dd><span><img src="__FRONT__/images/dddd.png">&nbsp;&nbsp;</span><a href="__MODULE__/Footer/detail/code/{$vo.article_code}">{$vo.title}</a></dd>
+                        </foreach>
+                    </dl>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-2 jkl1 jkl1c">
+                <img src="__FRONT__/images/shx.png">
+            </div>
+            <div class="col-sm-6 col-md-2 jkl1 jkl1a">
+
+                <div class="dnn1  ffdsf">
+                    <span class="pc">关注我们<br><br></span>
+                    <h2 class="phone">关注我们</h2>
+                    <div class="hoof2">
+                        <div class="bdsharebuttonbox">
+                            <img style="width:158px;height:158px;" src="/Public/Front/images/wskk1.jpg">
+                            <!--<div class="hoof2">
+                                <div class="bdsharebuttonbox"><a title="分享到新浪微博" href="#" class="bds_tsina te11" data-cmd="tsina"></a>
+                                    <a title="分享到QQ好友" href="#" class="bds_sqq te12" data-cmd="sqq"></a>
+                                    <a title="分享到微信" href="#" class="bds_weixin te13" data-cmd="weixin"></a>
+                                </div>
+                            </div>-->
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="foothr"></div>
+    <div>
+        <div class="fooh2 container">
+            <div class="fooh21">
+                <p><span>©2016 信义安达物流 京ICP备18021868号</span></p>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- <div class="xin5">
+	<h2>感谢您的信任，请保持工作日电话畅通。</h2>
+</div> -->
+<!-- 留言框 -->
+<script>
+    $(".xin4").click(function(){
+        $(".xin2").show();
+    });
+    /* $(".xin3 button").click(function(){
+     layer.msg('感谢您的信任，请保持工作日电话畅通。');
+     }); */
+    $(".xin6").click(function(){
+        $(".xin2").hide();
+    });
+    $("#zixun").click(function(){
+        var phone=$("#phone").val();
+        var content=$("#cont").val();
+        if(phone == ''){
+            layer.msg('手机号不能为空！');
+            return false;
+        }
+        if(content == ''){
+            layer.msg('内容不能为空！');
+            return false;
+        }
+        var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|17[6789]|18[0-9]|14[57])[0-9]{8}$/;
+        var r = phone.match(reg);
+        if(r==null){
+            layer.msg('手机号格式不对！');
+            return false;
+        }
+        $.post("__MODULE__/Liu/add",{phone:phone,content:content},function(data){
+            if(data.status == 'Y'){
+                layer.msg('感谢您的信任，请保持工作日电话畅通。');
+                $(".xin2").hide();
+            }else{
+                layer.msg('咨询失败，我们正在处理！');
+            }
+        })
+
+    })
+    function tiaoFun(str){
+        var keyword = $("#"+str).val();
+        if(keyword==""){
+            layer.msg("请输入订单号");
+            return false;
+        }
+        window.location.href="__MODULE__/Ordersel/orderselView/status/2/keyword/"+keyword;
+    }
+</script>
+<script>
+    $(".qqr01 ul li").click(function(){
+        $(this).addClass("on").siblings().removeClass('on');
+        var tt=$(this).index();
+        $(".part13  .part3b").eq(tt).show().siblings().hide();
+
+
+    });
+
+
+
+
+    $(".inko").click(function(){
+        $(this).siblings(".selected").show();
+        //$(this).siblings(".selected0").show();
+
+    });
+    $(".xiandan").click(function(){
+        $(".korder0").animate({width:"100%"});
+
+    });
+    $(".close2").click(function(){
+        $(".korder0").animate({width:"0%"});
+
+    });
+
+
+
+
+    $(".selected li").click(function(){
+        $(this).parent().parent().hide();
+        var oop= $(this).html();
+        $(this).parent().parent().siblings('.inko').val(oop);
+
+    });
+
+
+    $(".mess1 p").click(function(){
+        $(this).parent().parent().hide();
+
+    });
+    $('.xiandan').hide();
+    $(function(){
+        $(window).scroll(function() {
+            if($(window).scrollTop() >= 400){
+                $('.xiandan').fadeIn(300);
+            }else{
+                $('.xiandan').fadeOut(300);
+            }
+        });
+
+    });
+
+    function ceshi3(obj){
+        type = $(obj).siblings(".selected0").attr('style');
+        if(type == 'display: block;'){
+            $(obj).siblings(".selected0").hide();
+        }else{
+            $(obj).siblings(".selected0").show();
+        }
+    }
+
+
+
+
+
+</script>
+
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+<script>
+    /* var _hmt = _hmt || [];
+     (function() {
+         var hm = document.createElement("script");
+         hm.src = "https://hm.baidu.com/hm.js?762ac8f96cfe5d83292d4e118e460e76";
+         var s = document.getElementsByTagName("script")[0];
+         s.parentNode.insertBefore(hm, s);
+     })();*/
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<!--footer-->
+
+</body></html>

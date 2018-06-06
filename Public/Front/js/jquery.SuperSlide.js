@@ -81,54 +81,8 @@
 					conBox.wrap('<div class="tempWrap" style="overflow:hidden; height:'+opts.vis*slideH+'px"></div>').css( { "height":conBoxSize*slideH*3,"padding":"0","margin":"0","top":-conBoxSize*slideH}).children().css( {"height":selfH} ); break;
 			}
 
-			var yuan1=function(){
-				$(".yuan1").attr("style","background: #ff8000; border: 1px solid #ffffff;");
-				$(".yuan2").attr("style","background: #ffffff;border: 1px solid #ff8000;");
-				$(".bannerdiv").animate({'left':'50%' });
-				$(".bannerdiv2").animate({'left':'40%'});
-				$(".bannerdiv3").animate({'left':'20%' });
-				//setTimeout(xiaoshi(),30000000);
-			}
-			var yuan2=function(){
-                $(".thbanner").attr("src","/Public/Front/images/BANNER.png");
-                $(".yuan1").attr("style","background: #ffffff;border: 1px solid #ff8000;");
-                $(".yuan2").attr("style","background: #ff8000; border: 1px solid #ffffff;");
-                $(".bannerdiv").animate({'left':'30%' });
-                $(".bannerdiv2").animate({'left':'50%' });
-                $(".bannerdiv3").animate({'left':'50%' });
-                $(".bannerdiv2, .bannerdiv3").show();
-                //setTimeout(huadong(),300);
-			}
-            var yuan1sj=function(){
-                $(".yuan1").attr("style","background: #ff8000; border: 1px solid #ffffff;");
-                $(".yuan2").attr("style","background: #ffffff;border: 1px solid #ff8000;");
-            }
-            var yuan2sj=function(){
-                $(".yuan1").attr("style","background: #ffffff;border: 1px solid #ff8000;");
-                $(".yuan2").attr("style","background: #ff8000; border: 1px solid #ffffff;");
-            }
-			var xiaoshi=function(){
-                $(".bannerdiv2, .bannerdiv3").hide()
-            }
-			var huadong=function(){
-
-                setTimeout(huadong1(),300);
-
-            }
-            var huadong1=function(){
-
-			}
-
 			//效果函数
 			var doPlay=function(){
-				if(index == 2){
-                    $(".thbanner1").attr("src","/Public/Front/images/banner1.png");
-                    flag==true?yuan1():yuan1sj();
-				}else if(index==0){
-                    flag==true?yuan1():yuan1sj();
-				}else{
-                    flag==true?yuan2():yuan2sj();
-				}
 				switch(opts.effect)
 				{
 					case "fade": case "top": case "left": if ( index >= navObjSize) { index = 0; } else if( index < 0) { index = navObjSize-1; } break;
