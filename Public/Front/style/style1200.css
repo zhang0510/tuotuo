@@ -1426,7 +1426,7 @@ select {
     .bannerdiv3{z-index: 100;width: 150px;height: 20px;position:absolute;left:30%;margin-top: 286px;margin-left: 350px;display: none;}
     .bannerimg{height:750px;width:100%}
     .yuan{  width: 20px;  height:20px; background: #ffffff; border-radius: 50%;  border: 1px solid #ff8000;display: inline-block;box-sizing: border-box;}
-    .on{width: 20px;  height:20px;background: #ff8000;border-radius: 50%;border: 1px solid #ffffff;display: inline-block;box-sizing: border-box;}
+    .bannerdiv1 .on{width: 20px;  height:20px;background: #ff8000;border-radius: 50%;border: 1px solid #ffffff;display: inline-block;box-sizing: border-box;}
     .ksfw{height: 320px;}
     .tbddfont{font-size:22px}
     .tbxdfont{font-size:22px;}
