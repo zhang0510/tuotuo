@@ -50,14 +50,14 @@
 					<td class="tddh" onclick="xdxs()">
 						<img class="tdimg" id="td11.png" name="td1.png" style="width:100%" src="/Public/Front/images/lc1.png">
 						<div class="tddhdiv1" style="opacity: 0.3;z-index: 1;top: 50px;background: #ffffff;position: absolute;">
-							<div class="tddhdiv11" style="font-size: 30px">查询价格</div>
+							<div class="tddhdiv11" style="font-size: 30px">快速下单</div>
 						</div>
 					</td>
 					<td style="width: 20px"></td>
 					<td class="tddh" onclick="ddxs('320')">
 						<img class="tdimg" id="td22.png" name="td2.png" style="width:100%" src="/Public/Front/images/lc2.png">
 						<div class="tddhdiv1" style="opacity: 0.3;z-index: 1;top: 50px;background: #ffffff;position: absolute;">
-							<div class="tddhdiv11" style="font-size: 30px">查询订单</div>
+							<div class="tddhdiv11" style="font-size: 30px">订单查询</div>
 						</div>
 					</td>
 				</tr>
@@ -66,20 +66,24 @@
 					<td class="tddh" onclick="youshi()">
 						<img class="tdimg" id="td33.png" name="td3.png" style="width:100%" src="/Public/Front/images/lc3.png">
 						<div class="tddhdiv1 tddhdiv2" style="opacity: 0.3;z-index: 1;top: 50px;background: #ffffff;position: absolute;">
-							<div class="tddhdiv11" style="font-size: 30px">运车优势</div>
+							<div class="tddhdiv11" style="font-size: 30px">服务优势</div>
 						</div>
 					</td>
 					<td style="width: 20px"></td>
 					<td class="tddh">
 						<img class="tdimg" id="td44.png" name="td4.png" style="width:100%" src="/Public/Front/images/lc4.png">
 						<div class="tddhdiv1 tddhdiv2" style="opacity: 0.3;z-index: 1;top: 50px;background: #ffffff;position: absolute;">
-							<div class="tddhdiv11" style="font-size: 30px">查询价格</>
+							<div class="tddhdiv11" style="font-size: 30px">关于我们</div>
 						</div>
 					</td>
 				</tr>
 			</table>
 		</div>
 		<div style="float: right;width:50%;">
+			<div style="width: 410px;margin:auto;">
+				<div style="font-size: 30px;width: 133px;margin: 70px auto 0px;">快速服务</div>
+				<img src="/Public/Front/images/rzd.png">
+			</div>
 			<div class="ksfw">
 				<table id="searchtable" class="pc fwtable1">
 					<tr>
@@ -256,7 +260,9 @@
 					</form>
 				</table>
 				<div id="yxtable">
-					<img src="/Public/Front/images/youshi.png" />
+					<div class="yximg">
+						<img src="/Public/Front/images/youf.png" style="padding-top:20px;width: 400px;position: relative;left: 50%;margin-left: -200px;" />
+					</div>
 				</div>
 			</div>
 		</div>
@@ -301,8 +307,8 @@
         $(".tddhdiv2").css('margin-top',parseInt(height/2-60)+parseInt(21)+'px');
         width=$(".tdimg").width();
         $(".tddhdiv1").css('width',parseInt(width)+parseInt(1)+'px');
-        $("#xdtable,#searchtable").css('margin-top',parseInt(height/2)-parseInt(136)+'px');
-        $("#yxtable").css('margin-top',parseInt(height/2)-parseInt(267)+'px');
+        $("#xdtable,#searchtable").css('margin-top',parseInt(height/2)-parseInt(250)+'px');
+        $("#yxtable").css('height',height-220+'px');
         banheight = height-176;
         $(".bannerimg").css('height',banheight+'px');
         $(".bannerdiv1").css('margin-top',banheight-50+'px');

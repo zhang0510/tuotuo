@@ -1475,7 +1475,7 @@ select {
     .xdcxdiv{background: url(/Public/Front/images/xscx.png);}
     .xdcxdiv1{height: 550px;width: 100%;margin: auto;overflow: auto;}
     .tddh{width:250px;height:250px;text-align:center;overflow: hidden;}
-    #yxtable{width: 283px;position: absolute;margin-left: 200px;height: 533px;overflow: auto;display: none}
+    #yxtable{width: 40%;position: absolute;margin-left: 5%;margin-top:10px;overflow: hidden;display: none}
     .lcul{overflow: auto}
     .lcul li{float:left;width:24.8%;overflow: hidden;margin: 0.1%  }
     .lcul li img{width:100%;height:250px}
@@ -1484,9 +1484,9 @@ select {
     #footck{margin-bottom: 8px;margin-top: 45px;}
 
     .lcul li img:hover {
-        width:476px;
+        width:380px;
         height:250px;
-        transform:scale(1.1,1.1);
+        transform:scale(1.05,1.05);
     }
     /* 中心变形*/
     .lcul li img {
@@ -1501,7 +1501,7 @@ select {
     }
 
     .tddh:hover .tdimg{
-        width:400px;
+        width:380px;
         height:250px;
         transform:scale(1.1,1.1);
     }
