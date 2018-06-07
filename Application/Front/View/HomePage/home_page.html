@@ -329,11 +329,12 @@
             str = $(this).attr("name");
             //$(this).attr("src", "/Public/Front/images/" + str);
         }) ;
+        lcimg2 = $("#lcimg2").height();
         $("#lcdiv").on({
             mouseover : function(){
                 $("#lcimg1").stop(true,true).animate({
-                    height:height-220+'px',
-                    top:'220px',
+                    height:height-lcimg2+'px',
+                    top:lcimg2+'px',
                     opacity:'1',
                     width:'100%',
 					left:'0',
