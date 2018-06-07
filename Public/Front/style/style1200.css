@@ -1484,9 +1484,9 @@ select {
     #footck{margin-bottom: 8px;margin-top: 45px;}
 
     .lcul li img:hover {
-        width:400px;
+        width:476px;
         height:250px;
-        transform:scale(1.4,1.4);
+        transform:scale(1.1,1.1);
     }
     /* 中心变形*/
     .lcul li img {
@@ -1500,13 +1500,13 @@ select {
         /* Opera */
     }
 
-    .tdimg:hover {
+    .tddh:hover .tdimg{
         width:400px;
         height:250px;
-        transform:scale(1.2,1.2);
+        transform:scale(1.1,1.1);
     }
     /* 中心变形*/
-    .tdimg{
+    .tddh .tdimg{
         transition:all 0.5s ease-out;
         /* 过度 所有css属性 1秒过度 结束慢*/
         -moz-transition:all 0.5s ease-out;

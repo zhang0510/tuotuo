@@ -44,15 +44,38 @@
 	</div>
 	<!--第二个页面-->
 	<div class="section xdcxdiv">
-		<div style="float: left;width:50%">
+		<div style="float: left;width:50%;padding:50px">
 			<table id="twotable" style="width:100%">
 				<tr>
-					<td class="tddh"><img onclick="xdxs()" class="tdimg" id="td11.png" name="td1.png" style="width:100%" src="/Public/Front/images/lc1.png"></td>
-					<td class="tddh"><img onclick="ddxs('320')" class="tdimg" id="td22.png" name="td2.png" style="width:100%" src="/Public/Front/images/lc2.png"></td>
+					<td class="tddh">
+						<img onclick="xdxs()" class="tdimg" id="td11.png" name="td1.png" style="width:100%" src="/Public/Front/images/lc1.png">
+						<div class="tddhdiv1" style="opacity: 0.3;z-index: 1;top: 50px;background: #ffffff;position: absolute;">
+							<div class="tddhdiv11" style="font-size: 30px">查询价格</div>
+						</div>
+					</td>
+					<td style="width: 20px"></td>
+					<td class="tddh">
+						<img onclick="ddxs('320')" class="tdimg" id="td22.png" name="td2.png" style="width:100%" src="/Public/Front/images/lc2.png">
+						<div class="tddhdiv1" style="opacity: 0.3;z-index: 1;top: 50px;background: #ffffff;position: absolute;">
+							<div class="tddhdiv11" style="font-size: 30px">查询订单</div>
+						</div>
+					</td>
 				</tr>
+				<tr style="height: 20px"></tr>
 				<tr>
-					<td class="tddh"><img onclick="youshi()" class="tdimg" id="td33.png" name="td3.png" style="width:100%" src="/Public/Front/images/lc3.png"></td>
-					<td class="tddh"><img class="tdimg" id="td44.png" name="td4.png" style="width:100%" src="/Public/Front/images/lc4.png"></td>
+					<td class="tddh">
+						<img onclick="youshi()" class="tdimg" id="td33.png" name="td3.png" style="width:100%" src="/Public/Front/images/lc3.png">
+						<div class="tddhdiv1 tddhdiv2" style="opacity: 0.3;z-index: 1;top: 50px;background: #ffffff;position: absolute;">
+							<div class="tddhdiv11" style="font-size: 30px">运车优势</div>
+						</div>
+					</td>
+					<td style="width: 20px"></td>
+					<td class="tddh">
+						<img class="tdimg" id="td44.png" name="td4.png" style="width:100%" src="/Public/Front/images/lc4.png">
+						<div class="tddhdiv1 tddhdiv2" style="opacity: 0.3;z-index: 1;top: 50px;background: #ffffff;position: absolute;">
+							<div class="tddhdiv11" style="font-size: 30px">查询价格</>
+						</div>
+					</td>
 				</tr>
 			</table>
 		</div>
@@ -249,7 +272,7 @@
 				<img id="lcimg" style="width:100%;" src="/Public/Front/images/lcdi.png">
 				<img id="lcimg1" style="z-index:1001;width:100%;position:absolute" src="/Public/Front/images/lchd.png">
 			</div>
-			<img id="lcimg2" style="width:100%;position: absolute;top:0px" src="/Public/Front/images/lctdn.png">
+			<img id="lcimg2" style="opacity: 0.8;width:100%;position: absolute;top:0px" src="/Public/Front/images/lctdn.png">
 		</div>
 	</div>
 	<!--第四个页面-->
@@ -272,8 +295,12 @@
 <script>
     $(function(){
         height = $(window).height();
-        $("#twotable").css('height',height+'px');
-        $(".tdimg").css('height',height/2+'px');
+        $("#twotable").css('height',height-120+'px');
+        $(".tdimg,.tddhdiv1").css('height',height/2-60+'px');
+        $(".tddhdiv11").css('margin-top',height/4-30+'px');
+        $(".tddhdiv2").css('margin-top',parseInt(height/2-60)+parseInt(21)+'px');
+        width=$(".tdimg").width();
+        $(".tddhdiv1").css('width',parseInt(width)+parseInt(1)+'px');
         $("#xdtable,#searchtable").css('margin-top',parseInt(height/2)-parseInt(136)+'px');
         $("#yxtable").css('margin-top',parseInt(height/2)-parseInt(267)+'px');
         banheight = height-176;
