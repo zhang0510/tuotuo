@@ -1132,10 +1132,10 @@ body{position:relative;}
 .iske6 ul li h2{font-size:16px;margin:0px;padding:14px 0;background:url(../images/vvv1.jpg) no-repeat 10px center;text-indent:30px;}
 .iske6 ul li span{float:right;display:inline-block;font-size:16px;background:#27B062;border-radius:5px;text-align:center;color:#fff;padding:5px 5px;margin-top:5px;margin-bottom:10px;}
 .iske7{float:right;width:100%;border:1px solid #e1e1e1;padding:12px 12px 15px 12px;margin-top:20px;}
-.iske7 h2{font-size:18px;color:#000;font-weight:700;margin:0 0 30px;}
+.iske7 h2{font-size:26px;color:#000;font-weight:700;margin:0 0 30px;}
 .iske7 h2 span{color:#ff8000;}
-.iske7 ul li{line-height:45px;padding-left:10px;}
-.iske7 ul li p{font-size:16px;border-bottom:1px dotted #e1e1e1;}
+.iske7 ul li{line-height:60px;padding-left:10px;}
+.iske7 ul li p{font-size:22px;border-bottom:1px dotted #e1e1e1;}
 
 #tiao1 {border:1px solid #eee;border-radius:5px;line-height:35px;height:35px;margin:60px auto 69px;width:90%}
 
@@ -1413,7 +1413,7 @@ body{position:relative;}
     #pointTip:hover  #notice_a{width:177px;}
     #warning:hover  #warning_a{width:177px;}
 
-    .ttxw{margin:0 6% 12%;padding-top: 10px;}
+    .ttxw{margin:0 0 12%;padding-top: 10px;}
     .ttxwpng1{width:48%;float:left;padding-left:5%}
     .ttxww{padding: 0 5%;}
     .ttfont{margin-top: 6%;text-align: center;}
@@ -1501,11 +1501,11 @@ body{position:relative;}
     .blacktd{width:28%}
     .part8left{width:49%;float:left;}
     .part8right{width:49%;float:right;}
-    .nrsj{position: absolute;margin-top: -36px;}
+    .nrsj{margin-top: 10px;width:100%}
     .xdleft{padding-left: 12px;}
     .moreques{left: 50%;margin-left: -45px;}
     .serchsj{background: #fff;border:2px solid #ff8000;border-radius:5px;line-height:67px;height:57px;margin:30px auto;width:100%}
-    .serchsj  button{width:69px;background:#ff8000 url(../images/ser1.png) no-repeat center center;height:53px;display:block;border:0px;float:right;}
+    .serchsj  button{width:46px;background:#ff8000 url(../images/ser1.png) no-repeat center center;height:53px;display:block;border:0px;float:right;}
     .cx2{width: 249px;display:block;float:left;height:53px;border:0px;text-indent:20px;font-size:20px;color:#B4B4B4;}
     .new3b1{height: 500px;width: 90%;margin: 50px auto 0px;}
     .new3b1 p{float:left;writing-mode: tb-rl;margin-left: 50px;line-height: 22px }
@@ -1548,5 +1548,9 @@ body{position:relative;}
         background-color: white;
         z-index: 10000;
     }
+
+    .ttxw11{position: relative;width: 180px;margin: auto;top: -50px;}
+    .ttxw11 font{font-size: 28px;}
+    .xwfont font{color: #ffffff;}
 
 }

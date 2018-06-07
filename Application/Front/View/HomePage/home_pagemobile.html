@@ -90,7 +90,7 @@
 	<div style="width:100%">
 		<table>
 			<tr>
-				<td class="tddh"><img onclick="xdxs()" class="tdimg" id="tdsj11.png" name="tdsj1.png" style="width:80%" src="/Public/Front/images/tdsj1.png"></td>
+				<td class="tddh"><img onclick="xdxs()" class="tdimg" id="tdsj1.png" name="tdsj1.png" style="width:80%" src="/Public/Front/images/tdsj1.png"></td>
 				<td class="tddh"><img onclick="ddxs('320')" class="tdimg" id="tdsj22.png" name="tdsj2.png" style="width:60%" src="/Public/Front/images/tdsj22.png"></td>
 				<td class="tddh"><img onclick="youshi()" class="tdimg" id="tdsj33.png" name="tdsj3.png" style="width:60%" src="/Public/Front/images/tdsj33.png"></td>
 				<td class="tddh"><img class="tdimg" id="tdsj44.png" name="tdsj4.png" style="width:60%" src="/Public/Front/images/tdsj44.png"></td>
@@ -313,101 +313,60 @@
 	  </div>
 </div>-->
 <div class="part8">
-	<div class="fwfont" style="margin-bottom: 38px;margin-top: 14px;">
-		<img style="width:100%" src="/Public/Front/images/lct.png">
+	<div class="patr81">
+		<img id="lcimg" style="width:100%;" src="/Public/Front/images/lcdi.png">
 	</div>
-	<div id="lcdiv">
-		<div>
-			<img id="lcimg" style="width:100%;" src="/Public/Front/images/lcdi.png">
-			<div class="lcimgdiv">
-				<img id="lcimg1" style="width:100%;" src="/Public/Front/images/lchd.png">
-			</div>
-		</div>
-
-		<img >
+	<div class="patr82" style="position: relative;">
+		<img class="patr821" style="width:100%;opacity:0.9" src="/Public/Front/images/lct.png">
+		<img class="patr822" id="lcimg1" style="width:100%;" src="/Public/Front/images/lchd.png">
 	</div>
 </div>
 <div class="ttxw">
-	<img class="pc" src="/Public/Front/images/HEARTONFIRE2.png"  style="width: 100%" alt="弧度">
-	<img class="phone" src="/Public/Front/images/qiche.png"  style="width: 100%" alt="小汽车">
-	<div class="fwfont fwfontx">
-		<font><strong>妥妥新闻</strong></font>
-		<h3>Proper news</h3>
-		<img src="__FRONT__/images/Rectangle.png" alt="线条">
+	<div class="ttxw1">
+		<img class="nrsj" src="/Public/Front/images/lc1.png" alt="展示图">
+		<div class="ttxw11">
+			<font>专业轿车托运</font>
+			<center><font>查看详情</font></center>
+		</div>
+	</div>
+	<div class="ttxw1">
+		<img class="nrsj" src="/Public/Front/images/lc2.png" alt="展示图">
+		<div class="ttxw11 xwfont">
+			<font>专业轿车托运</font>
+			<center><font>查看详情</font></center>
+		</div>
+	</div>
+	<div class="ttxw1">
+		<img class="nrsj" src="/Public/Front/images/lc3.png" alt="展示图">
+		<div class="ttxw11 xwfont">
+			<font>专业轿车托运</font>
+			<center><font>查看详情</font></center>
+		</div>
+	</div>
+	<div class="ttxw1">
+		<img class="nrsj" src="/Public/Front/images/lc4.png" alt="展示图">
+		<div class="ttxw11">
+			<font>专业轿车托运</font>
+			<center><font>查看详情</font></center>
+		</div>
 	</div>
 	<div class="container">
-		<div class="iske1">
-			<div class="iske2">
-				<table class="xwtable">
-					<tr>
-						<td class="xdtd1">
-							<div class="td1div">
-								<img class="pc" src="/Public/Front/images/neirongtu.png" alt="展示图">
-								<img class="phone nrsj" src="/Public/Front/images/neirongtusj.png" alt="展示图">
-							</div>
-							<div class="xddiv1">
-								<font>{$artList.0.title}</font>
-							</div>
-							<div class="xddiv2">
-								<font>{$artList.0.article_time}</font>
-							</div>
-							<div class="xddiv3">
-								<font>{$artList.0.article_desc}</font>
-							</div>
-							<div class="xddiv4">
-								<div class="more">
-									<a href="__MODULE__/News/detail/code/{$artList.0.article_code}">
-										<div class="morechild">
-											<center><font class="morefont">MORE</font></center>
-										</div>
-									</a>
-								</div>
-							</div>
-						</td>
-						<td class="xdtd1 xdleft">
-							<div class="td1div">
-								<img class="pc" src="/Public/Front/images/neirongtu1.png" alt="展示图">
-								<img class="phone nrsj" src="/Public/Front/images/neirongtusj1.png" alt="展示图">
-							</div>
-							<div class="xddiv1">
-								<font>{$artList.1.title}</font>
-							</div>
-							<div class="xddiv2">
-								<font>{$artList.1.article_time}</font>
-							</div>
-							<div class="xddiv3">
-								<font>{$artList.1.article_desc}</font>
-							</div>
-							<div class="xddiv4">
-								<div class="more">
-									<a href="__MODULE__/News/detail/code/{$artList.1.article_code}">
-										<div class="morechild">
-											<center><font class="morefont">MORE</font></center>
-										</div>
-									</a>
-								</div>
-							</div>
-						</td>
-					</tr>
-				</table>
-			</div>
-			<div class="iske7">
-				<h2><span>FAQ </span> 常见问题</h2>
-				<ul>
-					<foreach name="cj" item="vo" key="k">
-						<if condition="$k lt 7">
-							<li><a href="__MODULE__/Footer/detail/code/{$vo.article_code}"><p>{$k+1}、{$vo.title}</p></a></li>
-						</if>
-					</foreach>
-				</ul>
-				<div style="margin-top: 50px;">
-					<div class="more moreques">
-						<a href="__MODULE__/Footer/detail/code/AC14920671855R3B">
-							<div class="morechild">
-								<center><font class="morefont">MORE</font></center>
-							</div>
-						</a>
-					</div>
+		<div class="iske7">
+			<h2><span>FAQ </span> 常见问题</h2>
+			<ul>
+				<foreach name="cj" item="vo" key="k">
+					<if condition="$k lt 7">
+						<li><a href="__MODULE__/Footer/detail/code/{$vo.article_code}"><p>{$k+1}、{$vo.title}</p></a></li>
+					</if>
+				</foreach>
+			</ul>
+			<div style="margin-top: 50px;">
+				<div class="more moreques">
+					<a href="__MODULE__/Footer/detail/code/AC14920671855R3B">
+						<div class="morechild">
+							<center><font class="morefont">MORE</font></center>
+						</div>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -430,44 +389,14 @@
    </ul>
 </div>
 <script>
-    $('#yxtable').on('mousewheel', function(event) {
-        //mac自然状态向上是-1
-        //window向上滑动时候是1 向下-1
-        console.log(event.deltaX, event.deltaY, event.deltaFactor);
-        var currentPage = parseInt($('.active').attr('data-page'));
-        if (event.deltaY > 0) {
-            var prevpage = currentPage - 1;
-            if (prevpage >=0) {
-                $('.page' + prevpage).addClass('active');
-                $('.page' + currentPage).removeClass('active');
-                $('.wrapper').css({
-                    'transform': 'translate(0,' + (prevpage * -100) + '%)'
-                });
-            }
-        } else {
-            var nextpage = currentPage + 1;
-            if (nextpage < 4) {
-                $('.page' + nextpage).addClass('active');
-                $('.page' + currentPage).removeClass('active');
-                $('.wrapper').css({
-                    'transform': 'translate(0,' + (nextpage * -100) + '%)'
-                });
-            }
-        }
-
-    });
-	function yuansj1(){
-		$(".yuan1").attr("style","background: #ff8000; border: 1px solid #ffffff;");
-		$(".yuan2").attr("style","background: #ffffff;border: 1px solid #ff8000;");
-		window.navtimesj = 0;
-		window.typesj = 2;
-	}
-	function yuansj2(){
-		$(".yuan1").attr("style","background: #ffffff;border: 1px solid #ff8000;");
-		$(".yuan2").attr("style","background: #ff8000; border: 1px solid #ffffff;");
-		window.navtimesj = 0;
-		window.typesj = 1;
-	}
+    height = $('#lcimg').height();
+    $(".patr82,.part8").css('height',height+'px');
+    $(".patr82").css('top','-'+height+'px');
+    $(".patr821").css('height',(height*0.3)+'px');
+    $(".patr822").css('height',(height*0.7)+'px');
+    nrsj = $('.nrsj').height();
+    $(".ttxw1").css('height',parseInt(nrsj)+parseInt(10)+'px');
+    $(".ttxw11").css('top','-'+(nrsj-60)+'px');
 	function ddxs(){
 		$(".xiadan").attr("style","background:url(/Public/Front/images/xiadanf.png) left top no-repeat");
 		$(".serchimg").attr("style","background:url(/Public/Front/images/dingdanchaxunb.png) right top no-repeat");
