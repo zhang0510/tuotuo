@@ -285,8 +285,8 @@
 		<div>
 			<ul class="lcul">
 				<li>
-					<img src="/Public/Front/images/xw11.png">
-					<div class="ttxw11 xwfont" style="opacity: 0.6;background: #000000;">
+					<img id="xw11" src="/Public/Front/images/xw11.png">
+					<div class="ttxw11 xwfont">
 						<div>
 							<center><font>{$artList.0.titles}</font></center>
 							<center><a href="__MODULE__/News/detail/code/{$artList.0.article_code}"><font>查看详情</font></a></center>
@@ -294,8 +294,8 @@
 					</div>
 				</li>
 				<li>
-					<img src="/Public/Front/images/xw22.png">
-					<div class="ttxw11 xwfont" style="opacity: 0.6;background: #000000;">
+					<img src="/Public/Front/images/xw33.png">
+					<div class="ttxw11 xwfont">
 						<div>
 							<center><font>{$artList.1.titles}</font></center>
 							<center><a href="__MODULE__/News/detail/code/{$artList.1.article_code}"><font>查看详情</font></a></center>
@@ -303,8 +303,8 @@
 					</div>
 				</li>
 				<li>
-					<img src="/Public/Front/images/xw33.png">
-					<div class="ttxw11 xwfont" style="opacity: 0.6;background: #000000;">
+					<img src="/Public/Front/images/xw22.png">
+					<div class="ttxw11 xwfont">
 						<div>
 							<center><font>{$artList.2.titles}</font></center>
 							<center><a href="__MODULE__/News/detail/code/{$artList.2.article_code}"><font>查看详情</font></a></center>
@@ -313,7 +313,7 @@
 				</li>
 				<li>
 					<img src="/Public/Front/images/xw44.png">
-					<div class="ttxw11 xwfont" style="opacity: 0.6;background: #000000;">
+					<div class="ttxw11 xwfont">
 						<div>
 							<center><font>{$artList.3.titles}</font></center>
 							<center><a href="__MODULE__/News/detail/code/{$artList.3.article_code}"><font>查看详情</font></a></center>
@@ -352,7 +352,8 @@
         //$("#lcimg1").css('margin-top',-(height-200)+'px');
         //$("#lcimg1").css('height',height-220+'px');
         hrtop = height-450;
-        imgheight = $(".lcul li img").height();
+        imgheight = $("#xw11").height();
+        $(".lcul").css('height',imgheight+'px');
         hrtop = hrtop - imgheight
         $(".foothr").css('margin-top',hrtop+'px');
         $(".tdimg").click(function() {
