@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-@media screen and (min-width:995px) and (max-width:1199px){
+@media screen and (min-width:767px) and (max-width:1199px){
     .close2{float:right;font-size:20px;color:#eee;margin:0px 20px 0px 0px;}
     .pc{display:block;}
     .phone{display:none;}
@@ -64,7 +64,7 @@
     .head22 a{display:block;font-size:22px;color:#fff;background:#092B75;}
     #sasa {background:#fff;}
     .navbar{border:none !important;margin:0px;}
-    .navbar-default{background:#fff;height: 126px;}
+    .navbar-default{background:#fff;height: 145px;}
     .navbar-nav{}
     .navbar-nav > li >h2{margin:0px;font-weight:400;}
     .navbar-nav > li{height:68px;}
@@ -1426,7 +1426,7 @@
     .bannerdiv3{z-index: 100;width: 150px;height: 20px;position:absolute;left:30%;margin-top: 286px;margin-left: 350px;display: none;}
     .bannerimg{height:750px;width:100%}
     .yuan{  width: 20px;  height:20px; background: #ffffff; border-radius: 50%;  border: 1px solid #ff8000;display: inline-block;box-sizing: border-box;}
-    .on{width: 20px;  height:20px;background: #ff8000;border-radius: 50%;border: 1px solid #ffffff;display: inline-block;box-sizing: border-box;}
+    .bannerdiv1 .on{width: 20px;  height:20px;background: #ff8000;border-radius: 50%;border: 1px solid #ffffff;display: inline-block;box-sizing: border-box;}
     .ksfw{margin: 106px 0px;height: 320px;}
     .tbddfont{font-size:22px}
     .tbxdfont{font-size:22px;}
@@ -1474,7 +1474,7 @@
     .tel1 a{font-family: 微软雅黑;font-size: 18px;color: #ff8000;}
     .xdcxdiv{background: url(/Public/Front/images/xscx.png);}
     .xdcxdiv1{height: 550px;width: 900px;margin: auto;overflow: auto;}
-    .tddh{width:250px;height:250px;text-align:center}
+    .tddh{width:250px;height:250px;text-align:center;overflow: hidden;}
     #yxtable{margin-left: 90px;width: 283px;position: absolute;margin-top: -111px;height: 533px;overflow: auto;display: none}
     .lcul{overflow: auto}
     .lcul li{float:left;width:25%}
@@ -1485,7 +1485,7 @@
 
     .lcul li img:hover {
         width:100%;
-        height:250px;
+        height:150px;
         transform:scale(1.05,1.05);
     }
     /* 中心变形*/
@@ -1501,8 +1501,8 @@
     }
 
     .tddh:hover .tdimg{
-        width:380px;
-        height:250px;
+        width:90%;
+        height:200px;
         transform:scale(1.1,1.1);
     }
     /* 中心变形*/
@@ -1518,6 +1518,6 @@
     }
 
     .tddhdiv11{font-size: 30px;color: #ffffff;font-weight: 900;}
-    .tddhdiv1{opacity: 0.4;z-index: 1;top: 50px;background: #000000;position: absolute;}
+    .tddhdiv1{opacity: 0.6;z-index: 1;top: 50px;background: #000000;position: absolute;}
 }
 

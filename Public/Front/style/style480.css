@@ -1472,7 +1472,7 @@
     .bannerdiv3{z-index: 1;width: 100%;height: 86px;position:absolute;top:815px;margin-top: -86px;}
     .bannerimg{height:703px;width:100%}
     .yuan{  width: 20px;  height:20px; background: #ffffff; border-radius: 50%;  border: 1px solid #ff8000;display: inline-block;box-sizing: border-box;}
-    .on{width: 20px;  height:20px;background: #ff8000;border-radius: 50%;border: 1px solid #ffffff;display: inline-block;box-sizing: border-box;}
+    .bannerdiv1 .on{width: 20px;  height:20px;background: #ff8000;border-radius: 50%;border: 1px solid #ffffff;display: inline-block;box-sizing: border-box;}
     .ksfw{margin-top: 73px;height: 376px;}
     .tbddfont{font-size:22px}
     .tbxdfont{font-size:22px;}
@@ -1501,7 +1501,7 @@
     .blacktd{width:28%}
     .part8left{width:49%;float:left;}
     .part8right{width:49%;float:right;}
-    .nrsj{margin-top: 10px;width:100%}
+    .nrsj{margin-top: 10px;width:100%;height: 180px;}
     .xdleft{padding-left: 12px;}
     .moreques{left: 50%;margin-left: -45px;}
     .serchsj{background: #fff;border:2px solid #ff8000;border-radius:5px;line-height:67px;height:57px;margin:30px auto;width:100%}
@@ -1549,7 +1549,7 @@
         z-index: 10000;
     }
 
-    .ttxw11{position: relative;width: 180px;margin: auto;top: -50px;}
+    .ttxw11{position: relative;width: 280px;margin: auto;top: -50px;}
     .ttxw11 font{font-size: 28px;}
     .xwfont font{color: #ffffff;}
 

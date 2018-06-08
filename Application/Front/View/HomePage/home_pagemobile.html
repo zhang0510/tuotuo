@@ -53,31 +53,27 @@
 					<li class="yuan yuan4" ></li>
 				</ul>
 			</span>
-			<div class="bannerdiv3" style="background:url('/Public/Front/images/dhdi.png') " >
+			<div class="bannerdiv3">
 				<center><div class="dhdiv">热线电话：400-877-1107</div></center>
 			</div>
 			<div class="bd">
 				<ul>
 					<li>
-						<img class="pc bannerimg thbanner" src="/Public/Front/images/BANNER_min.png" alt="运车">
 						<img class="phone bannerimg" src="/Public/Front/images/bannersj.png" alt="运车">
 					</li>
 				</ul>
 				<ul>
 					<li>
-						<img class="pc bannerimg thbanner1" src="/Public/Front/images/banner1_min.png" alt="运车">
 						<img class="phone bannerimg" src="/Public/Front/images/banner1.png" alt="运车">
 					</li>
 				</ul>
 				<ul>
 					<li>
-						<img class="pc bannerimg thbanner" src="/Public/Front/images/BANNER_min.png" alt="运车">
 						<img class="phone bannerimg" src="/Public/Front/images/bannersj.png" alt="运车">
 					</li>
 				</ul>
 				<ul>
 					<li>
-						<img class="pc bannerimg thbanner1" src="/Public/Front/images/banner1_min.png" alt="运车">
 						<img class="phone bannerimg" src="/Public/Front/images/banner1.png" alt="运车">
 					</li>
 				</ul>
@@ -90,10 +86,10 @@
 	<div style="width:100%">
 		<table>
 			<tr>
-				<td class="tddh"><img onclick="xdxs()" class="tdimg" id="tdsj1.png" name="tdsj1.png" style="width:80%" src="/Public/Front/images/tdsj1.png"></td>
-				<td class="tddh"><img onclick="ddxs('320')" class="tdimg" id="tdsj22.png" name="tdsj2.png" style="width:60%" src="/Public/Front/images/tdsj22.png"></td>
-				<td class="tddh"><img onclick="youshi()" class="tdimg" id="tdsj33.png" name="tdsj3.png" style="width:60%" src="/Public/Front/images/tdsj33.png"></td>
-				<td class="tddh"><img class="tdimg" id="tdsj44.png" name="tdsj4.png" style="width:60%" src="/Public/Front/images/tdsj44.png"></td>
+				<td class="tddh"><img onclick="xdxs()" class="tdimg" id="er1.png" name="er11.png" style="width:80%" src="/Public/Front/images/er11.png"></td>
+				<td class="tddh"><img onclick="ddxs('320')" class="tdimg" id="er2.png" name="er22.png" style="width:60%" src="/Public/Front/images/er2.png"></td>
+				<td class="tddh"><img onclick="youshi()" class="tdimg" id="er3.png" name="er33.png" style="width:60%" src="/Public/Front/images/er3.png"></td>
+				<td class="tddh"><img class="tdimg" id="er4.png" name="er44.png" style="width:60%" src="/Public/Front/images/er4.png"></td>
 			</tr>
 		</table>
 	</div>
@@ -314,10 +310,10 @@
 </div>-->
 <div class="part8">
 	<div class="patr81">
-		<img id="lcimg" style="width:100%;" src="/Public/Front/images/lcdi.png">
+		<img id="lcimg" style="width:100%;height:500px;" src="/Public/Front/images/lcdi.png">
 	</div>
 	<div class="patr82" style="position: relative;">
-		<img class="patr821" style="width:100%;opacity:0.9" src="/Public/Front/images/lct.png">
+		<img class="patr821" style="width:100%;opacity:0.8" src="/Public/Front/images/lct.png">
 		<img class="patr822" id="lcimg1" style="width:100%;" src="/Public/Front/images/lchd.png">
 	</div>
 </div>
@@ -325,29 +321,29 @@
 	<div class="ttxw1">
 		<img class="nrsj" src="/Public/Front/images/lc1.png" alt="展示图">
 		<div class="ttxw11">
-			<font>专业轿车托运</font>
-			<center><font>查看详情</font></center>
+			<font>{$artList.0.titles}</font>
+			<center><a href="__MODULE__/News/detail/code/{$artList.0.article_code}"><font>查看详情</font></a></center>
 		</div>
 	</div>
 	<div class="ttxw1">
 		<img class="nrsj" src="/Public/Front/images/lc2.png" alt="展示图">
 		<div class="ttxw11 xwfont">
-			<font>专业轿车托运</font>
-			<center><font>查看详情</font></center>
+			<font>{$artList.1.titles}</font>
+			<center><a href="__MODULE__/News/detail/code/{$artList.1.article_code}"><font>查看详情</font></a></center>
 		</div>
 	</div>
 	<div class="ttxw1">
 		<img class="nrsj" src="/Public/Front/images/lc3.png" alt="展示图">
 		<div class="ttxw11 xwfont">
-			<font>专业轿车托运</font>
-			<center><font>查看详情</font></center>
+			<font>{$artList.2.titles}</font>
+			<center><a href="__MODULE__/News/detail/code/{$artList.2.article_code}"><font>查看详情</font></a></center>
 		</div>
 	</div>
 	<div class="ttxw1">
 		<img class="nrsj" src="/Public/Front/images/lc4.png" alt="展示图">
 		<div class="ttxw11">
-			<font>专业轿车托运</font>
-			<center><font>查看详情</font></center>
+			<font>{$artList.3.titles}</font>
+			<center><a href="__MODULE__/News/detail/code/{$artList.3.article_code}"><font>查看详情</font></a></center>
 		</div>
 	</div>
 	<div class="container">
@@ -390,10 +386,10 @@
 </div>
 <script>
     height = $('#lcimg').height();
-    $(".patr82,.part8").css('height',height+'px');
+    $(".patr82,.part8").css('height','500px');
     $(".patr82").css('top','-'+height+'px');
-    $(".patr821").css('height',(height*0.3)+'px');
-    $(".patr822").css('height',(height*0.7)+'px');
+    $(".patr821").css('height',(500*0.2)+'px');
+    $(".patr822").css('height',(500*0.8)+'px');
     nrsj = $('.nrsj').height();
     $(".ttxw1").css('height',parseInt(nrsj)+parseInt(10)+'px');
     $(".ttxw11").css('top','-'+(nrsj-60)+'px');
