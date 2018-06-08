@@ -87,7 +87,7 @@ color:#Ea5512 !important;
 	.navbar-nav > li dl dd a:hover{background:#ff8000;color:#fff;}
 	.navbar-nav > li>h2 > a:hover{
 color:#Ea5512 !important;}
-.navbar-brand0 img{padding-top:64px;width: 70%;}
+.navbar-brand0 img{padding-top:75px;width: 65%;}
 	.navbar-brand img{padding:32px 0 0;}
 .navbar-nav{text-align: center}
 .navbar-nav   li:nth-child(1)   h2{background:url(../images/nav11.png) no-repeat 0px center;}
@@ -1470,7 +1470,7 @@ select {
     .xddivxg:hover .xddfont{color:#ffffff}
     .more:hover{background:#ff8000}
     .more:hover .morefont{color:#ffffff}
-    .tel1{float: left;margin-left: 140px;margin-top: 53px;}
+    .tel1{float: left;margin-left: 140px;margin-top: 85px;}
     .tel1 a{font-family: 微软雅黑;font-size: 26px;color: #ff8000;}
     .xdcxdiv{background: url(/Public/Front/images/xscx.png);}
     .xdcxdiv1{height: 550px;width: 100%;margin: auto;overflow: auto;}
