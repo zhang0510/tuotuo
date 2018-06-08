@@ -41,15 +41,15 @@
 		<div style="float: left;width:50%;padding:50px">
 			<table id="twotable" style="width:100%">
 				<tr>
-					<td class="tddh" onclick="xdxs()">
-						<img class="tdimg" id="td11.png" name="td1.png" style="width:100%" src="/Public/Front/images/er1.png">
+					<td class="tddh" onclick="xdxs()" style="border-top-left-radius: 39px;">
+						<img class="tdimg" id="er1.png" name="er11.png" style="width:100%" src="/Public/Front/images/er1.png">
 						<div class="tddhdiv1">
 							<div class="tddhdiv11">快速下单</div>
 						</div>
 					</td>
 					<td style="width: 20px"></td>
-					<td class="tddh" onclick="ddxs('320')">
-						<img class="tdimg" id="td22.png" name="td2.png" style="width:100%" src="/Public/Front/images/er2.png">
+					<td class="tddh" onclick="ddxs('320')" style="border-top-right-radius: 39px;">
+						<img class="tdimg" id="er2.png" name="er22.png" style="width:100%" src="/Public/Front/images/er2.png">
 						<div class="tddhdiv1">
 							<div class="tddhdiv11">订单查询</div>
 						</div>
@@ -57,15 +57,15 @@
 				</tr>
 				<tr style="height: 20px"></tr>
 				<tr>
-					<td class="tddh" onclick="youshi()">
-						<img class="tdimg" id="td33.png" name="td3.png" style="width:100%" src="/Public/Front/images/er3.png">
+					<td class="tddh" onclick="youshi()" style="border-bottom-left-radius: 39px;">
+						<img class="tdimg" id="er3.png" name="er33.png" style="width:100%" src="/Public/Front/images/er3.png">
 						<div class="tddhdiv1 tddhdiv2">
 							<div class="tddhdiv11">服务优势</div>
 						</div>
 					</td>
 					<td style="width: 20px"></td>
-					<td class="tddh">
-						<img class="tdimg" id="td44.png" name="td4.png" style="width:100%" src="/Public/Front/images/er4.png">
+					<td class="tddh" onclick="gywm()" style="border-bottom-right-radius: 39px;">
+						<img class="tdimg" id="er4.png" name="er44.png" style="width:100%" src="/Public/Front/images/er4.png">
 						<div class="tddhdiv1 tddhdiv2">
 							<div class="tddhdiv11">关于我们</div>
 						</div>
@@ -75,7 +75,7 @@
 		</div>
 		<div style="float: right;width:50%;">
 			<div style="width: 410px;margin:auto;">
-				<div style="font-size: 30px;width: 133px;margin: 70px auto 0px;">快速服务</div>
+				<div id="ksfw" style="font-size: 30px;width: 133px;margin: 70px auto 0px;">快速服务</div>
 				<img src="/Public/Front/images/rzd.png">
 			</div>
 			<div class="ksfw">
@@ -258,6 +258,11 @@
 						<img src="/Public/Front/images/youf.png" style="padding-top:20px;width: 400px;position: relative;left: 50%;margin-left: -200px;" />
 					</div>
 				</div>
+				<div id="wmtable" style="display: none">
+					<div class="yximg">
+						<img src="/Public/Front/images/gywm.png" style="padding-top:20px;width: 400px;position: relative;left: 50%;margin-left: -200px;" />
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -333,7 +338,7 @@
         $(".tddhdiv2").css('margin-top',parseInt(height/2-60)+parseInt(21)+'px');
         width=$(".tdimg").width();
         $(".tddhdiv1").css('width',parseInt(width)+parseInt(1)+'px');
-        $("#xdtable,#searchtable").css('margin-top',parseInt(height/2)-parseInt(250)+'px');
+        $("#xdtable,#searchtable").css('margin-top',parseInt(height/2)-parseInt(270)+'px');
         $("#yxtable").css('height',height-220+'px');
         banheight = height-176;
         $(".bannerimg").css('height',banheight+'px');
@@ -432,20 +437,45 @@
 	    $("#searchtable").show();
         $("#yxtable").hide();
         $("#xdtable").hide();
+        $("#wmtable").hide();
+        $("#ksfw").html('订单查询');
+
 	}
     function xdxs(){
         $("#searchtable").hide();
         $("#yxtable").hide();
         $("#xdtable").show();
+        $("#wmtable").hide();
+        $("#ksfw").html('快速下单');
     }
     function youshi(){
         $("#searchtable").hide();
         $("#yxtable").show();
         $("#xdtable").hide();
+        $("#wmtable").hide();
+        $("#ksfw").html('服务优势');
+    }
+    function gywm(){
+        $("#searchtable").hide();
+        $("#yxtable").hide();
+        $("#xdtable").hide();
+        $("#wmtable").show();
+        $("#ksfw").html('关于我们');
     }
 	$('.aske1 ul li').click(function(){
 		$(this).addClass('on').siblings().removeClass('on');
 		$('.tab-cont1 .tab-pay1').eq($(this).index()).fadeIn(300).siblings().hide();
 	});
+
+    $(".tdimg").click(function() {
+        str = $(".tdimg")
+        str.each(function(){
+            str =  $(this).attr("id");
+            $(this).attr("src","/Public/Front/images/"+str) ;
+        });
+        str = $(this).attr("name");
+        $(this).attr("src", "/Public/Front/images/" + str);
+
+    }) ;
 </script>
 <!--content-->
