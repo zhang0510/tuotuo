@@ -15,7 +15,7 @@
 						<li class="yuan yuan3" ></li>
 					</ul>
 				</span>
-				<div class="bd">
+				<div class="bd" style="overflow: hidden">
 					<ul>
 						<li>
 							<img class="pc bannerimg thbanner" src="/Public/Front/images/BANNER_min.png" alt="运车">
@@ -255,7 +255,7 @@
 				</table>
 				<div id="yxtable">
 					<div class="yximg">
-						<img src="/Public/Front/images/youf.png" style="padding-top:20px;position: relative;" />
+						<center><img src="/Public/Front/images/youf.png" style="padding-top:20px;position: relative;" /></center>
 					</div>
 				</div>
 				<div id="wmtable" style="display: none">
@@ -275,7 +275,7 @@
 		<div id="lcdiv">
 			<div class="lcparentdiv" style="overflow:hidden">
 				<img id="lcimg" style="width:100%;" src="/Public/Front/images/lcdi.png">
-				<img id="lcimg1" style="z-index:1001;width:100%;position:absolute" src="/Public/Front/images/lchd.png">
+				<img id="lcimg1" style="z-index:1001;width:60%;position:absolute" src="/Public/Front/images/lchd.png">
 			</div>
 			<img id="lcimg2" style="opacity: 0.8;width:100%;position: absolute;top:0px" src="/Public/Front/images/lctdn.png">
 		</div>
@@ -340,8 +340,10 @@
         $(".tddhdiv1").css('width',parseInt(width)+parseInt(1)+'px');
         $("#xdtable,#searchtable").css('margin-top',parseInt(height/2)-parseInt(270)+'px');
         $("#yxtable").css('height',height-220+'px');
-        banheight = height-176;
-        $(".bannerimg").css('height',banheight+'px');
+        banheight = height-91;
+        nerheight = $(".bannerimg").height();
+        $(".bd").css('height',banheight+'px');
+        $(".bannerimg").css('margin-top','-'+((nerheight-banheight)/2)+'px');
         $(".bannerdiv1").css('margin-top',banheight-50+'px');
         lcimg = height-189;
         $("#lcimg,.lcparentdiv").css('height',height+'px');
@@ -349,7 +351,7 @@
 
         //$("#lcimg1").css('margin-top',-(height-200)+'px');
         //$("#lcimg1").css('height',height-220+'px');
-        hrtop = height-550;
+        hrtop = height-450;
         imgheight = $(".lcul li img").height();
         hrtop = hrtop - imgheight
         $(".foothr").css('margin-top',hrtop+'px');
@@ -363,15 +365,16 @@
             //$(this).attr("src", "/Public/Front/images/" + str);
         }) ;
         lcimg2 = $("#lcimg2").height();
+        lcimg1	 = $("#lcimg1").height();
+        lctop=parseInt((height-parseInt(lcimg2)-parseInt(lcimg1))/2)+parseInt(lcimg2);
         $("#lcdiv").on({
             mouseover : function(){
                 $("#lcimg1").stop(true,true).animate({
-                    height:height-lcimg2+'px',
-                    top:lcimg2+'px',
+                    top:lctop+'px',
                     opacity:'1',
-                    width:'100%',
-					left:'0',
-                },'slow');
+                    width:'60%',
+					left:'39%',
+                },'90000');
             }
         }) ;
         $(document).on('mouseout','#lcdivid', function(){

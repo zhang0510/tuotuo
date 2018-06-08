@@ -35,7 +35,7 @@
 		<div id="navbar" class="collapse navbar-collapse">
 			<div class="baotio">
 				<ul class="nav navbar-nav">
-					<li  <if condition="$Think.const.CONTROLLER_NAME  eq 'Index'">class="active"</if>>
+					<li class="firstnav"  <if condition="$Think.const.CONTROLLER_NAME  eq 'Index'">class="active"</if>>
 					<h2><a href="/">首页</a></h2>
 					</li>
 
@@ -87,7 +87,36 @@
 
 			</div>
 		</div>
-
+		<div style="float: right;margin-top: -49px;">
+			<if condition="$UserInfo.login eq 0">
+				<div class="header_top2">
+						<span class="login">
+                            <a  class="deng1" href="__MODULE__/Login/pclogin/">请登录</a>&nbsp;&nbsp;|&nbsp;
+                            <a  class="deng2" href="__MODULE__/Register/index/">请注册</a>
+                        </span>
+				</div>
+				<else/>
+				<div class="header_top1">
+					<span>400-877-1107<!--{$UserInfo['userInfo']['user_name']==""?$UserInfo['userInfo']['tel']:$UserInfo['userInfo']['user_name']}-->&nbsp;</span>
+					<h3>
+						<a  class="deng3" href="javascript:;">个人中心</a>
+						<dl>
+							<dt><a href="__MODULE__/Personal/personalInfo">个人资料</a></dt>
+							<dt><a href="__MODULE__/MyOrder/index">我的订单</a></dt>
+							<dt><a href="__MODULE__/MyCoupon/index">我的优惠券</a></dt>
+						</dl>
+					</h3>
+					<a class="deng4" href="#" onclick="loginout();">退出</a>
+				</div>
+				<script>
+                    function loginout(){
+                        $.post('__MODULE__/Login/logout/',function(data){
+                            window.location.reload();
+                        })
+                    }
+				</script>
+			</if>
+		</div>
 	</div>
 </nav>
 <!--logo and nav-->
