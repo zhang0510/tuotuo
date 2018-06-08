@@ -880,7 +880,7 @@ select {
     margin-left: 3px;
     line-height: 49px;
     text-indent: 20px;
-    width: 330px;
+    width: 369px;
     font-size: 20px;
     color: #333;
     border: 1px solid #e1e1e1;
@@ -1374,7 +1374,7 @@ select {
 	.rr5h{padding:0px 100px;}
 	.rr320{margin-top:10px;}
 	
-	.csczz{font-size:22px;line-height:170%;color:#999;margin-top:40px;}
+	.csczz{font-size:22px;line-height:170%;color:#999;}
 
     .ttxw{margin-top: -227px;}
     .ttxwpng1{width:48%;float:left;padding-left:5%}
@@ -1401,7 +1401,7 @@ select {
     .moneyfont{font-size: 28px;}
     .dlbottom{margin-bottom:0px;}
     .buttonblack2 font{font-size: 14px;}
-    .xddiv{width:168px;height:52px;margin-left:137px;background: #FFFFFF;margin-top: 23px;border-radius: 5px;border: 1px solid #ff8000;}
+    .xddiv{width:168px;height:52px;margin:auto;background: #FFFFFF;margin-top: 23px;border-radius: 5px;border: 1px solid #ff8000;}
     .xdchild{padding-top: 10px;}
     .xdfont{font-size: 24px;}
     .xdfont a{color:#FFFFFF}
@@ -1442,7 +1442,7 @@ select {
     .xwtable{margin: 16px 34px;}
     .xdtd1{padding-right: 67px}
     .xddiv1{margin-top: 15px}
-    .xddiv1 font{font-size:20px;}
+    .xddiv1 font{font-size:22px;}
     .xddiv2{margin-top: 5px}
     .xddiv2 font{font-size:16px;color:#999}
     .xddiv3{padding-top:10px;margin-top: 15px;border-top:1px solid #e1e1e1;}
@@ -1520,12 +1520,13 @@ select {
     .tddhdiv11{font-size: 30px;color: #ffffff;font-weight: 900;}
     .tddhdiv1{opacity: 0.6;z-index: 1;top: 50px;background: #000000;position: absolute;display: none}
 
-    .ttxw11{position: relative;height: 200px;margin: auto;top: -200px;}
+    .ttxw11{position: relative;height: 200px;margin: auto;top: -200px;display: none;}
     .ttxw11 div{padding-top: 50px;}
     .ttxw11 font{font-size: 28px;}
     .xwfont font{color: #ffffff;}
     .dnnn1font{color:#000000}
-    .
+    .xddiv1{margin-top: 50px}
+    .cxdiv{margin-top: 34px}
 
 }
 

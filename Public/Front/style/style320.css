@@ -1429,7 +1429,7 @@
 
     .fwfont{text-align:center;}
     .fwfontx{width:100%;margin-bottom: 30px;}
-    .fwtable1{display:none;margin: auto;width: 66%;}
+    .fwtable1{display:none;margin: auto;width: 88%;}
     .serchimg{width:212px;height:52px;float: right;background: url(../images/dingdanchaxun320.png);}
     .xiadan{width:212px;height:52px;float: left;background: url(../images/xiadanb320.png);}
     .descrimg1{position: absolute;margin-top: 2.5%;margin-left: 1%;}
@@ -1469,11 +1469,11 @@
     .bannerdiv{width: 425px;height: 436px;background: url(/Public/Front/images/di320.png); position:absolute;left:50%;margin-top: 290px;margin-left: -212px;border-radius: 23px;box-shadow:0px 0px 15px #777;}
     .bannerdiv1{z-index: 1;width: 100px;height: 20px;position:absolute;left:50%;margin-top: 260px;margin-left: -35px;}
     .bannerdiv2{width: 80px;height: 20px;position:absolute;left:50%;margin-top: 148px;margin-left: 50px;display: none;}
-    .bannerdiv3{z-index: 1;width: 100%;height: 86px;position:absolute;top:482px;margin-top: -91px;background-color: #000000;}
+    .bannerdiv3{z-index: 1;width: 100%;height: 86px;position:absolute;top:482px;margin-top: -93px;background-color: #000000;}
     .bannerimg{height:303px;width:100%}
     .yuan{  width: 20px;  height:20px; background: #ffffff; border-radius: 50%;  border: 1px solid #ff8000;display: inline-block;box-sizing: border-box;}
     .bannerdiv1 .on{width: 20px;  height:20px;background: #ff8000;border-radius: 50%;border: 1px solid #ffffff;display: inline-block;box-sizing: border-box;}
-    .ksfw{margin-top: 73px;height: 376px;}
+    .ksfw{margin-top: -36px;height: 376px;}
     .tbddfont{font-size:22px}
     .tbxdfont{font-size:22px;}
     .dfontd,.dfontd:hover{color:#FFFFFF;}
@@ -1487,7 +1487,7 @@
     .morefont{font-size: 14px;color:#FFFFFF}
     .xwtable{width: 335px;margin: 5px auto 0px;}
     .xddiv1{margin-top: 15px}
-    .xddiv1 font{font-size:16px;}
+    .xddiv1 font{font-size:20px;}
     .xddiv2{margin-top: 5px}
     .xddiv2 font{font-size:16px;color:#999}
     .xddiv3{padding-top:10px;margin-top: 15px;border-top:1px solid #e1e1e1}
@@ -1552,5 +1552,7 @@
     .ttxw11{position: relative;width: 280px;margin: auto;top: -50px;}
     .ttxw11 font{font-size: 28px;}
     .xwfont font{color: #ffffff;}
+    .xddiv1{margin-top: 31px;}
+    #wmtable p{font-size: 20px}
 
 }

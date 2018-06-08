@@ -74,7 +74,7 @@
 			</table>
 		</div>
 		<div style="float: right;width:50%;">
-			<div style="width: 410px;margin:auto;">
+			<div style="width: 501px;margin:auto;">
 				<div id="ksfw" style="font-size: 30px;width: 133px;margin: 70px auto 0px;">快速服务</div>
 				<img src="/Public/Front/images/rzd.png">
 			</div>
@@ -98,7 +98,7 @@
 					<tr class="searchtd">
 						<td>
 							<a>
-								<div class="xddiv">
+								<div class="xddiv cxdiv">
 									<div class="pc xdchild"  onclick="tiaoFun('keyword');">
 										<center><font class="xddfont">订单查询</font></center>
 									</div>
@@ -116,7 +116,7 @@
                         $(".searchtd .xddfont").attr('style',"color:#ffffff;");
                     }
 				</script>
-				<table id="xdtable" style="margin: auto;">
+				<table id="xdtable" style="margin: auto;width: 480px;">
 					<form method="post" action="__MODULE__/Order/normal" id="quickz">
 						<div style="display: bolok">
 							<!-- 开始地 -->
@@ -243,7 +243,7 @@
 						<tr style="height:50px;">
 							<td colspan="2">
 								<a>
-									<div class="xddiv">
+									<div class="xddiv xddiv1">
 										<div class="xdchild"  onclick="goOrder();">
 											<center><font class="xddfont">立即下单</font></center>
 										</div>
@@ -255,12 +255,12 @@
 				</table>
 				<div id="yxtable">
 					<div class="yximg">
-						<img src="/Public/Front/images/youf.png" style="padding-top:20px;width: 400px;position: relative;left: 50%;margin-left: -200px;" />
+						<img src="/Public/Front/images/youf.png" style="padding-top:20px;position: relative;" />
 					</div>
 				</div>
 				<div id="wmtable" style="display: none">
 					<div class="yximg">
-						<img src="/Public/Front/images/gywm.png" style="padding-top:20px;width: 400px;position: relative;left: 50%;margin-left: -200px;" />
+						<img src="/Public/Front/images/gywm.png" style="padding-top:20px;width: 90%;" />
 					</div>
 				</div>
 			</div>
@@ -285,7 +285,7 @@
 		<div>
 			<ul class="lcul">
 				<li>
-					<img src="/Public/Front/images/lc1.png">
+					<img src="/Public/Front/images/xw11.png">
 					<div class="ttxw11 xwfont" style="opacity: 0.6;background: #000000;">
 						<div>
 							<center><font>{$artList.0.titles}</font></center>
@@ -294,7 +294,7 @@
 					</div>
 				</li>
 				<li>
-					<img src="/Public/Front/images/lc2.png">
+					<img src="/Public/Front/images/xw22.png">
 					<div class="ttxw11 xwfont" style="opacity: 0.6;background: #000000;">
 						<div>
 							<center><font>{$artList.1.titles}</font></center>
@@ -303,7 +303,7 @@
 					</div>
 				</li>
 				<li>
-					<img src="/Public/Front/images/lc3.png">
+					<img src="/Public/Front/images/xw33.png">
 					<div class="ttxw11 xwfont" style="opacity: 0.6;background: #000000;">
 						<div>
 							<center><font>{$artList.2.titles}</font></center>
@@ -312,7 +312,7 @@
 					</div>
 				</li>
 				<li>
-					<img src="/Public/Front/images/lc4.png">
+					<img src="/Public/Front/images/xw44.png">
 					<div class="ttxw11 xwfont" style="opacity: 0.6;background: #000000;">
 						<div>
 							<center><font>{$artList.3.titles}</font></center>
@@ -345,6 +345,8 @@
         $(".bannerdiv1").css('margin-top',banheight-50+'px');
         lcimg = height-189;
         $("#lcimg,.lcparentdiv").css('height',height+'px');
+        $(".yximg img").css('height',height-230+'px');
+
         //$("#lcimg1").css('margin-top',-(height-200)+'px');
         //$("#lcimg1").css('height',height-220+'px');
         hrtop = height-550;
