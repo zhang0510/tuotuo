@@ -18,7 +18,7 @@
 .dsds{border:1px solid #ccc;padding:2px 5px;}
 
 	.navbar-header0{height:50px;}
-	#navbar{width:58%; margin: 26px auto 51px;height:60px !important;padding:0px;margin-right: 0px;}
+	#navbar{width:60%; margin: 26px auto 51px;height:60px !important;padding:0px;margin-right: 0px;}
 	.serch0{float:right;height:90px;background:#63CFBF;}
 	.serch{float:right;height:38px;margin-top:22px;}
 	.serch .vv1{display:block;float:left;border:0px;height:36px;line-height:36px;width:158px;border-right:1px solid #EAEDF2;font-size:16px;color:#b2b2b2;text-indent:10px;display:none;margin-left:20px;}
@@ -68,7 +68,7 @@
 	.navbar-nav{}
 	.navbar-nav > li >h2{margin:0px;font-weight:400;}
 	.navbar-nav > li{height:68px;}
-	.navbar-nav > li >h2> a{height:90px;font-size:18px;color:#333 !important;line-height:90px;}
+	.navbar-nav > li >h2> a{height:90px;font-size:20px;color:#333 !important;line-height:90px;}
 	.navbar-default .navbar-nav > .active>h2 > a, .navbar-default .navbar-nav > .active>h2 > a:focus, .navbar-default .navbar-nav > .active>h2 > a:hover{background:none !important;
 color:#Ea5512 !important;
 
@@ -1397,7 +1397,7 @@ select {
     .ycfont1{font-size: 24px;color:#ff8000}
     .ycfont2{font-size: 24px;}
     .ycfont3{font-size: 20px;color:#1f1f1f}
-    .buttonblack1 font{font-size: 24px;}
+    .buttonblack1 font{font-size: 30px;}
     .moneyfont{font-size: 28px;}
     .dlbottom{margin-bottom:0px;}
     .buttonblack2 font{font-size: 14px;}
@@ -1471,7 +1471,7 @@ select {
     .more:hover{background:#ff8000}
     .more:hover .morefont{color:#ffffff}
     .tel1{float: left;margin-left: 167px;margin-top: 60px;}
-    .tel1 a{font-family: 微软雅黑;font-size: 18px;color: #ff8000;}
+    .tel1 a{font-family: 微软雅黑;font-size: 20px;color: #ff8000;}
     .xdcxdiv{background: url(/Public/Front/images/xscx.png);}
     .xdcxdiv1{height: 550px;width: 100%;margin: auto;overflow: auto;}
     .tddh{width:250px;height:250px;text-align:center;overflow: hidden;}

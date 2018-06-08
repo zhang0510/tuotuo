@@ -18,7 +18,7 @@
         font-weight: 700;
         padding: 0 10px 0 46px;}
     /**banner**/
-    .bannersy{margin-bottom: 45px;height:710px;border-bottom: 1px solid #d6d6d6;}
+    .bannersy{margin-bottom: 45px;height:387px;border-bottom: 1px solid #d6d6d6;}
     .banner_pic{background:url(../images/banner.jpg) no-repeat 55px center;height:610px;}
     .banner_con{position:absolute;width:100%;height:100%;top:0px;left:0px;display:table;}
     .banner_con span{display:block;font-size:20px;color:#fff;line-height:1.5;padding:30px 0;}
@@ -1467,10 +1467,10 @@
     #inserttable{display:block;width: 408px;margin: auto;}
 
     .bannerdiv{width: 425px;height: 436px;background: url(/Public/Front/images/di320.png); position:absolute;left:50%;margin-top: 290px;margin-left: -212px;border-radius: 23px;box-shadow:0px 0px 15px #777;}
-    .bannerdiv1{z-index: 1;width: 100px;height: 20px;position:absolute;left:50%;margin-top: 560px;margin-left: -35px;}
+    .bannerdiv1{z-index: 1;width: 100px;height: 20px;position:absolute;left:50%;margin-top: 260px;margin-left: -35px;}
     .bannerdiv2{width: 80px;height: 20px;position:absolute;left:50%;margin-top: 148px;margin-left: 50px;display: none;}
-    .bannerdiv3{z-index: 1;width: 100%;height: 86px;position:absolute;top:815px;margin-top: -86px;}
-    .bannerimg{height:703px;width:100%}
+    .bannerdiv3{z-index: 1;width: 100%;height: 86px;position:absolute;top:482px;margin-top: -75px;background-color: #000000;}
+    .bannerimg{height:303px;width:100%}
     .yuan{  width: 20px;  height:20px; background: #ffffff; border-radius: 50%;  border: 1px solid #ff8000;display: inline-block;box-sizing: border-box;}
     .bannerdiv1 .on{width: 20px;  height:20px;background: #ff8000;border-radius: 50%;border: 1px solid #ffffff;display: inline-block;box-sizing: border-box;}
     .ksfw{margin-top: 73px;height: 376px;}

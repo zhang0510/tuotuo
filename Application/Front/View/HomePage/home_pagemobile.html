@@ -50,7 +50,6 @@
 					<li class="yuan yuan1" ></li>
 					<li class="yuan yuan2" ></li>
 					<li class="yuan yuan3" ></li>
-					<li class="yuan yuan4" ></li>
 				</ul>
 			</span>
 			<div class="bannerdiv3">
@@ -59,22 +58,17 @@
 			<div class="bd">
 				<ul>
 					<li>
-						<img class="phone bannerimg" src="/Public/Front/images/bannersj.png" alt="运车">
+						<img class="phone bannerimg" src="/Public/Front/images/BANNER_min.png" alt="运车">
 					</li>
 				</ul>
 				<ul>
 					<li>
-						<img class="phone bannerimg" src="/Public/Front/images/banner1.png" alt="运车">
+						<img class="phone bannerimg" src="/Public/Front/images/banner1_min.png" alt="运车">
 					</li>
 				</ul>
 				<ul>
 					<li>
-						<img class="phone bannerimg" src="/Public/Front/images/bannersj.png" alt="运车">
-					</li>
-				</ul>
-				<ul>
-					<li>
-						<img class="phone bannerimg" src="/Public/Front/images/banner1.png" alt="运车">
+						<img class="phone bannerimg" src="/Public/Front/images/banner2_min.png" alt="运车">
 					</li>
 				</ul>
 			</div>
@@ -89,7 +83,7 @@
 				<td class="tddh"><img onclick="xdxs()" class="tdimg" id="er1.png" name="er11.png" style="width:80%" src="/Public/Front/images/er11.png"></td>
 				<td class="tddh"><img onclick="ddxs('320')" class="tdimg" id="er2.png" name="er22.png" style="width:60%" src="/Public/Front/images/er2.png"></td>
 				<td class="tddh"><img onclick="youshi()" class="tdimg" id="er3.png" name="er33.png" style="width:60%" src="/Public/Front/images/er3.png"></td>
-				<td class="tddh"><img class="tdimg" id="er4.png" name="er44.png" style="width:60%" src="/Public/Front/images/er4.png"></td>
+				<td class="tddh"><img onclick="gywm()" class="tdimg" id="er4.png" name="er44.png" style="width:60%" src="/Public/Front/images/er4.png"></td>
 			</tr>
 		</table>
 	</div>
@@ -272,6 +266,9 @@
 		<div id="yxtable" style="text-align: center;display: none">
 			<img class="phone" src="/Public/Front/images/liucheng.png" alt="流程" style="width: 63%;margin: auto;">
 		</div>
+		<div id="wmtable" style="text-align: center;display: none">
+			<img class="phone" src="/Public/Front/images/gywm.png" alt="关于我们" style="width: 63%;margin: auto;">
+		</div>
 	</div>
 </div>
 <!--<div class="part8">
@@ -418,16 +415,25 @@
         $("#searchtable").show();
         $("#yxtable").hide();
         $("#xdtable").hide();
+        $("#wmtable").hide();
     }
     function xdxs(){
         $("#searchtable").hide();
         $("#yxtable").hide();
         $("#xdtable").show();
+        $("#wmtable").hide();
     }
     function youshi(){
         $("#searchtable").hide();
         $("#yxtable").show();
         $("#xdtable").hide();
+        $("#wmtable").hide();
+    }
+    function gywm(){
+        $("#searchtable").hide();
+        $("#yxtable").hide();
+        $("#xdtable").hide();
+        $("#wmtable").show();
     }
     $(".tdimg").click(function() {
         str = $(".tdimg")
