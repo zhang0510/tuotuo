@@ -127,7 +127,7 @@ color:#Ea5512 !important;}
 
 	.footer-box{padding:0px 0 0px;font-size:18px;background:#262626;}
 	.footer-box1{padding:0px 0 0px;font-size:18px;}
-.dnn0{overflow:hidden;padding-bottom:20px;width: 900px;margin: auto;}
+.dnn0{overflow:hidden;width: 900px;margin: auto;height: 226px;}
 	.dnn1{overflow:hidden;}
 .dnn1 h2{height:60px;font-size:18px;color:#fff;line-height:60px;margin:0px;background:url(../images/hx.png) no-repeat bottom left;margin-bottom:15px;}
 .dnn1 h2 a{color:#ffffff;}
@@ -1425,8 +1425,8 @@ select {
     .bannerdiv2{z-index: 101;width: 80px;height: 20px;position:absolute;left:30%;margin-top: 361px;margin-left: 86px;display: none;}
     .bannerdiv3{z-index: 100;width: 150px;height: 20px;position:absolute;left:30%;margin-top: 286px;margin-left: 350px;display: none;}
     .bannerimg{width:100%}
-    .yuan{  width: 20px;  height:20px; background: #ffffff; border-radius: 50%;  border: 1px solid #ff8000;display: inline-block;box-sizing: border-box;}
-    .bannerdiv1 .on{width: 20px;  height:20px;background: #ff8000;border-radius: 50%;border: 1px solid #ffffff;display: inline-block;box-sizing: border-box;}
+    .yuan{  width: 40px;  height:5px; background: #ffffff; border: 1px solid #ff8000;display: inline-block;box-sizing: border-box;}
+    .bannerdiv1 .on{width: 40px;  height:5px;background: #ff8000;border: 1px solid #ffffff;display: inline-block;box-sizing: border-box;}
     .ksfw{height: 320px;}
     .tbddfont{font-size:22px}
     .tbxdfont{font-size:22px;}
