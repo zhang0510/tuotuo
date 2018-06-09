@@ -58,17 +58,17 @@
 			<div class="bd">
 				<ul>
 					<li>
-						<img class="phone bannerimg" src="/Public/Front/images/BANNER_min.png" alt="运车">
+						<a target="_blank" href="__MODULE__/SecurityGuarantee/index/code/AC1492063903542G"><img class="phone bannerimg" src="/Public/Front/images/BANNER_min.png" alt="品质"></a>
 					</li>
 				</ul>
 				<ul>
 					<li>
-						<img class="phone bannerimg" src="/Public/Front/images/banner1_min.png" alt="运车">
+						<a target="_blank" href="__MODULE__/SecurityGuarantee/index/code/AC1492063903542G"><img class="phone bannerimg" src="/Public/Front/images/banner1_min.png" alt="快捷"></a>
 					</li>
 				</ul>
 				<ul>
 					<li>
-						<img class="phone bannerimg" src="/Public/Front/images/banner2_min.png" alt="运车">
+						<a target="_blank" href="__MODULE__/SecurityGuarantee/index/code/AC14920637842D94"><img class="phone bannerimg" src="/Public/Front/images/banner2_min.png" alt="安心"></a>
 					</li>
 				</ul>
 			</div>
@@ -80,10 +80,10 @@
 	<div style="width:100%">
 		<table>
 			<tr>
-				<td class="tddh"><img onclick="xdxs()" class="tdimg" id="ersj1.png" name="ersj1.png" style="width:60%" src="/Public/Front/images/ersj1.png"></td>
-				<td class="tddh"><img onclick="ddxs('320')" class="tdimg" id="ersj2.png" name="ersj2.png" style="width:60%" src="/Public/Front/images/ersj2.png"></td>
-				<td class="tddh"><img onclick="youshi()" class="tdimg" id="ersj3.png" name="ersj3.png" style="width:60%" src="/Public/Front/images/ersj3.png"></td>
-				<td class="tddh"><img onclick="gywm()" class="tdimg" id="ersj4.png" name="ersj4.png" style="width:60%" src="/Public/Front/images/ersj4.png"></td>
+				<td class="tddh"><img onclick="xdxs()" value="0" class="tdimg" id="ersj1.png" name="ersj1.png" style="width:60%" src="/Public/Front/images/ersj1.png"></td>
+				<td class="tddh"><img onclick="ddxs(this)" value="0" class="tdimg" id="ersj2.png" name="ersj2.png" style="width:60%" src="/Public/Front/images/ersj2.png"></td>
+				<td class="tddh"><img onclick="youshi()" value="0" class="tdimg" id="ersj3.png" name="ersj3.png" style="width:60%" src="/Public/Front/images/ersj3.png"></td>
+				<td class="tddh"><img onclick="gywm()" value="0" class="tdimg" id="ersj4.png" name="ersj4.png" style="width:60%" src="/Public/Front/images/ersj4.png"></td>
 			</tr>
 		</table>
 	</div>
@@ -323,31 +323,27 @@
 		<center><span style="font-size: 22px;color: #666">没有满意的结果，过程再好也只是回忆</span></center>
 	</div>
 	<div class="ttxw1">
-		<img class="nrsj" src="/Public/Front/images/xwsj1.png" alt="展示图">
+		<a href="__MODULE__/News/detail/code/{$artList.0.article_code}"><img class="nrsj" src="/Public/Front/images/xwsj1.png" alt="展示图"></a>
 		<div class="ttxw11 xwfont">
-			<center><font>{$artList.0.titles}</font></center>
-			<center><a href="__MODULE__/News/detail/code/{$artList.0.article_code}"><font>查看详情</font></a></center>
+			<center><a href="__MODULE__/News/detail/code/{$artList.0.article_code}"><font>{$artList.0.titles}</font></a></center>
 		</div>
 	</div>
 	<div class="ttxw1">
-		<img class="nrsj" src="/Public/Front/images/xwsj2.png" alt="展示图">
+		<a href="__MODULE__/News/detail/code/{$artList.1.article_code}"><img class="nrsj" src="/Public/Front/images/xwsj2.png" alt="展示图"></a>
 		<div class="ttxw11 xwfont">
-			<center><font>{$artList.1.titles}</font></center>
-			<center><a href="__MODULE__/News/detail/code/{$artList.1.article_code}"><font>查看详情</font></a></center>
+			<center><a href="__MODULE__/News/detail/code/{$artList.1.article_code}"><font>{$artList.1.titles}</font></a></center>
 		</div>
 	</div>
 	<div class="ttxw1">
-		<img class="nrsj" src="/Public/Front/images/xwsj3.png" alt="展示图">
+		<a href="__MODULE__/News/detail/code/{$artList.2.article_code}"><img class="nrsj" src="/Public/Front/images/xwsj3.png" alt="展示图"></a>
 		<div class="ttxw11 xwfont">
-			<center><font>{$artList.2.titles}</font></center>
-			<center><a href="__MODULE__/News/detail/code/{$artList.2.article_code}"><font>查看详情</font></a></center>
+			<center><a href="__MODULE__/News/detail/code/{$artList.2.article_code}"><font>{$artList.2.titles}</font></a></center>
 		</div>
 	</div>
 	<div class="ttxw1">
-		<img class="nrsj" src="/Public/Front/images/xwsj4.png" alt="展示图">
+		<a href="__MODULE__/News/detail/code/{$artList.3.article_code}"><img class="nrsj" src="/Public/Front/images/xwsj4.png" alt="展示图"></a>
 		<div class="ttxw11 xwfont">
-			<center><font>{$artList.3.titles}</font></center>
-			<center><a href="__MODULE__/News/detail/code/{$artList.3.article_code}"><font>查看详情</font></a></center>
+			<center><a href="__MODULE__/News/detail/code/{$artList.3.article_code}"><font>{$artList.3.titles}</font></a></center>
 		</div>
 	</div>
 	<div class="container">
@@ -396,71 +392,80 @@
     nrsj = $('.nrsj').height();
     $(".ttxw1").css('height','300px');
     $(".ttxw11").css('top','-'+(nrsj-60)+'px');
-	function ddxs(){
-		$(".xiadan").attr("style","background:url(/Public/Front/images/xiadanf.png) left top no-repeat");
-		$(".serchimg").attr("style","background:url(/Public/Front/images/dingdanchaxunb.png) right top no-repeat");
-	    $("#searchtable").show();
-	    $("#xdtable").hide();
-	    $(".dfontd").attr("style","color:#ff8000");
-	    $(".xfontd").attr("style","color:#FFFFFF");
-	}
-    function xdxs(){
-        $(".xiadan").attr("style","background:url(/Public/Front/images/xiadanb.png) left top no-repeat");
-        $(".serchimg").attr("style","background:url(/Public/Front/images/dingdanchaxun.png) right top no-repeat");
-        $("#searchtable").hide();
-        $("#xdtable").show();
-        $(".dfontd").attr("style","color:#FFFFFF")
-        $(".xfontd").attr("style","color:#ff8000")
-    }
 	$('.aske1 ul li').click(function(){
 		$(this).addClass('on').siblings().removeClass('on');
 		$('.tab-cont1 .tab-pay1').eq($(this).index()).fadeIn(300).siblings().hide();
 	});
 
-    function ddxs(){
-        $(".ksfw").slideDown("slow");
+    function ddxs(obj){
         $("#searchtable").show();
         $("#yxtable").hide();
         $("#xdtable").hide();
         $("#wmtable").hide();
         $("#ksfw").html('订单查询');
+        $("img[id^='ersj']").attr("style","width:60%");
+        value = $("img[id^='ersj2']").attr("value");
+        $("img[id^='ersj']").attr("value",'0');
+        if(value == 0){
+            $(".ksfw").slideDown("slow");
+            $("img[id^='ersj2']").attr("value",'1');
+            $("img[id^='ersj2']").attr("style",'width:80%');
+		}else{
+            $(".ksfw").slideUp("slow");
+		}
     }
     function xdxs(){
-        $(".ksfw").slideDown("slow");
         $("#searchtable").hide();
         $("#yxtable").hide();
         $("#xdtable").show();
         $("#wmtable").hide();
         $("#ksfw").html('快速下单');
+        $("img[id^='ersj']").attr("style","width:60%");
+        value = $("img[id^='ersj1']").attr("value");
+        $("img[id^='ersj']").attr("value",'0');
+        if(value == 0){
+            $(".ksfw").slideDown("slow");
+            $("img[id^='ersj1']").attr("value",'1');
+            $("img[id^='ersj1']").attr("style",'width:80%');
+        }else{
+            $(".ksfw").slideUp("slow");
+            return false;
+        }
     }
     function youshi(){
-        $(".ksfw").slideDown("slow");
         $("#searchtable").hide();
         $("#yxtable").show();
         $("#xdtable").hide();
         $("#wmtable").hide();
         $("#ksfw").html('运车优势');
+        $("img[id^='ersj']").attr("style","width:60%");
+        value = $("img[id^='ersj3']").attr("value");
+        $("img[id^='ersj']").attr("value",'0');
+        if(value == 0){
+            $(".ksfw").slideDown("slow");
+            $("img[id^='ersj3']").attr("value",'1');
+            $("img[id^='ersj3']").attr("style",'width:80%');
+        }else{
+            $(".ksfw").slideUp("slow");
+        }
     }
     function gywm(){
-        $(".ksfw").slideDown("slow");
         $("#searchtable").hide();
         $("#yxtable").hide();
         $("#xdtable").hide();
         $("#wmtable").show();
         $("#ksfw").html('关于我们');
+        $("img[id^='ersj']").attr("style","width:60%");
+        value = $("img[id^='ersj4']").attr("value");
+        $("img[id^='ersj']").attr("value",'0');
+        if(value == 0){
+            $(".ksfw").slideDown("slow");
+            $("img[id^='ersj4']").attr("value",'1');
+            $("img[id^='ersj4']").attr("style",'width:80%');
+        }else{
+            $(".ksfw").slideUp("slow");
+        }
     }
-    $(".tdimg").click(function() {
-        str = $(".tdimg")
-        str.each(function(){
-            str =  $(this).attr("id");
-            $(this).attr("src","/Public/Front/images/"+str) ;
-            $(this).attr("style","width:60%") ;
-        });;
-        str = $(this).attr("name");
-        $(this).attr("src", "/Public/Front/images/" + str);
-        $(this).attr("style", "width:80%");
-
-    }) ;
 </script>
 <!--content-->
 <include file='public:foot_coy'/>

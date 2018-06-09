@@ -294,6 +294,9 @@
 	</div>
 	<!--第四个页面-->
 	<div class="section">
+		<div class="newstitle">
+			<center><span>妥妥新闻</span></center>
+		</div>
 		<div>
 			<ul class="lcul">
 				<li>
@@ -364,7 +367,6 @@
         $(".lcul").css('height',imgheight1+'px');
         $(".ttxw11").css('top','-'+(imgheight1*0.7)+'px');
         hrtop = hrtop - imgheight1
-        //$(".foothr").css('margin-top',hrtop+'px');
         $(".tdimg").click(function() {
 			str = $(".tdimg")
 			str.each(function(){
@@ -374,6 +376,11 @@
             str = $(this).attr("name");
             //$(this).attr("src", "/Public/Front/images/" + str);
         }) ;
+        newstitle = $(".newstitle").outerHeight(true);
+        lcul = $(".lcul").outerHeight(true);
+        fwfont = $(".fwfont").outerHeight(true);
+        dnn0 = $(".dnn0").outerHeight(true);
+        $(".foothr").css('margin-top',(height-newstitle-lcul-fwfont-dnn0-60)+'px');
         lcimg2 = $("#lcimg2").height();
         lcimg1	 = $("#lcimg1").height();
         lctop=parseInt((height-parseInt(lcimg2)-parseInt(lcimg1))/2)+parseInt(lcimg2);

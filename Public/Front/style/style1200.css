@@ -686,7 +686,7 @@ select {
 .new3{padding:90px 0px 10px;text-align:center;border-bottom:1px dotted #ccc;}
 .new3 h2{line-height:42px;font-size:26px;color:#333;font-weight:700;margin:0px;}
 .new3 p{line-height:36px;font-size:14px;color:#999;}
-.news_m{width: 80%;margin:auto;font-size:13px;color:#555;line-height:231%;}
+.news_m{width: 70%;margin:auto;font-size:16px;color:#555;line-height:231%;}
 
 
 
@@ -1532,6 +1532,7 @@ select {
     .lcfwul li{float: left;margin-left: 3%;width:20%;}
     .lcfwul li img{width:100%}
     .lcfwul1 li{margin-top: 20px}
+    .newstitle{font-size: 24px;margin: 30px 0px 20px}
 
 }
 
