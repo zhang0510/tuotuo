@@ -1529,5 +1529,9 @@ select {
     .header_top2{font-size: 20px;}
     .firstnav{margin-left: 0px;}
 
+    .lcfwul li{float: left;margin-left: 3%;width:20%;}
+    .lcfwul li img{width:100%}
+    .lcfwul1 li{margin-top: 20px}
+
 }
 

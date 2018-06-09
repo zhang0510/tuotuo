@@ -28,8 +28,9 @@ class IndexController extends BaseObjController {
 	    /* 新闻 */
 		$art=M("article");
 		$map1['article_pid']="XW";
-		$map1['article_img'] = array('neq','');
+		//$map1['article_img'] = array('neq','');
 		$artList=$art->field('article_id,article_code,title,article_img,article_time,article_desc')->where($map1)->order("article_time desc")->limit(4)->select();
+		//echo $art->_sql();die;
 		//$map3['article_pid']="XW";
 		//$map3['article_id'] = array('not in',array($artList[0]['article_id'],$artList[1]['article_id']));
 		//$artList2=$art->where($map3)->order("article_time desc")->limit(3)->select();
