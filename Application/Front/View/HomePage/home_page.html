@@ -351,9 +351,9 @@
         //$("#lcimg1").css('margin-top',-(height-200)+'px');
         //$("#lcimg1").css('height',height-220+'px');
         hrtop = height-450;
-        imgheight1 = $("#xw11").height();
-        $(".lcul").css('height',imgheight1+'px');
-        $(".ttxw11").css('top','-'+(imgheight1*0.7)+'px');
+        imgheight1 = $(".lcul li").height();
+        $(".lcul").css('height',imgheight1-80+'px');
+        $(".ttxw11").css('top','-'+((imgheight1-80)*0.7)+'px');
         hrtop = hrtop - imgheight1
         $(".foothr").css('margin-top',hrtop+'px');
         $(".tdimg").click(function() {
