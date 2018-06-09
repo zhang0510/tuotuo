@@ -1518,8 +1518,8 @@ select {
     .tddhdiv11{font-size: 30px;color: #ffffff;font-weight: 900;}
     .tddhdiv1{opacity: 0.6;z-index: 1;top: 50px;background: #000000;position: absolute;display: none}
 
-    .ttxw11{position: relative;margin: auto;top: -315px;}
-    .ttxw11 div{padding-top: 68px;}
+    .ttxw11{position: relative;margin: auto;}
+    .ttxw11 div{padding-top: 0px;}
     .ttxw11 font{font-size: 20px;}
     .xwfont font{color: #ffffff;}
     .dnnn1font{color:#000000}
