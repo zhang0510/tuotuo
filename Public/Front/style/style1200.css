@@ -5,7 +5,7 @@
 	.close2{float:right;font-size:20px;color:#eee;margin:0px 20px 0px 0px;}
 	.pc{display:block;}
 	.phone{display:none;}
-.container{width:90%;}
+.container{width:1200px;}
 
 .parth3{margin-top:10px;}
 	/**banner**/
@@ -18,7 +18,7 @@
 .dsds{border:1px solid #ccc;padding:2px 5px;}
 
 	.navbar-header0{height:50px;}
-	#navbar{width:711px; margin: 56px auto 17px;height:60px !important;padding:0px;}
+	#navbar{width:711px; margin: 0px auto 17px;height:60px !important;padding:0px;margin-left: 280px;}
 	.serch0{float:right;height:90px;background:#63CFBF;}
 	.serch{float:right;height:38px;margin-top:22px;}
 	.serch .vv1{display:block;float:left;border:0px;height:36px;line-height:36px;width:158px;border-right:1px solid #EAEDF2;font-size:16px;color:#b2b2b2;text-indent:10px;display:none;margin-left:20px;}
@@ -57,7 +57,7 @@
 .header_top2 p span{background:#30AD64 url(../images/qq4.png) no-repeat 20px center;padding:0px 20px 0px 50px;font-size:16px;color:#fff;font-weight:700;}
 
 
-.head1{height:90px;width: 11%;margin: -4% 0% -4.7%;}
+.head1{float: left;margin-top: 10px;}
 .head2{height:180px;background:#fff;}
 .head21{float:left;line-height:90px;font-size:17px;color:#999;margin-left:25px;}
 .head22{float:right;width:90px;height:90px;line-height:90px;text-align:center;}
@@ -87,7 +87,7 @@ color:#Ea5512 !important;
 	.navbar-nav > li dl dd a:hover{background:#ff8000;color:#fff;}
 	.navbar-nav > li>h2 > a:hover{
 color:#Ea5512 !important;}
-.navbar-brand0 img{padding-top:75px;width: 65%;}
+.navbar-brand0 img{width: 100px;}
 	.navbar-brand img{padding:32px 0 0;}
 .navbar-nav{text-align: center}
 .navbar-nav   li:nth-child(1)   h2{background:url(../images/nav11.png) no-repeat 0px center;}
@@ -1470,7 +1470,7 @@ select {
     .xddivxg:hover .xddfont{color:#ffffff}
     .more:hover{background:#ff8000}
     .more:hover .morefont{color:#ffffff}
-    .tel1{float: left;margin-left: 140px;margin-top: 85px;}
+    .tel1{margin-left: 15px;margin-top: 25px;}
     .tel1 a{font-family: 微软雅黑;font-size: 26px;color: #ff8000;}
     .xdcxdiv{background: url(/Public/Front/images/xscx.png);}
     .xdcxdiv1{height: 550px;width: 100%;margin: auto;overflow: auto;}
