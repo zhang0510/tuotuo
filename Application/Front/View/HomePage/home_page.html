@@ -284,7 +284,7 @@
 		<div>
 			<ul class="lcul">
 				<li>
-					<img id="xw11" src="/Public/Front/images/xw11.png">
+					<img id="xw11" style="width: 100%;" src="/Public/Front/images/xw11.png">
 					<div class="ttxw11 xwfont">
 						<div>
 							<center><font>{$artList.0.titles}</font></center>
@@ -293,7 +293,7 @@
 					</div>
 				</li>
 				<li>
-					<img src="/Public/Front/images/xw33.png">
+					<img style="width: 100%;" src="/Public/Front/images/xw33.png">
 					<div class="ttxw11 xwfont">
 						<div>
 							<center><font>{$artList.1.titles}</font></center>
@@ -302,7 +302,7 @@
 					</div>
 				</li>
 				<li>
-					<img src="/Public/Front/images/xw22.png">
+					<img style="width: 100%;" src="/Public/Front/images/xw22.png">
 					<div class="ttxw11 xwfont">
 						<div>
 							<center><font>{$artList.2.titles}</font></center>
@@ -311,7 +311,7 @@
 					</div>
 				</li>
 				<li>
-					<img src="/Public/Front/images/xw44.png">
+					<img style="width: 100%;" src="/Public/Front/images/xw44.png">
 					<div class="ttxw11 xwfont">
 						<div>
 							<center><font>{$artList.3.titles}</font></center>
@@ -351,9 +351,9 @@
         //$("#lcimg1").css('margin-top',-(height-200)+'px');
         //$("#lcimg1").css('height',height-220+'px');
         hrtop = height-450;
-        imgheight1 = $(".lcul li").height();
-        $(".lcul").css('height',imgheight1-80+'px');
-        $(".ttxw11").css('top','-'+((imgheight1-80)*0.7)+'px');
+        imgheight1 = $("#xw11").height();
+        $(".lcul").css('height',imgheight1+'px');
+        $(".ttxw11").css('top','-'+(imgheight1*0.7)+'px');
         hrtop = hrtop - imgheight1
         $(".foothr").css('margin-top',hrtop+'px');
         $(".tdimg").click(function() {
