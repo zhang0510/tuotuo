@@ -1,12 +1,12 @@
 <!--logo and nav-->
 <nav class="navbar navbar-default">
+	<div class="head1">
+		<a class="navbar-brand0" href="/"><img class="logoimg" src="__FRONT__/images/logo.png" alt="logo"></a>
+	</div>
+	<div class="pc tel1" style="float: left;">
+		<a>400-877-1107</a>
+	</div>
 	<div id="sasa" class="container">
-		<div class="head1">
-			<a class="navbar-brand0" href="/"><img class="logoimg" src="__FRONT__/images/logo.png" alt="logo"></a>
-		</div>
-		<div class="pc tel1" style="float: left;">
-			<a>400-877-1107</a>
-		</div>
 		<if condition="$UserInfo.login eq 0">
 			<a class="phone " href="__MODULE__/Login/pclogin/">
 				<img class="renimg" src="__FRONT__/images/ren.png" alt="图标">
@@ -87,36 +87,36 @@
 
 			</div>
 		</div>
-		<div style="float: right;margin-top: -49px;">
-			<if condition="$UserInfo.login eq 0">
-				<div class="header_top2">
+	</div>
+	<div style="float: right;margin-top: -49px;margin-right: 20px;">
+		<if condition="$UserInfo.login eq 0">
+			<div class="header_top2">
 						<span class="login">
                             <a  class="deng1" href="__MODULE__/Login/pclogin/">登录</a>&nbsp;&nbsp;|&nbsp;
                             <a  class="deng2" href="__MODULE__/Register/index/">注册</a>
                         </span>
-				</div>
-				<else/>
-				<div class="header_top1">
-					<span>400-877-1107<!--{$UserInfo['userInfo']['user_name']==""?$UserInfo['userInfo']['tel']:$UserInfo['userInfo']['user_name']}-->&nbsp;</span>
-					<h3>
-						<a  class="deng3" href="javascript:;">个人中心</a>
-						<dl>
-							<dt><a href="__MODULE__/Personal/personalInfo">个人资料</a></dt>
-							<dt><a href="__MODULE__/MyOrder/index">我的订单</a></dt>
-							<dt><a href="__MODULE__/MyCoupon/index">我的优惠券</a></dt>
-						</dl>
-					</h3>
-					<a class="deng4" href="#" onclick="loginout();">退出</a>
-				</div>
-				<script>
-                    function loginout(){
-                        $.post('__MODULE__/Login/logout/',function(data){
-                            window.location.reload();
-                        })
-                    }
-				</script>
-			</if>
-		</div>
+			</div>
+			<else/>
+			<div class="header_top1">
+				<span>400-877-1107<!--{$UserInfo['userInfo']['user_name']==""?$UserInfo['userInfo']['tel']:$UserInfo['userInfo']['user_name']}-->&nbsp;</span>
+				<h3>
+					<a  class="deng3" href="javascript:;">个人中心</a>
+					<dl>
+						<dt><a href="__MODULE__/Personal/personalInfo">个人资料</a></dt>
+						<dt><a href="__MODULE__/MyOrder/index">我的订单</a></dt>
+						<dt><a href="__MODULE__/MyCoupon/index">我的优惠券</a></dt>
+					</dl>
+				</h3>
+				<a class="deng4" href="#" onclick="loginout();">退出</a>
+			</div>
+			<script>
+				function loginout(){
+					$.post('__MODULE__/Login/logout/',function(data){
+						window.location.reload();
+					})
+				}
+			</script>
+		</if>
 	</div>
 </nav>
 <!--logo and nav-->

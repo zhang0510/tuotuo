@@ -116,7 +116,7 @@
     .head21{float:left;line-height:90px;font-size:17px;color:#999;margin-left:25px;}
     .head22{float:right;width:90px;height:90px;line-height:90px;text-align:center;}
     .head22 a{display:block;font-size:22px;color:#fff;background:#092B75;}
-    #sasa {background:#fff;min-height:90px;}
+    #sasa {background:#fff;}
     .navbar-nav{z-index:4000;}
 
     .navbar-nav   li:hover h2 a,.navbar-nav   li.active h2 a{color:#30AC63;}
