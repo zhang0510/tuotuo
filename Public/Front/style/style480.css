@@ -116,7 +116,7 @@
     .head21{float:left;line-height:90px;font-size:17px;color:#999;margin-left:25px;}
     .head22{float:right;width:90px;height:90px;line-height:90px;text-align:center;}
     .head22 a{display:block;font-size:22px;color:#fff;background:#092B75;}
-    #sasa {background:#fff;min-height:90px;}
+    #sasa {background:#fff;}
     .navbar-nav{z-index:4000;}
 
     .navbar-nav   li:hover h2 a,.navbar-nav   li.active h2 a{color:#30AC63;}
@@ -704,7 +704,7 @@
     .new3{padding:90px 0px 10px;text-align:center;border-bottom:1px dotted #ccc;}
     .new3 h2{line-height:42px;font-size:26px;color:#000;font-weight:700;margin:0px;}
     .new3 p{line-height:36px;font-size:14px;color:#999;}
-    .news_m{padding:30px 20px 50px;font-size:13px;color:#999;line-height:231%;}
+    .news_m{padding:30px 60px 50px;font-size:18px;color:#999;line-height:231%;}
 
     .tnew1{padding:90px 0px 50px;text-align:center;}
     .tnew1 h2{line-height:42px;font-size:26px;color:#000;font-weight:700;margin:0px;}
@@ -1469,11 +1469,11 @@
     .bannerdiv{width: 425px;height: 436px;background: url(/Public/Front/images/di320.png); position:absolute;left:50%;margin-top: 290px;margin-left: -212px;border-radius: 23px;box-shadow:0px 0px 15px #777;}
     .bannerdiv1{z-index: 1;width: 100px;height: 20px;position:absolute;left:50%;margin-top: 260px;margin-left: -35px;}
     .bannerdiv2{width: 80px;height: 20px;position:absolute;left:50%;margin-top: 148px;margin-left: 50px;display: none;}
-    .bannerdiv3{z-index: 1;width: 100%;height: 86px;position:absolute;top:482px;margin-top: -62px;background-color: #000000;}
+    .bannerdiv3{z-index: 1;width: 100%;height: 86px;position:absolute;top:482px;margin-top: -93px;background-color: #000000;}
     .bannerimg{height:303px;width:100%}
     .yuan{  width: 20px;  height:20px; background: #ffffff; border-radius: 50%;  border: 1px solid #ff8000;display: inline-block;box-sizing: border-box;}
     .bannerdiv1 .on{width: 20px;  height:20px;background: #ff8000;border-radius: 50%;border: 1px solid #ffffff;display: inline-block;box-sizing: border-box;}
-    .ksfw{margin-top: -36px;height: 580px;}
+    .ksfw{margin-top: -36px;height: 503px;}
     .tbddfont{font-size:22px}
     .tbxdfont{font-size:22px;}
     .dfontd,.dfontd:hover{color:#FFFFFF;}
