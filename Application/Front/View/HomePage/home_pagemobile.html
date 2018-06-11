@@ -80,10 +80,14 @@
 	<div style="width:100%">
 		<table>
 			<tr>
-				<td class="tddh"><img onclick="xdxs()" value="0" class="tdimg" id="ersj1.png" name="ersj1.png" style="width:60%" src="/Public/Front/images/ersj1.png"></td>
+				<!--<td class="tddh"><img onclick="xdxs()" value="0" class="tdimg" id="ersj1.png" name="ersj1.png" style="width:60%" src="/Public/Front/images/ersj1.png"></td>
 				<td class="tddh"><img onclick="ddxs(this)" value="0" class="tdimg" id="ersj2.png" name="ersj2.png" style="width:60%" src="/Public/Front/images/ersj2.png"></td>
 				<td class="tddh"><img onclick="youshi()" value="0" class="tdimg" id="ersj3.png" name="ersj3.png" style="width:60%" src="/Public/Front/images/ersj3.png"></td>
-				<td class="tddh"><img onclick="gywm()" value="0" class="tdimg" id="ersj4.png" name="ersj4.png" style="width:60%" src="/Public/Front/images/ersj4.png"></td>
+				<td class="tddh"><img onclick="gywm()" value="0" class="tdimg" id="ersj4.png" name="ersj4.png" style="width:60%" src="/Public/Front/images/ersj4.png"></td>-->
+				<td class="tddh"><img onclick="xdxs()" value="0" class="tdimg" id="er1.png" name="er1.png" style="width:60%" src="/Public/Front/images/er1.png"></td>
+				<td class="tddh"><img onclick="ddxs()" value="0" class="tdimg" id="er2.png" name="er2.png" style="width:60%" src="/Public/Front/images/er2.png"></td>
+				<td class="tddh"><img onclick="youshi()" value="0" class="tdimg" id="er3.png" name="er3.png" style="width:60%" src="/Public/Front/images/er3.png"></td>
+				<td class="tddh"><img onclick="gywm()" value="0" class="tdimg" id="er4.png" name="er4.png" style="width:60%" src="/Public/Front/images/er4.png"></td>
 			</tr>
 		</table>
 	</div>
@@ -396,13 +400,13 @@
         $("#xdtable").hide();
         $("#wmtable").hide();
         $("#ksfw").html('订单查询');
-        $("img[id^='ersj']").attr("style","width:60%");
-        value = $("img[id^='ersj2']").attr("value");
-        $("img[id^='ersj']").attr("value",'0');
+        $("img[id^='er']").attr("style","width:60%");
+        value = $("img[id^='er2']").attr("value");
+        $("img[id^='er']").attr("value",'0');
         if(value == 0){
             $(".ksfw").slideDown("slow");
-            $("img[id^='ersj2']").attr("value",'1');
-            $("img[id^='ersj2']").attr("style",'width:80%');
+            $("img[id^='er2']").attr("value",'1');
+            $("img[id^='er2']").attr("style",'width:80%');
 		}else{
             $(".ksfw").slideUp("slow");
 		}
@@ -413,13 +417,13 @@
         $("#xdtable").show();
         $("#wmtable").hide();
         $("#ksfw").html('快速下单');
-        $("img[id^='ersj']").attr("style","width:60%");
-        value = $("img[id^='ersj1']").attr("value");
-        $("img[id^='ersj']").attr("value",'0');
+        $("img[id^='er']").attr("style","width:60%");
+        value = $("img[id^='er1']").attr("value");
+        $("img[id^='er']").attr("value",'0');
         if(value == 0){
             $(".ksfw").slideDown("slow");
-            $("img[id^='ersj1']").attr("value",'1');
-            $("img[id^='ersj1']").attr("style",'width:80%');
+            $("img[id^='er1']").attr("value",'1');
+            $("img[id^='er1']").attr("style",'width:80%');
         }else{
             $(".ksfw").slideUp("slow");
             return false;
@@ -431,13 +435,13 @@
         $("#xdtable").hide();
         $("#wmtable").hide();
         $("#ksfw").html('运车优势');
-        $("img[id^='ersj']").attr("style","width:60%");
-        value = $("img[id^='ersj3']").attr("value");
-        $("img[id^='ersj']").attr("value",'0');
+        $("img[id^='er']").attr("style","width:60%");
+        value = $("img[id^='er3']").attr("value");
+        $("img[id^='er']").attr("value",'0');
         if(value == 0){
             $(".ksfw").slideDown("slow");
-            $("img[id^='ersj3']").attr("value",'1');
-            $("img[id^='ersj3']").attr("style",'width:80%');
+            $("img[id^='er3']").attr("value",'1');
+            $("img[id^='er3']").attr("style",'width:80%');
         }else{
             $(".ksfw").slideUp("slow");
         }
@@ -448,13 +452,13 @@
         $("#xdtable").hide();
         $("#wmtable").show();
         $("#ksfw").html('关于我们');
-        $("img[id^='ersj']").attr("style","width:60%");
-        value = $("img[id^='ersj4']").attr("value");
-        $("img[id^='ersj']").attr("value",'0');
+        $("img[id^='er']").attr("style","width:60%");
+        value = $("img[id^='er4']").attr("value");
+        $("img[id^='er']").attr("value",'0');
         if(value == 0){
             $(".ksfw").slideDown("slow");
-            $("img[id^='ersj4']").attr("value",'1');
-            $("img[id^='ersj4']").attr("style",'width:80%');
+            $("img[id^='er4']").attr("value",'1');
+            $("img[id^='er4']").attr("style",'width:80%');
         }else{
             $(".ksfw").slideUp("slow");
         }
