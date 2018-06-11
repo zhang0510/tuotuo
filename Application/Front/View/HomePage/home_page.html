@@ -407,8 +407,8 @@
             $(".foothr").css('margin-top',foorhr+'px');
 		}
         lcimg2 = 180;
-        lcimg1	 = $(".lcimg1img").width();
-		alert(lcimg1);
+        lcimg1width= $(".lcimg1img").width();
+		lcimg1 = (lcimg1width/1489*739)
         lctop=parseInt((height-lcimg1-lcimg2)/2)+parseInt(lcimg2);
         $(document).on('mouseover','#lcimg', function(){
             $("#lcimg1").stop(true,true).animate({
