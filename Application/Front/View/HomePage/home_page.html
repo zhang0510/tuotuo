@@ -412,8 +412,8 @@
             $(".foothr").css('margin-top',foorhr+'px');
 		}
         lcimg2 = 180;
-        lcimg1	 = $("#lcimg1").height();
-        lctop=parseInt((height-lcimg1)/2)+parseInt(lcimg2);
+        lcimg1	 = $("#lcimg1").outerHeight(true);
+        lctop=parseInt((height-lcimg1-lcimg2)/2)+parseInt(lcimg2);
         $(document).on('mouseover','#lcimg', function(){
             $("#lcimg1").stop(true,true).animate({
                 top:lctop+'px',
