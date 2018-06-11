@@ -1116,7 +1116,7 @@
     .aske2 button{width:23%;}
     .aske2 .du3d{margin:30px auto 30px;width:100%;}
 
-    .iske1{overflow:hidden;width:100%;margin-bottom:40px;}
+    .iske1{width: 428px;margin: auto;margin-bottom:40px;}
     .iske2{width:100%;float:left;border:1px solid #e1e1e1;padding:12px;margin-bottom: 18px;background: url(../images/xinwendisj.png);}
     .iske3{width:100%;overflow:hidden;}
     .iske4{width:65%;float:left;}
@@ -1448,6 +1448,7 @@
     .ycfont2{font-size: 24px;}
     .ycfont3{font-size: 24px;color:#1f1f1f;}
     .xdtd{padding-left: 18%;padding-right: 23%}
+    .xdtd1{width: 48%}
     .xdfont{font-size: 20px;}
     .buttonblack2 font{font-size: 16px;color: #FFFFFF;}
     .buttonblack1 font{font-size: 20px;}
@@ -1469,7 +1470,7 @@
     .bannerdiv{width: 425px;height: 436px;background: url(/Public/Front/images/di320.png); position:absolute;left:50%;margin-top: 290px;margin-left: -212px;border-radius: 23px;box-shadow:0px 0px 15px #777;}
     .bannerdiv1{z-index: 1;width: 100px;height: 20px;position:absolute;left:50%;margin-top: 260px;margin-left: -35px;}
     .bannerdiv2{width: 80px;height: 20px;position:absolute;left:50%;margin-top: 148px;margin-left: 50px;display: none;}
-    .bannerdiv3{z-index: 1;width: 100%;height: 86px;position:absolute;top:482px;margin-top: -93px;background-color: #000000;}
+    .bannerdiv3{z-index: 1;width: 100%;height: 86px;position:absolute;top:482px;margin-top: -85px;background-color: #000000;}
     .bannerimg{height:303px;width:100%}
     .yuan{  width: 20px;  height:20px; background: #ffffff; border-radius: 50%;  border: 1px solid #ff8000;display: inline-block;box-sizing: border-box;}
     .bannerdiv1 .on{width: 20px;  height:20px;background: #ff8000;border-radius: 50%;border: 1px solid #ffffff;display: inline-block;box-sizing: border-box;}
@@ -1485,17 +1486,17 @@
     .more{width:85px;height:33px;margin-left:37px;background: url(../images/gengduoanqiu.png);margin-top: 0px;position: absolute;border-radius: 5px;}
     .morechild{padding-top: 8px;}
     .morefont{font-size: 14px;color:#FFFFFF}
-    .xwtable{width: 335px;margin: 5px auto 0px;}
+    .xwtable{width: 100%;margin: -39px auto 0px;}
     .xddiv1{margin-top: 15px}
     .xddiv1 font{font-size:20px;}
     .xddiv2{margin-top: 5px}
     .xddiv2 font{font-size:16px;color:#999}
-    .xddiv3{padding-top:10px;margin-top: 15px;border-top:1px solid #e1e1e1}
+    .xddiv3{padding-top:10px;margin-top: 15px;border-top:1px solid #e1e1e1;height: 81px;}
     .xddiv3 font{font-size:16px;color:#999}
     .xddiv4{margin-top: 10px}
     .xddivxg{margin:auto;}
-    .td1div{height:124px;}
-    .td1div img{width:160px;height:160px;}
+    .td1div{}
+    .td1div img{margin-top: -10px;width: 190px;height: 190px;}
     .bannerdiv2 img{width:70px;height:50px;}
     .bannerdiv3 img{width:132px;height:132px;}
     .blacktd{width:28%}
@@ -1552,7 +1553,7 @@
     .ttxw11{position: relative;width: 280px;margin: auto;top: -50px;}
     .ttxw11 font{font-size: 28px;}
     .xwfont font{color: #ffffff;}
-    .xddiv1{margin-top: 31px;}
+    .xddiv1{margin-top: 10px;}
     #wmtable p{font-size: 20px}
 
 }

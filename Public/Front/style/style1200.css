@@ -617,7 +617,7 @@ select {
 .order_d2{width:70%;margin:0 auto;}
 
 .du3c{text-align:center;}
-#tiao1 {border:1px solid #eee;border-radius:2px;line-height:35px;height:35px;margin:48px auto 28px;width:352px;}
+#tiao1 {border:1px solid #eee;border-radius:2px;line-height:35px;height:35px;margin:104px auto 68px;width:352px;}
 
 #tiao1 input {
     height: 33px;
@@ -1421,12 +1421,12 @@ select {
     .new3b1 p{float:left;writing-mode: tb-rl;margin-left: 90px;}
 
     .bannerdiv{z-index: 102;width: 485px;height: 456px;background: url(/Public/Front/images/di.png); position:absolute;left:50%;margin-top: 183px;margin-left: -242px;border-radius: 23px;box-shadow:0px 0px 15px #777;}
-    .bannerdiv1{z-index: 101;width: 143px;height: 20px;position:absolute;left:50%;margin-left: -40px;}
+    .bannerdiv1{z-index: 101;width: 160px;height: 20px;position:absolute;left:50%;margin-left: -40px;}
     .bannerdiv2{z-index: 101;width: 80px;height: 20px;position:absolute;left:30%;margin-top: 361px;margin-left: 86px;display: none;}
     .bannerdiv3{z-index: 100;width: 150px;height: 20px;position:absolute;left:30%;margin-top: 286px;margin-left: 350px;display: none;}
     .bannerimg{width:100%}
-    .yuan{  width: 40px;  height:5px; background: #ffffff; border: 1px solid #ff8000;display: inline-block;box-sizing: border-box;}
-    .bannerdiv1 .on{width: 40px;  height:5px;background: #ff8000;border: 1px solid #ffffff;display: inline-block;box-sizing: border-box;}
+    .yuan{width: 50px;  height:5px; background: #ffffff; border: 1px solid #ff8000;display: inline-block;box-sizing: border-box;}
+    .bannerdiv1 .on{width: 50px;  height:5px;background: #ff8000;border: 1px solid #ffffff;display: inline-block;box-sizing: border-box;}
     .ksfw{height: 320px;}
     .tbddfont{font-size:22px}
     .tbxdfont{font-size:22px;}

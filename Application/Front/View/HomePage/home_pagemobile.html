@@ -327,46 +327,91 @@
 	</div>
 </div>
 <div class="ttxw">
-	<div class="ttxwbj" style="margin: 40px auto 20px;">
-		<center><span style="font-size: 28px;">时事新闻</span></center>
+	<div class="ttxwbj" style="margin: 20px auto 20px;">
+		<center><span style="font-size: 28px;">妥妥新闻</span></center>
 		<center><span style="font-size: 22px;color: #666">没有满意的结果，过程再好也只是回忆</span></center>
 	</div>
-	<div class="ttxw1">
-		<a href="__MODULE__/News/detail/code/{$artList.0.article_code}"><img class="nrsj" src="/Public/Front/images/xwsj1.png" alt="展示图"></a>
-		<div class="ttxw11 xwfont">
-			<center><a href="__MODULE__/News/detail/code/{$artList.0.article_code}"><font>{$artList.0.titles}</font></a></center>
-		</div>
-	</div>
-	<div class="ttxw1">
-		<a href="__MODULE__/News/detail/code/{$artList.1.article_code}"><img class="nrsj" src="/Public/Front/images/xwsj2.png" alt="展示图"></a>
-		<div class="ttxw11 xwfont">
-			<center><a href="__MODULE__/News/detail/code/{$artList.1.article_code}"><font>{$artList.1.titles}</font></a></center>
-		</div>
 	</div>
 	<div class="container">
-		<div class="iske7">
-			<h2><span>FAQ </span> 常见问题</h2>
-			<ul>
-				<foreach name="cj" item="vo" key="k">
-					<if condition="$k lt 7">
-						<li><a href="__MODULE__/Footer/detail/code/{$vo.article_code}"><p>{$k+1}、{$vo.title}</p></a></li>
-					</if>
-				</foreach>
-			</ul>
-			<div style="margin-top: 50px;">
-				<div class="more moreques">
-					<a href="__MODULE__/Footer/detail/code/AC14920671855R3B">
-						<div class="morechild">
-							<center><font class="morefont">MORE</font></center>
-						</div>
-					</a>
+		<div class="iske1">
+			<div class="iske2">
+				<table class="xwtable">
+					<tr>
+						<td class="xdtd1">
+							<div class="td1div">
+								<img class="pc" src="/Public/Front/images/neirongtu.png" alt="展示图">
+								<img class="phone nrsj" src="/Public/Front/images/neirongtusj.png" alt="展示图">
+							</div>
+							<div class="xddiv1">
+								<font>{$artList.0.title}</font>
+							</div>
+							<div class="xddiv2">
+								<font>{$artList.0.article_time}</font>
+							</div>
+							<div class="xddiv3">
+								<font>{$artList.0.article_desc}</font>
+							</div>
+							<div class="xddiv4">
+								<div class="more">
+									<a href="__MODULE__/News/detail/code/{$artList.0.article_code}">
+										<div class="morechild">
+											<center><font class="morefont">MORE</font></center>
+										</div>
+									</a>
+								</div>
+							</div>
+						</td>
+						<td class="xdtd1 xdleft">
+							<div class="td1div">
+								<img class="pc" src="/Public/Front/images/neirongtu1.png" alt="展示图">
+								<img class="phone nrsj" src="/Public/Front/images/neirongtusj1.png" alt="展示图">
+							</div>
+							<div class="xddiv1">
+								<font>{$artList.1.title}</font>
+							</div>
+							<div class="xddiv2">
+								<font>{$artList.1.article_time}</font>
+							</div>
+							<div class="xddiv3">
+								<font>{$artList.1.article_desc}</font>
+							</div>
+							<div class="xddiv4">
+								<div class="more">
+									<a href="__MODULE__/News/detail/code/{$artList.1.article_code}">
+										<div class="morechild">
+											<center><font class="morefont">MORE</font></center>
+										</div>
+									</a>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="iske7">
+				<h2><span>FAQ </span> 常见问题</h2>
+				<ul>
+					<foreach name="cj" item="vo" key="k">
+						<if condition="$k lt 7">
+							<li><a href="__MODULE__/Footer/detail/code/{$vo.article_code}"><p>{$k+1}、{$vo.title}</p></a></li>
+						</if>
+					</foreach>
+				</ul>
+				<div style="margin-top: 50px;">
+					<div class="more moreques">
+						<a href="__MODULE__/Footer/detail/code/AC14920671855R3B">
+							<div class="morechild">
+								<center><font class="morefont">MORE</font></center>
+							</div>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div style="padding-bottom: 64px;" class="part61 container">
+<div style="padding-bottom: 64px;margin-top: 60px;" class="part61 container">
   <div class="fwfont" style="margin-bottom: 56px;">
 	  <center><font><strong>合作伙伴</strong></font>
 	  <h3>Cooperation</h3></center>
