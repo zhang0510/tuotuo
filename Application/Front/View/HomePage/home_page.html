@@ -295,7 +295,7 @@
 						<li><a href=""><img src="/Public/Front/images/lc3.png"></a></li>
 						<li><a href=""><img src="/Public/Front/images/lc4.png"></a></li>
 					</ul>-->
-					<a href="http://www.tuotuoyunche.com/Front/News/detail/code/AC1528526275U7SW"><img style="width: 100%;" src="/Public/Front/images/lcfc1.png"></a>
+					<a href="http://www.tuotuoyunche.com/Front/News/detail/code/AC1528526275U7SW"><img class="lcimg1img" style="width: 100%;" src="/Public/Front/images/lcfc1.png"></a>
 				</div>
 			</div>
 			<div id="lcimg2" style="width: 100%;height: 121px;position: absolute;top: 0px;" class="newstitle">
@@ -380,9 +380,6 @@
         lcimg = height-189;
         $("#lcimg,.lcparentdiv").css('height',height+'px');
         $(".yximg img").css('height',height-230+'px');
-
-        //$("#lcimg1").css('margin-top',-(height-200)+'px');
-        //$("#lcimg1").css('height',height-220+'px');
         hrtop = height-450;
         imgheight1 = $("#xw11").outerHeight();
         lcul = 250;
@@ -396,10 +393,8 @@
 			str = $(".tdimg")
 			str.each(function(){
                 str =  $(this).attr("id");
-                //$(this).attr("src","/Public/Front/images/"+str) ;
 			});;
             str = $(this).attr("name");
-            //$(this).attr("src", "/Public/Front/images/" + str);
         }) ;
         newstitle = $(".newstitle").outerHeight(true);
         fwfont = $(".fwfont").outerHeight(true);
@@ -412,7 +407,7 @@
             $(".foothr").css('margin-top',foorhr+'px');
 		}
         lcimg2 = 180;
-        lcimg1	 = $("#lcimg1").outerHeight(true);
+        lcimg1	 = $(".lcimg1img").outerHeight(true);
         lctop=parseInt((height-lcimg1-lcimg2)/2)+parseInt(lcimg2);
         $(document).on('mouseover','#lcimg', function(){
             $("#lcimg1").stop(true,true).animate({
