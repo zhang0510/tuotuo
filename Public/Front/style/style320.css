@@ -1117,7 +1117,7 @@
     .aske2 .du3d{margin:30px auto 30px;width:100%;}
 
     .iske1{width: 428px;margin: auto;margin-bottom:40px;}
-    .iske2{width:100%;float:left;border:1px solid #e1e1e1;padding:12px;margin-bottom: 18px;background: url(../images/xinwendisj.png);}
+    .iske2{width:100%;float:left;border:1px solid #e1e1e1;padding:12px;margin-bottom: 18px;background: url(../images/xinwendisj.png);padding-bottom: 25px;}
     .iske3{width:100%;overflow:hidden;}
     .iske4{width:65%;float:left;}
     .iske4 img{width:100%;}
@@ -1483,9 +1483,9 @@
     .fwbzfont{width: 100%;margin:auto}
     .jsbzfont{font-size: 18px;color:#ff8000;}
     .gslc{padding-bottom: 0px;margin: 20px 0px;}
-    .more{width:85px;height:33px;margin-left:37px;background: url(../images/gengduoanqiu.png);margin-top: 0px;position: absolute;border-radius: 5px;}
-    .morechild{padding-top: 6px;}
-    .morefont{font-size: 16px;color:#FFFFFF}
+    .more{width:110px;height:40px;margin-left:-55px;background: url(../images/gengduoanqiu.png);margin-top: 0px;position: absolute;left:50%;border-radius: 5px;}
+    .morechild{padding-top: 8px;}
+    .morefont{font-size: 18px;color:#FFFFFF}
     .xwtable{width: 100%;margin: -39px auto 0px;}
     .xddiv1{margin-top: 15px}
     .xddiv1 font{font-size:20px;}

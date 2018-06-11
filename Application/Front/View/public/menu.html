@@ -79,16 +79,18 @@
 						<dd><a href="__MODULE__/News/newsList">妥妥新闻</a></dd>
 					</dl>
 					</li>
-					<li><h2><a href="__MODULE__/Ordersel/orderselView">运单查询</a></h2>
-
+					<li>
+						<h2><a href="__MODULE__/Ordersel/orderselView">运单查询</a></h2>
 					</li>
-
+					<li>
+						<h2><a target="_blank" href="__MODULE__/News/detail/code/AC1528702684PD2V">联系我们</a></h2>
+					</li>
 				</ul>
 
 			</div>
 		</div>
 	</div>
-	<div style="float: right;margin-top: -49px;margin-right: 20px;">
+	<div style="float: right;margin-top: -49px;margin-right: 15px;">
 		<if condition="$UserInfo.login eq 0">
 			<div class="header_top2">
 						<span class="login">
@@ -97,8 +99,7 @@
                         </span>
 			</div>
 			<else/>
-			<div class="header_top1">
-				<span>400-877-1107<!--{$UserInfo['userInfo']['user_name']==""?$UserInfo['userInfo']['tel']:$UserInfo['userInfo']['user_name']}-->&nbsp;</span>
+			<div class="pc header_top1">
 				<h3>
 					<a  class="deng3" href="javascript:;">个人中心</a>
 					<dl>

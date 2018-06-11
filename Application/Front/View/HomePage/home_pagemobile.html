@@ -84,16 +84,28 @@
 				<td class="tddh"><img onclick="ddxs(this)" value="0" class="tdimg" id="ersj2.png" name="ersj2.png" style="width:60%" src="/Public/Front/images/ersj2.png"></td>
 				<td class="tddh"><img onclick="youshi()" value="0" class="tdimg" id="ersj3.png" name="ersj3.png" style="width:60%" src="/Public/Front/images/ersj3.png"></td>
 				<td class="tddh"><img onclick="gywm()" value="0" class="tdimg" id="ersj4.png" name="ersj4.png" style="width:60%" src="/Public/Front/images/ersj4.png"></td>-->
-				<td class="tddh"><img onclick="xdxs()" value="0" class="tdimg" id="er1.png" name="er1.png" style="width:60%" src="/Public/Front/images/er1.png"></td>
-				<td class="tddh"><img onclick="ddxs()" value="0" class="tdimg" id="er2.png" name="er2.png" style="width:60%" src="/Public/Front/images/er2.png"></td>
-				<td class="tddh"><img onclick="youshi()" value="0" class="tdimg" id="er3.png" name="er3.png" style="width:60%" src="/Public/Front/images/er3.png"></td>
-				<td class="tddh"><img onclick="gywm()" value="0" class="tdimg" id="er4.png" name="er4.png" style="width:60%" src="/Public/Front/images/er4.png"></td>
+				<td class="tddh">
+					<img onclick="xdxs()" value="0" class="tdimg" id="ersj1.png" name="ersj1.png" style="width:60%" src="/Public/Front/images/ersj1.png">
+					<div onclick="xdxs()" style="font-size: 24px;font-weight: 900;">快速下单</div>
+				</td>
+				<td class="tddh">
+					<img onclick="ddxs()" value="0" class="tdimg" id="ersj2.png" name="ersj2.png" style="width:60%" src="/Public/Front/images/ersj2.png">
+					<div onclick="ddxs()" style="font-size: 24px;font-weight: 900;">订单查询</div>
+				</td>
+				<td class="tddh">
+					<img onclick="youshi()" value="0" class="tdimg" id="ersj3.png" name="ersj3.png" style="width:60%" src="/Public/Front/images/ersj3.png">
+					<div onclick="youshi()" style="font-size: 24px;font-weight: 900;">运车优势</div>
+				</td>
+				<td class="tddh">
+					<img onclick="gywm()" value="0" class="tdimg" id="ersj4.png" name="ersj4.png" style="width:60%" src="/Public/Front/images/ersj4.png">
+					<div onclick="gywm()" style="font-size: 24px;font-weight: 900;">关于我们</div>
+				</td>
 			</tr>
 		</table>
 	</div>
 	<div class="ksfw" style="display: none">
 		<div style="width: 90%;margin:auto;overflow: hidden">
-			<div id="ksfw" style="font-size: 30px;width: 133px;margin: 70px auto 0px;">快速下单</div>
+			<div id="ksfw" style="font-weight: 900;font-size: 30px;width: 133px;margin: 70px auto 0px;">快速下单</div>
 		</div>
 		<table id="searchtable" class="pc fwtable1">
 			<tr>
@@ -285,40 +297,6 @@
 		</div>
 	</div>
 </div>
-<!--<div class="part8">
-	  <div class="part8left">
-		  <img style="width:100%" src="/Public/Front/images/gongsijieshao_min.png" alt="背景图">
-		  <div class="gsjsfont">
-			  <div class="fwfont gslc">
-				  <font>妥妥运车&nbsp;<strong><span class="jsbzfont">公司介绍</span></strong></font>
-				  <h3>Company introduction</h3>
-			  </div>
-			  <a href="__MODULE__/AboutUs/index/code/AC14920644586W3N">
-			  <div class="xddiv xddivxg">
-				  <div class="xdchild">
-					  <center><font class="xddfont">详情</font></center>
-				  </div>
-			  </div>
-			  </a>
-		  </div>
-	  </div>
-	  <div class="part8right">
-		  <img style="width:100%" src="/Public/Front/images/fuwubaozhang_min.png" alt="背景图">
-		  <div class="fwbzfont">
-			  <div class="fwfont gslc">
-				  <font>妥妥运车&nbsp;<strong><span class="jsbzfont">服务保障</span></strong></font>
-				  <h3>Service guarantee</h3>
-			  </div>
-			  <a href="__MODULE__/AboutUs/index/code/AC14920644902AGS">
-			  <div class="xddiv xddivxg">
-				  <div class="xdchild">
-					  <center><font class="xddfont">更多</font></center>
-				  </div>
-			  </div>
-			  </a>
-		  </div>
-	  </div>
-</div>-->
 <div class="part8" style="margin-top: 50px;">
 	<div class="patr81">
 		<img id="lcimg" style="width:100%;height:388px;" src="/Public/Front/images/lcdi.png">
@@ -346,7 +324,9 @@
 					<tr>
 						<td class="xdtd1">
 							<div class="td1div">
-								<img class="phone nrsj" src="/Public/Front/images/xw11.png" alt="展示图">
+								<a href="__MODULE__/News/detail/code/{$artList.0.article_code}">
+									<img class="phone nrsj" src="/Public/Front/images/xw11.jpg" alt="展示图">
+								</a>
 							</div>
 							<div class="xddiv1">
 								<font>{$artList.0.title}</font>
@@ -359,9 +339,9 @@
 							</div>
 							<div class="xddiv4">
 								<div class="more">
-									<a href="__MODULE__/News/detail/code/{$artList.0.article_code}">
+									<a href="__MODULE__/News/newsList">
 										<div class="morechild">
-											<center><font class="morefont">详情</font></center>
+											<center><font class="morefont">全部新闻</font></center>
 										</div>
 									</a>
 								</div>
@@ -369,7 +349,9 @@
 						</td>
 						<td class="xdtd1 xdleft">
 							<div class="td1div">
-								<img class="phone nrsj" src="/Public/Front/images/xw22.png" alt="展示图">
+								<a href="__MODULE__/News/detail/code/{$artList.1.article_code}">
+									<img class="phone nrsj" src="/Public/Front/images/xw22.jpg" alt="展示图">
+								</a>
 							</div>
 							<div class="xddiv1">
 								<font>{$artList.1.title}</font>
@@ -379,15 +361,6 @@
 							</div>
 							<div class="xddiv3">
 								<font>{$artList.1.article_desc}</font>
-							</div>
-							<div class="xddiv4">
-								<div class="more">
-									<a href="__MODULE__/News/detail/code/{$artList.1.article_code}">
-										<div class="morechild">
-											<center><font class="morefont">详情</font></center>
-										</div>
-									</a>
-								</div>
 							</div>
 						</td>
 					</tr>
@@ -450,13 +423,13 @@
         $("#xdtable").hide();
         $("#wmtable").hide();
         $("#ksfw").html('订单查询');
-        $("img[id^='er']").attr("style","width:60%");
-        value = $("img[id^='er2']").attr("value");
-        $("img[id^='er']").attr("value",'0');
+        $("img[id^='ersj']").attr("style","width:60%");
+        value = $("img[id^='ersj2']").attr("value");
+        $("img[id^='ersj']").attr("value",'0');
         if(value == 0){
             $(".ksfw").slideDown("slow");
-            $("img[id^='er2']").attr("value",'1');
-            $("img[id^='er2']").attr("style",'width:80%');
+            $("img[id^='ersj2']").attr("value",'1');
+            $("img[id^='ersj2']").attr("style",'width:80%');
 		}else{
             $(".ksfw").slideUp("slow");
 		}
@@ -467,13 +440,13 @@
         $("#xdtable").show();
         $("#wmtable").hide();
         $("#ksfw").html('快速下单');
-        $("img[id^='er']").attr("style","width:60%");
-        value = $("img[id^='er1']").attr("value");
-        $("img[id^='er']").attr("value",'0');
+        $("img[id^='ersj']").attr("style","width:60%");
+        value = $("img[id^='ersj1']").attr("value");
+        $("img[id^='ersj']").attr("value",'0');
         if(value == 0){
             $(".ksfw").slideDown("slow");
-            $("img[id^='er1']").attr("value",'1');
-            $("img[id^='er1']").attr("style",'width:80%');
+            $("img[id^='ersj1']").attr("value",'1');
+            $("img[id^='ersj1']").attr("style",'width:80%');
         }else{
             $(".ksfw").slideUp("slow");
             return false;
@@ -485,13 +458,13 @@
         $("#wmtable").hide();
         $("#yxtable").show();
         $("#ksfw").html('运车优势');
-        $("img[id^='er']").attr("style","width:60%");
-        value = $("img[id^='er3']").attr("value");
-        $("img[id^='er']").attr("value",'0');
+        $("img[id^='ersj']").attr("style","width:60%");
+        value = $("img[id^='ersj3']").attr("value");
+        $("img[id^='ersj']").attr("value",'0');
         if(value == 0){
             $(".ksfw").slideDown("slow");
-            $("img[id^='er3']").attr("value",'1');
-            $("img[id^='er3']").attr("style",'width:80%');
+            $("img[id^='ersj3']").attr("value",'1');
+            $("img[id^='ersj3']").attr("style",'width:80%');
         }else{
             $(".ksfw").slideUp("slow");
         }
@@ -502,13 +475,13 @@
         $("#xdtable").hide();
         $("#wmtable").show();
         $("#ksfw").html('关于我们');
-        $("img[id^='er']").attr("style","width:60%");
-        value = $("img[id^='er4']").attr("value");
-        $("img[id^='er']").attr("value",'0');
+        $("img[id^='ersj']").attr("style","width:60%");
+        value = $("img[id^='ersj4']").attr("value");
+        $("img[id^='ersj']").attr("value",'0');
         if(value == 0){
             $(".ksfw").slideDown("slow");
-            $("img[id^='er4']").attr("value",'1');
-            $("img[id^='er4']").attr("style",'width:80%');
+            $("img[id^='ersj4']").attr("value",'1');
+            $("img[id^='ersj4']").attr("style",'width:80%');
         }else{
             $(".ksfw").slideUp("slow");
         }
