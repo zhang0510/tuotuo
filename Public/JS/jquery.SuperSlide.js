@@ -5,8 +5,8 @@
 		$.fn.slide.deflunt={
 		effect : "fade", //效果 || fade：渐显； || top：上滚动；|| left：左滚动；|| topLoop：上循环滚动；|| leftLoop：左循环滚动；|| topMarquee：上无缝循环滚动；|| leftMarquee：左无缝循环滚动；
 		autoPlay:false, //自动运行
-		delayTime : 500, //效果持续时间
-		interTime : 6000,//自动运行间隔。当effect为无缝滚动的时候，相当于运行速度。
+		delayTime : 1000, //效果持续时间
+		interTime : 3000,//自动运行间隔。当effect为无缝滚动的时候，相当于运行速度。
 		defaultIndex : 0,//默认的当前位置索引。0是第一个
 		titCell:".hd li",//导航元素
 		mainCell:".bd",//内容元素的父层对象
