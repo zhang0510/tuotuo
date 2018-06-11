@@ -18,7 +18,7 @@
         font-weight: 700;
         padding: 0 10px 0 46px;}
     /**banner**/
-    .bannersy{margin-bottom: 45px;height:387px;border-bottom: 1px solid #d6d6d6;}
+    .bannersy{border-bottom: 1px solid #d6d6d6;}
     .banner_pic{background:url(../images/banner.jpg) no-repeat 55px center;height:610px;}
     .banner_con{position:absolute;width:100%;height:100%;top:0px;left:0px;display:table;}
     .banner_con span{display:block;font-size:20px;color:#fff;line-height:1.5;padding:30px 0;}
@@ -852,7 +852,7 @@
     .pae0:hover  h2{color:#30AC63;}
     .part22 ul li:hover .pae0{border-right:4px solid #30AC63;}
 
-    .part1{background:#fff;margin-top: -15px;overflow: auto;background:url(../images/fwsj.png) no-repeat center center;border-bottom: #e1e1e1 1px solid;}
+    .part1{background:#fff;margin-top: 20px;overflow: auto;background:url(../images/fwsj.png) no-repeat center center;border-bottom: #e1e1e1 1px solid;}
     .part12 ul{}
 
     .part12 ul li h2{width:100px;height:100px;background:url(../images/pa4.png) no-repeat center center;line-height:100px;text-align:center;color:#2FAD63;font-size:28px;margin:0 auto;}
@@ -1402,7 +1402,7 @@
     .yyu1 ul li img{max-width:100%;}
     .rr5h{padding:0px 20px;}
     .rr320{margin-top:10px;}
-    .csczz{font-size:20px;line-height:170%;color:#999;margin-top:40px;}
+    .csczz{font-size:20px;line-height:170%;color:#999;margin-top:20px;}
 
     #banner	#notice_a{width:0px;overflow:hidden;}
     #banner	#warning_a{width:0px;overflow:hidden;}
@@ -1470,11 +1470,11 @@
     .bannerdiv{width: 425px;height: 436px;background: url(/Public/Front/images/di320.png); position:absolute;left:50%;margin-top: 290px;margin-left: -212px;border-radius: 23px;box-shadow:0px 0px 15px #777;}
     .bannerdiv1{z-index: 1;width: 100px;height: 20px;position:absolute;left:50%;margin-top: 260px;margin-left: -35px;}
     .bannerdiv2{width: 80px;height: 20px;position:absolute;left:50%;margin-top: 148px;margin-left: 50px;display: none;}
-    .bannerdiv3{z-index: 1;width: 100%;height: 86px;position:absolute;top:482px;margin-top: -85px;background-color: #000000;}
+    .bannerdiv3{z-index: 1;width: 100%;height: 86px;background-color: #000000;}
     .bannerimg{height:303px;width:100%}
     .yuan{  width: 20px;  height:20px; background: #ffffff; border-radius: 50%;  border: 1px solid #ff8000;display: inline-block;box-sizing: border-box;}
     .bannerdiv1 .on{width: 20px;  height:20px;background: #ff8000;border-radius: 50%;border: 1px solid #ffffff;display: inline-block;box-sizing: border-box;}
-    .ksfw{margin-top: -36px;height: 503px;}
+    .ksfw{margin-top: -36px;height: 553px;}
     .tbddfont{font-size:22px}
     .tbxdfont{font-size:22px;}
     .dfontd,.dfontd:hover{color:#FFFFFF;}
@@ -1484,8 +1484,8 @@
     .jsbzfont{font-size: 18px;color:#ff8000;}
     .gslc{padding-bottom: 0px;margin: 20px 0px;}
     .more{width:85px;height:33px;margin-left:37px;background: url(../images/gengduoanqiu.png);margin-top: 0px;position: absolute;border-radius: 5px;}
-    .morechild{padding-top: 8px;}
-    .morefont{font-size: 14px;color:#FFFFFF}
+    .morechild{padding-top: 6px;}
+    .morefont{font-size: 16px;color:#FFFFFF}
     .xwtable{width: 100%;margin: -39px auto 0px;}
     .xddiv1{margin-top: 15px}
     .xddiv1 font{font-size:20px;}
@@ -1505,7 +1505,7 @@
     .nrsj{margin-top: 10px;width:100%;height: 300px;}
     .xdleft{padding-left: 12px;}
     .moreques{left: 50%;margin-left: -45px;}
-    .serchsj{background: #fff;border:2px solid #ff8000;border-radius:5px;line-height:67px;height:57px;margin:30px auto;width:100%}
+    .serchsj{background: #fff;border:2px solid #ff8000;border-radius:5px;line-height:67px;height:57px;margin:74px auto;width:100%}
     .serchsj  button{width:46px;background:#ff8000 url(../images/ser1.png) no-repeat center center;height:53px;display:block;border:0px;float:right;}
     .cx2{width: 249px;display:block;float:left;height:53px;border:0px;text-indent:20px;font-size:20px;color:#B4B4B4;}
     .new3b1{height: 500px;width: 90%;margin: 50px auto 0px;}
@@ -1530,7 +1530,7 @@
     .xdcxdiv{background: url(/Public/Front/images/xscx.png);}
     .xdcxdiv1{height: 550px;width: 1100px;margin: auto;overflow: auto;}
     .tddh{width:250px;height:100px;text-align:center}
-    #yxtable{width: 100%;position: absolute;}
+    #yxtable{width: 100%;}
     .lcul{overflow: auto}
     .lcul li{float:left;width:25%}
     .lcul li img{width:100%;height:250px}

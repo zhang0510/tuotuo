@@ -52,9 +52,6 @@
 					<li class="yuan yuan3" ></li>
 				</ul>
 			</span>
-			<div class="bannerdiv3">
-				<center><div class="dhdiv">热线电话：400-877-1107</div></center>
-			</div>
 			<div class="bd">
 				<ul>
 					<li>
@@ -75,6 +72,9 @@
 		</div>
 		<script type="text/javascript">jQuery(".slideTxtBox").slide(); </script>
 	</div>
+<div class="bannerdiv3">
+	<center><div class="dhdiv">热线电话：400-877-1107</div></center>
+</div>
 <!--content-->
 <div class="part1" style="width: 100%;">
 	<div style="width:100%">
@@ -179,6 +179,13 @@
 					<input type="hidden" name="flag" id="flag" value='N' />
 					<input type="hidden" name="msg" id="msg" value='N' />
 				</div>
+				<tr>
+					<td  colspan="2">
+						<div class="csczz">
+							<p>请选择出发地、目的地进行询价，点击立即下单后客服会联系您确认</p>
+						</div>
+					</td>
+				</tr>
 				<tr class="jiange"></tr>
 				<tr>
 					<td class="blacktd"><div class="buttonblack1"><font>出发地:</font></div></td>
@@ -339,8 +346,7 @@
 					<tr>
 						<td class="xdtd1">
 							<div class="td1div">
-								<img class="pc" src="/Public/Front/images/neirongtu.png" alt="展示图">
-								<img class="phone nrsj" src="/Public/Front/images/neirongtusj.png" alt="展示图">
+								<img class="phone nrsj" src="/Public/Front/images/xw11.png" alt="展示图">
 							</div>
 							<div class="xddiv1">
 								<font>{$artList.0.title}</font>
@@ -355,7 +361,7 @@
 								<div class="more">
 									<a href="__MODULE__/News/detail/code/{$artList.0.article_code}">
 										<div class="morechild">
-											<center><font class="morefont">MORE</font></center>
+											<center><font class="morefont">详情</font></center>
 										</div>
 									</a>
 								</div>
@@ -363,8 +369,7 @@
 						</td>
 						<td class="xdtd1 xdleft">
 							<div class="td1div">
-								<img class="pc" src="/Public/Front/images/neirongtu1.png" alt="展示图">
-								<img class="phone nrsj" src="/Public/Front/images/neirongtusj1.png" alt="展示图">
+								<img class="phone nrsj" src="/Public/Front/images/xw22.png" alt="展示图">
 							</div>
 							<div class="xddiv1">
 								<font>{$artList.1.title}</font>
@@ -379,7 +384,7 @@
 								<div class="more">
 									<a href="__MODULE__/News/detail/code/{$artList.1.article_code}">
 										<div class="morechild">
-											<center><font class="morefont">MORE</font></center>
+											<center><font class="morefont">详情</font></center>
 										</div>
 									</a>
 								</div>
@@ -401,7 +406,7 @@
 					<div class="more moreques">
 						<a href="__MODULE__/Footer/detail/code/AC14920671855R3B">
 							<div class="morechild">
-								<center><font class="morefont">MORE</font></center>
+								<center><font class="morefont">更多</font></center>
 							</div>
 						</a>
 					</div>
@@ -476,9 +481,9 @@
     }
     function youshi(){
         $("#searchtable").hide();
-        $("#yxtable").show();
         $("#xdtable").hide();
         $("#wmtable").hide();
+        $("#yxtable").show();
         $("#ksfw").html('运车优势');
         $("img[id^='er']").attr("style","width:60%");
         value = $("img[id^='er3']").attr("value");
