@@ -1116,7 +1116,7 @@
     .aske2 button{width:23%;}
     .aske2 .du3d{margin:30px auto 30px;width:100%;}
 
-    .iske1{width: 428px;margin: auto;margin-bottom:40px;}
+    .iske1{width: 95%;margin: auto;margin-bottom:40px;}
     .iske2{width:100%;float:left;border:1px solid #e1e1e1;padding:12px;margin-bottom: 18px;background: url(../images/xinwendisj.png);padding-bottom: 25px;}
     .iske3{width:100%;overflow:hidden;}
     .iske4{width:65%;float:left;}
@@ -1491,12 +1491,12 @@
     .xddiv1 font{font-size:20px;}
     .xddiv2{margin-top: 5px}
     .xddiv2 font{font-size:16px;color:#999}
-    .xddiv3{padding-top:10px;margin-top: 15px;border-top:1px solid #e1e1e1;height: 81px;}
+    .xddiv3{padding-top:10px;margin-top: 15px;border-top:1px solid #e1e1e1;height: 90px;}
     .xddiv3 font{font-size:16px;color:#999}
     .xddiv4{margin-top: 10px}
     .xddivxg{margin:auto;}
     .td1div{}
-    .td1div img{margin-top: -10px;width: 190px;height: 190px;}
+    .td1div img{margin-top: -10px;width: 100%;height: 190px;}
     .bannerdiv2 img{width:70px;height:50px;}
     .bannerdiv3 img{width:132px;height:132px;}
     .blacktd{width:28%}
