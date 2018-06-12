@@ -1479,13 +1479,12 @@ select {
     #yxtable{width: 40%;position: absolute;margin-left: 5%;margin-top:10px;overflow: hidden;display: none}
     .lcul{overflow: hidden;}
     .lcul li{float:left;width:24.8%;overflow: hidden;margin: 0.1%;height:250px}
-    .lcul li img{width:100%;}
+    .lcul li img{width: auto;height:270px}
     .ffdsf span{color:#000000}
     .foothr{margin:auto;width:600px;border-bottom: #000000 1px solid;margin-bottom: 20px}
     #footck{margin-top: 20px;padding-bottom: 10px}
 
     .lcul li:hover img{
-        width:100%;
         transform:scale(1.05,1.05);
     }
     /* 中心变形*/
