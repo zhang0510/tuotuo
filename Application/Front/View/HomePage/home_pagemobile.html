@@ -41,37 +41,33 @@
 		}
 	}
 </script>
-<script src="__JS__/indexTuo.js"></script>
+
+<link type="text/css" href="__JS__/mobilelunbo/css/style.css" rel="stylesheet"/>
+
 <!--banner-->
-	<div class="bannersy">
-		<div class="slideTxtBox">
-			<span class="hd">
-				<ul class="bannerdiv1">
-					<li class="yuan yuan1" ></li>
-					<li class="yuan yuan2" ></li>
-					<li class="yuan yuan3" ></li>
-				</ul>
-			</span>
-			<div class="bd">
-				<ul>
-					<li>
-						<a target="_blank" href="__MODULE__/SecurityGuarantee/index/code/AC1492063903542G"><img class="phone bannerimg" src="/Public/Front/images/banner1.png" alt="品质"></a>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						<a target="_blank" href="__MODULE__/SecurityGuarantee/index/code/AC1492063903542G"><img class="phone bannerimg" src="/Public/Front/images/banner2.png" alt="快捷"></a>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						<a target="_blank" href="__MODULE__/SecurityGuarantee/index/code/AC14920637842D94"><img class="phone bannerimg" src="/Public/Front/images/banner3.png" alt="安心"></a>
-					</li>
-				</ul>
-			</div>
+<div class="bannersy">
+	<div class="img_gallery">
+		<div class="point">
+			<a href="#">1</a>
+			<a href="#">2</a>
+			<a href="#">3</a>
 		</div>
-		<script type="text/javascript">jQuery(".slideTxtBox").slide(); </script>
+		<div class="main_img">
+			<ul>
+				<li><span class="img_1"><a target="_blank" href="http://www.tuotuoyunche.com/Front/AboutUs/index/code/AC14920644902AGS"><img src="/Public/Front/images/banner1.png"></a></span></li>
+				<li><span class="img_2"><a target="_blank" href="http://www.tuotuoyunche.com/Front/SecurityGuarantee/index/code/AC1492063903542G"><img src="/Public/Front/images/banner2.png"></a></span></li>
+				<li><span class="img_3"><a target="_blank" href="http://www.tuotuoyunche.com/Front/SecurityGuarantee/index/code/AC14920637842D94"><img src="/Public/Front/images/banner3.png"></a></span></li>
+			</ul>
+			<a href="javascript:;" id="btn_prev"></a>
+			<a href="javascript:;" id="btn_next"></a>
+		</div>
+		<div class="img_font">
+				<!--<span>img 1/3</span>
+				<span>img 2/3</span>
+				<span>img 3/3</span>-->
+		</div>
 	</div>
+</div>
 <div class="bannerdiv3">
 	<center><div class="dhdiv">热线电话：400-877-1107</div></center>
 </div>
@@ -404,6 +400,67 @@
   </foreach>
    </ul>
 </div>
+<script type="text/javascript" src="__JS__/mobilelunbo/js/jquery.event.drag.js"></script>
+<script type="text/javascript" src="__JS__/mobilelunbo/js/jquery.touchSlider.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        $(".img_gallery").hover(function(){
+            $("#btn_prev,#btn_next").fadeIn()
+        },function(){
+            $("#btn_prev,#btn_next").fadeOut()
+        });
+
+        $dragBln = false;
+
+        $(".main_img").touchSlider({
+            flexible : true,
+            speed : 200,
+            btn_prev : $("#btn_prev"),
+            btn_next : $("#btn_next"),
+            paging : $(".point a"),
+            counter : function (e){
+                $(".point a").removeClass("on").eq(e.current-1).addClass("on");//图片顺序点切换
+                $(".img_font span").hide().eq(e.current-1).show();//图片文字切换
+            }
+        });
+
+        $(".main_img").bind("mousedown", function() {
+            $dragBln = false;
+        });
+
+        $(".main_img").bind("dragstart", function() {
+            $dragBln = true;
+        });
+
+        $(".main_img a").click(function(){
+            if($dragBln) {
+                return false;
+            }
+        });
+
+        timer = setInterval(function(){
+            $("#btn_next").click();
+        }, 5000);
+
+        $(".img_gallery").hover(function(){
+            clearInterval(timer);
+        },function(){
+            timer = setInterval(function(){
+                $("#btn_next").click();
+            },5000);
+        });
+
+        $(".main_img").bind("touchstart",function(){
+            clearInterval(timer);
+        }).bind("touchend", function(){
+            timer = setInterval(function(){
+                $("#btn_next").click();
+            }, 5000);
+        });
+
+    });
+</script>
 <script>
     height = $('#lcimg').height();
     $(".patr82,.part8").css('height','500px');
