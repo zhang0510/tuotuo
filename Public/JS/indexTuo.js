@@ -254,6 +254,7 @@
 	 * string carid 车型id
 	 */
 	function getLine(str,end,carid){
+			carid = carid==''?'21':carid;
 			$.post("/Front/Index/getLine",{str:str,end:end,carid:carid},function(data){
 			console.log(data);
 			if(data.flag){
