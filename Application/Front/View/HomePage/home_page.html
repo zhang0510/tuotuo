@@ -382,9 +382,14 @@
         $(".yximg img").css('height',height-230+'px');
         hrtop = height-450;
         imgheight1 = $("#xw11").outerHeight();
-        lcul = 250;
+        if(height<800){
+            lcul = 150;
+            $(".ttxw11").css('top','-'+(200)+'px');
+		}else{
+            lcul = 250;
+            $(".ttxw11").css('top','-'+(150)+'px');
+		}
         $(".lcul").css('height',lcul+'px');
-        $(".ttxw11").css('top','-'+(150)+'px');
         lculimg = $(".lcul li img").outerHeight(true);
 
         $(".lcul li img").css('margin-top','-'+((lculimg-lcul)/2)+'px');
