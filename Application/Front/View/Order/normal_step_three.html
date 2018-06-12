@@ -156,7 +156,9 @@
 	  	$(this).addClass("on");
 	  	$("#sname").val($("#fname").val());
 		$("#sphone").val($("#fphone").val());
-		$("#siden").val($("#fiden").val());
+          iden = $("#fiden").val();
+          iden = iden == '-'?'':iden;
+		$("#siden").val(iden);
 	  }
 	});
 	function submitF(){
@@ -255,6 +257,7 @@
 		var name = $(".clist1.on").find('.bm1').attr('name');
 		var phone = $(".clist1.on").find('.bm2').attr('name');
 		var iden = $(".clist1.on").find('.bm3').attr('name');
+        iden = iden == '-'?'':iden;
 		if(sign=='S'){
 			$("#fname").val(name);
 			$("#fphone").val(phone);
