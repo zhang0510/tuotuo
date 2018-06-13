@@ -1967,22 +1967,25 @@ class ProductController extends BaseController{
 	    }else{
 	        $ret = M("line")->where($where)->order('line_star asc,line_end asc')->select();
 	    }
-
 	    $area= M("area");
 	    foreach ($ret as &$va){
 	        $star=$va['line_star'];
 	        $end=$va['line_end'];
 	        if(!empty($star)){
 	            $arr=explode(",",$star);
-	            $star_1= $area ->where("area_id =".$arr[0])->field("area_name")->find();
-	            $star_2= $area ->where("area_id =".$arr[1])->field("area_name")->find();
-	            $va['line_star']=$star_1['area_name'].",".$star_2['area_name'];
+	            if($arr[0] != '' && $arr[1] != '' && $arr[1] != '请选择市'){
+                    $star_1= $area ->where("area_id =".$arr[0])->field("area_name")->find();
+                    $star_2= $area ->where("area_id =".$arr[1])->field("area_name")->find();
+                    $va['line_star']=$star_1['area_name'].",".$star_2['area_name'];
+                }
 	        }
 	        if(!empty($end)){
 	            $arr=explode(",",$end);
-	            $end_1= $area ->where("area_id =".$arr[0])->field("area_name")->find();
-	            $end_2= $area ->where("area_id =".$arr[1])->field("area_name")->find();
-	            $va['line_end']=$end_1['area_name'].",".$end_2['area_name'];
+                if($arr[0] != '' && $arr[1] != '' && $arr[1] != '请选择市'){
+                    $end_1= $area ->where("area_id =".$arr[0])->field("area_name")->find();
+                    $end_2= $area ->where("area_id =".$arr[1])->field("area_name")->find();
+                    $va['line_end']=$end_1['area_name'].",".$end_2['area_name'];
+                }
 	        }
 	    }
 	    $data['xlsName']  = "线路直发--导出".date("Y-m-d H:i:s",time());
