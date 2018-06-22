@@ -11,6 +11,7 @@ class OrderyjhController extends BaseController{
         $order_status = I('get.order_status');
         $provincea=I('provincea');
         $admin_name=I('admin_name');
+        $order_info_remark=I('order_info_remark');
         print_log("订单---条件---查询:".$order_status);
         $order = I('get.order');
         $model = D('Area');
@@ -69,8 +70,13 @@ class OrderyjhController extends BaseController{
             $where['order_status'] =array("neq",'DIE');
         }
         if ($star!=0 && $end!=0){$where['order_time'] = array('between',array($star,$end));}
-        if($admin_name){
+        if($admin_name != '' && $admin_name != 'f'){
             $where['admin_name'] = array('like',"%$admin_name%");
+        }else{
+            $admin_name = '';
+        }
+        if($order_info_remark){
+            $where['order_info_remark'] = array('like',"%$order_info_remark%");
         }
         $where[] = "1=1";
         print_log("订单条件查询:".json_encode($where));
@@ -140,6 +146,7 @@ class OrderyjhController extends BaseController{
         $this->assign('list',$info['list']);
         $this->assign('order',$order);
         $this->assign('admin_name',$admin_name);
+        $this->assign('order_info_remark',$order_info_remark);
         //$this->assign('pay',$pay);
         $this->assign('num',$num);
         $this->assign('order_status',$order_status);

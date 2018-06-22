@@ -198,6 +198,7 @@
 														</volist>
 												</select> -->
 												 <input type="hidden" value="{$arry.pid}" id="pro"/>
+													<input type="text" placeholder="备注" id="order_info_remark" value="{$order_info_remark}" style="width: 125px;height: 36px;" />
 													<input type="text" placeholder="客服" id="admin_name" value="{$admin_name}" style="width: 125px;height: 36px;" />
 													<input type="text" id="order" value="{$order}" name="order" placeholder="请输入订单/车牌/手机号"  class="i_n text2">
 													<button class="btn btn-default5" id="btn" type="button">搜索</button>
@@ -426,6 +427,7 @@
         var endtime = $('#endtime').val();
         var provincea=$('#pro').val();
         var admin_name=$('#admin_name').val();
+        var order_info_remark=$('#order_info_remark').val();
         if(provincea ==''){
         	provincea ='f';
         }
@@ -435,14 +437,17 @@
        	if (endtime == '') {
        		endtime = 0;
        	}
+        if (admin_name == '') {
+            admin_name = 'f';
+        }
         if (getos&&order) {
-        	window.location.href="__MODULE__/Orderyjh/orderList/order_status/"+getos+"/star/"+startime+"/end/"+endtime+"/order/"+order+"/provincea/"+provincea+"/admin_name/"+admin_name;
+        	window.location.href="__MODULE__/Orderyjh/orderList/order_status/"+getos+"/star/"+startime+"/end/"+endtime+"/order/"+order+"/provincea/"+provincea+"/admin_name/"+admin_name+"/order_info_remark/"+order_info_remark;
         } else if(order){
-        	window.location.href="__MODULE__/Orderyjh/orderList/star/"+startime+"/end/"+endtime+"/order/"+order+"/provincea/"+provincea+"/admin_name/"+admin_name;
+        	window.location.href="__MODULE__/Orderyjh/orderList/star/"+startime+"/end/"+endtime+"/order/"+order+"/provincea/"+provincea+"/admin_name/"+admin_name+"/order_info_remark/"+order_info_remark;
         }else if(getos){
-        	window.location.href="__MODULE__/Orderyjh/orderList/order_status/"+getos+"/star/"+startime+"/end/"+endtime+"/provincea/"+provincea+"/admin_name/"+admin_name;
+        	window.location.href="__MODULE__/Orderyjh/orderList/order_status/"+getos+"/star/"+startime+"/end/"+endtime+"/provincea/"+provincea+"/admin_name/"+admin_name+"/order_info_remark/"+order_info_remark;
         }else{
-        	window.location.href="__MODULE__/Orderyjh/orderList/star/"+startime+"/end/"+endtime+"/provincea/"+provincea+"/admin_name/"+admin_name;
+        	window.location.href="__MODULE__/Orderyjh/orderList/star/"+startime+"/end/"+endtime+"/provincea/"+provincea+"/admin_name/"+admin_name+"/order_info_remark/"+order_info_remark;
         }        
     });
     //删除
