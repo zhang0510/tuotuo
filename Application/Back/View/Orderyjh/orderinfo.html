@@ -225,7 +225,7 @@
 				</foreach>
 			</tbody>
 		</table>
-	</div>							
+	</div>
 </div>
 <div class="l_table onteytb">
 	<table>
@@ -387,7 +387,7 @@
 </div>
 <div class="onteytb">
 	<div class="onteytb5">	
-		<table> 
+		<table style="float: left">
 			<thead>
 				<tr>
 					<th>操作时间</th>
@@ -409,6 +409,26 @@
 				</foreach>
 			</tbody>
 		</table>
+		<if condition="!empty($arrive)">
+		<table style="width: 400px;float: left;margin-left: 50px;">
+			<thead>
+			<tr>
+				<th style="width: 60%">图片</th>
+				<th style="width: 40%">备注</th>
+			</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<if condition="$arrive['arrive_img']!=''">
+							<img style="width:200px;height: 200px;" src="http://www.tuotuoyunche.com/Upload/hzd/{$arrive['arrive_img']}">
+						</if>
+					</td>
+					<td>{$arrive['arrive_mark']}</td>
+				</tr>
+			</tbody>
+		</table>
+		</if>
 	</div>							
 </div>
 <!-- 审核订单 -->
@@ -755,7 +775,9 @@
 	</if>
 	<div class="dss1">
 		<span style="width:auto;">需安排回访</span>
-		<input name="Fruit" type="checkbox" value="Y" class="visit" checked="checked"/>
+		<input name="Fruit" type="checkbox" value="Y" class="visit" checked="checked"/><br/>
+		客户签名：<input type="file" name="huifangimg" id="huifangimg"><br/>
+		无签名备注：<textarea id="hfimg_mark" style="height:106px"></textarea><br/><br/><br/>
 	</div>
 	<div class="sad1 onteytc8">
 		<button style="margin-left:8px;" class="btn btn-default23" type="button" id="shou">确认用户收车</button>
@@ -1566,7 +1588,7 @@ var up = $('#upload1').Huploadify({
 					   }
 				   }
 			   });
-			
+
 		}else{
 			layer.msg(datas.msg);
 		}
@@ -1575,7 +1597,7 @@ var up = $('#upload1').Huploadify({
 $("#addImg").click(function(){
 	$("#file_upload_1-button").click();
 })
- 
+
 
 //  type  弹出类型   1 input,2 select,3 textarea
 //   num   个数       1,2,3
@@ -1742,7 +1764,7 @@ $("#addImg").click(function(){
 	  /* window.location.reload();*/
   });
   <!-- 发送短信 -->
-  $(".sendMessage").click(function(){
+  /*$(".sendMessage").click(function(){
 	  var phone=$(this).attr("data-targe");
 	  var cont=$(this).attr("data-content");
 	  var id=$(this).attr("data-id");
@@ -1754,7 +1776,7 @@ $("#addImg").click(function(){
 			  layer.msg(data.msg);
 		  }
 	  });
-  });
+  });*/
   <!-- 运单修改 -->
   $(".sa1").click(function(){
   $(this).hide();
@@ -2055,20 +2077,42 @@ $("#arrive").click(function(){
 })
 //已交车
 $("#shou").click(function(){
-	var code="{$code}";
-	var income=$(".income").val();
-	var hui_man=$(".hui_man").val();
-	var visit=$(".visit:checked").val();
-	if(visit==''||visit==null){
-		visit='N';
+    var code="{$code}";
+    var income=$(".income").val();
+    var hui_man=$(".hui_man").val();
+    var visit=$(".visit:checked").val();
+    var hfimg_mark=$("#hfimg_mark").val();
+    var file = $("#huifangimg").get(0).files[0];
+    if(visit==''||visit==null){
+        visit='N';
+    }
+    if(!file && hfimg_mark == ''){
+		layer.msg('请上传签名或填写备注');
+		return false;
 	}
-	$.post("__MODULE__/Orderyjh/editOrder",{log_mark:'DAISHOU',order_code:code,income:income,hui_man:hui_man,visit:visit,order_status:'W'},function(data){
-		if(data.flag){
-			window.location.reload();
-  		}else{
-  			layer.msg(data.msg);
-  		}
-	})
+    var fd = new FormData();
+    fd.append('log_mark','DAISHOU'); //上传的参数名 参数值 k-v键值对
+    fd.append('order_code',code); //上传的参数名 参数值 k-v键值对
+    fd.append('income',income); //上传的参数名 参数值 k-v键值对
+    fd.append('hui_man',hui_man); //上传的参数名 参数值 k-v键值对
+    fd.append('visit',visit); //上传的参数名 参数值 k-v键值对
+    fd.append('order_status','W'); //上传的参数名 参数值 k-v键值对
+    fd.append('hfimg_mark',hfimg_mark); //上传的参数名 参数值 k-v键值对
+    fd.append("upfile", file);//上传的文件file
+    $.ajax({
+        url: '__MODULE__/Orderyjh/editOrder',
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data: fd,
+        success: function(data) {
+            if(data.flag){
+                window.location.reload();
+            }else{
+                layer.msg(data.msg);
+            }
+        }
+    })
 })
 //待回访
 $("#fang").click(function(){

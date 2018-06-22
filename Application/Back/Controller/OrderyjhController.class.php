@@ -210,6 +210,9 @@ class OrderyjhController extends BaseController{
         if($info['order_info_end'] !=''){
             $info['order_info_end_num'] =explode(",", $info['order_info_end']);
         }
+
+        $arrive = M('arrive')->where("order_code='".$code."'")->find();
+
         //token验证 防止重复提交
         $this->assign("formToken",rand_token());
         $provincea = $model->getArea(1);
@@ -227,6 +230,7 @@ class OrderyjhController extends BaseController{
         $this->assign("times",date("Y-m-d",time()));
         $this->assign("path",C("DOMAINNAME"));
         $this->assign("log",D("Log")->getLogs($code));
+        $this->assign("arrive",$arrive);
         $this->display();
     }
     /**
@@ -260,6 +264,12 @@ class OrderyjhController extends BaseController{
                 $ji['B'] = $data['pr'];
                 $wObj->logsSet($data['log_mark'],$ji);
             }else if($data['log_mark'] =="DAISHOU"){
+                $up_dir = '';
+                if($_FILES['upfile']){
+                    $img_name = explode('.',$_FILES['upfile']['name']);
+                    $up_dir = time().'.'.$img_name['1'];
+                    move_uploaded_file($_FILES['upfile']['tmp_name'], 'Upload/hzd/'.$up_dir);
+                }
                 $ji['A'] = $data['hui_man'];
                 $ji['B'] = "无";
                 $wObj->logsSet($data['log_mark'],$ji);
@@ -292,8 +302,14 @@ class OrderyjhController extends BaseController{
                 $datas['log_content'] = $strshs;
                 $datas['log_operation'] = $strsh[1];
                 $datas['log_back_cont'] = "-";
+                $datas['order_code'] = $data['order_code'];
                 $ress = $cobj -> add($datas);
-                
+
+                $dataa['order_code'] = $data['order_code'];
+                $dataa['arrive_img'] = $up_dir;
+                $dataa['arrive_mark'] = $data['hfimg_mark'];
+                M('arrive') -> add($dataa);
+
             }else if($data['log_mark'] =="UPSHOU"){
                 $ji['A'] = $data['hui_man'];
                 $ji['B'] = $data['cont_qian'];
