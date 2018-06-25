@@ -305,16 +305,10 @@
 			var totel = yunPirce+baoPirce;
 			$("#totalz").val(totel);
 			$("#heji").html(totel);
-		}else if(!isNaN(yuns) && !isNaN(bao) &&  !isNaN(smsprice) &&  !isNaN(youhui)){
-			//计算第三步
-			if(youhui != 0 ){
-                var totel = yuns+bao+smsprice-youhui;
-			}else{
-                var totel = yuns+bao+smsprice;
-			}
-			var totels = yuns+bao+smsprice;
+		}else if(!isNaN(yuns) && !isNaN(bao) &&  !isNaN(smsprice)){
+			var totel = yuns+bao+smsprice;
 			$("#heji").html(totel);
-			$('#totalz').val(totels);
+			$('#totalz').val(totel);
 		}
 		
 	}
