@@ -130,7 +130,9 @@ class OrderController extends BaseObjController{
      * 获取保费
      */
     public function getAcale(){
-        $this->ajaxReturn(D('Worktwo')->getSecu(I("car_baojia")*10000,"acale_clent"));
+        $return = D('Worktwo')->getSecu((I("car_baojia")-100)*10000,"acale_clent");
+        $return = $return < 0 ? '0': $return;
+        $this->ajaxReturn($return);
     }
     /**
      * 正常下单第三页面

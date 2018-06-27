@@ -76,7 +76,9 @@
 		</dl>
 		<dl><dt>运费：</dt><dd><b id="totelz">{$order.totalz}</b>元</dd></dl>
 		<dl><dt><p class="bm1"><b>保险费</b></p></dt></dl>
-		<dl><dt>保额：</dt><dd><input type="text" class="txt1" onblur="baojia();" onkeyup="if(event.keyCode !=37 && event.keyCode != 39){if (!/^[\d]+$/ig.test(this.value)){this.value='';}}" id="car_baojia"><font style="color:red;">(*请输入车辆当前价值单位:万)</font></dd></dl>
+		<dl><dt>保额：</dt><dd><input type="text" class="txt1" onblur="baojia();" onkeyup="if(event.keyCode !=37 && event.keyCode != 39){if (!/^[\d]+$/ig.test(this.value)){this.value='';}}" id="car_baojia">
+			<font style="color:red;">(*请输入车辆当前价值单位:万)<br/>(*用户免费享有100万保险，超出100万的部分按照万分之五收取)</font>
+		</dd></dl>
 		<dl><dt>保险费：</dt><dd><b id="baoprice">0</b>元</dd></dl>
 		<dl><dt>合计费用：</dt><dd><b id="heji">{$order.totalz}</b>元</dd></dl>
 		<!-- 开始地 -->
