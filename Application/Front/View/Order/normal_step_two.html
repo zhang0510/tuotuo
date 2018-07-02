@@ -74,13 +74,13 @@
 				</div> 
 			</dd>
 		</dl>
-		<dl><dt>运费：</dt><dd><b id="totelz">{$order.totalz}</b>元</dd></dl>
+		<dl><dt>运费：</dt><dd><b id="totelz" style="display: none">{$order.totalz}</b><b>0</b>元</dd></dl>
 		<dl><dt><p class="bm1"><b>保险费</b></p></dt></dl>
 		<dl><dt>保额：</dt><dd><input type="text" class="txt1" onblur="baojia();" onkeyup="if(event.keyCode !=37 && event.keyCode != 39){if (!/^[\d]+$/ig.test(this.value)){this.value='';}}" id="car_baojia">
-			<font style="color:red;">(*请输入车辆当前价值单位:万)<br/>(*用户免费享有100万保险，超出100万的部分按照万分之五收取)</font>
+			<font style="color:red;">(*请输入车辆当前价值单位:万)<!--<br/>(*用户免费享有100万保险，超出100万的部分按照万分之五收取)--></font>
 		</dd></dl>
 		<dl><dt>保险费：</dt><dd><b id="baoprice">0</b>元</dd></dl>
-		<dl><dt>合计费用：</dt><dd><b id="heji">{$order.totalz}</b>元</dd></dl>
+		<dl><dt>合计费用：</dt><dd><b id="heji" style="display: none">{$order.totalz}</b><b id="hejils">{$order.totalz}</b>元</dd></dl>
 		<!-- 开始地 -->
 		<input type="hidden" name="qsrez" id="qsrez" value="{$order.qsrez}" />
 		<!-- 目的地 -->
@@ -96,15 +96,19 @@
 		<!-- 车id -->
 		<input type="hidden" name="carids" id="carids" value="{$order.carids}" />
 		<!-- 运费 -->
-		<input type="hidden" name="lineprice" id="lineprice" value="{$order.lineprice}" />
+		<!--<input type="hidden" name="lineprice" id="lineprice" value="{$order.lineprice}" />-->
+		<input type="hidden" name="lineprice" value="{$order.lineprice}" />
 		<!-- 类型 -->
 		<input type="hidden" name="product_type" id="product_type" value="{$order.product_type}" />
 		<!-- 总费 -->
-		<input type="hidden" name="totalz" id="totalz" value="{$order.totalz}" />
+		<!--<input type="hidden" name="totalz" id="totalz" value="{$order.totalz}" />-->
+		<input type="hidden" name="totalz" id="totalzls" value="{$order.totalz}" />
 		<!-- 提车费 -->
-		<input type="hidden" name="tiz" id="tiz" value="{$order.tiz}" />
+		<!--<input type="hidden" name="tiz" id="tiz" value="{$order.tiz}" />-->
+		<input type="hidden" name="tiz" value="0" />
 		<!-- 送车费 -->
-		<input type="hidden" name="songz" id="songz" value="{$order.songz}" />
+		<!--<input type="hidden" name="songz" id="songz" value="{$order.songz}" />-->
+		<input type="hidden" name="songz" value="0" />
 		<!-- 集散地起点 -->
 		<input type="hidden" name="sansz" id="sansz" value="" />
 		<!-- 集散地重点 -->
@@ -114,7 +118,8 @@
 		<!-- 送车地id -->
 		<input type="hidden" name="sidz" id="sidz" value="" />
 		<!-- 毛利 -->
-		<input type="hidden" name="maoliz" id="maoliz" value="{$order.maoliz}" />
+		<!--<input type="hidden" name="maoliz" id="maoliz" value="{$order.maoliz}" />-->
+		<input type="hidden" name="maoliz" value="0" />
 		<!-- 普通下单钱数第一部分 -->
 		<input type="hidden" name="ptxd1" id="ptxd1" value=0 />
 		<!-- 普通下单钱数第二部分 -->
@@ -181,6 +186,8 @@ function baojia(){
 	} */
 	$.post("__MODULE__/Order/getAcale",{car_baojia:car_baojia},function(data){
 		$("#baoprice").html(data);
+        $("#hejils").html(data);
+        $("#totalzls").val(data);
 		$("#order_info_price").val(car_baojia);
 		$("#order_info_bxd").val(data);
 		totelFun();

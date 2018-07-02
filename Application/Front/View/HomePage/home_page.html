@@ -133,11 +133,13 @@
 							<!-- 车id -->
 							<input type="hidden" name="carids" id="carids" value="202" />
 							<!-- 运费 -->
-							<input type="hidden" name="lineprice" id="lineprice" value="0" />
+							<!--<input type="hidden" name="lineprice" id="lineprice" value="0" />-->
+							<input type="text" name="lineprice" value="0" />
 							<!-- 类型 -->
 							<input type="hidden" name="product_type" id="product_type" value="0" />
 							<!-- 总费 -->
-							<input type="hidden" name="totalz" id="totalz" value="0" />
+							<!--<input type="hidden" name="totalz" id="totalz" value="0" />-->
+							<input type="hidden" name="totalz" value="0" />
 							<!-- 提车费 -->
 							<input type="hidden" name="tiz" id="tiz" value="0" />
 							<!-- 送车费 -->
@@ -165,7 +167,10 @@
 						<tr>
 							<td  colspan="2">
 								<div class="csczz">
-									<p>请选择出发地、目的地进行询价，点击立即下单后客服会联系您确认</p>
+									<p>
+										<!--请选择出发地、目的地进行询价，点击立即下单后客服会联系您确认-->
+										由于公司正转换六位板，所以当前价格显示为0，下单您可以拨打400-877-1107问价，或者下单后会有客户跟您联系
+									</p>
 								</div>
 							</td>
 						</tr>
@@ -243,7 +248,7 @@
 						<tr>
 							<td colspan="2">
 								<center>
-									<font class="moneyfont">费用：&nbsp;￥<bold id="zongz1">0</bold>元</font>
+									<font class="moneyfont">费用：&nbsp;￥<bold style="display:none" id="zongz1">0</bold><bold>0</bold>元</font>
 								</center>
 							</td>
 						</tr>
@@ -370,7 +375,7 @@
         $(".tddhdiv2").css('margin-top',parseInt(height/2-60)+parseInt(21)+'px');
         width=$(".tdimg").width();
         $(".tddhdiv1").css('width',parseInt(width)+parseInt(1)+'px');
-        $("#xdtable,#searchtable").css('margin-top',parseInt(height/2)-parseInt(270)+'px');
+        $("#xdtable,#searchtable").css('margin-top',parseInt(height/2)-parseInt(344)+'px');
         $("#yxtable").css('height',height-220+'px');
         banheight = height-91;
         nerheight = $(".bannerimg").height();
