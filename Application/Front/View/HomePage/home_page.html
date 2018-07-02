@@ -167,7 +167,7 @@
 						<tr>
 							<td  colspan="2">
 								<div class="csczz">
-									<p>
+									<p style="font-size: 18px">
 										<!--请选择出发地、目的地进行询价，点击立即下单后客服会联系您确认-->
 										客户您好，为响应运输部要求，我司14位板已更换6位板，故成本、价格浮动较大，下单请直接联客服，感谢您的配合与理解，谢谢。
 									</p>
@@ -287,7 +287,7 @@
 		<div id="lcdiv">
 			<div class="lcparentdiv" style="overflow:hidden">
 				<img id="lcimg" style="width:100%" src="/Public/Front/images/lcdi.png">
-				<div id="lcimg1" style="z-index: 1001;width: 70%;margin-left: -35%;position: absolute;opacity: 1;top: 150px;left: 150%;">
+				<div id="lcimg1" style="z-index: 1001;width: 70%;margin-left: -35%;position: absolute;opacity: 1;top: 150px;left: 50%;">
 					<!--<ul class="lcfwul">
 						<li><a href=""><img src="/Public/Front/images/lc1.png"></a></li>
 						<li><a href=""><img src="/Public/Front/images/lc2.png"></a></li>
@@ -375,7 +375,7 @@
         $(".tddhdiv2").css('margin-top',parseInt(height/2-60)+parseInt(21)+'px');
         width=$(".tdimg").width();
         $(".tddhdiv1").css('width',parseInt(width)+parseInt(1)+'px');
-        $("#xdtable,#searchtable").css('margin-top',parseInt(height/2)-parseInt(344)+'px');
+        $("#xdtable,#searchtable").css('margin-top',parseInt(height/2)-parseInt(270)+'px');
         $("#yxtable").css('height',height-220+'px');
         banheight = height-91;
         nerheight = $(".bannerimg").height();
@@ -420,7 +420,8 @@
         lcimg1width= $(".lcimg1img").width();
 		lcimg1 = (lcimg1width/1489*739)
         lctop=parseInt((height-lcimg1-lcimg2)/2)+parseInt(lcimg2);
-        $(document).on('mouseover','#lcimg', function(){
+        $("#lcimg1").css("top",lctop+'px');
+        /*$(document).on('mouseover','#lcimg', function(){
             $("#lcimg1").stop(true,true).animate({
                 top:lctop+'px',
                 opacity:'1',
@@ -435,7 +436,7 @@
                 width:'70%',
                 left:'150%',
             },'100000');
-		});
+		});*/
     }) ;
 
     $(document).ready(function() {
