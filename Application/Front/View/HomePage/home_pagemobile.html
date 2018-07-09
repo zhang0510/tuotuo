@@ -107,7 +107,7 @@
 			<tr>
 				<td style="width:40%;">
 					<div class="csczz">
-						<p>请输入订单号查询当前订单状况，如果当前订单不存在，请联系客服人员。</p>
+						<p style="margin-top: 122px;">请输入订单号查询当前订单状况，如果当前订单不存在，请联系客服人员。</p>
 					</div>
 					<div class="du3d" id="tiao1">
 						<input type="text" placeholder="请在此输入订单号" class="cx1" id="keyword" onchange="bians()" ><!-- onkeyup="sel(this);" --><button onclick="tiaoFun('keyword');" type="button"></button>
@@ -158,11 +158,13 @@
 					<!-- 车id -->
 					<input type="hidden" name="carids" id="carids" value="202" />
 					<!-- 运费 -->
-					<input type="hidden" name="lineprice" id="lineprice" value="0" />
+					<!--<input type="hidden" name="lineprice" id="lineprice" value="0" />-->
+					<input type="hidden" name="lineprice" value="0" />
 					<!-- 类型 -->
 					<input type="hidden" name="product_type" id="product_type" value="0" />
 					<!-- 总费 -->
-					<input type="hidden" name="totalz" id="totalz" value="0" />
+					<!--<input type="hidden" name="totalz" id="totalz" value="0" />-->
+					<input type="hidden" name="totalz" value="0" />
 					<!-- 提车费 -->
 					<input type="hidden" name="tiz" id="tiz" value="0" />
 					<!-- 送车费 -->
@@ -190,7 +192,7 @@
 				<tr>
 					<td  colspan="2">
 						<div class="csczz">
-							<p>请选择出发地、目的地进行询价，点击立即下单后客服会联系您确认</p>
+							<p>尊敬的客户您好！为响应运输部要求，我司板车已进行升级改进，部分线路价格浮动较大，如需下单请直接联系客服，感谢您的配合与理解，谢谢！</p>
 						</div>
 					</td>
 				</tr>
@@ -268,7 +270,7 @@
 				<tr>
 					<td colspan="2">
 						<center>
-							<font class="moneyfont">费用：&nbsp;￥<bold id="zongz1">0</bold>元</font>
+							<font class="moneyfont">费用：&nbsp;￥<bold style="display:none" id="zongz1">0</bold><bold>0</bold>元</font>
 						</center>
 					</td>
 				</tr>
