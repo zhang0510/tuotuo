@@ -86,13 +86,15 @@ class QuerypriceController extends BaseController{
                 foreach ($zhi[$z_k1] as $key=>$value) {
                     if ($value['end_prov'] == $end && $value['end_city'] == $end_city) {
                         $arr = array($v,$value);
-                        $return[] = $this->line_content($arr,$area);
+                        $re = $this->line_content($arr,$area);
+                        $return[$re['0']] = $re['1'];
                     }else{
                         $z_k2 = $value['end_prov'].'/'.$value['end_city'];
                         foreach ($zhi[$z_k2] as $key2=>$value2) {
                             if ($value2['end_prov'] == $end && $value2['end_city'] == $end_city) {
                                 $arr = array($v,$value,$value2);
-                                $return[] = $this->line_content($arr,$area);
+                                $re = $this->line_content($arr,$area);
+                                $return[$re['0']] = $re['1'];
                             }/*else{
                                 $z_k3 = $value['end_prov'].'/'.$value['end_city'];
                                 if(in_array($z_k3,$end_arr)){
@@ -105,7 +107,12 @@ class QuerypriceController extends BaseController{
                 }
             }
         }
-        echo implode('<br><br>',$return);
+        ksort($return);
+        if(empty($return)){
+            echo '';
+        }else{
+            echo reset($return);
+        }
     }
 
     public function line_content($arr,$area){
@@ -120,7 +127,7 @@ class QuerypriceController extends BaseController{
         $return[] = '总价：'.$sum;
         $retu = implode('<br>',$return);
 	    $return_str = '<br/>线路：'.$str.'<br/>'.$retu;
-	    return $return_str;
+	    return array($sum,$return_str);
     }
 
 	public function portprice(){
