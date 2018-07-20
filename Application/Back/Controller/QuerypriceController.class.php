@@ -98,21 +98,20 @@ class QuerypriceController extends BaseController{
                                 $arr = array($v,$value,$value2);
                                 $re = $this->line_content($arr,$area);
                                 $return[$re['0']] = $re['1'];
-                            }else{
+                            }/*else{
                                 $z_k3 = $value2['end_prov'].'/'.$value2['end_city'];
                                 if(in_array($z_k3,$end_arr)){
                                     $arr = array($v,$value,$value2,$end_content[$z_k3]);
                                     $re = $this->line_content($arr,$area);
                                     $return[$re['0']] = $re['1'];
                                 }
-                            }
+                            }*/
                         }
                     }
                 }
             }
         }
         ksort($return);
-        echo implode('<br/><br/>',$return);die;
         if(empty($return)){
             echo '';
         }else{
