@@ -281,6 +281,7 @@ class QuerypriceController extends BaseController{
                             echo '<span style="color:red">'.$ec_str.'</span>';
                             echo "<br/>";
                             $err_arr[] = $ec_str;
+                            $err_arr[] = M('zhi')->_sql();
                         }
                     }else{
                         $arr = array(
@@ -302,6 +303,7 @@ class QuerypriceController extends BaseController{
                             echo '<span style="color:red">'.$ec_str.'</span>';
                             echo "<br/>";
                             $err_arr[] = $ec_str;
+                            $err_arr[] = M('zhi')->_sql();
                         }
                     }
                     if($currentRow%10 == 0){
@@ -312,8 +314,7 @@ class QuerypriceController extends BaseController{
                 print_log("价格导入添加成功:".implode('<br/>',$add_arr));
                 print_log("价格导入修改成功:".implode('<br/>',$up_arr));
                 print_log("价格导入失败:".implode('<br/>',$err_arr));
-                echo "<pre/>";
-                print_r(implode('<br/>',$err_arr));die;
+                echo "<a href='index'>返回</a>";
             }else{
                 $this->error( '不是Excel文件，重新上传' );
             }
