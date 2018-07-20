@@ -10,8 +10,8 @@ class QuerypriceController extends BaseController{
                 'start_city' => $v['start_city'],
                 'end_prov' => $v['end_prov'],
                 'end_city' => $v['end_city'],
-                'cb_price' => '0',
-                'zz_price' => $v['zhuan_price'],
+                'cb_price' => $v['zhuan_price'],
+                'zz_price' => '0',
                 'zhi_mark' => $v['zhuan_mark'],
                 'zhi_man' => $v['zhuan_man'],
             );
@@ -96,7 +96,7 @@ class QuerypriceController extends BaseController{
                                 $re = $this->line_content($arr,$area);
                                 $return[$re['0']] = $re['1'];
                             }else{
-                                $z_k3 = $value['end_prov'].'/'.$value['end_city'];
+                                $z_k3 = $value2['end_prov'].'/'.$value2['end_city'];
                                 if(in_array($z_k3,$end_arr)){
                                     $arr = array($v,$value,$value2,$end_content[$z_k3]);
                                     $re = $this->line_content($arr,$area);
@@ -123,7 +123,8 @@ class QuerypriceController extends BaseController{
             $str .= '——'.$area[$v['end_prov']].'/'.$area[$v['end_city']];
             $line = $area[$v['start_prov']].'/'.$area[$v['start_city']].'——'.$area[$v['end_prov']].'/'.$area[$v['end_city']];
             $return[] = $line.'：成本->'.$v['cb_price'].'；最终价格->'.$v['zz_price'].'；备注->'.$v['zhi_mark'];
-            $sum+=$v['zz_price'];
+            $price = $v['zz_price'] == '0'?$v['cb_price']:$v['zz_price'];
+            $sum+=$price;
         }
         $return[] = '总价：'.$sum;
         $retu = implode('<br>',$return);
