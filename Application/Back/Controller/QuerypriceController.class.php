@@ -112,6 +112,7 @@ class QuerypriceController extends BaseController{
             }
         }
         ksort($return);
+        echo implode('<br/><br/>',$return);die;
         if(empty($return)){
             echo '';
         }else{
