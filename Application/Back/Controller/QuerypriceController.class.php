@@ -1,5 +1,8 @@
 <?php
 namespace Back\Controller;
+
+header("Content-type:text/html;charset=utf-8");
+
 class QuerypriceController extends BaseController{
 	//查价
 	public function index(){
@@ -183,7 +186,6 @@ class QuerypriceController extends BaseController{
                 $datatime = date('Y-m-d H:i:s',time());
                 $add_arr = $up_arr = $err_arr = array();
                 for($currentRow=2;$currentRow<=$allRow;$currentRow++){
-                    sleep(1);
                     $arr = array();
                     $str='';
                     for($k='A';$k<=$allColumn;$k++){            //从A列读取数据
@@ -302,12 +304,16 @@ class QuerypriceController extends BaseController{
                             $err_arr[] = $ec_str;
                         }
                     }
-                    ob_flush();
-                    flush();
+                    if($currentRow%10 == 0){
+                        ob_flush();
+                        flush();
+                    }
                 }
                 print_log("价格导入添加成功:".implode('<br/>',$add_arr));
                 print_log("价格导入修改成功:".implode('<br/>',$up_arr));
                 print_log("价格导入失败:".implode('<br/>',$err_arr));
+                echo "<pre/>";
+                print_r(implode('<br/>',$err_arr));die;
             }else{
                 $this->error( '不是Excel文件，重新上传' );
             }
