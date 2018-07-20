@@ -132,7 +132,12 @@ class QuerypriceController extends BaseController{
 	    return array($sum,$return_str);
     }
 
+    public function portform(){
+	    $this->display();
+    }
+
 	public function portprice(){
+        set_time_limit(0);
         import("Org.Util.PHPExcel");
         if (! empty ( $_FILES['csvFile']['name'])){
             $tmp_file = $_FILES['csvFile']['tmp_name'];
@@ -176,8 +181,10 @@ class QuerypriceController extends BaseController{
                 //print_r($allRow);
                 //print_log("文件导入:".$allRow);
                 $datatime = date('Y-m-d H:i:s',time());
-                $arr = array();
+                $add_arr = $up_arr = $err_arr = array();
                 for($currentRow=2;$currentRow<=$allRow;$currentRow++){
+                    sleep(1);
+                    $arr = array();
                     $str='';
                     for($k='A';$k<=$allColumn;$k++){            //从A列读取数据
                         //这种方法简单，但有不妥，以'\\'合并为数组，再分割\\为字段值插入到数据库,实测在excel中，如果某单元格的值包含了\\导入的数据会为空
@@ -185,123 +192,122 @@ class QuerypriceController extends BaseController{
                     }
                     //explode:函数把字符串分割为数组。
                     $str_arr = explode("\\",$str);
+                    foreach($str_arr as $k=>&$v){
+                        $v = trim($v);
+                    }
                     //直发地入库
-                    /*$map['area_pid'] = array('neq','0');
-                    $map['area_name'] = array('like',"%{$str_arr['2']}%");
-                    $area = M('area_price')->where($map)->find();
-                    if(empty($area)){
-                        echo "<pre/>";
-                        print_r($str_arr);
-                    }elseif($str_arr['3'] == '' && $str_arr['4'] == ''){
-                        echo "<pre/>";
-                        print_r($str_arr);
+                    //出发地目的地处理
+                    $start_prov_map['area_name'] = array('eq',$str_arr['0']);
+                    $start_prov_map['area_pid'] = array('eq','0');
+                    $start_prov = M('area_price')->where($start_prov_map)->find();
+                    if(empty($start_prov)){
+                        $start_pid = M('area_price')->add(array(
+                                'area_pid' => '0',
+                                'area_name' => $str_arr['0'],
+                        ));
+                        $start_id = M('area_price')->add(array(
+                            'area_pid' => $start_pid,
+                            'area_name' => $str_arr['1'],
+                        ));
+                    }else{
+                        $start_pid = $start_prov['area_id'];
+                        $start_area_map['area_name'] = array('eq',$str_arr['1']);
+                        $start_area_map['area_pid'] = array('neq','0');
+                        $start_area = M('area_price')->where($start_area_map)->find();
+                        if(empty($start_area)){
+                            $start_id = M('area_price')->add(array(
+                                'area_pid' => $start_pid,
+                                'area_name' => $str_arr['1'],
+                            ));
+                        }else{
+                            $start_id = $start_area['area_id'];
+                        }
+                    }
+
+                    $end_prov_map['area_name'] = array('eq',$str_arr['2']);
+                    $end_prov_map['area_pid'] = array('eq','0');
+                    $end_prov = M('area_price')->where($end_prov_map)->find();
+                    if(empty($end_prov)){
+                        $end_pid = M('area_price')->add(array(
+                            'area_pid' => '0',
+                            'area_name' => $str_arr['2'],
+                        ));
+                        $end_id = M('area_price')->add(array(
+                            'area_pid' => $end_pid,
+                            'area_name' => $str_arr['3'],
+                        ));
+                    }else{
+                        $end_pid = $end_prov['area_id'];
+                        $end_area_map['area_name'] = array('eq',$str_arr['3']);
+                        $end_area_map['area_pid'] = array('neq','0');
+                        $end_area = M('area_price')->where($end_area_map)->find();
+                        if(empty($end_area)){
+                            $end_id = M('area_price')->add(array(
+                                'area_pid' => $end_pid,
+                                'area_name' => $str_arr['3'],
+                            ));
+                        }else{
+                            $end_id = $end_area['area_id'];
+                        }
+                    }
+
+                    $map['start_prov'] = array('eq',$start_pid);
+                    $map['start_city'] = array('eq',$start_id);
+                    $map['end_prov'] = array('eq',$end_pid);
+                    $map['end_city'] = array('eq',$end_id);
+                    $result = M('zhi')->where($map)->find();
+                    if(empty($result)){
+                        $arr = array(
+                            'start_prov' => $start_pid,
+                            'start_city' => $start_id,
+                            'end_prov' => $end_pid,
+                            'end_city' => $end_id,
+                            'cb_price' => $str_arr['4'],
+                            'zz_price' => $str_arr['5'],
+                            'zhi_mark' => $str_arr['6'],
+                            'zhi_man' => $str_arr['7'],
+                            'up_date' => date('Y-m-d H:i:s'),
+                        );
+                        $return = M('zhi')->add($arr);
+                        if($return){
+                            $ec_str = "添加成功：".$str_arr['0'].'/'.$str_arr['1'].'——'.$str_arr['2'].'/'.$str_arr['3'].'；成本：'.$str_arr['4'].'；报价：'.$str_arr['5'];
+                            echo $ec_str;
+                            echo "<br/>";
+                            $add_arr[] = $ec_str;
+                        }else{
+                            $ec_str = "添加失败：".$str_arr['0'].'/'.$str_arr['1'].'——'.$str_arr['2'].'/'.$str_arr['3'].'；成本：'.$str_arr['4'].'；报价：'.$str_arr['5'];
+                            echo '<span style="color:red">'.$ec_str.'</span>';
+                            echo "<br/>";
+                            $err_arr[] = $ec_str;
+                        }
                     }else{
                         $arr = array(
-                            'start_prov' => '1',
-                            'start_city' => '2',
-                            'end_prov' => $area['area_pid'],
-                            'end_city' => $area['area_id'],
-                            'cb_price' => $str_arr['3'],
-                            'zz_price' => $str_arr['4'],
-                            'zhi_mark' => $str_arr['5'],
+                            'cb_price' => $str_arr['4'],
+                            'zz_price' => $str_arr['5'],
+                            'zhi_mark' => $str_arr['6'],
+                            'zhi_man' => $str_arr['7'],
+                            'up_date' => date('Y-m-d H:i:s'),
                         );
-                        M('zhi')->add($arr);
-                    }*/
-
-                    //中转地入库
-                    $map['area_pid'] = array('neq','0');
-                    $map['area_name'] = array('like',"%".trim($str_arr['2'])."%");
-                    $area = M('area_price')->where($map)->find();
-
-                    $map1['area_pid'] = array('neq','0');
-                    $map1['area_name'] = array('like',"%".trim($str_arr['3'])."%");
-                    $area1 = M('area_price')->where($map1)->find();
-
-                    if(empty($area) || empty($area1)){
-                        echo M('area_price')->_sql();
-                        echo "123<pre/>";
-                        print_r($str_arr);
-                    }elseif($str_arr['4'] == ''){
-                        echo "456<pre/>";
-                        print_r($str_arr);
-                    }else{
-                        $arr = array(
-                            'start_prov' => $area['area_pid'],
-                            'start_city' => $area['area_id'],
-                            'end_prov' => $area1['area_pid'],
-                            'end_city' => $area1['area_id'],
-                            'zhuan_price' => $str_arr['4'],
-                            'zhuan_man' => $str_arr['5'],
-                            'zhuan_mark' => $str_arr['6'],
-                        );
-                        M('zhuan')->add($arr);
+                        $up_map['zhi_id'] = array('eq',$result['zhi_id']);
+                        $return = M('zhi')->where($up_map)->save($arr);
+                        if($return){
+                            $ec_str = "修改成功：".$str_arr['0'].'/'.$str_arr['1'].'——'.$str_arr['2'].'/'.$str_arr['3'].'；成本：'.$str_arr['4'].'；报价：'.$str_arr['5'];
+                            echo $ec_str;
+                            echo "<br/>";
+                            $up_arr[] = $ec_str;
+                        }else{
+                            $ec_str = "修改失败：".$str_arr['0'].'/'.$str_arr['1'].'——'.$str_arr['2'].'/'.$str_arr['3'].'；成本：'.$str_arr['4'].'；报价：'.$str_arr['5'];
+                            echo '<span style="color:red">'.$ec_str.'</span>';
+                            echo "<br/>";
+                            $err_arr[] = $ec_str;
+                        }
                     }
-                    //直发地处理
-                    //$arr[$str_arr['1']][$str_arr['2']] = $str_arr['2'];
-
-                    //中转出发地处理
-                    /*$arr[$str_arr['1']][$str_arr['2']] = $str_arr['2'];*/
-
-                    //中转目的地处理
-                    /*$map['area_pid'] = array('neq','1');
-                    $map['area_name'] = array('like',"%{$str_arr['3']}%");
-                    $area = M('area')->where($map)->find();
-                    $map1['area_id'] = array('eq',$area['area_pid']);
-                    $area1 = M('area')->where($map1)->find();
-                    if($area1['area_pid'] != '1'){
-                        $map2['area_id'] = array('eq',$area1['area_pid']);
-                        $area1 = M('area')->where($map2)->find();
-                    }
-                    $arr[$area1['area_name']][$str_arr['3']] = $str_arr['3'];*/
-
-                    //中转添加入库
-                    /*$s_map['start_pid'] = array('neq','0');
-                    $s_map['start_name'] = array('eq',$str_arr['2']);
-                    $start = M('start')->where($s_map)->find();
-                    $e_map['end_pid'] = array('neq','0');
-                    $e_map['end_name'] = array('eq',$str_arr['3']);
-                    $end = M('end')->where($e_map)->find();
-                    $add = array(
-                        'start_prov'=>$start['start_pid'],
-                        'start_city'=>$start['start_id'],
-                        'end_prov'=>$end['end_pid'],
-                        'end_city'=>$end['end_id'],
-                        'zhuan_price'=>$str_arr['4'],
-                        'zhuan_mark'=>$str_arr['6'],
-                        'zhuan_man'=>$str_arr['5'],
-                    );
-                    echo "<pre/>";
-                    print_r($add);
-                    M('zhuan')->add($add);*/
-
+                    ob_flush();
+                    flush();
                 }
-                //中转出发地入库
-                /*foreach($arr as $k=>$v){
-                    $id = M('start')->add(array(
-                        'start_pid' => '0',
-                        'start_name' => $k,
-                    ));
-                    foreach($v as $key=>$val){
-                        M('start')->add(array(
-                            'start_pid' => $id,
-                            'start_name' => $val,
-                        ));
-                    }
-                }*/
-
-                //中转目的地入库
-                /*foreach($arr as $k=>$v){
-                    $id = M('end')->add(array(
-                        'end_pid' => '0',
-                        'end_name' => $k,
-                    ));
-                    foreach($v as $key=>$val){
-                        M('end')->add(array(
-                            'end_pid' => $id,
-                            'end_name' => $val,
-                        ));
-                    }
-                }*/
+                print_log("价格导入添加成功:".implode('<br/>',$add_arr));
+                print_log("价格导入修改成功:".implode('<br/>',$up_arr));
+                print_log("价格导入失败:".implode('<br/>',$err_arr));
             }else{
                 $this->error( '不是Excel文件，重新上传' );
             }

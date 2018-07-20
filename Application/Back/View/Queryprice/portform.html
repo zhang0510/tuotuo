@@ -1,0 +1,19 @@
+<include file='public:head'/>
+<body>
+<include file='public:header'/>
+<div id="main-pyf">
+    <include file='public:left'/>
+    <div id="content">
+        <div style="width: 639px;margin: auto;">
+            <form method="post" action="__MODULE__/Queryprice/portprice" enctype="multipart/form-data">
+                <input type="file" name="csvFile">
+                <input type="submit" value="提交">
+            </form>
+            <div style="margin-top: 20px;">
+                <span id="line"></span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
