@@ -187,6 +187,8 @@ class QuerypriceController extends BaseController{
                 //print_log("文件导入:".$allRow);
                 $datatime = date('Y-m-d H:i:s',time());
                 $add_arr = $up_arr = $err_arr = array();
+                M('area_price')->where('1')->delete();
+                M('zhi')->where('1')->delete();
                 for($currentRow=2;$currentRow<=$allRow;$currentRow++){
                     $arr = array();
                     $str='';
@@ -203,7 +205,6 @@ class QuerypriceController extends BaseController{
                     if($str_arr['4'] == '' && $str_arr['5'] == ''){
                         continue;
                     }
-
                     //直发地入库
                     //出发地目的地处理
                     $start_prov_map['area_name'] = array('eq',$str_arr['0']);
