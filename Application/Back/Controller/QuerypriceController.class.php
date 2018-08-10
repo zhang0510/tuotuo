@@ -6,22 +6,18 @@ header("Content-type:text/html;charset=utf-8");
 class QuerypriceController extends BaseController{
 	//查价
 	public function index(){
-        /*$zhuan = M('zhuan')->select();
-        foreach($zhuan as $k=>$v){
-            $arr = array(
-                'start_prov' => $v['start_prov'],
-                'start_city' => $v['start_city'],
-                'end_prov' => $v['end_prov'],
-                'end_city' => $v['end_city'],
-                'cb_price' => $v['zhuan_price'],
-                'zz_price' => '0',
-                'zhi_mark' => $v['zhuan_mark'],
-                'zhi_man' => $v['zhuan_man'],
-            );
-            $aa = M('zhi')->add($arr);
-            if(!$aa){
-                echo "<pre/>";
-                print_r($arr);
+        /*$zhi = M('zhi')->select();
+        foreach($zhi as $k=>$v){
+            if($v['zz_price'] == '0.00'){
+                $arr = array(
+                    'zz_price' => $v['cb_price']+500,
+                );
+                $map['zhi_id'] = array('eq',$v['zhi_id']);
+                $aa = M('zhi')->where($map)->save($arr);
+                if($aa){
+                    echo "<pre/>";
+                    print_r($v);
+                }
             }
         }die;*/
         $area = M('area_price')->where('area_pid = 0')->order('area_name asc')->select();
@@ -82,28 +78,27 @@ class QuerypriceController extends BaseController{
         foreach ($zhi[$z_k] as $k=>$v) {
             if ($v['end_prov'] == $end && $v['end_city'] == $end_city) {
                 $str = $area[$v['start_prov']].'/'.$area[$v['start_city']].'——'.$area[$v['end_prov']].'/'.$area[$v['end_city']];
-                $return = "<br><br>直发：".$str.'；成本->'.$v['cb_price'].'；最终价格->'.$v['zz_price'].'；备注->'.$v['zhi_mark'];
-                echo $return;die;
+                $return[0][] = "直发：".$str.'；成本->'.$v['cb_price'].'；最终价格->'.$v['zz_price'].'；备注->'.$v['zhi_mark'].'；联系人->'.$v['zhi_man'];
             }else{
                 $z_k1 = $v['end_prov'].'/'.$v['end_city'];
                 foreach ($zhi[$z_k1] as $key=>$value) {
                     if ($value['end_prov'] == $end && $value['end_city'] == $end_city) {
                         $arr = array($v,$value);
                         $re = $this->line_content($arr,$area);
-                        $return[$re['0']] = $re['1'];
+                        $return[$re['0']][] = $re['1'];
                     }else{
                         $z_k2 = $value['end_prov'].'/'.$value['end_city'];
                         foreach ($zhi[$z_k2] as $key2=>$value2) {
                             if ($value2['end_prov'] == $end && $value2['end_city'] == $end_city) {
                                 $arr = array($v,$value,$value2);
                                 $re = $this->line_content($arr,$area);
-                                $return[$re['0']] = $re['1'];
+                                $return[$re['0']][] = $re['1'];
                             }/*else{
                                 $z_k3 = $value2['end_prov'].'/'.$value2['end_city'];
                                 if(in_array($z_k3,$end_arr)){
                                     $arr = array($v,$value,$value2,$end_content[$z_k3]);
                                     $re = $this->line_content($arr,$area);
-                                    $return[$re['0']] = $re['1'];
+                                    $return[$re['0']][] = $re['1'];
                                 }
                             }*/
                         }
@@ -111,24 +106,31 @@ class QuerypriceController extends BaseController{
                 }
             }
         }
+        $num = 1;
         ksort($return);
-        if(empty($return)){
-            echo '';
-        }else{
-            echo reset($return);
+        foreach ($return as $k=>$v){
+            foreach ($v as $key=>$val){
+                echo "<br/><br/><span style='font-weight: 800;'>线路$num</span>";
+                echo $val;
+                $num++;
+            }
         }
     }
 
     public function line_content($arr,$area){
 	    $str = $area[$arr['0']['start_prov']].'/'.$area[$arr['0']['start_city']];
-        $sum = 0;
+        $sum = $price = 0;
 	    foreach($arr as $k=>$v){
             $str .= '——'.$area[$v['end_prov']].'/'.$area[$v['end_city']];
             $line = $area[$v['start_prov']].'/'.$area[$v['start_city']].'——'.$area[$v['end_prov']].'/'.$area[$v['end_city']];
-            $return[] = $line.'：成本->'.$v['cb_price'].'；最终价格->'.$v['zz_price'].'；备注->'.$v['zhi_mark'];
-            $price = $v['zz_price'] == '0'?$v['cb_price']:$v['zz_price'];
-            $sum+=$price;
+            $return[] = $line.'：成本->'.$v['cb_price'].'；最终价格->'.$v['zz_price'].'；备注->'.$v['zhi_mark'].'；联系人->'.$v['zhi_man'];
+            $price_jia = $v['zz_price'] == '0'?0:$v['zz_price']-$v['cb_price'];
+            if($price_jia>$price){
+                $price = $price_jia;
+            }
+            $sum+=$v['cb_price'];
         }
+        $sum += $price;
         $return[] = '总价：'.$sum;
         $retu = implode('<br>',$return);
 	    $return_str = '<br/>线路：'.$str.'<br/>'.$retu;
@@ -197,6 +199,11 @@ class QuerypriceController extends BaseController{
                     foreach($str_arr as $k=>&$v){
                         $v = trim($v);
                     }
+
+                    if($str_arr['4'] == '' && $str_arr['5'] == ''){
+                        continue;
+                    }
+
                     //直发地入库
                     //出发地目的地处理
                     $start_prov_map['area_name'] = array('eq',$str_arr['0']);
@@ -225,7 +232,15 @@ class QuerypriceController extends BaseController{
                             $start_id = $start_area['area_id'];
                         }
                     }
-
+                    if($str_arr['2'] == ''){
+                        $area_like['area_name'] = array('like',"%{$str_arr['3']}%");
+                        $area_like['area_pid'] = array('neq',"1");
+                        $area_find = M('area')->where($area_like)->find();
+                        if(!empty($area_find)){
+                            $area_find1 = M('area')->find($area_find['area_pid']);
+                            $str_arr['2'] = !empty($area_find1)?$area_find1['area_name']:'未知省会';
+                        }
+                    }
                     $end_prov_map['area_name'] = array('eq',$str_arr['2']);
                     $end_prov_map['area_pid'] = array('eq','0');
                     $end_prov = M('area_price')->where($end_prov_map)->find();
@@ -252,13 +267,11 @@ class QuerypriceController extends BaseController{
                             $end_id = $end_area['area_id'];
                         }
                     }
-
-                    $map['start_prov'] = array('eq',$start_pid);
+                    /*$map['start_prov'] = array('eq',$start_pid);
                     $map['start_city'] = array('eq',$start_id);
                     $map['end_prov'] = array('eq',$end_pid);
                     $map['end_city'] = array('eq',$end_id);
-                    $result = M('zhi')->where($map)->find();
-                    if(empty($result)){
+                    $result = M('zhi')->where($map)->find();*/
                         $arr = array(
                             'start_prov' => $start_pid,
                             'start_city' => $start_id,
@@ -270,6 +283,9 @@ class QuerypriceController extends BaseController{
                             'zhi_man' => $str_arr['7'],
                             'up_date' => date('Y-m-d H:i:s'),
                         );
+                        if($arr['cb_price'] == '' && $arr['zz_price'] == ''){
+                            continue;
+                        }
                         $return = M('zhi')->add($arr);
                         if($return){
                             $ec_str = "添加成功：".$str_arr['0'].'/'.$str_arr['1'].'——'.$str_arr['2'].'/'.$str_arr['3'].'；成本：'.$str_arr['4'].'；报价：'.$str_arr['5'];
@@ -283,8 +299,8 @@ class QuerypriceController extends BaseController{
                             $err_arr[] = $ec_str;
                             $err_arr[] = M('zhi')->_sql();
                         }
-                    }else{
-                        $arr = array(
+
+                        /*$arr = array(
                             'cb_price' => $str_arr['4'],
                             'zz_price' => $str_arr['5'],
                             'zhi_mark' => $str_arr['6'],
@@ -304,8 +320,8 @@ class QuerypriceController extends BaseController{
                             echo "<br/>";
                             $err_arr[] = $ec_str;
                             $err_arr[] = M('zhi')->_sql();
-                        }
-                    }
+                        }*/
+
                     if($currentRow%10 == 0){
                         ob_flush();
                         flush();
